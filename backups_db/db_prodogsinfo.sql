@@ -11,7 +11,6 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_akeeba_common
-DROP TABLE IF EXISTS `gy3te_akeeba_common`;
 CREATE TABLE IF NOT EXISTS `gy3te_akeeba_common` (
   `key` varchar(192) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `value` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -31,7 +30,6 @@ INSERT INTO `gy3te_akeeba_common` (`key`, `value`) VALUES
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_ak_profiles
-DROP TABLE IF EXISTS `gy3te_ak_profiles`;
 CREATE TABLE IF NOT EXISTS `gy3te_ak_profiles` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `description` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -41,7 +39,7 @@ CREATE TABLE IF NOT EXISTS `gy3te_ak_profiles` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Дамп данных таблицы prodogsinfo.gy3te_ak_profiles: ~1 rows (приблизительно)
+-- Дамп данных таблицы prodogsinfo.gy3te_ak_profiles: ~0 rows (приблизительно)
 DELETE FROM `gy3te_ak_profiles`;
 /*!40000 ALTER TABLE `gy3te_ak_profiles` DISABLE KEYS */;
 INSERT INTO `gy3te_ak_profiles` (`id`, `description`, `configuration`, `filters`, `quickicon`) VALUES
@@ -50,7 +48,6 @@ INSERT INTO `gy3te_ak_profiles` (`id`, `description`, `configuration`, `filters`
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_ak_stats
-DROP TABLE IF EXISTS `gy3te_ak_stats`;
 CREATE TABLE IF NOT EXISTS `gy3te_ak_stats` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `description` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -84,7 +81,6 @@ INSERT INTO `gy3te_ak_stats` (`id`, `description`, `comment`, `backupstart`, `ba
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_ak_storage
-DROP TABLE IF EXISTS `gy3te_ak_storage`;
 CREATE TABLE IF NOT EXISTS `gy3te_ak_storage` (
   `tag` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `lastupdate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
@@ -99,7 +95,6 @@ DELETE FROM `gy3te_ak_storage`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_assets
-DROP TABLE IF EXISTS `gy3te_assets`;
 CREATE TABLE IF NOT EXISTS `gy3te_assets` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Primary Key',
   `parent_id` int(11) NOT NULL DEFAULT '0' COMMENT 'Nested set parent.',
@@ -246,7 +241,6 @@ INSERT INTO `gy3te_assets` (`id`, `parent_id`, `lft`, `rgt`, `level`, `name`, `t
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_associations
-DROP TABLE IF EXISTS `gy3te_associations`;
 CREATE TABLE IF NOT EXISTS `gy3te_associations` (
   `id` int(11) NOT NULL COMMENT 'A reference to the associated item.',
   `context` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'The context of the associated item.',
@@ -262,7 +256,6 @@ DELETE FROM `gy3te_associations`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_banners
-DROP TABLE IF EXISTS `gy3te_banners`;
 CREATE TABLE IF NOT EXISTS `gy3te_banners` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `cid` int(11) NOT NULL DEFAULT '0',
@@ -313,7 +306,6 @@ DELETE FROM `gy3te_banners`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_banner_clients
-DROP TABLE IF EXISTS `gy3te_banner_clients`;
 CREATE TABLE IF NOT EXISTS `gy3te_banner_clients` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
@@ -341,7 +333,6 @@ DELETE FROM `gy3te_banner_clients`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_banner_tracks
-DROP TABLE IF EXISTS `gy3te_banner_tracks`;
 CREATE TABLE IF NOT EXISTS `gy3te_banner_tracks` (
   `track_date` datetime NOT NULL,
   `track_type` int(10) unsigned NOT NULL,
@@ -360,7 +351,6 @@ DELETE FROM `gy3te_banner_tracks`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_categories
-DROP TABLE IF EXISTS `gy3te_categories`;
 CREATE TABLE IF NOT EXISTS `gy3te_categories` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `asset_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'FK to the #__assets table.',
@@ -413,7 +403,6 @@ INSERT INTO `gy3te_categories` (`id`, `asset_id`, `parent_id`, `lft`, `rgt`, `le
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_activities
-DROP TABLE IF EXISTS `gy3te_community_activities`;
 CREATE TABLE IF NOT EXISTS `gy3te_community_activities` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `actor` int(10) unsigned NOT NULL,
@@ -461,7 +450,6 @@ INSERT INTO `gy3te_community_activities` (`id`, `actor`, `target`, `title`, `con
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_activities_hide
-DROP TABLE IF EXISTS `gy3te_community_activities_hide`;
 CREATE TABLE IF NOT EXISTS `gy3te_community_activities_hide` (
   `activity_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
@@ -475,7 +463,6 @@ DELETE FROM `gy3te_community_activities_hide`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_apps
-DROP TABLE IF EXISTS `gy3te_community_apps`;
 CREATE TABLE IF NOT EXISTS `gy3te_community_apps` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `userid` int(10) unsigned NOT NULL,
@@ -496,7 +483,6 @@ DELETE FROM `gy3te_community_apps`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_avatar
-DROP TABLE IF EXISTS `gy3te_community_avatar`;
 CREATE TABLE IF NOT EXISTS `gy3te_community_avatar` (
   `id` int(10) unsigned NOT NULL,
   `apptype` varchar(255) NOT NULL,
@@ -512,7 +498,6 @@ DELETE FROM `gy3te_community_avatar`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_badges
-DROP TABLE IF EXISTS `gy3te_community_badges`;
 CREATE TABLE IF NOT EXISTS `gy3te_community_badges` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(64) NOT NULL,
@@ -536,7 +521,6 @@ INSERT INTO `gy3te_community_badges` (`id`, `title`, `points`, `image`, `publish
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_blocklist
-DROP TABLE IF EXISTS `gy3te_community_blocklist`;
 CREATE TABLE IF NOT EXISTS `gy3te_community_blocklist` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `userid` int(11) NOT NULL,
@@ -554,7 +538,6 @@ DELETE FROM `gy3te_community_blocklist`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_chat
-DROP TABLE IF EXISTS `gy3te_community_chat`;
 CREATE TABLE IF NOT EXISTS `gy3te_community_chat` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `type` char(50) NOT NULL,
@@ -571,7 +554,6 @@ DELETE FROM `gy3te_community_chat`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_chat_activity
-DROP TABLE IF EXISTS `gy3te_community_chat_activity`;
 CREATE TABLE IF NOT EXISTS `gy3te_community_chat_activity` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `chat_id` int(11) NOT NULL,
@@ -592,7 +574,6 @@ DELETE FROM `gy3te_community_chat_activity`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_chat_participants
-DROP TABLE IF EXISTS `gy3te_community_chat_participants`;
 CREATE TABLE IF NOT EXISTS `gy3te_community_chat_participants` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `chat_id` int(11) NOT NULL,
@@ -612,7 +593,6 @@ DELETE FROM `gy3te_community_chat_participants`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_config
-DROP TABLE IF EXISTS `gy3te_community_config`;
 CREATE TABLE IF NOT EXISTS `gy3te_community_config` (
   `name` varchar(64) NOT NULL,
   `params` longtext NOT NULL,
@@ -629,7 +609,6 @@ INSERT INTO `gy3te_community_config` (`name`, `params`) VALUES
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_connection
-DROP TABLE IF EXISTS `gy3te_community_connection`;
 CREATE TABLE IF NOT EXISTS `gy3te_community_connection` (
   `connection_id` int(11) NOT NULL AUTO_INCREMENT,
   `connect_from` int(11) NOT NULL,
@@ -652,7 +631,6 @@ DELETE FROM `gy3te_community_connection`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_connect_users
-DROP TABLE IF EXISTS `gy3te_community_connect_users`;
 CREATE TABLE IF NOT EXISTS `gy3te_community_connect_users` (
   `connectid` bigint(20) NOT NULL,
   `type` varchar(255) NOT NULL,
@@ -668,7 +646,6 @@ DELETE FROM `gy3te_community_connect_users`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_digest_email
-DROP TABLE IF EXISTS `gy3te_community_digest_email`;
 CREATE TABLE IF NOT EXISTS `gy3te_community_digest_email` (
   `user_id` int(11) NOT NULL,
   `total_sent` int(11) NOT NULL,
@@ -683,7 +660,6 @@ DELETE FROM `gy3te_community_digest_email`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_engagement
-DROP TABLE IF EXISTS `gy3te_community_engagement`;
 CREATE TABLE IF NOT EXISTS `gy3te_community_engagement` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `action` varchar(64) NOT NULL,
@@ -703,7 +679,6 @@ INSERT INTO `gy3te_community_engagement` (`id`, `action`, `user_id`, `created`, 
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_events
-DROP TABLE IF EXISTS `gy3te_community_events`;
 CREATE TABLE IF NOT EXISTS `gy3te_community_events` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `parent` int(11) NOT NULL COMMENT 'parent for recurring event',
@@ -757,7 +732,6 @@ INSERT INTO `gy3te_community_events` (`id`, `parent`, `catid`, `contentid`, `typ
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_events_category
-DROP TABLE IF EXISTS `gy3te_community_events_category`;
 CREATE TABLE IF NOT EXISTS `gy3te_community_events_category` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `parent` int(11) NOT NULL DEFAULT '0',
@@ -782,7 +756,6 @@ INSERT INTO `gy3te_community_events_category` (`id`, `parent`, `name`, `descript
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_events_members
-DROP TABLE IF EXISTS `gy3te_community_events_members`;
 CREATE TABLE IF NOT EXISTS `gy3te_community_events_members` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `eventid` int(11) unsigned NOT NULL,
@@ -809,7 +782,6 @@ INSERT INTO `gy3te_community_events_members` (`id`, `eventid`, `memberid`, `stat
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_event_stats
-DROP TABLE IF EXISTS `gy3te_community_event_stats`;
 CREATE TABLE IF NOT EXISTS `gy3te_community_event_stats` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `eid` int(11) NOT NULL,
@@ -830,7 +802,6 @@ INSERT INTO `gy3te_community_event_stats` (`id`, `eid`, `type`, `count`, `date`,
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_featured
-DROP TABLE IF EXISTS `gy3te_community_featured`;
 CREATE TABLE IF NOT EXISTS `gy3te_community_featured` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `cid` int(11) NOT NULL,
@@ -849,7 +820,6 @@ DELETE FROM `gy3te_community_featured`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_fields
-DROP TABLE IF EXISTS `gy3te_community_fields`;
 CREATE TABLE IF NOT EXISTS `gy3te_community_fields` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `type` varchar(255) NOT NULL,
@@ -890,7 +860,6 @@ INSERT INTO `gy3te_community_fields` (`id`, `type`, `ordering`, `published`, `mi
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_fields_values
-DROP TABLE IF EXISTS `gy3te_community_fields_values`;
 CREATE TABLE IF NOT EXISTS `gy3te_community_fields_values` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `user_id` int(11) NOT NULL,
@@ -903,9 +872,9 @@ CREATE TABLE IF NOT EXISTS `gy3te_community_fields_values` (
   KEY `user_id` (`user_id`),
   KEY `idx_user_fieldid` (`user_id`,`field_id`),
   KEY `access` (`access`)
-) ENGINE=MyISAM AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=26 DEFAULT CHARSET=utf8;
 
--- Дамп данных таблицы prodogsinfo.gy3te_community_fields_values: 16 rows
+-- Дамп данных таблицы prodogsinfo.gy3te_community_fields_values: 25 rows
 DELETE FROM `gy3te_community_fields_values`;
 /*!40000 ALTER TABLE `gy3te_community_fields_values` DISABLE KEYS */;
 INSERT INTO `gy3te_community_fields_values` (`id`, `user_id`, `field_id`, `value`, `access`, `params`) VALUES
@@ -924,12 +893,20 @@ INSERT INTO `gy3te_community_fields_values` (`id`, `user_id`, `field_id`, `value
 	(13, 53, 5, '{"name":"\\u041c\\u0438\\u043d\\u0441\\u043a","desc":"\\u041c\\u0438\\u043d\\u0441\\u043a, \\u0411\\u0435\\u043b\\u0430\\u0440\\u0443\\u0441\\u044c","lat":"53.9045398","lng":"27.561524400000053"}', 10, ''),
 	(14, 53, 7, '', 10, ''),
 	(15, 53, 8, '', 10, ''),
-	(16, 53, 9, '', 10, '');
+	(16, 53, 9, '', 10, ''),
+	(17, 48, 2, 'COM_COMMUNITY_MALE', 0, ''),
+	(18, 48, 3, '1975-5-26 23:59:59', 0, ''),
+	(19, 48, 4, 'Супер админ ))', 0, ''),
+	(20, 48, 5, '{"name":"","desc":"","lat":"","lng":""}', 0, ''),
+	(21, 48, 7, '', 0, ''),
+	(22, 48, 8, '', 0, ''),
+	(23, 48, 9, '', 0, ''),
+	(24, 48, 11, '', 0, ''),
+	(25, 48, 12, '', 0, '');
 /*!40000 ALTER TABLE `gy3te_community_fields_values` ENABLE KEYS */;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_files
-DROP TABLE IF EXISTS `gy3te_community_files`;
 CREATE TABLE IF NOT EXISTS `gy3te_community_files` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL,
@@ -960,7 +937,6 @@ DELETE FROM `gy3te_community_files`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_groups
-DROP TABLE IF EXISTS `gy3te_community_groups`;
 CREATE TABLE IF NOT EXISTS `gy3te_community_groups` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `published` tinyint(1) NOT NULL,
@@ -995,7 +971,6 @@ INSERT INTO `gy3te_community_groups` (`id`, `published`, `ownerid`, `categoryid`
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_groups_bulletins
-DROP TABLE IF EXISTS `gy3te_community_groups_bulletins`;
 CREATE TABLE IF NOT EXISTS `gy3te_community_groups_bulletins` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `groupid` int(11) NOT NULL,
@@ -1016,7 +991,6 @@ DELETE FROM `gy3te_community_groups_bulletins`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_groups_category
-DROP TABLE IF EXISTS `gy3te_community_groups_category`;
 CREATE TABLE IF NOT EXISTS `gy3te_community_groups_category` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `parent` int(11) NOT NULL DEFAULT '0',
@@ -1038,7 +1012,6 @@ INSERT INTO `gy3te_community_groups_category` (`id`, `parent`, `name`, `descript
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_groups_discuss
-DROP TABLE IF EXISTS `gy3te_community_groups_discuss`;
 CREATE TABLE IF NOT EXISTS `gy3te_community_groups_discuss` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `parentid` int(11) NOT NULL DEFAULT '0',
@@ -1062,7 +1035,6 @@ DELETE FROM `gy3te_community_groups_discuss`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_groups_invite
-DROP TABLE IF EXISTS `gy3te_community_groups_invite`;
 CREATE TABLE IF NOT EXISTS `gy3te_community_groups_invite` (
   `groupid` int(11) NOT NULL,
   `userid` int(11) NOT NULL,
@@ -1076,7 +1048,6 @@ DELETE FROM `gy3te_community_groups_invite`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_groups_members
-DROP TABLE IF EXISTS `gy3te_community_groups_members`;
 CREATE TABLE IF NOT EXISTS `gy3te_community_groups_members` (
   `groupid` int(11) NOT NULL,
   `memberid` int(11) NOT NULL,
@@ -1096,7 +1067,6 @@ INSERT INTO `gy3te_community_groups_members` (`groupid`, `memberid`, `approved`,
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_group_stats
-DROP TABLE IF EXISTS `gy3te_community_group_stats`;
 CREATE TABLE IF NOT EXISTS `gy3te_community_group_stats` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `gid` int(11) NOT NULL,
@@ -1117,7 +1087,6 @@ INSERT INTO `gy3te_community_group_stats` (`id`, `gid`, `type`, `count`, `date`,
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_hashtag
-DROP TABLE IF EXISTS `gy3te_community_hashtag`;
 CREATE TABLE IF NOT EXISTS `gy3te_community_hashtag` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `tag` varchar(128) NOT NULL,
@@ -1134,7 +1103,6 @@ DELETE FROM `gy3te_community_hashtag`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_invitations
-DROP TABLE IF EXISTS `gy3te_community_invitations`;
 CREATE TABLE IF NOT EXISTS `gy3te_community_invitations` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `callback` varchar(255) NOT NULL,
@@ -1150,7 +1118,6 @@ DELETE FROM `gy3te_community_invitations`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_likes
-DROP TABLE IF EXISTS `gy3te_community_likes`;
 CREATE TABLE IF NOT EXISTS `gy3te_community_likes` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `element` varchar(200) NOT NULL,
@@ -1168,7 +1135,6 @@ DELETE FROM `gy3te_community_likes`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_location_cache
-DROP TABLE IF EXISTS `gy3te_community_location_cache`;
 CREATE TABLE IF NOT EXISTS `gy3te_community_location_cache` (
   `address` varchar(255) NOT NULL,
   `latitude` float(10,6) NOT NULL DEFAULT '255.000000',
@@ -1187,7 +1153,6 @@ INSERT INTO `gy3te_community_location_cache` (`address`, `latitude`, `longitude`
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_mailq
-DROP TABLE IF EXISTS `gy3te_community_mailq`;
 CREATE TABLE IF NOT EXISTS `gy3te_community_mailq` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `recipient` text NOT NULL,
@@ -1211,7 +1176,6 @@ INSERT INTO `gy3te_community_mailq` (`id`, `recipient`, `subject`, `body`, `stat
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_memberlist
-DROP TABLE IF EXISTS `gy3te_community_memberlist`;
 CREATE TABLE IF NOT EXISTS `gy3te_community_memberlist` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` text NOT NULL,
@@ -1229,7 +1193,6 @@ DELETE FROM `gy3te_community_memberlist`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_memberlist_criteria
-DROP TABLE IF EXISTS `gy3te_community_memberlist_criteria`;
 CREATE TABLE IF NOT EXISTS `gy3te_community_memberlist_criteria` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `listid` int(11) NOT NULL,
@@ -1248,7 +1211,6 @@ DELETE FROM `gy3te_community_memberlist_criteria`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_moods
-DROP TABLE IF EXISTS `gy3te_community_moods`;
 CREATE TABLE IF NOT EXISTS `gy3te_community_moods` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(128) NOT NULL,
@@ -1313,7 +1275,6 @@ INSERT INTO `gy3te_community_moods` (`id`, `title`, `description`, `image`, `cus
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_msg
-DROP TABLE IF EXISTS `gy3te_community_msg`;
 CREATE TABLE IF NOT EXISTS `gy3te_community_msg` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `from` int(10) unsigned NOT NULL,
@@ -1334,7 +1295,6 @@ DELETE FROM `gy3te_community_msg`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_msg_recepient
-DROP TABLE IF EXISTS `gy3te_community_msg_recepient`;
 CREATE TABLE IF NOT EXISTS `gy3te_community_msg_recepient` (
   `msg_id` int(10) unsigned NOT NULL,
   `msg_parent` int(10) unsigned NOT NULL DEFAULT '0',
@@ -1356,7 +1316,6 @@ DELETE FROM `gy3te_community_msg_recepient`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_notifications
-DROP TABLE IF EXISTS `gy3te_community_notifications`;
 CREATE TABLE IF NOT EXISTS `gy3te_community_notifications` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `actor` int(11) NOT NULL,
@@ -1382,7 +1341,6 @@ DELETE FROM `gy3te_community_notifications`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_oauth
-DROP TABLE IF EXISTS `gy3te_community_oauth`;
 CREATE TABLE IF NOT EXISTS `gy3te_community_oauth` (
   `userid` int(11) NOT NULL,
   `requesttoken` text NOT NULL,
@@ -1398,7 +1356,6 @@ DELETE FROM `gy3te_community_oauth`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_photos
-DROP TABLE IF EXISTS `gy3te_community_photos`;
 CREATE TABLE IF NOT EXISTS `gy3te_community_photos` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `albumid` int(11) NOT NULL,
@@ -1428,7 +1385,6 @@ DELETE FROM `gy3te_community_photos`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_photos_albums
-DROP TABLE IF EXISTS `gy3te_community_photos_albums`;
 CREATE TABLE IF NOT EXISTS `gy3te_community_photos_albums` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `photoid` int(11) NOT NULL,
@@ -1474,7 +1430,6 @@ INSERT INTO `gy3te_community_photos_albums` (`id`, `photoid`, `creator`, `name`,
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_photos_tag
-DROP TABLE IF EXISTS `gy3te_community_photos_tag`;
 CREATE TABLE IF NOT EXISTS `gy3te_community_photos_tag` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `photoid` int(11) NOT NULL,
@@ -1496,7 +1451,6 @@ DELETE FROM `gy3te_community_photos_tag`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_photos_tokens
-DROP TABLE IF EXISTS `gy3te_community_photos_tokens`;
 CREATE TABLE IF NOT EXISTS `gy3te_community_photos_tokens` (
   `userid` int(11) NOT NULL,
   `token` varchar(200) NOT NULL,
@@ -1510,7 +1464,6 @@ DELETE FROM `gy3te_community_photos_tokens`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_photo_stats
-DROP TABLE IF EXISTS `gy3te_community_photo_stats`;
 CREATE TABLE IF NOT EXISTS `gy3te_community_photo_stats` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `pid` int(11) NOT NULL,
@@ -1529,7 +1482,6 @@ DELETE FROM `gy3te_community_photo_stats`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_profiles
-DROP TABLE IF EXISTS `gy3te_community_profiles`;
 CREATE TABLE IF NOT EXISTS `gy3te_community_profiles` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL,
@@ -1549,20 +1501,20 @@ CREATE TABLE IF NOT EXISTS `gy3te_community_profiles` (
   `params` text,
   PRIMARY KEY (`id`),
   KEY `approvals` (`approvals`,`published`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
--- Дамп данных таблицы prodogsinfo.gy3te_community_profiles: 3 rows
+-- Дамп данных таблицы prodogsinfo.gy3te_community_profiles: 4 rows
 DELETE FROM `gy3te_community_profiles`;
 /*!40000 ALTER TABLE `gy3te_community_profiles` DISABLE KEYS */;
 INSERT INTO `gy3te_community_profiles` (`id`, `name`, `description`, `approvals`, `published`, `avatar`, `watermark`, `watermark_hash`, `watermark_location`, `thumb`, `created`, `create_groups`, `create_events`, `profile_lock`, `ordering`, `params`) VALUES
 	(1, 'Собаковод', '', 0, 1, 'images/watermarks/ee5b71d4bbdc1d36ab1338da.jpg', '', '', '', 'images/watermarks/thumb_ee5b71d4bbdc1d36ab1338da.jpg', '2018-05-12 09:31:22', 1, 1, 0, 1, '{"userGroup":["10"]}'),
 	(2, 'Питомник', '', 0, 1, '', '', '', '', '', '2018-05-12 09:32:55', 1, 1, 0, 2, '{"userGroup":["11"]}'),
-	(3, 'Выставка', '', 0, 1, '', '', '', '', '', '2018-05-14 07:24:33', 1, 1, 0, 3, '{"userGroup":["12"]}');
+	(3, 'Выставка', '', 0, 1, '', '', '', '', '', '2018-05-14 07:24:33', 1, 1, 0, 3, '{"userGroup":["12"]}'),
+	(4, 'Супер Администраторы', '', 1, 0, 'images/watermarks/026d40f69b46162e4743ab72.jpg', '', '', '', 'images/watermarks/thumb_026d40f69b46162e4743ab72.jpg', '2018-05-16 07:56:45', 1, 1, 0, 4, '{"userGroup":["8"]}');
 /*!40000 ALTER TABLE `gy3te_community_profiles` ENABLE KEYS */;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_profiles_fields
-DROP TABLE IF EXISTS `gy3te_community_profiles_fields`;
 CREATE TABLE IF NOT EXISTS `gy3te_community_profiles_fields` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `parent` int(11) NOT NULL,
@@ -1599,7 +1551,6 @@ INSERT INTO `gy3te_community_profiles_fields` (`id`, `parent`, `field_id`) VALUE
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_profile_stats
-DROP TABLE IF EXISTS `gy3te_community_profile_stats`;
 CREATE TABLE IF NOT EXISTS `gy3te_community_profile_stats` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `uid` int(11) NOT NULL,
@@ -1626,7 +1577,6 @@ INSERT INTO `gy3te_community_profile_stats` (`id`, `uid`, `type`, `count`, `date
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_register
-DROP TABLE IF EXISTS `gy3te_community_register`;
 CREATE TABLE IF NOT EXISTS `gy3te_community_register` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `token` varchar(200) NOT NULL,
@@ -1648,7 +1598,6 @@ DELETE FROM `gy3te_community_register`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_register_auth_token
-DROP TABLE IF EXISTS `gy3te_community_register_auth_token`;
 CREATE TABLE IF NOT EXISTS `gy3te_community_register_auth_token` (
   `token` varchar(200) NOT NULL,
   `ip` varchar(255) NOT NULL,
@@ -1668,7 +1617,6 @@ INSERT INTO `gy3te_community_register_auth_token` (`token`, `ip`, `auth_key`, `c
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_reports
-DROP TABLE IF EXISTS `gy3te_community_reports`;
 CREATE TABLE IF NOT EXISTS `gy3te_community_reports` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `uniquestring` varchar(200) NOT NULL,
@@ -1685,7 +1633,6 @@ DELETE FROM `gy3te_community_reports`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_reports_actions
-DROP TABLE IF EXISTS `gy3te_community_reports_actions`;
 CREATE TABLE IF NOT EXISTS `gy3te_community_reports_actions` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `reportid` int(11) NOT NULL,
@@ -1703,7 +1650,6 @@ DELETE FROM `gy3te_community_reports_actions`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_reports_reporter
-DROP TABLE IF EXISTS `gy3te_community_reports_reporter`;
 CREATE TABLE IF NOT EXISTS `gy3te_community_reports_reporter` (
   `reportid` int(11) NOT NULL,
   `message` text NOT NULL,
@@ -1719,7 +1665,6 @@ DELETE FROM `gy3te_community_reports_reporter`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_storage_s3
-DROP TABLE IF EXISTS `gy3te_community_storage_s3`;
 CREATE TABLE IF NOT EXISTS `gy3te_community_storage_s3` (
   `storageid` varchar(255) NOT NULL,
   `resource_path` varchar(255) NOT NULL,
@@ -1733,7 +1678,6 @@ DELETE FROM `gy3te_community_storage_s3`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_tags
-DROP TABLE IF EXISTS `gy3te_community_tags`;
 CREATE TABLE IF NOT EXISTS `gy3te_community_tags` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `element` varchar(200) NOT NULL,
@@ -1751,7 +1695,6 @@ DELETE FROM `gy3te_community_tags`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_tags_words
-DROP TABLE IF EXISTS `gy3te_community_tags_words`;
 CREATE TABLE IF NOT EXISTS `gy3te_community_tags_words` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `tag` varchar(200) NOT NULL,
@@ -1767,7 +1710,6 @@ DELETE FROM `gy3te_community_tags_words`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_theme
-DROP TABLE IF EXISTS `gy3te_community_theme`;
 CREATE TABLE IF NOT EXISTS `gy3te_community_theme` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `key` varchar(32) NOT NULL,
@@ -1785,7 +1727,6 @@ INSERT INTO `gy3te_community_theme` (`id`, `key`, `value`) VALUES
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_thirdparty_wall_options
-DROP TABLE IF EXISTS `gy3te_community_thirdparty_wall_options`;
 CREATE TABLE IF NOT EXISTS `gy3te_community_thirdparty_wall_options` (
   `name` varchar(255) NOT NULL,
   `notification_cmd` varchar(255) NOT NULL,
@@ -1801,7 +1742,6 @@ DELETE FROM `gy3te_community_thirdparty_wall_options`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_userpoints
-DROP TABLE IF EXISTS `gy3te_community_userpoints`;
 CREATE TABLE IF NOT EXISTS `gy3te_community_userpoints` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `rule_name` varchar(255) NOT NULL DEFAULT '',
@@ -1883,7 +1823,6 @@ INSERT INTO `gy3te_community_userpoints` (`id`, `rule_name`, `rule_description`,
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_users
-DROP TABLE IF EXISTS `gy3te_community_users`;
 CREATE TABLE IF NOT EXISTS `gy3te_community_users` (
   `userid` int(11) NOT NULL,
   `status` text NOT NULL,
@@ -1919,14 +1858,13 @@ INSERT INTO `gy3te_community_users` (`userid`, `status`, `status_access`, `point
 	(51, '', 0, 0, '0000-00-00 00:00:00', 'images/watermarks/ee5b71d4bbdc1d36ab1338da.jpg', 'images/watermarks/thumb_ee5b71d4bbdc1d36ab1338da.jpg', '', 0, '{"notifyEmailSystem":1,"privacyPrivateMessage":10,"privacyFriendRequest":10,"privacyProfileView":0,"privacyPhotoView":0,"privacyFriendsView":0,"privacyGroupsView":"","privacyVideoView":0,"notifyEmailMessage":1,"notifyEmailApps":1,"notifyWallComment":0,"invitorId":0,"notif_groups_notify_admin":1,"etype_groups_notify_admin":1,"notif_user_profile_delete":1,"etype_user_profile_delete":1,"notif_system_reports_threshold":1,"etype_system_reports_threshold":1,"notif_profile_activity_add_comment":1,"etype_profile_activity_add_comment":1,"notif_profile_activity_reply_comment":1,"etype_profile_activity_reply_comment":1,"notif_profile_status_update":1,"etype_profile_status_update":1,"notif_profile_like":1,"etype_profile_like":1,"notif_profile_stream_like":1,"etype_profile_stream_like":1,"notif_profle_digest_email":0,"etype_profle_digest_email":1,"notif_friends_request_connection":1,"etype_friends_request_connection":1,"notif_friends_create_connection":1,"etype_friends_create_connection":1,"notif_inbox_create_message":1,"etype_inbox_create_message":1,"notif_users_tagged":1,"etype_users_tagged":1,"notif_groups_invite":1,"etype_groups_invite":1,"notif_groups_discussion_reply":1,"etype_groups_discussion_reply":1,"notif_groups_wall_create":1,"etype_groups_wall_create":1,"notif_groups_create_discussion":1,"etype_groups_create_discussion":1,"notif_groups_create_news":1,"etype_groups_create_news":1,"notif_groups_create_album":1,"etype_groups_create_album":1,"notif_groups_create_video":1,"etype_groups_create_video":1,"notif_groups_create_event":1,"etype_groups_create_event":1,"notif_groups_sendmail":1,"etype_groups_sendmail":1,"notif_groups_member_approved":1,"etype_groups_member_approved":1,"notif_groups_member_join":1,"etype_groups_member_join":1,"notif_groups_notify_creator":1,"etype_groups_notify_creator":1,"notif_groups_discussion_newfile":1,"etype_groups_discussion_newfile":1,"notif_groups_activity_add_comment":1,"etype_groups_activity_add_comment":1,"notif_events_notify_admin":1,"etype_events_notify_admin":1,"notif_events_invite":1,"etype_events_invite":1,"notif_events_invitation_approved":1,"etype_events_invitation_approved":1,"notif_events_sendmail":1,"etype_events_sendmail":1,"notif_event_notify_creator":0,"etype_event_notify_creator":0,"notif_event_join_request":1,"etype_event_join_request":1,"notif_events_activity_add_comment":0,"etype_events_activity_add_comment":0,"notif_events_wall_create":1,"etype_events_wall_create":1,"notif_videos_submit_wall":1,"etype_videos_submit_wall":1,"notif_videos_reply_wall":1,"etype_videos_reply_wall":1,"notif_videos_tagging":1,"etype_videos_tagging":1,"notif_videos_like":1,"etype_videos_like":1,"notif_videos_convert_success":1,"etype_videos_convert_success":1,"notif_photos_submit_wall":1,"etype_photos_submit_wall":1,"notif_photos_reply_wall":1,"etype_photos_reply_wall":1,"notif_photos_tagging":1,"etype_photos_tagging":1,"notif_photos_like":1,"etype_photos_like":1,"notif_system_messaging":1,"etype_system_messaging":1,"postFacebookStatus":0}', 0, '', '', '', 0, '51:support', 255.000000, 255.000000, 0, 'file', '', 1, 1, NULL),
 	(50, '', 0, 0, '0000-00-00 00:00:00', 'images/watermarks/ee5b71d4bbdc1d36ab1338da.jpg', 'images/watermarks/thumb_ee5b71d4bbdc1d36ab1338da.jpg', '', 0, '{"notifyEmailSystem":1,"privacyPrivateMessage":10,"privacyFriendRequest":10,"privacyProfileView":0,"privacyPhotoView":0,"privacyFriendsView":0,"privacyGroupsView":"","privacyVideoView":0,"notifyEmailMessage":1,"notifyEmailApps":1,"notifyWallComment":0,"invitorId":0,"postFacebookStatus":0}', 0, '', '', '', 0, '50:test2', 255.000000, 255.000000, 0, 'file', '', 1, 1, NULL),
 	(49, 'Жизнь прекрасна!!! ))', 10, 6, '2018-05-12 11:31:46', 'images/watermarks/ee5b71d4bbdc1d36ab1338da.jpg', 'images/watermarks/thumb_ee5b71d4bbdc1d36ab1338da.jpg', '', 0, '{"notifyEmailSystem":1,"privacyPrivateMessage":10,"privacyFriendRequest":10,"privacyProfileView":0,"privacyPhotoView":0,"privacyFriendsView":0,"privacyGroupsView":"","privacyVideoView":0,"notifyEmailMessage":1,"notifyEmailApps":1,"notifyWallComment":0,"invitorId":0,"postFacebookStatus":0,"lastnotificationlist":"2018-05-14 07:15:43","group_activity_1":"1"}', 2, '', '1', '', 0, '49:test', 0.000000, 0.000000, 0, 'file', '', 1, 1, NULL),
-	(48, '', 0, 0, '0000-00-00 00:00:00', 'images/watermarks/ee5b71d4bbdc1d36ab1338da.jpg', 'images/watermarks/thumb_ee5b71d4bbdc1d36ab1338da.jpg', '', 0, '{"notifyEmailSystem":1,"privacyPrivateMessage":10,"privacyFriendRequest":10,"privacyProfileView":0,"privacyPhotoView":0,"privacyFriendsView":0,"privacyGroupsView":"","privacyVideoView":0,"notifyEmailMessage":1,"notifyEmailApps":1,"notifyWallComment":0,"invitorId":0,"postFacebookStatus":0}', 2, '', '', '', 0, '48:super-user', 255.000000, 255.000000, 0, 'file', '', 1, 1, NULL),
+	(48, '', 0, 0, '0000-00-00 00:00:00', 'images/watermarks/ee5b71d4bbdc1d36ab1338da.jpg', 'images/watermarks/thumb_ee5b71d4bbdc1d36ab1338da.jpg', '', 0, '{"notifyEmailSystem":1,"privacyPrivateMessage":10,"privacyFriendRequest":10,"privacyProfileView":0,"privacyPhotoView":0,"privacyFriendsView":0,"privacyGroupsView":"","privacyVideoView":0,"notifyEmailMessage":1,"notifyEmailApps":1,"notifyWallComment":0,"invitorId":0,"postFacebookStatus":0,"daylightsavingoffset":"0"}', 2, '', '', '', 0, '48:super-user', 0.000000, 0.000000, 4, 'file', '', 1, 1, '8'),
 	(52, '', 0, 1, '0000-00-00 00:00:00', 'images/watermarks/ee5b71d4bbdc1d36ab1338da.jpg', 'images/watermarks/thumb_ee5b71d4bbdc1d36ab1338da.jpg', '', 0, '{"notifyEmailSystem":1,"privacyPrivateMessage":10,"privacyFriendRequest":10,"privacyProfileView":0,"privacyPhotoView":0,"privacyFriendsView":0,"privacyGroupsView":"","privacyVideoView":0,"notifyEmailMessage":1,"notifyEmailApps":1,"notifyWallComment":0,"invitorId":0,"notif_groups_notify_admin":1,"etype_groups_notify_admin":1,"notif_user_profile_delete":1,"etype_user_profile_delete":1,"notif_system_reports_threshold":1,"etype_system_reports_threshold":1,"notif_profile_activity_add_comment":1,"etype_profile_activity_add_comment":1,"notif_profile_activity_reply_comment":1,"etype_profile_activity_reply_comment":1,"notif_profile_status_update":1,"etype_profile_status_update":1,"notif_profile_like":1,"etype_profile_like":1,"notif_profile_stream_like":1,"etype_profile_stream_like":1,"notif_profle_digest_email":0,"etype_profle_digest_email":1,"notif_friends_request_connection":1,"etype_friends_request_connection":1,"notif_friends_create_connection":1,"etype_friends_create_connection":1,"notif_inbox_create_message":1,"etype_inbox_create_message":1,"notif_users_tagged":1,"etype_users_tagged":1,"notif_groups_invite":1,"etype_groups_invite":1,"notif_groups_discussion_reply":1,"etype_groups_discussion_reply":1,"notif_groups_wall_create":1,"etype_groups_wall_create":1,"notif_groups_create_discussion":1,"etype_groups_create_discussion":1,"notif_groups_create_news":1,"etype_groups_create_news":1,"notif_groups_create_album":1,"etype_groups_create_album":1,"notif_groups_create_video":1,"etype_groups_create_video":1,"notif_groups_create_event":1,"etype_groups_create_event":1,"notif_groups_sendmail":1,"etype_groups_sendmail":1,"notif_groups_member_approved":1,"etype_groups_member_approved":1,"notif_groups_member_join":1,"etype_groups_member_join":1,"notif_groups_notify_creator":1,"etype_groups_notify_creator":1,"notif_groups_discussion_newfile":1,"etype_groups_discussion_newfile":1,"notif_groups_activity_add_comment":1,"etype_groups_activity_add_comment":1,"notif_events_notify_admin":1,"etype_events_notify_admin":1,"notif_events_invite":1,"etype_events_invite":1,"notif_events_invitation_approved":1,"etype_events_invitation_approved":1,"notif_events_sendmail":1,"etype_events_sendmail":1,"notif_event_notify_creator":0,"etype_event_notify_creator":0,"notif_event_join_request":1,"etype_event_join_request":1,"notif_events_activity_add_comment":0,"etype_events_activity_add_comment":0,"notif_events_wall_create":1,"etype_events_wall_create":1,"notif_videos_submit_wall":1,"etype_videos_submit_wall":1,"notif_videos_reply_wall":1,"etype_videos_reply_wall":1,"notif_videos_tagging":1,"etype_videos_tagging":1,"notif_videos_like":1,"etype_videos_like":1,"notif_videos_convert_success":1,"etype_videos_convert_success":1,"notif_photos_submit_wall":1,"etype_photos_submit_wall":1,"notif_photos_reply_wall":1,"etype_photos_reply_wall":1,"notif_photos_tagging":1,"etype_photos_tagging":1,"notif_photos_like":1,"etype_photos_like":1,"notif_system_messaging":1,"etype_system_messaging":1,"postFacebookStatus":0,"lastnotificationlist":"2018-05-14 08:15:16","group_activity_1":"1"}', 1, '', '', '', 0, '52:pitomnik', 53.904541, 27.561523, 2, 'file', '', 1, 1, '11'),
-	(53, '', 0, 2, '0000-00-00 00:00:00', '', '', '', 0, '{"notifyEmailSystem":1,"privacyPrivateMessage":10,"privacyFriendRequest":10,"privacyProfileView":0,"privacyPhotoView":0,"privacyFriendsView":0,"privacyGroupsView":"","privacyVideoView":0,"notifyEmailMessage":1,"notifyEmailApps":1,"notifyWallComment":0,"invitorId":0,"notif_groups_notify_admin":1,"etype_groups_notify_admin":1,"notif_user_profile_delete":1,"etype_user_profile_delete":1,"notif_system_reports_threshold":1,"etype_system_reports_threshold":1,"notif_profile_activity_add_comment":1,"etype_profile_activity_add_comment":1,"notif_profile_activity_reply_comment":1,"etype_profile_activity_reply_comment":1,"notif_profile_status_update":1,"etype_profile_status_update":1,"notif_profile_like":1,"etype_profile_like":1,"notif_profile_stream_like":1,"etype_profile_stream_like":1,"notif_profle_digest_email":0,"etype_profle_digest_email":1,"notif_friends_request_connection":1,"etype_friends_request_connection":1,"notif_friends_create_connection":1,"etype_friends_create_connection":1,"notif_inbox_create_message":1,"etype_inbox_create_message":1,"notif_users_tagged":1,"etype_users_tagged":1,"notif_groups_invite":1,"etype_groups_invite":1,"notif_groups_discussion_reply":1,"etype_groups_discussion_reply":1,"notif_groups_wall_create":1,"etype_groups_wall_create":1,"notif_groups_create_discussion":1,"etype_groups_create_discussion":1,"notif_groups_create_news":1,"etype_groups_create_news":1,"notif_groups_create_album":1,"etype_groups_create_album":1,"notif_groups_create_video":1,"etype_groups_create_video":1,"notif_groups_create_event":1,"etype_groups_create_event":1,"notif_groups_sendmail":1,"etype_groups_sendmail":1,"notif_groups_member_approved":1,"etype_groups_member_approved":1,"notif_groups_member_join":1,"etype_groups_member_join":1,"notif_groups_notify_creator":1,"etype_groups_notify_creator":1,"notif_groups_discussion_newfile":1,"etype_groups_discussion_newfile":1,"notif_groups_activity_add_comment":1,"etype_groups_activity_add_comment":1,"notif_events_notify_admin":1,"etype_events_notify_admin":1,"notif_events_invite":1,"etype_events_invite":1,"notif_events_invitation_approved":1,"etype_events_invitation_approved":1,"notif_events_sendmail":1,"etype_events_sendmail":1,"notif_event_notify_creator":0,"etype_event_notify_creator":0,"notif_event_join_request":1,"etype_event_join_request":1,"notif_events_activity_add_comment":0,"etype_events_activity_add_comment":0,"notif_events_wall_create":1,"etype_events_wall_create":1,"notif_system_messaging":1,"etype_system_messaging":1,"postFacebookStatus":"0"}', 0, '', '', '', 0, '53:vistavka', 53.904541, 27.561523, 3, 'file', '', 1, 1, '12');
+	(53, '', 0, 2, '0000-00-00 00:00:00', 'images/watermarks/026d40f69b46162e4743ab72.jpg', 'images/watermarks/thumb_026d40f69b46162e4743ab72.jpg', '', 0, '{"notifyEmailSystem":1,"privacyPrivateMessage":10,"privacyFriendRequest":10,"privacyProfileView":0,"privacyPhotoView":0,"privacyFriendsView":0,"privacyGroupsView":"","privacyVideoView":0,"notifyEmailMessage":1,"notifyEmailApps":1,"notifyWallComment":0,"invitorId":0,"notif_groups_notify_admin":1,"etype_groups_notify_admin":1,"notif_user_profile_delete":1,"etype_user_profile_delete":1,"notif_system_reports_threshold":1,"etype_system_reports_threshold":1,"notif_profile_activity_add_comment":1,"etype_profile_activity_add_comment":1,"notif_profile_activity_reply_comment":1,"etype_profile_activity_reply_comment":1,"notif_profile_status_update":1,"etype_profile_status_update":1,"notif_profile_like":1,"etype_profile_like":1,"notif_profile_stream_like":1,"etype_profile_stream_like":1,"notif_profle_digest_email":0,"etype_profle_digest_email":1,"notif_friends_request_connection":1,"etype_friends_request_connection":1,"notif_friends_create_connection":1,"etype_friends_create_connection":1,"notif_inbox_create_message":1,"etype_inbox_create_message":1,"notif_users_tagged":1,"etype_users_tagged":1,"notif_groups_invite":1,"etype_groups_invite":1,"notif_groups_discussion_reply":1,"etype_groups_discussion_reply":1,"notif_groups_wall_create":1,"etype_groups_wall_create":1,"notif_groups_create_discussion":1,"etype_groups_create_discussion":1,"notif_groups_create_news":1,"etype_groups_create_news":1,"notif_groups_create_album":1,"etype_groups_create_album":1,"notif_groups_create_video":1,"etype_groups_create_video":1,"notif_groups_create_event":1,"etype_groups_create_event":1,"notif_groups_sendmail":1,"etype_groups_sendmail":1,"notif_groups_member_approved":1,"etype_groups_member_approved":1,"notif_groups_member_join":1,"etype_groups_member_join":1,"notif_groups_notify_creator":1,"etype_groups_notify_creator":1,"notif_groups_discussion_newfile":1,"etype_groups_discussion_newfile":1,"notif_groups_activity_add_comment":1,"etype_groups_activity_add_comment":1,"notif_events_notify_admin":1,"etype_events_notify_admin":1,"notif_events_invite":1,"etype_events_invite":1,"notif_events_invitation_approved":1,"etype_events_invitation_approved":1,"notif_events_sendmail":1,"etype_events_sendmail":1,"notif_event_notify_creator":0,"etype_event_notify_creator":0,"notif_event_join_request":1,"etype_event_join_request":1,"notif_events_activity_add_comment":0,"etype_events_activity_add_comment":0,"notif_events_wall_create":1,"etype_events_wall_create":1,"notif_system_messaging":1,"etype_system_messaging":1,"postFacebookStatus":"0"}', 0, '', '', '', 0, '53:vistavka', 53.904541, 27.561523, 3, 'file', '', 1, 1, '12');
 /*!40000 ALTER TABLE `gy3te_community_users` ENABLE KEYS */;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_user_invites
-DROP TABLE IF EXISTS `gy3te_community_user_invites`;
 CREATE TABLE IF NOT EXISTS `gy3te_community_user_invites` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(250) NOT NULL,
@@ -1945,7 +1883,6 @@ DELETE FROM `gy3te_community_user_invites`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_user_status
-DROP TABLE IF EXISTS `gy3te_community_user_status`;
 CREATE TABLE IF NOT EXISTS `gy3te_community_user_status` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `userid` int(11) NOT NULL,
@@ -1965,7 +1902,6 @@ DELETE FROM `gy3te_community_user_status`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_videos
-DROP TABLE IF EXISTS `gy3te_community_videos`;
 CREATE TABLE IF NOT EXISTS `gy3te_community_videos` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `title` varchar(200) NOT NULL,
@@ -2005,7 +1941,6 @@ DELETE FROM `gy3te_community_videos`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_videos_category
-DROP TABLE IF EXISTS `gy3te_community_videos_category`;
 CREATE TABLE IF NOT EXISTS `gy3te_community_videos_category` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `parent` int(11) NOT NULL,
@@ -2024,7 +1959,6 @@ INSERT INTO `gy3te_community_videos_category` (`id`, `parent`, `name`, `descript
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_videos_tag
-DROP TABLE IF EXISTS `gy3te_community_videos_tag`;
 CREATE TABLE IF NOT EXISTS `gy3te_community_videos_tag` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `videoid` int(11) NOT NULL,
@@ -2042,7 +1976,6 @@ DELETE FROM `gy3te_community_videos_tag`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_video_stats
-DROP TABLE IF EXISTS `gy3te_community_video_stats`;
 CREATE TABLE IF NOT EXISTS `gy3te_community_video_stats` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `vid` int(11) NOT NULL,
@@ -2061,7 +1994,6 @@ DELETE FROM `gy3te_community_video_stats`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_wall
-DROP TABLE IF EXISTS `gy3te_community_wall`;
 CREATE TABLE IF NOT EXISTS `gy3te_community_wall` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `contentid` int(10) unsigned NOT NULL DEFAULT '0',
@@ -2084,7 +2016,6 @@ DELETE FROM `gy3te_community_wall`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_contact_details
-DROP TABLE IF EXISTS `gy3te_contact_details`;
 CREATE TABLE IF NOT EXISTS `gy3te_contact_details` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -2147,7 +2078,6 @@ DELETE FROM `gy3te_contact_details`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_content
-DROP TABLE IF EXISTS `gy3te_content`;
 CREATE TABLE IF NOT EXISTS `gy3te_content` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `asset_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'FK to the #__assets table.',
@@ -2198,7 +2128,6 @@ DELETE FROM `gy3te_content`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_contentitem_tag_map
-DROP TABLE IF EXISTS `gy3te_contentitem_tag_map`;
 CREATE TABLE IF NOT EXISTS `gy3te_contentitem_tag_map` (
   `type_alias` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `core_content_id` int(10) unsigned NOT NULL COMMENT 'PK from the core content table',
@@ -2219,7 +2148,6 @@ DELETE FROM `gy3te_contentitem_tag_map`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_content_frontpage
-DROP TABLE IF EXISTS `gy3te_content_frontpage`;
 CREATE TABLE IF NOT EXISTS `gy3te_content_frontpage` (
   `content_id` int(11) NOT NULL DEFAULT '0',
   `ordering` int(11) NOT NULL DEFAULT '0',
@@ -2233,7 +2161,6 @@ DELETE FROM `gy3te_content_frontpage`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_content_rating
-DROP TABLE IF EXISTS `gy3te_content_rating`;
 CREATE TABLE IF NOT EXISTS `gy3te_content_rating` (
   `content_id` int(11) NOT NULL DEFAULT '0',
   `rating_sum` int(10) unsigned NOT NULL DEFAULT '0',
@@ -2249,7 +2176,6 @@ DELETE FROM `gy3te_content_rating`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_content_types
-DROP TABLE IF EXISTS `gy3te_content_types`;
 CREATE TABLE IF NOT EXISTS `gy3te_content_types` (
   `type_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `type_title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
@@ -2284,7 +2210,6 @@ INSERT INTO `gy3te_content_types` (`type_id`, `type_title`, `type_alias`, `table
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_core_log_searches
-DROP TABLE IF EXISTS `gy3te_core_log_searches`;
 CREATE TABLE IF NOT EXISTS `gy3te_core_log_searches` (
   `search_term` varchar(128) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `hits` int(10) unsigned NOT NULL DEFAULT '0'
@@ -2297,7 +2222,6 @@ DELETE FROM `gy3te_core_log_searches`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_extensions
-DROP TABLE IF EXISTS `gy3te_extensions`;
 CREATE TABLE IF NOT EXISTS `gy3te_extensions` (
   `extension_id` int(11) NOT NULL AUTO_INCREMENT,
   `package_id` int(11) NOT NULL DEFAULT '0' COMMENT 'Parent package ID for extensions installed as a package.',
@@ -2641,7 +2565,6 @@ INSERT INTO `gy3te_extensions` (`extension_id`, `package_id`, `name`, `type`, `e
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_fields
-DROP TABLE IF EXISTS `gy3te_fields`;
 CREATE TABLE IF NOT EXISTS `gy3te_fields` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `asset_id` int(10) unsigned NOT NULL DEFAULT '0',
@@ -2683,7 +2606,6 @@ DELETE FROM `gy3te_fields`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_fields_categories
-DROP TABLE IF EXISTS `gy3te_fields_categories`;
 CREATE TABLE IF NOT EXISTS `gy3te_fields_categories` (
   `field_id` int(11) NOT NULL DEFAULT '0',
   `category_id` int(11) NOT NULL DEFAULT '0',
@@ -2697,7 +2619,6 @@ DELETE FROM `gy3te_fields_categories`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_fields_groups
-DROP TABLE IF EXISTS `gy3te_fields_groups`;
 CREATE TABLE IF NOT EXISTS `gy3te_fields_groups` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `asset_id` int(10) unsigned NOT NULL DEFAULT '0',
@@ -2732,7 +2653,6 @@ DELETE FROM `gy3te_fields_groups`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_fields_values
-DROP TABLE IF EXISTS `gy3te_fields_values`;
 CREATE TABLE IF NOT EXISTS `gy3te_fields_values` (
   `field_id` int(10) unsigned NOT NULL,
   `item_id` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'Allow references to items which have strings as ids, eg. none db systems.',
@@ -2748,7 +2668,6 @@ DELETE FROM `gy3te_fields_values`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_finder_filters
-DROP TABLE IF EXISTS `gy3te_finder_filters`;
 CREATE TABLE IF NOT EXISTS `gy3te_finder_filters` (
   `filter_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `title` varchar(255) NOT NULL,
@@ -2774,7 +2693,6 @@ DELETE FROM `gy3te_finder_filters`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_finder_links
-DROP TABLE IF EXISTS `gy3te_finder_links`;
 CREATE TABLE IF NOT EXISTS `gy3te_finder_links` (
   `link_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `url` varchar(255) NOT NULL,
@@ -2811,7 +2729,6 @@ DELETE FROM `gy3te_finder_links`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_finder_links_terms0
-DROP TABLE IF EXISTS `gy3te_finder_links_terms0`;
 CREATE TABLE IF NOT EXISTS `gy3te_finder_links_terms0` (
   `link_id` int(10) unsigned NOT NULL,
   `term_id` int(10) unsigned NOT NULL,
@@ -2828,7 +2745,6 @@ DELETE FROM `gy3te_finder_links_terms0`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_finder_links_terms1
-DROP TABLE IF EXISTS `gy3te_finder_links_terms1`;
 CREATE TABLE IF NOT EXISTS `gy3te_finder_links_terms1` (
   `link_id` int(10) unsigned NOT NULL,
   `term_id` int(10) unsigned NOT NULL,
@@ -2845,7 +2761,6 @@ DELETE FROM `gy3te_finder_links_terms1`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_finder_links_terms2
-DROP TABLE IF EXISTS `gy3te_finder_links_terms2`;
 CREATE TABLE IF NOT EXISTS `gy3te_finder_links_terms2` (
   `link_id` int(10) unsigned NOT NULL,
   `term_id` int(10) unsigned NOT NULL,
@@ -2862,7 +2777,6 @@ DELETE FROM `gy3te_finder_links_terms2`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_finder_links_terms3
-DROP TABLE IF EXISTS `gy3te_finder_links_terms3`;
 CREATE TABLE IF NOT EXISTS `gy3te_finder_links_terms3` (
   `link_id` int(10) unsigned NOT NULL,
   `term_id` int(10) unsigned NOT NULL,
@@ -2879,7 +2793,6 @@ DELETE FROM `gy3te_finder_links_terms3`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_finder_links_terms4
-DROP TABLE IF EXISTS `gy3te_finder_links_terms4`;
 CREATE TABLE IF NOT EXISTS `gy3te_finder_links_terms4` (
   `link_id` int(10) unsigned NOT NULL,
   `term_id` int(10) unsigned NOT NULL,
@@ -2896,7 +2809,6 @@ DELETE FROM `gy3te_finder_links_terms4`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_finder_links_terms5
-DROP TABLE IF EXISTS `gy3te_finder_links_terms5`;
 CREATE TABLE IF NOT EXISTS `gy3te_finder_links_terms5` (
   `link_id` int(10) unsigned NOT NULL,
   `term_id` int(10) unsigned NOT NULL,
@@ -2913,7 +2825,6 @@ DELETE FROM `gy3te_finder_links_terms5`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_finder_links_terms6
-DROP TABLE IF EXISTS `gy3te_finder_links_terms6`;
 CREATE TABLE IF NOT EXISTS `gy3te_finder_links_terms6` (
   `link_id` int(10) unsigned NOT NULL,
   `term_id` int(10) unsigned NOT NULL,
@@ -2930,7 +2841,6 @@ DELETE FROM `gy3te_finder_links_terms6`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_finder_links_terms7
-DROP TABLE IF EXISTS `gy3te_finder_links_terms7`;
 CREATE TABLE IF NOT EXISTS `gy3te_finder_links_terms7` (
   `link_id` int(10) unsigned NOT NULL,
   `term_id` int(10) unsigned NOT NULL,
@@ -2947,7 +2857,6 @@ DELETE FROM `gy3te_finder_links_terms7`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_finder_links_terms8
-DROP TABLE IF EXISTS `gy3te_finder_links_terms8`;
 CREATE TABLE IF NOT EXISTS `gy3te_finder_links_terms8` (
   `link_id` int(10) unsigned NOT NULL,
   `term_id` int(10) unsigned NOT NULL,
@@ -2964,7 +2873,6 @@ DELETE FROM `gy3te_finder_links_terms8`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_finder_links_terms9
-DROP TABLE IF EXISTS `gy3te_finder_links_terms9`;
 CREATE TABLE IF NOT EXISTS `gy3te_finder_links_terms9` (
   `link_id` int(10) unsigned NOT NULL,
   `term_id` int(10) unsigned NOT NULL,
@@ -2981,7 +2889,6 @@ DELETE FROM `gy3te_finder_links_terms9`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_finder_links_termsa
-DROP TABLE IF EXISTS `gy3te_finder_links_termsa`;
 CREATE TABLE IF NOT EXISTS `gy3te_finder_links_termsa` (
   `link_id` int(10) unsigned NOT NULL,
   `term_id` int(10) unsigned NOT NULL,
@@ -2998,7 +2905,6 @@ DELETE FROM `gy3te_finder_links_termsa`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_finder_links_termsb
-DROP TABLE IF EXISTS `gy3te_finder_links_termsb`;
 CREATE TABLE IF NOT EXISTS `gy3te_finder_links_termsb` (
   `link_id` int(10) unsigned NOT NULL,
   `term_id` int(10) unsigned NOT NULL,
@@ -3015,7 +2921,6 @@ DELETE FROM `gy3te_finder_links_termsb`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_finder_links_termsc
-DROP TABLE IF EXISTS `gy3te_finder_links_termsc`;
 CREATE TABLE IF NOT EXISTS `gy3te_finder_links_termsc` (
   `link_id` int(10) unsigned NOT NULL,
   `term_id` int(10) unsigned NOT NULL,
@@ -3032,7 +2937,6 @@ DELETE FROM `gy3te_finder_links_termsc`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_finder_links_termsd
-DROP TABLE IF EXISTS `gy3te_finder_links_termsd`;
 CREATE TABLE IF NOT EXISTS `gy3te_finder_links_termsd` (
   `link_id` int(10) unsigned NOT NULL,
   `term_id` int(10) unsigned NOT NULL,
@@ -3049,7 +2953,6 @@ DELETE FROM `gy3te_finder_links_termsd`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_finder_links_termse
-DROP TABLE IF EXISTS `gy3te_finder_links_termse`;
 CREATE TABLE IF NOT EXISTS `gy3te_finder_links_termse` (
   `link_id` int(10) unsigned NOT NULL,
   `term_id` int(10) unsigned NOT NULL,
@@ -3066,7 +2969,6 @@ DELETE FROM `gy3te_finder_links_termse`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_finder_links_termsf
-DROP TABLE IF EXISTS `gy3te_finder_links_termsf`;
 CREATE TABLE IF NOT EXISTS `gy3te_finder_links_termsf` (
   `link_id` int(10) unsigned NOT NULL,
   `term_id` int(10) unsigned NOT NULL,
@@ -3083,7 +2985,6 @@ DELETE FROM `gy3te_finder_links_termsf`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_finder_taxonomy
-DROP TABLE IF EXISTS `gy3te_finder_taxonomy`;
 CREATE TABLE IF NOT EXISTS `gy3te_finder_taxonomy` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `parent_id` int(10) unsigned NOT NULL DEFAULT '0',
@@ -3106,7 +3007,6 @@ DELETE FROM `gy3te_finder_taxonomy`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_finder_taxonomy_map
-DROP TABLE IF EXISTS `gy3te_finder_taxonomy_map`;
 CREATE TABLE IF NOT EXISTS `gy3te_finder_taxonomy_map` (
   `link_id` int(10) unsigned NOT NULL,
   `node_id` int(10) unsigned NOT NULL,
@@ -3122,7 +3022,6 @@ DELETE FROM `gy3te_finder_taxonomy_map`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_finder_terms
-DROP TABLE IF EXISTS `gy3te_finder_terms`;
 CREATE TABLE IF NOT EXISTS `gy3te_finder_terms` (
   `term_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `term` varchar(75) NOT NULL,
@@ -3147,7 +3046,6 @@ DELETE FROM `gy3te_finder_terms`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_finder_terms_common
-DROP TABLE IF EXISTS `gy3te_finder_terms_common`;
 CREATE TABLE IF NOT EXISTS `gy3te_finder_terms_common` (
   `term` varchar(75) NOT NULL,
   `language` varchar(3) NOT NULL,
@@ -3273,7 +3171,6 @@ INSERT INTO `gy3te_finder_terms_common` (`term`, `language`) VALUES
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_finder_tokens
-DROP TABLE IF EXISTS `gy3te_finder_tokens`;
 CREATE TABLE IF NOT EXISTS `gy3te_finder_tokens` (
   `term` varchar(75) NOT NULL,
   `stem` varchar(75) NOT NULL,
@@ -3293,7 +3190,6 @@ DELETE FROM `gy3te_finder_tokens`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_finder_tokens_aggregate
-DROP TABLE IF EXISTS `gy3te_finder_tokens_aggregate`;
 CREATE TABLE IF NOT EXISTS `gy3te_finder_tokens_aggregate` (
   `term_id` int(10) unsigned NOT NULL,
   `map_suffix` char(1) NOT NULL,
@@ -3317,7 +3213,6 @@ DELETE FROM `gy3te_finder_tokens_aggregate`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_finder_types
-DROP TABLE IF EXISTS `gy3te_finder_types`;
 CREATE TABLE IF NOT EXISTS `gy3te_finder_types` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `title` varchar(100) NOT NULL,
@@ -3333,7 +3228,6 @@ DELETE FROM `gy3te_finder_types`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_js_ip_2_country
-DROP TABLE IF EXISTS `gy3te_js_ip_2_country`;
 CREATE TABLE IF NOT EXISTS `gy3te_js_ip_2_country` (
   `ip_from` int(10) NOT NULL DEFAULT '0',
   `ip_to` int(10) NOT NULL DEFAULT '0',
@@ -3351,7 +3245,6 @@ DELETE FROM `gy3te_js_ip_2_country`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_js_res_audit_log
-DROP TABLE IF EXISTS `gy3te_js_res_audit_log`;
 CREATE TABLE IF NOT EXISTS `gy3te_js_res_audit_log` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `user_id` int(11) NOT NULL DEFAULT '0',
@@ -3377,7 +3270,6 @@ DELETE FROM `gy3te_js_res_audit_log`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_js_res_audit_restore
-DROP TABLE IF EXISTS `gy3te_js_res_audit_restore`;
 CREATE TABLE IF NOT EXISTS `gy3te_js_res_audit_restore` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `record_id` int(11) DEFAULT '0',
@@ -3401,7 +3293,6 @@ DELETE FROM `gy3te_js_res_audit_restore`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_js_res_audit_versions
-DROP TABLE IF EXISTS `gy3te_js_res_audit_versions`;
 CREATE TABLE IF NOT EXISTS `gy3te_js_res_audit_versions` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `user_id` int(11) NOT NULL DEFAULT '0',
@@ -3426,7 +3317,6 @@ DELETE FROM `gy3te_js_res_audit_versions`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_js_res_categories
-DROP TABLE IF EXISTS `gy3te_js_res_categories`;
 CREATE TABLE IF NOT EXISTS `gy3te_js_res_categories` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `asset_id` int(10) NOT NULL DEFAULT '0',
@@ -3478,7 +3368,6 @@ INSERT INTO `gy3te_js_res_categories` (`id`, `asset_id`, `parent_id`, `lft`, `rg
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_js_res_category_filters
-DROP TABLE IF EXISTS `gy3te_js_res_category_filters`;
 CREATE TABLE IF NOT EXISTS `gy3te_js_res_category_filters` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `field_id` int(11) DEFAULT '0',
@@ -3494,7 +3383,6 @@ DELETE FROM `gy3te_js_res_category_filters`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_js_res_category_user
-DROP TABLE IF EXISTS `gy3te_js_res_category_user`;
 CREATE TABLE IF NOT EXISTS `gy3te_js_res_category_user` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `user_id` int(10) NOT NULL DEFAULT '0',
@@ -3530,7 +3418,6 @@ DELETE FROM `gy3te_js_res_category_user`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_js_res_comments
-DROP TABLE IF EXISTS `gy3te_js_res_comments`;
 CREATE TABLE IF NOT EXISTS `gy3te_js_res_comments` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `record_id` int(10) NOT NULL DEFAULT '0',
@@ -3575,7 +3462,6 @@ INSERT INTO `gy3te_js_res_comments` (`id`, `record_id`, `user_id`, `comment`, `c
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_js_res_country
-DROP TABLE IF EXISTS `gy3te_js_res_country`;
 CREATE TABLE IF NOT EXISTS `gy3te_js_res_country` (
   `id` varchar(2) NOT NULL DEFAULT '',
   `name` varchar(64) NOT NULL DEFAULT ''
@@ -3853,7 +3739,6 @@ INSERT INTO `gy3te_js_res_country` (`id`, `name`) VALUES
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_js_res_favorite
-DROP TABLE IF EXISTS `gy3te_js_res_favorite`;
 CREATE TABLE IF NOT EXISTS `gy3te_js_res_favorite` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `user_id` int(10) NOT NULL DEFAULT '0',
@@ -3875,7 +3760,6 @@ INSERT INTO `gy3te_js_res_favorite` (`id`, `user_id`, `record_id`, `ctime`, `sec
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_js_res_fields
-DROP TABLE IF EXISTS `gy3te_js_res_fields`;
 CREATE TABLE IF NOT EXISTS `gy3te_js_res_fields` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `key` varchar(45) DEFAULT NULL,
@@ -3934,7 +3818,6 @@ INSERT INTO `gy3te_js_res_fields` (`id`, `key`, `label`, `type_id`, `field_type`
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_js_res_fields_group
-DROP TABLE IF EXISTS `gy3te_js_res_fields_group`;
 CREATE TABLE IF NOT EXISTS `gy3te_js_res_fields_group` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `title` varchar(250) NOT NULL DEFAULT '',
@@ -3961,7 +3844,6 @@ INSERT INTO `gy3te_js_res_fields_group` (`id`, `title`, `type_id`, `ordering`, `
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_js_res_field_geo
-DROP TABLE IF EXISTS `gy3te_js_res_field_geo`;
 CREATE TABLE IF NOT EXISTS `gy3te_js_res_field_geo` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `country` char(2) DEFAULT NULL,
@@ -3990,7 +3872,6 @@ DELETE FROM `gy3te_js_res_field_geo`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_js_res_field_multilevelselect
-DROP TABLE IF EXISTS `gy3te_js_res_field_multilevelselect`;
 CREATE TABLE IF NOT EXISTS `gy3te_js_res_field_multilevelselect` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(255) DEFAULT NULL,
@@ -4014,7 +3895,6 @@ INSERT INTO `gy3te_js_res_field_multilevelselect` (`id`, `name`, `field_id`, `pa
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_js_res_field_stepaccess
-DROP TABLE IF EXISTS `gy3te_js_res_field_stepaccess`;
 CREATE TABLE IF NOT EXISTS `gy3te_js_res_field_stepaccess` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `user_id` int(11) NOT NULL DEFAULT '0',
@@ -4034,7 +3914,6 @@ DELETE FROM `gy3te_js_res_field_stepaccess`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_js_res_field_telephone
-DROP TABLE IF EXISTS `gy3te_js_res_field_telephone`;
 CREATE TABLE IF NOT EXISTS `gy3te_js_res_field_telephone` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL DEFAULT '',
@@ -4289,7 +4168,6 @@ INSERT INTO `gy3te_js_res_field_telephone` (`id`, `name`, `code2`, `code3`, `pho
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_js_res_files
-DROP TABLE IF EXISTS `gy3te_js_res_files`;
 CREATE TABLE IF NOT EXISTS `gy3te_js_res_files` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `filename` varchar(55) NOT NULL DEFAULT '',
@@ -4331,7 +4209,6 @@ INSERT INTO `gy3te_js_res_files` (`id`, `filename`, `realname`, `ctime`, `saved`
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_js_res_hits
-DROP TABLE IF EXISTS `gy3te_js_res_hits`;
 CREATE TABLE IF NOT EXISTS `gy3te_js_res_hits` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `record_id` int(10) NOT NULL DEFAULT '0',
@@ -4776,7 +4653,6 @@ INSERT INTO `gy3te_js_res_hits` (`id`, `record_id`, `ctime`, `user_id`, `ip`, `s
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_js_res_import
-DROP TABLE IF EXISTS `gy3te_js_res_import`;
 CREATE TABLE IF NOT EXISTS `gy3te_js_res_import` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(40) DEFAULT NULL,
@@ -4795,7 +4671,6 @@ DELETE FROM `gy3te_js_res_import`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_js_res_import_rows
-DROP TABLE IF EXISTS `gy3te_js_res_import_rows`;
 CREATE TABLE IF NOT EXISTS `gy3te_js_res_import_rows` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `import` int(11) DEFAULT '0',
@@ -4812,7 +4687,6 @@ DELETE FROM `gy3te_js_res_import_rows`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_js_res_moderators
-DROP TABLE IF EXISTS `gy3te_js_res_moderators`;
 CREATE TABLE IF NOT EXISTS `gy3te_js_res_moderators` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `user_id` int(11) NOT NULL DEFAULT '0',
@@ -4836,7 +4710,6 @@ DELETE FROM `gy3te_js_res_moderators`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_js_res_notifications
-DROP TABLE IF EXISTS `gy3te_js_res_notifications`;
 CREATE TABLE IF NOT EXISTS `gy3te_js_res_notifications` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `option` varchar(100) NOT NULL DEFAULT '',
@@ -4861,7 +4734,7 @@ CREATE TABLE IF NOT EXISTS `gy3te_js_res_notifications` (
   KEY `idx_ruser` (`user_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
--- Дамп данных таблицы prodogsinfo.gy3te_js_res_notifications: ~1 rows (приблизительно)
+-- Дамп данных таблицы prodogsinfo.gy3te_js_res_notifications: ~0 rows (приблизительно)
 DELETE FROM `gy3te_js_res_notifications`;
 /*!40000 ALTER TABLE `gy3te_js_res_notifications` DISABLE KEYS */;
 INSERT INTO `gy3te_js_res_notifications` (`id`, `option`, `type`, `ctime`, `notified`, `alerted`, `params`, `user_id`, `ref_1`, `ref_2`, `ref_3`, `ref_4`, `ref_5`, `html`, `num`, `state_new`, `eventer`) VALUES
@@ -4870,7 +4743,6 @@ INSERT INTO `gy3te_js_res_notifications` (`id`, `option`, `type`, `ctime`, `noti
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_js_res_packs
-DROP TABLE IF EXISTS `gy3te_js_res_packs`;
 CREATE TABLE IF NOT EXISTS `gy3te_js_res_packs` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL DEFAULT '',
@@ -4903,7 +4775,6 @@ INSERT INTO `gy3te_js_res_packs` (`id`, `name`, `description`, `key`, `addkey`, 
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_js_res_packs_sections
-DROP TABLE IF EXISTS `gy3te_js_res_packs_sections`;
 CREATE TABLE IF NOT EXISTS `gy3te_js_res_packs_sections` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `pack_id` int(11) NOT NULL DEFAULT '0',
@@ -4922,7 +4793,6 @@ INSERT INTO `gy3te_js_res_packs_sections` (`id`, `pack_id`, `section_id`, `param
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_js_res_polls
-DROP TABLE IF EXISTS `gy3te_js_res_polls`;
 CREATE TABLE IF NOT EXISTS `gy3te_js_res_polls` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `question` varchar(255) NOT NULL DEFAULT '',
@@ -4942,7 +4812,6 @@ DELETE FROM `gy3te_js_res_polls`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_js_res_record
-DROP TABLE IF EXISTS `gy3te_js_res_record`;
 CREATE TABLE IF NOT EXISTS `gy3te_js_res_record` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `title` varchar(255) NOT NULL DEFAULT '',
@@ -5022,7 +4891,6 @@ INSERT INTO `gy3te_js_res_record` (`id`, `title`, `published`, `access`, `params
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_js_res_record_category
-DROP TABLE IF EXISTS `gy3te_js_res_record_category`;
 CREATE TABLE IF NOT EXISTS `gy3te_js_res_record_category` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `catid` int(10) NOT NULL DEFAULT '0',
@@ -5044,7 +4912,6 @@ DELETE FROM `gy3te_js_res_record_category`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_js_res_record_repost
-DROP TABLE IF EXISTS `gy3te_js_res_record_repost`;
 CREATE TABLE IF NOT EXISTS `gy3te_js_res_record_repost` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `host_id` int(11) NOT NULL DEFAULT '0',
@@ -5067,7 +4934,6 @@ INSERT INTO `gy3te_js_res_record_repost` (`id`, `host_id`, `record_id`, `ctime`,
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_js_res_record_values
-DROP TABLE IF EXISTS `gy3te_js_res_record_values`;
 CREATE TABLE IF NOT EXISTS `gy3te_js_res_record_values` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `field_id` int(10) NOT NULL DEFAULT '0',
@@ -5124,7 +4990,6 @@ INSERT INTO `gy3te_js_res_record_values` (`id`, `field_id`, `field_key`, `field_
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_js_res_sales
-DROP TABLE IF EXISTS `gy3te_js_res_sales`;
 CREATE TABLE IF NOT EXISTS `gy3te_js_res_sales` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `user_id` int(11) NOT NULL DEFAULT '0',
@@ -5158,7 +5023,6 @@ DELETE FROM `gy3te_js_res_sales`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_js_res_sections
-DROP TABLE IF EXISTS `gy3te_js_res_sections`;
 CREATE TABLE IF NOT EXISTS `gy3te_js_res_sections` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `asset_id` int(10) NOT NULL DEFAULT '0',
@@ -5192,7 +5056,6 @@ INSERT INTO `gy3te_js_res_sections` (`id`, `asset_id`, `name`, `title`, `alias`,
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_js_res_subscribe
-DROP TABLE IF EXISTS `gy3te_js_res_subscribe`;
 CREATE TABLE IF NOT EXISTS `gy3te_js_res_subscribe` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `user_id` int(11) NOT NULL DEFAULT '0',
@@ -5218,7 +5081,6 @@ INSERT INTO `gy3te_js_res_subscribe` (`id`, `user_id`, `ref_id`, `ctime`, `type`
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_js_res_subscribe_cat
-DROP TABLE IF EXISTS `gy3te_js_res_subscribe_cat`;
 CREATE TABLE IF NOT EXISTS `gy3te_js_res_subscribe_cat` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `cat_id` int(11) NOT NULL DEFAULT '0',
@@ -5239,7 +5101,6 @@ DELETE FROM `gy3te_js_res_subscribe_cat`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_js_res_subscribe_user
-DROP TABLE IF EXISTS `gy3te_js_res_subscribe_user`;
 CREATE TABLE IF NOT EXISTS `gy3te_js_res_subscribe_user` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `u_id` int(11) NOT NULL DEFAULT '0',
@@ -5253,7 +5114,7 @@ CREATE TABLE IF NOT EXISTS `gy3te_js_res_subscribe_user` (
   KEY `idx_cat` (`u_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
--- Дамп данных таблицы prodogsinfo.gy3te_js_res_subscribe_user: ~1 rows (приблизительно)
+-- Дамп данных таблицы prodogsinfo.gy3te_js_res_subscribe_user: ~0 rows (приблизительно)
 DELETE FROM `gy3te_js_res_subscribe_user`;
 /*!40000 ALTER TABLE `gy3te_js_res_subscribe_user` DISABLE KEYS */;
 INSERT INTO `gy3te_js_res_subscribe_user` (`id`, `u_id`, `section_id`, `user_id`, `exclude`, `ctime`) VALUES
@@ -5262,7 +5123,6 @@ INSERT INTO `gy3te_js_res_subscribe_user` (`id`, `u_id`, `section_id`, `user_id`
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_js_res_tags
-DROP TABLE IF EXISTS `gy3te_js_res_tags`;
 CREATE TABLE IF NOT EXISTS `gy3te_js_res_tags` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `tag` varchar(50) NOT NULL DEFAULT '',
@@ -5279,7 +5139,6 @@ DELETE FROM `gy3te_js_res_tags`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_js_res_tags_history
-DROP TABLE IF EXISTS `gy3te_js_res_tags_history`;
 CREATE TABLE IF NOT EXISTS `gy3te_js_res_tags_history` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `record_id` int(10) NOT NULL DEFAULT '0',
@@ -5302,7 +5161,6 @@ DELETE FROM `gy3te_js_res_tags_history`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_js_res_types
-DROP TABLE IF EXISTS `gy3te_js_res_types`;
 CREATE TABLE IF NOT EXISTS `gy3te_js_res_types` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(100) NOT NULL DEFAULT '',
@@ -5332,7 +5190,6 @@ INSERT INTO `gy3te_js_res_types` (`id`, `name`, `params`, `checked_out`, `checke
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_js_res_user_options
-DROP TABLE IF EXISTS `gy3te_js_res_user_options`;
 CREATE TABLE IF NOT EXISTS `gy3te_js_res_user_options` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `user_id` int(11) NOT NULL DEFAULT '0',
@@ -5352,7 +5209,6 @@ DELETE FROM `gy3te_js_res_user_options`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_js_res_user_options_autofollow
-DROP TABLE IF EXISTS `gy3te_js_res_user_options_autofollow`;
 CREATE TABLE IF NOT EXISTS `gy3te_js_res_user_options_autofollow` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `user_id` int(11) DEFAULT '0',
@@ -5368,7 +5224,6 @@ DELETE FROM `gy3te_js_res_user_options_autofollow`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_js_res_user_post_map
-DROP TABLE IF EXISTS `gy3te_js_res_user_post_map`;
 CREATE TABLE IF NOT EXISTS `gy3te_js_res_user_post_map` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `user_id` int(11) NOT NULL DEFAULT '0',
@@ -5385,7 +5240,6 @@ DELETE FROM `gy3te_js_res_user_post_map`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_js_res_vote
-DROP TABLE IF EXISTS `gy3te_js_res_vote`;
 CREATE TABLE IF NOT EXISTS `gy3te_js_res_vote` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `user_id` int(10) NOT NULL DEFAULT '0',
@@ -5408,7 +5262,6 @@ DELETE FROM `gy3te_js_res_vote`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_languages
-DROP TABLE IF EXISTS `gy3te_languages`;
 CREATE TABLE IF NOT EXISTS `gy3te_languages` (
   `lang_id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `asset_id` int(10) unsigned NOT NULL DEFAULT '0',
@@ -5441,7 +5294,6 @@ INSERT INTO `gy3te_languages` (`lang_id`, `asset_id`, `lang_code`, `title`, `tit
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_menu
-DROP TABLE IF EXISTS `gy3te_menu`;
 CREATE TABLE IF NOT EXISTS `gy3te_menu` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `menutype` varchar(24) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'The type of menu this item belongs to. FK to #__menu_types.menutype',
@@ -5544,7 +5396,6 @@ INSERT INTO `gy3te_menu` (`id`, `menutype`, `title`, `alias`, `note`, `path`, `l
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_menu_types
-DROP TABLE IF EXISTS `gy3te_menu_types`;
 CREATE TABLE IF NOT EXISTS `gy3te_menu_types` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `asset_id` int(10) unsigned NOT NULL DEFAULT '0',
@@ -5567,7 +5418,6 @@ INSERT INTO `gy3te_menu_types` (`id`, `asset_id`, `menutype`, `title`, `descript
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_messages
-DROP TABLE IF EXISTS `gy3te_messages`;
 CREATE TABLE IF NOT EXISTS `gy3te_messages` (
   `message_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `user_id_from` int(10) unsigned NOT NULL DEFAULT '0',
@@ -5589,7 +5439,6 @@ DELETE FROM `gy3te_messages`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_messages_cfg
-DROP TABLE IF EXISTS `gy3te_messages_cfg`;
 CREATE TABLE IF NOT EXISTS `gy3te_messages_cfg` (
   `user_id` int(10) unsigned NOT NULL DEFAULT '0',
   `cfg_name` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
@@ -5604,7 +5453,6 @@ DELETE FROM `gy3te_messages_cfg`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_modules
-DROP TABLE IF EXISTS `gy3te_modules`;
 CREATE TABLE IF NOT EXISTS `gy3te_modules` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `asset_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'FK to the #__assets table.',
@@ -5681,7 +5529,6 @@ INSERT INTO `gy3te_modules` (`id`, `asset_id`, `title`, `note`, `content`, `orde
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_modules_menu
-DROP TABLE IF EXISTS `gy3te_modules_menu`;
 CREATE TABLE IF NOT EXISTS `gy3te_modules_menu` (
   `moduleid` int(11) NOT NULL DEFAULT '0',
   `menuid` int(11) NOT NULL DEFAULT '0',
@@ -5720,7 +5567,6 @@ INSERT INTO `gy3te_modules_menu` (`moduleid`, `menuid`) VALUES
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_newsfeeds
-DROP TABLE IF EXISTS `gy3te_newsfeeds`;
 CREATE TABLE IF NOT EXISTS `gy3te_newsfeeds` (
   `catid` int(11) NOT NULL DEFAULT '0',
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -5769,7 +5615,6 @@ DELETE FROM `gy3te_newsfeeds`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_overrider
-DROP TABLE IF EXISTS `gy3te_overrider`;
 CREATE TABLE IF NOT EXISTS `gy3te_overrider` (
   `id` int(10) NOT NULL AUTO_INCREMENT COMMENT 'Primary Key',
   `constant` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -5785,7 +5630,6 @@ DELETE FROM `gy3te_overrider`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_postinstall_messages
-DROP TABLE IF EXISTS `gy3te_postinstall_messages`;
 CREATE TABLE IF NOT EXISTS `gy3te_postinstall_messages` (
   `postinstall_message_id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `extension_id` bigint(20) NOT NULL DEFAULT '700' COMMENT 'FK to #__extensions',
@@ -5819,7 +5663,6 @@ INSERT INTO `gy3te_postinstall_messages` (`postinstall_message_id`, `extension_i
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_redirect_links
-DROP TABLE IF EXISTS `gy3te_redirect_links`;
 CREATE TABLE IF NOT EXISTS `gy3te_redirect_links` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `old_url` varchar(2048) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -5843,14 +5686,13 @@ DELETE FROM `gy3te_redirect_links`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_schemas
-DROP TABLE IF EXISTS `gy3te_schemas`;
 CREATE TABLE IF NOT EXISTS `gy3te_schemas` (
   `extension_id` int(11) NOT NULL,
   `version_id` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`extension_id`,`version_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Дамп данных таблицы prodogsinfo.gy3te_schemas: ~1 rows (приблизительно)
+-- Дамп данных таблицы prodogsinfo.gy3te_schemas: ~0 rows (приблизительно)
 DELETE FROM `gy3te_schemas`;
 /*!40000 ALTER TABLE `gy3te_schemas` DISABLE KEYS */;
 INSERT INTO `gy3te_schemas` (`extension_id`, `version_id`) VALUES
@@ -5859,7 +5701,6 @@ INSERT INTO `gy3te_schemas` (`extension_id`, `version_id`) VALUES
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_session
-DROP TABLE IF EXISTS `gy3te_session`;
 CREATE TABLE IF NOT EXISTS `gy3te_session` (
   `session_id` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `client_id` tinyint(3) unsigned DEFAULT NULL,
@@ -5877,13 +5718,12 @@ CREATE TABLE IF NOT EXISTS `gy3te_session` (
 DELETE FROM `gy3te_session`;
 /*!40000 ALTER TABLE `gy3te_session` DISABLE KEYS */;
 INSERT INTO `gy3te_session` (`session_id`, `client_id`, `guest`, `time`, `data`, `userid`, `username`) VALUES
-	('5n7da1gfaevak3ni7gf9mpkro7', 1, 0, '1526456133', 'joomla|s:920:"TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjE6e3M6OToiX19kZWZhdWx0IjtPOjg6InN0ZENsYXNzIjo0OntzOjc6InNlc3Npb24iO086ODoic3RkQ2xhc3MiOjM6e3M6NzoiY291bnRlciI7aTo2O3M6NToidGltZXIiO086ODoic3RkQ2xhc3MiOjM6e3M6NToic3RhcnQiO2k6MTUyNjQ1NjA5OTtzOjQ6Imxhc3QiO2k6MTUyNjQ1NjEzMDtzOjM6Im5vdyI7aToxNTI2NDU2MTMzO31zOjU6InRva2VuIjtzOjMyOiJRRVozOEwxeUNZV1RIVlVaa2t4MlZKVTNNUTQ4UXZScyI7fXM6ODoicmVnaXN0cnkiO086MjQ6Ikpvb21sYVxSZWdpc3RyeVxSZWdpc3RyeSI6Mzp7czo3OiIAKgBkYXRhIjtPOjg6InN0ZENsYXNzIjoxOntzOjEzOiJjb21faW5zdGFsbGVyIjtPOjg6InN0ZENsYXNzIjoyOntzOjc6Im1lc3NhZ2UiO3M6MDoiIjtzOjE3OiJleHRlbnNpb25fbWVzc2FnZSI7czowOiIiO319czoxNDoiACoAaW5pdGlhbGl6ZWQiO2I6MDtzOjk6InNlcGFyYXRvciI7czoxOiIuIjt9czo0OiJ1c2VyIjtPOjIwOiJKb29tbGFcQ01TXFVzZXJcVXNlciI6MTp7czoyOiJpZCI7czoyOiI0OCI7fXM6MTY6ImpvbXNvY2lhbF91c2VyaXAiO3M6OToiMTI3LjAuMC4xIjt9fXM6MTQ6IgAqAGluaXRpYWxpemVkIjtiOjA7czo5OiJzZXBhcmF0b3IiO3M6MToiLiI7fQ==";', 48, 'dimavz'),
-	('mgu5keu6qg84c6s4pf55n7rhb4', 0, 1, '1526456123', 'joomla|s:788:"TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjE6e3M6OToiX19kZWZhdWx0IjtPOjg6InN0ZENsYXNzIjo0OntzOjc6InNlc3Npb24iO086ODoic3RkQ2xhc3MiOjM6e3M6NzoiY291bnRlciI7aToyO3M6NToidGltZXIiO086ODoic3RkQ2xhc3MiOjM6e3M6NToic3RhcnQiO2k6MTUyNjQ1NjA2NTtzOjQ6Imxhc3QiO2k6MTUyNjQ1NjA2NTtzOjM6Im5vdyI7aToxNTI2NDU2MTIyO31zOjU6InRva2VuIjtzOjMyOiJ3WWt6Yjd6WFVYMGVmVWYydEZ6d000UDdXVmJpZ3I0OSI7fXM6ODoicmVnaXN0cnkiO086MjQ6Ikpvb21sYVxSZWdpc3RyeVxSZWdpc3RyeSI6Mzp7czo3OiIAKgBkYXRhIjtPOjg6InN0ZENsYXNzIjowOnt9czoxNDoiACoAaW5pdGlhbGl6ZWQiO2I6MDtzOjk6InNlcGFyYXRvciI7czoxOiIuIjt9czo0OiJ1c2VyIjtPOjIwOiJKb29tbGFcQ01TXFVzZXJcVXNlciI6MTp7czoyOiJpZCI7aTowO31zOjE2OiJqb21zb2NpYWxfdXNlcmlwIjtzOjk6IjEyNy4wLjAuMSI7fX1zOjE0OiIAKgBpbml0aWFsaXplZCI7YjowO3M6OToic2VwYXJhdG9yIjtzOjE6Ii4iO30=";', 0, '');
+	('74hpud0adqrd0ej6qbuoliu287', 1, 0, '1526461308', 'joomla|s:1228:"TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjE6e3M6OToiX19kZWZhdWx0IjtPOjg6InN0ZENsYXNzIjoxMzp7czo3OiJzZXNzaW9uIjtPOjg6InN0ZENsYXNzIjozOntzOjc6ImNvdW50ZXIiO2k6MTM7czo1OiJ0b2tlbiI7czozMjoiejNxbndROEpqT2VLODQzcndQa2xaNGFnSUI2S0NpNUciO3M6NToidGltZXIiO086ODoic3RkQ2xhc3MiOjM6e3M6NToic3RhcnQiO2k6MTUyNjQ2MTAxMTtzOjQ6Imxhc3QiO2k6MTUyNjQ2MTMwNTtzOjM6Im5vdyI7aToxNTI2NDYxMzA4O319czo4OiJyZWdpc3RyeSI7TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjA6e31zOjE0OiIAKgBpbml0aWFsaXplZCI7YjowO3M6OToic2VwYXJhdG9yIjtzOjE6Ii4iO31zOjQ6InVzZXIiO086MjA6Ikpvb21sYVxDTVNcVXNlclxVc2VyIjoxOntzOjI6ImlkIjtzOjI6IjQ4Ijt9czoxNjoiam9tc29jaWFsX3VzZXJpcCI7czo5OiIxMjcuMC4wLjEiO3M6ODoicG9zdERhdGEiO047czoyMjoiaWpvb21sYV9sYXRlc3RfdmVyc2lvbiI7Tzo4OiJzdGRDbGFzcyI6MTp7czo3OiJ2ZXJzaW9uIjtzOjA6IiI7fXM6MTg6InVzZXJfc3RhdHVzX2ZpbHRlciI7aToyO3M6MTY6InVzZXJfdHlwZV9maWx0ZXIiO3M6MzoiYWxsIjtzOjE4OiJ1c2VyX3NlYXJjaF9maWx0ZXIiO3M6MDoiIjtzOjE5OiJ1c2VyX3Byb2ZpbGVfZmlsdGVyIjtzOjA6IiI7czoxMDoidXNlcl9saW1pdCI7aToyMDtzOjE1OiJ1c2VyX2xpbWl0c3RhcnQiO2k6MDtzOjExOiJhcHBsaWNhdGlvbiI7Tzo4OiJzdGRDbGFzcyI6MTp7czo1OiJxdWV1ZSI7YTowOnt9fX19czoxNDoiACoAaW5pdGlhbGl6ZWQiO2I6MDtzOjk6InNlcGFyYXRvciI7czoxOiIuIjt9";', 48, 'dimavz'),
+	('cd7ol5u05p0qat8gavigldskh1', 0, 1, '1526461528', 'joomla|s:788:"TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjE6e3M6OToiX19kZWZhdWx0IjtPOjg6InN0ZENsYXNzIjo0OntzOjc6InNlc3Npb24iO086ODoic3RkQ2xhc3MiOjM6e3M6NzoiY291bnRlciI7aToxO3M6NToidGltZXIiO086ODoic3RkQ2xhc3MiOjM6e3M6NToic3RhcnQiO2k6MTUyNjQ2MTUyODtzOjQ6Imxhc3QiO2k6MTUyNjQ2MTUyODtzOjM6Im5vdyI7aToxNTI2NDYxNTI4O31zOjU6InRva2VuIjtzOjMyOiJUUWo2UFU3OWFiaWFka3haOUZvS3ZLaUtNaThVRkdBcSI7fXM6ODoicmVnaXN0cnkiO086MjQ6Ikpvb21sYVxSZWdpc3RyeVxSZWdpc3RyeSI6Mzp7czo3OiIAKgBkYXRhIjtPOjg6InN0ZENsYXNzIjowOnt9czoxNDoiACoAaW5pdGlhbGl6ZWQiO2I6MDtzOjk6InNlcGFyYXRvciI7czoxOiIuIjt9czo0OiJ1c2VyIjtPOjIwOiJKb29tbGFcQ01TXFVzZXJcVXNlciI6MTp7czoyOiJpZCI7aTowO31zOjE2OiJqb21zb2NpYWxfdXNlcmlwIjtzOjk6IjEyNy4wLjAuMSI7fX1zOjE0OiIAKgBpbml0aWFsaXplZCI7YjowO3M6OToic2VwYXJhdG9yIjtzOjE6Ii4iO30=";', 0, '');
 /*!40000 ALTER TABLE `gy3te_session` ENABLE KEYS */;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_access
-DROP TABLE IF EXISTS `gy3te_social_access`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_access` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `uid` int(11) NOT NULL,
@@ -5900,7 +5740,6 @@ DELETE FROM `gy3te_social_access`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_access_logs
-DROP TABLE IF EXISTS `gy3te_social_access_logs`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_access_logs` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `rule` varchar(255) NOT NULL,
@@ -5924,7 +5763,6 @@ DELETE FROM `gy3te_social_access_logs`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_access_rules
-DROP TABLE IF EXISTS `gy3te_social_access_rules`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_access_rules` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL,
@@ -6097,7 +5935,6 @@ INSERT INTO `gy3te_social_access_rules` (`id`, `name`, `title`, `description`, `
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_albums
-DROP TABLE IF EXISTS `gy3te_social_albums`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_albums` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `cover_id` int(11) NOT NULL,
@@ -6128,7 +5965,6 @@ DELETE FROM `gy3te_social_albums`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_albums_favourite
-DROP TABLE IF EXISTS `gy3te_social_albums_favourite`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_albums_favourite` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `album_id` int(11) NOT NULL,
@@ -6143,7 +5979,6 @@ DELETE FROM `gy3te_social_albums_favourite`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_alert
-DROP TABLE IF EXISTS `gy3te_social_alert`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_alert` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `extension` varchar(255) NOT NULL,
@@ -6285,7 +6120,6 @@ INSERT INTO `gy3te_social_alert` (`id`, `extension`, `element`, `rule`, `email`,
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_alert_map
-DROP TABLE IF EXISTS `gy3te_social_alert_map`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_alert_map` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `user_id` bigint(20) unsigned DEFAULT '0',
@@ -6305,7 +6139,6 @@ DELETE FROM `gy3te_social_alert_map`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_apps
-DROP TABLE IF EXISTS `gy3te_social_apps`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_apps` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `core` tinyint(4) NOT NULL DEFAULT '0',
@@ -6574,7 +6407,6 @@ INSERT INTO `gy3te_social_apps` (`id`, `core`, `system`, `unique`, `default`, `t
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_apps_access
-DROP TABLE IF EXISTS `gy3te_social_apps_access`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_apps_access` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `app_id` int(11) NOT NULL,
@@ -6589,7 +6421,6 @@ DELETE FROM `gy3te_social_apps_access`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_apps_calendar
-DROP TABLE IF EXISTS `gy3te_social_apps_calendar`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_apps_calendar` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `uid` int(11) NOT NULL,
@@ -6611,7 +6442,6 @@ DELETE FROM `gy3te_social_apps_calendar`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_apps_directory
-DROP TABLE IF EXISTS `gy3te_social_apps_directory`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_apps_directory` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `app_id` int(11) NOT NULL,
@@ -6640,7 +6470,6 @@ DELETE FROM `gy3te_social_apps_directory`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_apps_map
-DROP TABLE IF EXISTS `gy3te_social_apps_map`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_apps_map` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `uid` int(11) NOT NULL,
@@ -6660,7 +6489,6 @@ DELETE FROM `gy3te_social_apps_map`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_apps_store
-DROP TABLE IF EXISTS `gy3te_social_apps_store`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_apps_store` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `app_id` int(11) NOT NULL,
@@ -6695,7 +6523,6 @@ DELETE FROM `gy3te_social_apps_store`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_apps_views
-DROP TABLE IF EXISTS `gy3te_social_apps_views`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_apps_views` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `app_id` int(11) NOT NULL,
@@ -6738,7 +6565,6 @@ INSERT INTO `gy3te_social_apps_views` (`id`, `app_id`, `view`, `type`, `title`, 
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_audios
-DROP TABLE IF EXISTS `gy3te_social_audios`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_audios` (
   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Primary key for this table',
   `artist` varchar(255) NOT NULL COMMENT 'Artist of the audio',
@@ -6777,7 +6603,6 @@ DELETE FROM `gy3te_social_audios`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_audios_genres
-DROP TABLE IF EXISTS `gy3te_social_audios_genres`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_audios_genres` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(255) NOT NULL,
@@ -6810,7 +6635,6 @@ INSERT INTO `gy3te_social_audios_genres` (`id`, `title`, `alias`, `description`,
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_audios_genres_access
-DROP TABLE IF EXISTS `gy3te_social_audios_genres_access`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_audios_genres_access` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `genre_id` int(11) NOT NULL,
@@ -6827,7 +6651,6 @@ DELETE FROM `gy3te_social_audios_genres_access`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_avatars
-DROP TABLE IF EXISTS `gy3te_social_avatars`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_avatars` (
   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Primary ID',
   `uid` int(11) NOT NULL COMMENT 'Node''s ID',
@@ -6856,7 +6679,6 @@ DELETE FROM `gy3te_social_avatars`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_badges
-DROP TABLE IF EXISTS `gy3te_social_badges`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_badges` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `command` varchar(255) NOT NULL,
@@ -6912,7 +6734,6 @@ INSERT INTO `gy3te_social_badges` (`id`, `command`, `extension`, `title`, `alias
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_badges_history
-DROP TABLE IF EXISTS `gy3te_social_badges_history`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_badges_history` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `badge_id` int(11) NOT NULL,
@@ -6928,7 +6749,6 @@ DELETE FROM `gy3te_social_badges_history`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_badges_maps
-DROP TABLE IF EXISTS `gy3te_social_badges_maps`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_badges_maps` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `badge_id` int(11) NOT NULL,
@@ -6947,7 +6767,6 @@ DELETE FROM `gy3te_social_badges_maps`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_block_users
-DROP TABLE IF EXISTS `gy3te_social_block_users`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_block_users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `user_id` int(11) NOT NULL,
@@ -6967,7 +6786,6 @@ DELETE FROM `gy3te_social_block_users`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_bookmarks
-DROP TABLE IF EXISTS `gy3te_social_bookmarks`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_bookmarks` (
   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Primary key',
   `uid` int(11) NOT NULL COMMENT 'The bookmarked item id',
@@ -6988,7 +6806,6 @@ DELETE FROM `gy3te_social_bookmarks`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_broadcasts
-DROP TABLE IF EXISTS `gy3te_social_broadcasts`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_broadcasts` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `target_id` int(11) NOT NULL,
@@ -7012,7 +6829,6 @@ DELETE FROM `gy3te_social_broadcasts`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_clusters
-DROP TABLE IF EXISTS `gy3te_social_clusters`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_clusters` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `category_id` int(11) NOT NULL,
@@ -7050,7 +6866,6 @@ DELETE FROM `gy3te_social_clusters`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_clusters_categories
-DROP TABLE IF EXISTS `gy3te_social_clusters_categories`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_clusters_categories` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `type` varchar(255) NOT NULL,
@@ -7092,7 +6907,6 @@ INSERT INTO `gy3te_social_clusters_categories` (`id`, `type`, `title`, `alias`, 
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_clusters_categories_access
-DROP TABLE IF EXISTS `gy3te_social_clusters_categories_access`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_clusters_categories_access` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `category_id` int(11) NOT NULL,
@@ -7110,7 +6924,6 @@ DELETE FROM `gy3te_social_clusters_categories_access`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_clusters_news
-DROP TABLE IF EXISTS `gy3te_social_clusters_news`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_clusters_news` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `cluster_id` int(11) NOT NULL,
@@ -7133,7 +6946,6 @@ DELETE FROM `gy3te_social_clusters_news`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_clusters_nodes
-DROP TABLE IF EXISTS `gy3te_social_clusters_nodes`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_clusters_nodes` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `cluster_id` int(11) NOT NULL,
@@ -7161,7 +6973,6 @@ DELETE FROM `gy3te_social_clusters_nodes`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_clusters_reject
-DROP TABLE IF EXISTS `gy3te_social_clusters_reject`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_clusters_reject` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `message` text NOT NULL,
@@ -7180,7 +6991,6 @@ DELETE FROM `gy3te_social_clusters_reject`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_comments
-DROP TABLE IF EXISTS `gy3te_social_comments`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_comments` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `element` varchar(255) NOT NULL,
@@ -7213,7 +7023,6 @@ DELETE FROM `gy3te_social_comments`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_config
-DROP TABLE IF EXISTS `gy3te_social_config`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_config` (
   `type` varchar(255) NOT NULL,
   `value` text NOT NULL,
@@ -7232,7 +7041,6 @@ INSERT INTO `gy3te_social_config` (`type`, `value`, `value_binary`) VALUES
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_conversations
-DROP TABLE IF EXISTS `gy3te_social_conversations`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_conversations` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `title` varchar(255) DEFAULT '',
@@ -7253,7 +7061,6 @@ DELETE FROM `gy3te_social_conversations`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_conversations_message
-DROP TABLE IF EXISTS `gy3te_social_conversations_message`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_conversations_message` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `conversation_id` bigint(20) NOT NULL,
@@ -7273,7 +7080,6 @@ DELETE FROM `gy3te_social_conversations_message`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_conversations_message_maps
-DROP TABLE IF EXISTS `gy3te_social_conversations_message_maps`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_conversations_message_maps` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `user_id` bigint(20) NOT NULL,
@@ -7296,7 +7102,6 @@ DELETE FROM `gy3te_social_conversations_message_maps`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_conversations_participants
-DROP TABLE IF EXISTS `gy3te_social_conversations_participants`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_conversations_participants` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `conversation_id` bigint(20) NOT NULL,
@@ -7315,7 +7120,6 @@ DELETE FROM `gy3te_social_conversations_participants`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_covers
-DROP TABLE IF EXISTS `gy3te_social_covers`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_covers` (
   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Primary ID',
   `uid` int(11) NOT NULL COMMENT 'Node''s ID',
@@ -7338,7 +7142,6 @@ DELETE FROM `gy3te_social_covers`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_default_avatars
-DROP TABLE IF EXISTS `gy3te_social_default_avatars`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_default_avatars` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `uid` int(11) NOT NULL,
@@ -7364,7 +7167,6 @@ DELETE FROM `gy3te_social_default_avatars`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_default_covers
-DROP TABLE IF EXISTS `gy3te_social_default_covers`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_default_covers` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `uid` int(11) NOT NULL,
@@ -7388,7 +7190,6 @@ DELETE FROM `gy3te_social_default_covers`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_discussions
-DROP TABLE IF EXISTS `gy3te_social_discussions`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_discussions` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `parent_id` int(11) NOT NULL DEFAULT '0' COMMENT 'This determines if this is a reply to a discussion. If it is a reply, it should contain the parent''s id here.',
@@ -7422,7 +7223,6 @@ DELETE FROM `gy3te_social_discussions`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_discussions_files
-DROP TABLE IF EXISTS `gy3te_social_discussions_files`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_discussions_files` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `file_id` int(11) NOT NULL,
@@ -7439,7 +7239,6 @@ DELETE FROM `gy3te_social_discussions_files`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_events_meta
-DROP TABLE IF EXISTS `gy3te_social_events_meta`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_events_meta` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `cluster_id` int(11) NOT NULL COMMENT 'The event cluster id',
@@ -7466,7 +7265,6 @@ DELETE FROM `gy3te_social_events_meta`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_feeds
-DROP TABLE IF EXISTS `gy3te_social_feeds`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_feeds` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `user_id` int(11) NOT NULL,
@@ -7486,7 +7284,6 @@ DELETE FROM `gy3te_social_feeds`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_fields
-DROP TABLE IF EXISTS `gy3te_social_fields`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_fields` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `unique_key` text NOT NULL,
@@ -7613,7 +7410,6 @@ INSERT INTO `gy3te_social_fields` (`id`, `unique_key`, `app_id`, `step_id`, `tit
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_fields_data
-DROP TABLE IF EXISTS `gy3te_social_fields_data`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_fields_data` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `field_id` int(11) NOT NULL,
@@ -7656,7 +7452,6 @@ INSERT INTO `gy3te_social_fields_data` (`id`, `field_id`, `uid`, `type`, `datake
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_fields_options
-DROP TABLE IF EXISTS `gy3te_social_fields_options`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_fields_options` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `parent_id` int(11) NOT NULL,
@@ -7677,7 +7472,6 @@ DELETE FROM `gy3te_social_fields_options`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_fields_position
-DROP TABLE IF EXISTS `gy3te_social_fields_position`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_fields_position` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `field_id` int(11) NOT NULL,
@@ -7693,7 +7487,6 @@ DELETE FROM `gy3te_social_fields_position`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_fields_rules
-DROP TABLE IF EXISTS `gy3te_social_fields_rules`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_fields_rules` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `parent_id` int(11) NOT NULL,
@@ -7710,7 +7503,6 @@ DELETE FROM `gy3te_social_fields_rules`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_fields_steps
-DROP TABLE IF EXISTS `gy3te_social_fields_steps`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_fields_steps` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `uid` bigint(20) NOT NULL,
@@ -7742,7 +7534,6 @@ INSERT INTO `gy3te_social_fields_steps` (`id`, `uid`, `workflow_id`, `type`, `ti
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_files
-DROP TABLE IF EXISTS `gy3te_social_files`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_files` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `collection_id` int(11) NOT NULL,
@@ -7771,7 +7562,6 @@ DELETE FROM `gy3te_social_files`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_files_collections
-DROP TABLE IF EXISTS `gy3te_social_files_collections`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_files_collections` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `owner_id` int(11) NOT NULL,
@@ -7791,7 +7581,6 @@ DELETE FROM `gy3te_social_files_collections`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_friends
-DROP TABLE IF EXISTS `gy3te_social_friends`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_friends` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `actor_id` int(11) NOT NULL,
@@ -7816,7 +7605,6 @@ DELETE FROM `gy3te_social_friends`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_friends_invitations
-DROP TABLE IF EXISTS `gy3te_social_friends_invitations`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_friends_invitations` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `user_id` int(11) NOT NULL,
@@ -7834,7 +7622,6 @@ DELETE FROM `gy3te_social_friends_invitations`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_indexer
-DROP TABLE IF EXISTS `gy3te_social_indexer`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_indexer` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `uid` int(11) NOT NULL,
@@ -7858,7 +7645,6 @@ DELETE FROM `gy3te_social_indexer`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_languages
-DROP TABLE IF EXISTS `gy3te_social_languages`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_languages` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(255) NOT NULL,
@@ -7878,7 +7664,6 @@ DELETE FROM `gy3te_social_languages`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_likes
-DROP TABLE IF EXISTS `gy3te_social_likes`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_likes` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `reaction` varchar(255) DEFAULT 'like',
@@ -7906,7 +7691,6 @@ DELETE FROM `gy3te_social_likes`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_links
-DROP TABLE IF EXISTS `gy3te_social_links`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_links` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `hash` varchar(255) NOT NULL,
@@ -7923,7 +7707,6 @@ DELETE FROM `gy3te_social_links`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_links_images
-DROP TABLE IF EXISTS `gy3te_social_links_images`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_links_images` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `source_url` text NOT NULL,
@@ -7940,7 +7723,6 @@ DELETE FROM `gy3te_social_links_images`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_lists
-DROP TABLE IF EXISTS `gy3te_social_lists`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_lists` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `title` text NOT NULL,
@@ -7963,7 +7745,6 @@ DELETE FROM `gy3te_social_lists`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_lists_maps
-DROP TABLE IF EXISTS `gy3te_social_lists_maps`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_lists_maps` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `list_id` bigint(20) NOT NULL,
@@ -7982,7 +7763,6 @@ DELETE FROM `gy3te_social_lists_maps`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_locations
-DROP TABLE IF EXISTS `gy3te_social_locations`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_locations` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `uid` bigint(20) NOT NULL,
@@ -8004,7 +7784,6 @@ DELETE FROM `gy3te_social_locations`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_logger
-DROP TABLE IF EXISTS `gy3te_social_logger`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_logger` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `file` varchar(255) NOT NULL,
@@ -8021,7 +7800,6 @@ DELETE FROM `gy3te_social_logger`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_mailer
-DROP TABLE IF EXISTS `gy3te_social_mailer`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_mailer` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `sender_name` text NOT NULL,
@@ -8050,7 +7828,6 @@ DELETE FROM `gy3te_social_mailer`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_migrators
-DROP TABLE IF EXISTS `gy3te_social_migrators`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_migrators` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `oid` bigint(20) unsigned NOT NULL,
@@ -8070,7 +7847,6 @@ DELETE FROM `gy3te_social_migrators`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_moods
-DROP TABLE IF EXISTS `gy3te_social_moods`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_moods` (
   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Primary key of the row',
   `namespace` varchar(255) NOT NULL COMMENT 'Determines if this item is tied to a specific item',
@@ -8093,7 +7869,6 @@ DELETE FROM `gy3te_social_moods`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_notifications
-DROP TABLE IF EXISTS `gy3te_social_notifications`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_notifications` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `uid` int(11) NOT NULL,
@@ -8126,7 +7901,6 @@ DELETE FROM `gy3te_social_notifications`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_oauth
-DROP TABLE IF EXISTS `gy3te_social_oauth`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_oauth` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `oauth_id` varchar(255) NOT NULL,
@@ -8154,7 +7928,6 @@ DELETE FROM `gy3te_social_oauth`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_oauth_history
-DROP TABLE IF EXISTS `gy3te_social_oauth_history`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_oauth_history` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `oauth_id` int(11) NOT NULL,
@@ -8173,7 +7946,6 @@ DELETE FROM `gy3te_social_oauth_history`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_photos
-DROP TABLE IF EXISTS `gy3te_social_photos`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_photos` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `uid` int(11) NOT NULL,
@@ -8206,7 +7978,6 @@ DELETE FROM `gy3te_social_photos`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_photos_meta
-DROP TABLE IF EXISTS `gy3te_social_photos_meta`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_photos_meta` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `photo_id` int(11) NOT NULL,
@@ -8227,7 +7998,6 @@ DELETE FROM `gy3te_social_photos_meta`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_photos_tag
-DROP TABLE IF EXISTS `gy3te_social_photos_tag`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_photos_tag` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `photo_id` int(11) NOT NULL,
@@ -8250,7 +8020,6 @@ DELETE FROM `gy3te_social_photos_tag`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_points
-DROP TABLE IF EXISTS `gy3te_social_points`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_points` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `command` varchar(255) NOT NULL,
@@ -8407,7 +8176,6 @@ INSERT INTO `gy3te_social_points` (`id`, `command`, `extension`, `title`, `descr
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_points_history
-DROP TABLE IF EXISTS `gy3te_social_points_history`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_points_history` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT 'Primary key for this table',
   `points_id` bigint(20) NOT NULL,
@@ -8430,7 +8198,6 @@ DELETE FROM `gy3te_social_points_history`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_polls
-DROP TABLE IF EXISTS `gy3te_social_polls`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_polls` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `element` varchar(255) NOT NULL,
@@ -8454,7 +8221,6 @@ DELETE FROM `gy3te_social_polls`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_polls_items
-DROP TABLE IF EXISTS `gy3te_social_polls_items`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_polls_items` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `poll_id` bigint(20) unsigned NOT NULL,
@@ -8472,7 +8238,6 @@ DELETE FROM `gy3te_social_polls_items`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_polls_users
-DROP TABLE IF EXISTS `gy3te_social_polls_users`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_polls_users` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `poll_id` bigint(20) unsigned NOT NULL,
@@ -8495,7 +8260,6 @@ DELETE FROM `gy3te_social_polls_users`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_privacy
-DROP TABLE IF EXISTS `gy3te_social_privacy`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_privacy` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `type` varchar(64) NOT NULL COMMENT 'object type e.g. photos, friends, albums, profile and etc',
@@ -8561,7 +8325,6 @@ INSERT INTO `gy3te_social_privacy` (`id`, `type`, `rule`, `value`, `options`, `d
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_privacy_customize
-DROP TABLE IF EXISTS `gy3te_social_privacy_customize`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_privacy_customize` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `uid` int(11) NOT NULL COMMENT 'id from user or profile or item',
@@ -8579,7 +8342,6 @@ DELETE FROM `gy3te_social_privacy_customize`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_privacy_field
-DROP TABLE IF EXISTS `gy3te_social_privacy_field`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_privacy_field` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `uid` int(11) NOT NULL COMMENT 'id from profile or item',
@@ -8598,7 +8360,6 @@ DELETE FROM `gy3te_social_privacy_field`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_privacy_items
-DROP TABLE IF EXISTS `gy3te_social_privacy_items`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_privacy_items` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `privacy_id` int(11) NOT NULL COMMENT 'key to social_privacy.id',
@@ -8622,7 +8383,6 @@ DELETE FROM `gy3te_social_privacy_items`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_privacy_items_field
-DROP TABLE IF EXISTS `gy3te_social_privacy_items_field`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_privacy_items_field` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `uid` int(11) NOT NULL COMMENT 'id from profile or item',
@@ -8642,7 +8402,6 @@ DELETE FROM `gy3te_social_privacy_items_field`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_privacy_map
-DROP TABLE IF EXISTS `gy3te_social_privacy_map`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_privacy_map` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `privacy_id` int(11) NOT NULL COMMENT 'key to social_privacy.id',
@@ -8665,7 +8424,6 @@ DELETE FROM `gy3te_social_privacy_map`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_profiles
-DROP TABLE IF EXISTS `gy3te_social_profiles`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_profiles` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `title` text NOT NULL,
@@ -8700,7 +8458,6 @@ INSERT INTO `gy3te_social_profiles` (`id`, `title`, `alias`, `description`, `gid
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_profiles_maps
-DROP TABLE IF EXISTS `gy3te_social_profiles_maps`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_profiles_maps` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `profile_id` bigint(20) NOT NULL,
@@ -8725,7 +8482,6 @@ INSERT INTO `gy3te_social_profiles_maps` (`id`, `profile_id`, `user_id`, `state`
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_reactions
-DROP TABLE IF EXISTS `gy3te_social_reactions`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_reactions` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `action` varchar(255) NOT NULL,
@@ -8749,7 +8505,6 @@ INSERT INTO `gy3te_social_reactions` (`id`, `action`, `published`, `created`, `p
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_regions
-DROP TABLE IF EXISTS `gy3te_social_regions`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_regions` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `uid` bigint(20) NOT NULL,
@@ -8772,7 +8527,6 @@ DELETE FROM `gy3te_social_regions`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_registrations
-DROP TABLE IF EXISTS `gy3te_social_registrations`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_registrations` (
   `session_id` varchar(200) NOT NULL,
   `profile_id` bigint(20) NOT NULL,
@@ -8793,7 +8547,6 @@ DELETE FROM `gy3te_social_registrations`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_relationship_status
-DROP TABLE IF EXISTS `gy3te_social_relationship_status`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_relationship_status` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `actor` bigint(20) NOT NULL,
@@ -8813,7 +8566,6 @@ DELETE FROM `gy3te_social_relationship_status`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_reports
-DROP TABLE IF EXISTS `gy3te_social_reports`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_reports` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` text NOT NULL,
@@ -8837,7 +8589,6 @@ DELETE FROM `gy3te_social_reports`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_reviews
-DROP TABLE IF EXISTS `gy3te_social_reviews`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_reviews` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `uid` int(11) NOT NULL,
@@ -8858,7 +8609,6 @@ DELETE FROM `gy3te_social_reviews`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_rss
-DROP TABLE IF EXISTS `gy3te_social_rss`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_rss` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `user_id` int(11) NOT NULL,
@@ -8881,7 +8631,6 @@ DELETE FROM `gy3te_social_rss`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_search_filter
-DROP TABLE IF EXISTS `gy3te_social_search_filter`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_search_filter` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `element` varchar(255) NOT NULL,
@@ -8905,7 +8654,6 @@ DELETE FROM `gy3te_social_search_filter`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_shares
-DROP TABLE IF EXISTS `gy3te_social_shares`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_shares` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `uid` bigint(20) NOT NULL,
@@ -8926,7 +8674,6 @@ DELETE FROM `gy3te_social_shares`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_step_sessions
-DROP TABLE IF EXISTS `gy3te_social_step_sessions`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_step_sessions` (
   `session_id` varchar(200) NOT NULL,
   `uid` bigint(20) NOT NULL,
@@ -8949,7 +8696,6 @@ DELETE FROM `gy3te_social_step_sessions`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_storage_log
-DROP TABLE IF EXISTS `gy3te_social_storage_log`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_storage_log` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `object_id` int(11) NOT NULL,
@@ -8968,7 +8714,6 @@ DELETE FROM `gy3te_social_storage_log`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_stream
-DROP TABLE IF EXISTS `gy3te_social_stream`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_stream` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `actor_id` bigint(20) unsigned NOT NULL,
@@ -9033,7 +8778,6 @@ DELETE FROM `gy3te_social_stream`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_stream_assets
-DROP TABLE IF EXISTS `gy3te_social_stream_assets`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_stream_assets` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `stream_id` int(11) NOT NULL,
@@ -9049,7 +8793,6 @@ DELETE FROM `gy3te_social_stream_assets`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_stream_filter
-DROP TABLE IF EXISTS `gy3te_social_stream_filter`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_stream_filter` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `uid` bigint(20) unsigned NOT NULL,
@@ -9071,7 +8814,6 @@ DELETE FROM `gy3te_social_stream_filter`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_stream_filter_item
-DROP TABLE IF EXISTS `gy3te_social_stream_filter_item`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_stream_filter_item` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `filter_id` bigint(20) unsigned NOT NULL,
@@ -9090,7 +8832,6 @@ DELETE FROM `gy3te_social_stream_filter_item`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_stream_hide
-DROP TABLE IF EXISTS `gy3te_social_stream_hide`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_stream_hide` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `user_id` bigint(20) unsigned NOT NULL,
@@ -9115,7 +8856,6 @@ DELETE FROM `gy3te_social_stream_hide`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_stream_history
-DROP TABLE IF EXISTS `gy3te_social_stream_history`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_stream_history` (
   `id` bigint(20) unsigned NOT NULL,
   `actor_id` bigint(20) unsigned NOT NULL,
@@ -9163,7 +8903,6 @@ DELETE FROM `gy3te_social_stream_history`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_stream_item
-DROP TABLE IF EXISTS `gy3te_social_stream_item`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_stream_item` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `actor_id` bigint(20) unsigned NOT NULL,
@@ -9193,7 +8932,6 @@ DELETE FROM `gy3te_social_stream_item`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_stream_item_history
-DROP TABLE IF EXISTS `gy3te_social_stream_item_history`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_stream_item_history` (
   `id` bigint(20) unsigned NOT NULL,
   `actor_id` bigint(20) unsigned NOT NULL,
@@ -9218,7 +8956,6 @@ DELETE FROM `gy3te_social_stream_item_history`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_stream_privacy_field
-DROP TABLE IF EXISTS `gy3te_social_stream_privacy_field`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_stream_privacy_field` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `stream_id` int(11) NOT NULL,
@@ -9237,7 +8974,6 @@ DELETE FROM `gy3te_social_stream_privacy_field`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_stream_sticky
-DROP TABLE IF EXISTS `gy3te_social_stream_sticky`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_stream_sticky` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `stream_id` bigint(20) unsigned NOT NULL,
@@ -9253,7 +8989,6 @@ DELETE FROM `gy3te_social_stream_sticky`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_stream_tags
-DROP TABLE IF EXISTS `gy3te_social_stream_tags`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_stream_tags` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
   `stream_id` bigint(20) unsigned NOT NULL,
@@ -9277,7 +9012,6 @@ DELETE FROM `gy3te_social_stream_tags`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_subscriptions
-DROP TABLE IF EXISTS `gy3te_social_subscriptions`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_subscriptions` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `uid` int(11) NOT NULL COMMENT 'object id e.g userid, groupid, streamid and etc',
@@ -9300,7 +9034,6 @@ DELETE FROM `gy3te_social_subscriptions`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_tags
-DROP TABLE IF EXISTS `gy3te_social_tags`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_tags` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `type` varchar(255) NOT NULL,
@@ -9324,7 +9057,6 @@ DELETE FROM `gy3te_social_tags`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_tags_filter
-DROP TABLE IF EXISTS `gy3te_social_tags_filter`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_tags_filter` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `cid` bigint(20) NOT NULL,
@@ -9344,7 +9076,6 @@ DELETE FROM `gy3te_social_tags_filter`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_tags_filter_item
-DROP TABLE IF EXISTS `gy3te_social_tags_filter_item`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_tags_filter_item` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `filter_id` bigint(20) NOT NULL,
@@ -9362,7 +9093,6 @@ DELETE FROM `gy3te_social_tags_filter_item`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_tasks
-DROP TABLE IF EXISTS `gy3te_social_tasks`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_tasks` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `milestone_id` int(11) NOT NULL,
@@ -9386,7 +9116,6 @@ DELETE FROM `gy3te_social_tasks`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_tasks_milestones
-DROP TABLE IF EXISTS `gy3te_social_tasks_milestones`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_tasks_milestones` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `uid` int(11) NOT NULL,
@@ -9409,7 +9138,6 @@ DELETE FROM `gy3te_social_tasks_milestones`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_themes
-DROP TABLE IF EXISTS `gy3te_social_themes`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_themes` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `element` varchar(255) NOT NULL,
@@ -9425,7 +9153,6 @@ DELETE FROM `gy3te_social_themes`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_themes_overrides
-DROP TABLE IF EXISTS `gy3te_social_themes_overrides`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_themes_overrides` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `file_id` text NOT NULL,
@@ -9441,7 +9168,6 @@ DELETE FROM `gy3te_social_themes_overrides`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_tmp
-DROP TABLE IF EXISTS `gy3te_social_tmp`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_tmp` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `uid` int(11) NOT NULL,
@@ -9461,7 +9187,6 @@ DELETE FROM `gy3te_social_tmp`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_uploader
-DROP TABLE IF EXISTS `gy3te_social_uploader`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_uploader` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `path` text NOT NULL,
@@ -9480,7 +9205,6 @@ DELETE FROM `gy3te_social_uploader`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_users
-DROP TABLE IF EXISTS `gy3te_social_users`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_users` (
   `user_id` bigint(20) NOT NULL,
   `alias` varchar(255) NOT NULL,
@@ -9517,7 +9241,6 @@ INSERT INTO `gy3te_social_users` (`user_id`, `alias`, `state`, `params`, `connec
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_verification_requests
-DROP TABLE IF EXISTS `gy3te_social_verification_requests`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_verification_requests` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `uid` int(11) NOT NULL,
@@ -9538,7 +9261,6 @@ DELETE FROM `gy3te_social_verification_requests`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_videos
-DROP TABLE IF EXISTS `gy3te_social_videos`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_videos` (
   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Primary key for this table',
   `title` varchar(255) NOT NULL COMMENT 'Title of the video',
@@ -9573,7 +9295,6 @@ DELETE FROM `gy3te_social_videos`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_videos_categories
-DROP TABLE IF EXISTS `gy3te_social_videos_categories`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_videos_categories` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(255) NOT NULL,
@@ -9606,7 +9327,6 @@ INSERT INTO `gy3te_social_videos_categories` (`id`, `title`, `alias`, `descripti
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_videos_categories_access
-DROP TABLE IF EXISTS `gy3te_social_videos_categories_access`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_videos_categories_access` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `category_id` int(11) NOT NULL,
@@ -9623,7 +9343,6 @@ DELETE FROM `gy3te_social_videos_categories_access`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_workflows
-DROP TABLE IF EXISTS `gy3te_social_workflows`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_workflows` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(255) NOT NULL,
@@ -9646,7 +9365,6 @@ INSERT INTO `gy3te_social_workflows` (`id`, `title`, `description`, `type`) VALU
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_workflows_maps
-DROP TABLE IF EXISTS `gy3te_social_workflows_maps`;
 CREATE TABLE IF NOT EXISTS `gy3te_social_workflows_maps` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `uid` int(11) NOT NULL,
@@ -9680,7 +9398,6 @@ INSERT INTO `gy3te_social_workflows_maps` (`id`, `uid`, `workflow_id`, `type`) V
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_tags
-DROP TABLE IF EXISTS `gy3te_tags`;
 CREATE TABLE IF NOT EXISTS `gy3te_tags` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `parent_id` int(10) unsigned NOT NULL DEFAULT '0',
@@ -9722,7 +9439,7 @@ CREATE TABLE IF NOT EXISTS `gy3te_tags` (
   KEY `idx_language` (`language`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Дамп данных таблицы prodogsinfo.gy3te_tags: ~1 rows (приблизительно)
+-- Дамп данных таблицы prodogsinfo.gy3te_tags: ~0 rows (приблизительно)
 DELETE FROM `gy3te_tags`;
 /*!40000 ALTER TABLE `gy3te_tags` DISABLE KEYS */;
 INSERT INTO `gy3te_tags` (`id`, `parent_id`, `lft`, `rgt`, `level`, `path`, `title`, `alias`, `note`, `description`, `published`, `checked_out`, `checked_out_time`, `access`, `params`, `metadesc`, `metakey`, `metadata`, `created_user_id`, `created_time`, `created_by_alias`, `modified_user_id`, `modified_time`, `images`, `urls`, `hits`, `language`, `version`, `publish_up`, `publish_down`) VALUES
@@ -9731,7 +9448,6 @@ INSERT INTO `gy3te_tags` (`id`, `parent_id`, `lft`, `rgt`, `level`, `path`, `tit
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_template_styles
-DROP TABLE IF EXISTS `gy3te_template_styles`;
 CREATE TABLE IF NOT EXISTS `gy3te_template_styles` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `template` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
@@ -9757,7 +9473,6 @@ INSERT INTO `gy3te_template_styles` (`id`, `template`, `client_id`, `home`, `tit
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_ucm_base
-DROP TABLE IF EXISTS `gy3te_ucm_base`;
 CREATE TABLE IF NOT EXISTS `gy3te_ucm_base` (
   `ucm_id` int(10) unsigned NOT NULL,
   `ucm_item_id` int(10) NOT NULL,
@@ -9776,7 +9491,6 @@ DELETE FROM `gy3te_ucm_base`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_ucm_content
-DROP TABLE IF EXISTS `gy3te_ucm_content`;
 CREATE TABLE IF NOT EXISTS `gy3te_ucm_content` (
   `core_content_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `core_type_alias` varchar(400) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '' COMMENT 'FK to the content types table',
@@ -9832,7 +9546,6 @@ DELETE FROM `gy3te_ucm_content`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_ucm_history
-DROP TABLE IF EXISTS `gy3te_ucm_history`;
 CREATE TABLE IF NOT EXISTS `gy3te_ucm_history` (
   `version_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `ucm_item_id` int(10) unsigned NOT NULL,
@@ -9856,7 +9569,6 @@ DELETE FROM `gy3te_ucm_history`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_updates
-DROP TABLE IF EXISTS `gy3te_updates`;
 CREATE TABLE IF NOT EXISTS `gy3te_updates` (
   `update_id` int(11) NOT NULL AUTO_INCREMENT,
   `update_site_id` int(11) DEFAULT '0',
@@ -9882,7 +9594,6 @@ DELETE FROM `gy3te_updates`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_update_sites
-DROP TABLE IF EXISTS `gy3te_update_sites`;
 CREATE TABLE IF NOT EXISTS `gy3te_update_sites` (
   `update_site_id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT '',
@@ -9904,13 +9615,12 @@ INSERT INTO `gy3te_update_sites` (`update_site_id`, `name`, `type`, `location`, 
 	(6, 'WebInstaller Update Site', 'extension', 'https://appscdn.joomla.org/webapps/jedapps/webinstaller.xml', 1, 1526456183, ''),
 	(7, 'FOF 3.x', 'extension', 'http://cdn.akeebabackup.com/updates/fof3.xml', 1, 1526456202, ''),
 	(8, 'Akeeba FEF', 'extension', 'http://cdn.akeebabackup.com/updates/fef.xml', 1, 1526456221, ''),
-	(9, 'Akeeba Backup Core', 'extension', 'https://cdn.akeebabackup.com/updates/pkgakeebacore.xml', 0, 0, ''),
-	(10, 'JomSocial', 'extension', 'https://www.jomsocial.com/updates/community_update.xml', 1, 0, '');
+	(9, 'Akeeba Backup Core', 'extension', 'https://cdn.akeebabackup.com/updates/pkgakeebacore.xml', 1, 1526456240, ''),
+	(10, 'JomSocial', 'extension', 'https://www.jomsocial.com/updates/community_update.xml', 1, 1526456256, '');
 /*!40000 ALTER TABLE `gy3te_update_sites` ENABLE KEYS */;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_update_sites_extensions
-DROP TABLE IF EXISTS `gy3te_update_sites_extensions`;
 CREATE TABLE IF NOT EXISTS `gy3te_update_sites_extensions` (
   `update_site_id` int(11) NOT NULL DEFAULT '0',
   `extension_id` int(11) NOT NULL DEFAULT '0',
@@ -9934,7 +9644,6 @@ INSERT INTO `gy3te_update_sites_extensions` (`update_site_id`, `extension_id`) V
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_usergroups
-DROP TABLE IF EXISTS `gy3te_usergroups`;
 CREATE TABLE IF NOT EXISTS `gy3te_usergroups` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Primary Key',
   `parent_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Adjacency List Reference Id',
@@ -9968,7 +9677,6 @@ INSERT INTO `gy3te_usergroups` (`id`, `parent_id`, `lft`, `rgt`, `title`) VALUES
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_users
-DROP TABLE IF EXISTS `gy3te_users`;
 CREATE TABLE IF NOT EXISTS `gy3te_users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(400) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
@@ -9997,8 +9705,8 @@ CREATE TABLE IF NOT EXISTS `gy3te_users` (
 DELETE FROM `gy3te_users`;
 /*!40000 ALTER TABLE `gy3te_users` DISABLE KEYS */;
 INSERT INTO `gy3te_users` (`id`, `name`, `username`, `email`, `password`, `block`, `sendEmail`, `registerDate`, `lastvisitDate`, `activation`, `params`, `lastResetTime`, `resetCount`, `otpKey`, `otep`, `requireReset`) VALUES
-	(48, 'Super User', 'dimavz', 'zatulenko@gmail.com', '$2y$10$rsnFuSkdn4mbZf0TjBJVTOtYOU2ECHkNdo6Lo3gUj8BLt2/aGDAQ.', 0, 1, '2017-05-15 08:46:38', '2018-05-16 07:35:02', '0', '{"admin_style":"","admin_language":"","language":"","editor":"","helpsite":"","timezone":"","update_cache_list":1}', '0000-00-00 00:00:00', 0, '', '', 0),
-	(49, 'Тест', 'test', 'test@mail.ru', '$2y$10$SnqEiqeopU69SkI/6rdYtO5NBa.RBLM2SJb4nNXDGXbLxFdyX2K0G', 0, 0, '2017-05-15 09:23:36', '2018-05-14 14:01:49', '', '{"admin_style":"","admin_language":"","language":"","editor":"","helpsite":"","timezone":"","update_cache_list":1}', '0000-00-00 00:00:00', 0, '', '', 0),
+	(48, 'Super User', 'dimavz', 'zatulenko@gmail.com', '$2y$10$hcaTdf8pwSF8gXLoQauXdOgiqDuJA4eT/c0C1pXC037kOle2SXu4S', 0, 1, '2017-05-15 08:46:38', '2018-05-16 09:05:28', '0', '{"admin_style":"","admin_language":"ru-RU","language":"ru-RU","editor":"","helpsite":"","timezone":"Europe\\/Minsk","update_cache_list":1}', '0000-00-00 00:00:00', 0, '', '', 0),
+	(49, 'Тест', 'test', 'test@mail.ru', '$2y$10$SnqEiqeopU69SkI/6rdYtO5NBa.RBLM2SJb4nNXDGXbLxFdyX2K0G', 0, 0, '2017-05-15 09:23:36', '2018-05-16 08:00:59', '', '{"admin_style":"","admin_language":"","language":"","editor":"","helpsite":"","timezone":"","update_cache_list":1}', '0000-00-00 00:00:00', 0, '', '', 0),
 	(50, 'Тест2', 'test2', 'test2@mail.ru', '$2y$10$M1qZakRwZC7yw0hdTDt5me1PrpGM7AfzA.wyn9qZvRQ9wIn5A46MS', 0, 0, '2017-05-15 09:24:42', '2018-05-10 09:09:14', '', '{"admin_style":"","admin_language":"","language":"","editor":"","helpsite":"","timezone":"","update_cache_list":1}', '0000-00-00 00:00:00', 0, '', '', 0),
 	(51, 'Support', 'support', 'support@prodogs.info', '$2y$10$ITx.vlFx1XnVGShB8sFkOemSKzopoI47OFGO8FpqXegcm3wjS2Bye', 0, 0, '2017-05-18 17:01:25', '0000-00-00 00:00:00', '', '{"admin_style":"","admin_language":"","language":"","editor":"","helpsite":"","timezone":"","update_cache_list":1}', '0000-00-00 00:00:00', 0, '', '', 0),
 	(52, 'pitomnik', 'pitomnik', 'pitomnik@mail.ru', '$2y$10$r8YCl4ZxywhCLy1CT8hAX.g25c3LcjZfHh9kRHHHgHN2/Dkg6fzk2', 0, 0, '2018-05-12 09:35:21', '2018-05-14 14:02:45', '', '{"update_cache_list":1}', '0000-00-00 00:00:00', 0, '', '', 0),
@@ -10007,7 +9715,6 @@ INSERT INTO `gy3te_users` (`id`, `name`, `username`, `email`, `password`, `block
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_user_keys
-DROP TABLE IF EXISTS `gy3te_user_keys`;
 CREATE TABLE IF NOT EXISTS `gy3te_user_keys` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `user_id` varchar(150) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -10028,7 +9735,6 @@ DELETE FROM `gy3te_user_keys`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_user_notes
-DROP TABLE IF EXISTS `gy3te_user_notes`;
 CREATE TABLE IF NOT EXISTS `gy3te_user_notes` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `user_id` int(10) unsigned NOT NULL DEFAULT '0',
@@ -10057,7 +9763,6 @@ DELETE FROM `gy3te_user_notes`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_user_profiles
-DROP TABLE IF EXISTS `gy3te_user_profiles`;
 CREATE TABLE IF NOT EXISTS `gy3te_user_profiles` (
   `user_id` int(11) NOT NULL,
   `profile_key` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -10073,7 +9778,6 @@ DELETE FROM `gy3te_user_profiles`;
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_user_usergroup_map
-DROP TABLE IF EXISTS `gy3te_user_usergroup_map`;
 CREATE TABLE IF NOT EXISTS `gy3te_user_usergroup_map` (
   `user_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Foreign Key to #__users.id',
   `group_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Foreign Key to #__usergroups.id',
@@ -10097,7 +9801,6 @@ INSERT INTO `gy3te_user_usergroup_map` (`user_id`, `group_id`) VALUES
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_utf8_conversion
-DROP TABLE IF EXISTS `gy3te_utf8_conversion`;
 CREATE TABLE IF NOT EXISTS `gy3te_utf8_conversion` (
   `converted` tinyint(4) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -10111,7 +9814,6 @@ INSERT INTO `gy3te_utf8_conversion` (`converted`) VALUES
 
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_viewlevels
-DROP TABLE IF EXISTS `gy3te_viewlevels`;
 CREATE TABLE IF NOT EXISTS `gy3te_viewlevels` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Primary Key',
   `title` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
