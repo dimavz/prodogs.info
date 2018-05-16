@@ -1,0 +1,43 @@
+{
+  "name": "jomsocial",
+  "scripts": {
+    "build-chat": "browserify source/js/chat/chat.js | uglifyjs -c -m -o source/js/chat/dist/chat.min.js", 
+    "dev-chat": "watchify source/js/chat/chat.js -o source/js/chat/dist/chat.min.js -v"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babelify": "^8.0.0",
+    "browserify": "^14.5.0",
+    "browserify-shim": "^3.8.14",
+    "envify": "^4.1.0",
+    "grunt": "^1.0.1",
+    "grunt-browserify": "^5.0.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-contrib-requirejs": "^1.0.0",
+    "grunt-contrib-uglify": "^3.0.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-text-replace": "^0.4.0",
+    "matchdep": "^1.0.1",
+    "moment": "^2.21.0",
+    "node-sass": "^4.7.2",
+    "uglify-js": "^3.3.13",
+    "watchify": "^3.11.0"
+  },
+  "browserify": {
+    "transform": [
+      "babelify",
+      "browserify-shim"
+    ]
+  },
+  "browserify-shim": {
+    "jquery": "global:jQuery",
+    "joms": "global:joms"
+  },
+  "babel": {
+    "presets": [
+      "env"
+    ]
+  }
+}
