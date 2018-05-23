@@ -1,4 +1,0 @@
-{
-	"extends": "fields/user/header",
-    "searchable": false
-}

@@ -1,4 +1,0 @@
-{
-	"extends": "fields/user/file",
-    "searchable": false
-}
