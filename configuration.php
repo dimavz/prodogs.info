@@ -49,7 +49,7 @@ class JConfig {
 	public $offline_message = 'Сайт закрыт на техническое обслуживание.<br />Пожалуйста, зайдите позже.';
 	public $offset = 'UTC';
 	public $offset_user = 'UTC';
-	public $password = 'N844tu7Wb6B3';
+	public $password = 'matrix';
 	public $robots = '';
 	public $secret = 'a76sL3weYv6R9sa1j9FvXJrXkP58X9tA';
 	public $sef = '1';
