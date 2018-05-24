@@ -32,7 +32,7 @@ class JConfig {
 	public $ftp_root = '';
 	public $ftp_user = '';
 	public $gzip = '0';
-	public $helpurl = '';
+	public $helpurl = 'https://help.joomla.org/proxy?keyref=Help{major}{minor}:{keyref}&lang={langcode}';
 	public $host = 'localhost';
 	public $lifetime = '15';
 	public $list_limit = '20';
