@@ -1,21 +1,22 @@
 -- --------------------------------------------------------
 -- Хост:                         127.0.0.1
--- Версия сервера:               5.7.13 - MySQL Community Server (GPL)
--- ОС Сервера:                   Win64
--- HeidiSQL Версия:              9.3.0.4984
+-- Версия сервера:               5.7.16 - MySQL Community Server (GPL)
+-- Операционная система:         Win64
+-- HeidiSQL Версия:              9.4.0.5125
 -- --------------------------------------------------------
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET NAMES utf8mb4 */;
+/*!40101 SET NAMES utf8 */;
+/*!50503 SET NAMES utf8mb4 */;
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_akeeba_common
 CREATE TABLE IF NOT EXISTS `gy3te_akeeba_common` (
-  `key` varchar(192) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `value` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `key` varchar(192) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `value` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`key`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- Дамп данных таблицы prodogsinfo.gy3te_akeeba_common: ~5 rows (приблизительно)
 DELETE FROM `gy3te_akeeba_common`;
@@ -23,11 +24,10 @@ DELETE FROM `gy3te_akeeba_common`;
 INSERT INTO `gy3te_akeeba_common` (`key`, `value`) VALUES
 	('file_fef', '["com_akeeba"]'),
 	('fof30', '["com_akeeba","file_fef"]'),
-	('stats_lastrun', '1526973315'),
+	('stats_lastrun', '1527421152'),
 	('stats_siteid', '09f920bdc28d748918d39e4191a09a3dde3d9fba'),
 	('stats_siteurl', '0a9447854c9466497201215baee2b27b');
 /*!40000 ALTER TABLE `gy3te_akeeba_common` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_ak_profiles
 CREATE TABLE IF NOT EXISTS `gy3te_ak_profiles` (
@@ -45,7 +45,6 @@ DELETE FROM `gy3te_ak_profiles`;
 INSERT INTO `gy3te_ak_profiles` (`id`, `description`, `configuration`, `filters`, `quickicon`) VALUES
 	(1, 'Default Backup Profile', '###AES128###qmuV8avY5bSMqUDyDBVBYag/PNulzowe4AwTKl0ExDjA2Swi+PDYfuhTBlslb0EKsTuJzvshpODz0WNp5oy6vWh/J2fvfhIgnePK+lbEioCzFR3kN9nF9hv6z4hyUFhZMg1Y/eOvUE5Oamok2XThMMoVhhvlKcl0+DuCEpuOR2Cab0bqnKQjDUqqPXihf6aLnmEMqUBfMPnmgbanpmbdPwVEcQR9DLiRcU4t56x7BK/xCjOXjuD2Py7cBVacT7kfdtassRALUD18QoQkrnAdYxd7sVsStTjY8bIvFX4X3OHJ8TF3lj07TF9we62xRMHy3jTJdgc1qgJySD5Cz8KMs/CROkvNNUdiuxufTwLN0x22BizB7U7c0zDmIgEX0Dbw/tuFHmpwI83zYT7azR3MK4KSwTyjKi50l4jTkqRfXTO88nHxYzW2ng+JNv/lwuQd4G0EvQiEztn+U3Nmr9e0Vf8Z3bok0yjnG30hJv2aDwFpbxdpiO1DStN77r049VxGyrUwrOTeoVPUMs/5z1LmyA74SvtYxejczZfvJObASyCOKX0njw+AgOWf/cJpGudZM7HTwQ/LURzKaS/ckj5QZtqNAbllLypalPiS4n9UMaRYv8sIc53b2dUWNFHDhcsNq/RCh5GSt8C98cyh3+XEIf5gXoD5LaEBB14IZJU/zskCJs34johXLcOOdM/dxmBGL/2fmFnS6c+LR2K0kFkp/whHavTl2Gn8Gy8RRPpCBzWF1HDEEsu5HgIcQZLHzU2IinzLi7IuIaZEAd3iGncDT1bpmWyNayiQUlhE3/95RlCepiaOKR4OnL+yusv95CycgWbIjnqFEybR6HKGv3vhqWVd/HFEyB13rELftRpOau4Dcns7XsyMFrvCn1eYFjQlel9s4FSIHYJbhhg+x6MleGQ/ixULYD7SjlR6eD6PcJFI+H+RCzjuoj5HWGJ0c7BCgJoosKUeJJWe+caS9E89mWnz1wSAAB/0huwLgKtAoI6pXQ69Zz3Ve+m0bdM75NwHTCTOzcRo74d5zFhPdGXqu8TIGo3UwhQMHJgKh9lkEVabIllblgwaGs6VjmmdSYLdXiz5b0GA487SummPnovEHM4bZ5PEjo/fkBAXghpCTSqPJYfd0syAHHC8utrqHqc7sWZpoZiZ1nPjjpoh4hely7wWyjL0aygkTkNEvgE+lVcw8Va7yQ5q80/5OQ9PtFZcGTP4ObUGbfL9mvql8+vE7LHWQr5ryYWmvb+wRI8IxzJC4uz/94meaalSeGclq63kodTA+ztqM7MCRDux8Qf+4qS+TkadkKr41rWGTAQ9L4zVsm+QwrJk7Tn9U90L13s7VqYSFCgmSLp7qYGJ5nO/gr7mbvWLqQ9YMpsxAPzXpDRqERp0usrN59x2Sc8jsH+WVKfkN2GjFgbAnsPUfN3kKdn7U44/qSAyF8dhquTyKBcxakEyDYHqtkPAyOZbh3TvHaFxIcdRc+wAgO7uyFnyTvGYyaT+RN/1oLxpuuaZWnvhkTccfOt4GJv7c7y+Nh74F93H6aPuvC7pWb8ZnxOnwXZ8rBKRbRyA3QwjC/6+0/bH2KMAyhfMekwmNn+PbEzdzVMx6FMCdxf+39HDt0L6kvZYbVLO6r20iKpDMUrG5KHnqumysWbtMeHGAbFQOD3AK9EHwzd69+DPeJxjn1FFAr8N78tmnx+ECy0v4Szmc21t5pan750+1AOi77oUtK7aBUzfa/CQu9+EqwUczrbBtreOSxB/v+430u79JRCr+YO9jrtiR0MrLcHYcfoitcHmIhM3TSQibkKTAd6Unl+EBeGRuZIYJ6vaGDuaGBBRU6+f6bFRDucuMcwhwZa3aPRpki/XIUFF4+rgkg+JQnDbYBwp4B3Bvld76gVfY3zJEt9Go+YuuMrhncSMSnJHzAZZZy4cKdUTPCHvGWu4677jNCBCSmtJef+3V7FCtlHJejAJhvWDX+JkZVejk1aig0mru5MBtKUbkGFgksjeP+s6dluJW47xNvyMmFW/gD+OaNR8J23WQspq7hvwfffizf8TvnStzeZA7gWpT1YbBicwCwd1lhAiEx6dcsL9mQMHrF4xJW0Kq0VPLmpTkOh2sLh2sZmpMO/lgDyWy4uTXL/gJZfFZONInx9jNS+i6O1zWRd0KBkxEwkElUcWamVSIx5y4UPeDtMvLgTbxTAHr2ggqXuPKfsFalSczqrH5NFfeA+EJGyyKw7M5xep1xUoYlDlrCjqVEVoOEMZtbDVnEkD53ygHeSRxKXU1gsEevrjhKKs5qYsFvSxqgRqJNGT8SLXHWySODg82w/DS77ipt56fHDj/Z85OyydRiZxsseR1jkYSnL0TI8z9A5z3aOq3SengUQ3wA+nNQ4lanDnVD6QjEpQU1QNhya9371sBoJy4m46n4ltbgFs1nTQGLIlunwbKEwmpgAQrds1yaJQ0JRHrJvrRuJDczi2agOFvuPm03139slSSlBJVssoxTaNHZTgNLs9ZoTTa3v1BgAA', '', 1);
 /*!40000 ALTER TABLE `gy3te_ak_profiles` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_ak_stats
 CREATE TABLE IF NOT EXISTS `gy3te_ak_stats` (
@@ -71,13 +70,12 @@ CREATE TABLE IF NOT EXISTS `gy3te_ak_stats` (
   KEY `idx_stale` (`status`,`origin`)
 ) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Дамп данных таблицы prodogsinfo.gy3te_ak_stats: ~0 rows (приблизительно)
+-- Дамп данных таблицы prodogsinfo.gy3te_ak_stats: ~1 rows (приблизительно)
 DELETE FROM `gy3te_ak_stats`;
 /*!40000 ALTER TABLE `gy3te_ak_stats` DISABLE KEYS */;
 INSERT INTO `gy3te_ak_stats` (`id`, `description`, `comment`, `backupstart`, `backupend`, `status`, `origin`, `type`, `profile_id`, `archivename`, `absolute_path`, `multipart`, `tag`, `backupid`, `filesexist`, `remote_filename`, `total_size`) VALUES
 	(9, 'Резервное копирование 22.05.2018 10:16', '', '2018-05-22 10:17:02', '0000-00-00 00:00:00', 'complete', 'backend', 'full', 1, 'prodogs.info-20180522-101702.zip', 'G:/OpenServer/domains/prodogs.info/backups/prodogs.info-20180522-101702.zip', 0, 'backend', 'id1', 1, NULL, 0);
 /*!40000 ALTER TABLE `gy3te_ak_stats` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_ak_storage
 CREATE TABLE IF NOT EXISTS `gy3te_ak_storage` (
@@ -91,7 +89,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_ak_storage` (
 DELETE FROM `gy3te_ak_storage`;
 /*!40000 ALTER TABLE `gy3te_ak_storage` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_ak_storage` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_assets
 CREATE TABLE IF NOT EXISTS `gy3te_assets` (
@@ -297,7 +294,6 @@ INSERT INTO `gy3te_assets` (`id`, `parent_id`, `lft`, `rgt`, `level`, `name`, `t
 	(191, 1, 361, 362, 1, 'com_cobalt.field.84', 'Организация', '{}');
 /*!40000 ALTER TABLE `gy3te_assets` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_associations
 CREATE TABLE IF NOT EXISTS `gy3te_associations` (
   `id` int(11) NOT NULL COMMENT 'A reference to the associated item.',
@@ -311,7 +307,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_associations` (
 DELETE FROM `gy3te_associations`;
 /*!40000 ALTER TABLE `gy3te_associations` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_associations` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_banners
 CREATE TABLE IF NOT EXISTS `gy3te_banners` (
@@ -362,7 +357,6 @@ DELETE FROM `gy3te_banners`;
 /*!40000 ALTER TABLE `gy3te_banners` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_banners` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_banner_clients
 CREATE TABLE IF NOT EXISTS `gy3te_banner_clients` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -389,7 +383,6 @@ DELETE FROM `gy3te_banner_clients`;
 /*!40000 ALTER TABLE `gy3te_banner_clients` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_banner_clients` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_banner_tracks
 CREATE TABLE IF NOT EXISTS `gy3te_banner_tracks` (
   `track_date` datetime NOT NULL,
@@ -406,7 +399,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_banner_tracks` (
 DELETE FROM `gy3te_banner_tracks`;
 /*!40000 ALTER TABLE `gy3te_banner_tracks` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_banner_tracks` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_categories
 CREATE TABLE IF NOT EXISTS `gy3te_categories` (
@@ -458,7 +450,6 @@ INSERT INTO `gy3te_categories` (`id`, `asset_id`, `parent_id`, `lft`, `rgt`, `le
 	(5, 30, 1, 7, 8, 1, 'uncategorised', 'com_newsfeeds', 'Uncategorised', 'uncategorised', '', '', 1, 0, '0000-00-00 00:00:00', 1, '{"category_layout":"","image":""}', '', '', '{"author":"","robots":""}', 48, '2017-05-15 08:46:37', 0, '0000-00-00 00:00:00', 0, '*', 1),
 	(7, 32, 1, 9, 10, 1, 'uncategorised', 'com_users', 'Uncategorised', 'uncategorised', '', '', 1, 0, '0000-00-00 00:00:00', 1, '{"category_layout":"","image":""}', '', '', '{"author":"","robots":""}', 48, '2017-05-15 08:46:37', 0, '0000-00-00 00:00:00', 0, '*', 1);
 /*!40000 ALTER TABLE `gy3te_categories` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_activities
 CREATE TABLE IF NOT EXISTS `gy3te_community_activities` (
@@ -533,7 +524,6 @@ INSERT INTO `gy3te_community_activities` (`id`, `actor`, `target`, `title`, `con
 	(35, 54, 0, '', '', 'cover.upload', '', 1, 0, 0, 0, 0, '2018-05-25 07:40:40', 30, '{"attachment":"images\\/cover\\/profile\\/54\\/cf96ad0d83e951910757ef38ad1b352d.png","type":"profile","album_id":"13","photo_id":1}', 1, 0, '', 255.000000, 255.000000, 35, 'cover.upload', 35, 'cover.upload', '', '2018-05-25 10:40:40');
 /*!40000 ALTER TABLE `gy3te_community_activities` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_activities_hide
 CREATE TABLE IF NOT EXISTS `gy3te_community_activities_hide` (
   `activity_id` int(11) NOT NULL,
@@ -545,7 +535,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_community_activities_hide` (
 DELETE FROM `gy3te_community_activities_hide`;
 /*!40000 ALTER TABLE `gy3te_community_activities_hide` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_community_activities_hide` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_apps
 CREATE TABLE IF NOT EXISTS `gy3te_community_apps` (
@@ -566,7 +555,6 @@ DELETE FROM `gy3te_community_apps`;
 /*!40000 ALTER TABLE `gy3te_community_apps` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_community_apps` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_avatar
 CREATE TABLE IF NOT EXISTS `gy3te_community_avatar` (
   `id` int(10) unsigned NOT NULL,
@@ -580,7 +568,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_community_avatar` (
 DELETE FROM `gy3te_community_avatar`;
 /*!40000 ALTER TABLE `gy3te_community_avatar` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_community_avatar` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_badges
 CREATE TABLE IF NOT EXISTS `gy3te_community_badges` (
@@ -604,7 +591,6 @@ INSERT INTO `gy3te_community_badges` (`id`, `title`, `points`, `image`, `publish
 	(6, '600', 600, 'png', 1);
 /*!40000 ALTER TABLE `gy3te_community_badges` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_blocklist
 CREATE TABLE IF NOT EXISTS `gy3te_community_blocklist` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -621,7 +607,6 @@ DELETE FROM `gy3te_community_blocklist`;
 /*!40000 ALTER TABLE `gy3te_community_blocklist` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_community_blocklist` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_chat
 CREATE TABLE IF NOT EXISTS `gy3te_community_chat` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -636,7 +621,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_community_chat` (
 DELETE FROM `gy3te_community_chat`;
 /*!40000 ALTER TABLE `gy3te_community_chat` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_community_chat` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_chat_activity
 CREATE TABLE IF NOT EXISTS `gy3te_community_chat_activity` (
@@ -657,7 +641,6 @@ DELETE FROM `gy3te_community_chat_activity`;
 /*!40000 ALTER TABLE `gy3te_community_chat_activity` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_community_chat_activity` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_chat_participants
 CREATE TABLE IF NOT EXISTS `gy3te_community_chat_participants` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -676,7 +659,6 @@ DELETE FROM `gy3te_community_chat_participants`;
 /*!40000 ALTER TABLE `gy3te_community_chat_participants` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_community_chat_participants` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_config
 CREATE TABLE IF NOT EXISTS `gy3te_community_config` (
   `name` varchar(64) NOT NULL,
@@ -691,7 +673,6 @@ INSERT INTO `gy3te_community_config` (`name`, `params`) VALUES
 	('dbversion', '25'),
 	('config', '{"enablereporting":"1","maxReport":"50","notifyMaxReport":"","enableguestreporting":"0","predefinedreports":"Spamming \\/ Advertisement\\\\nProfanity \\/ Inappropriate content.\\\\nAbusive.","guestsearch":"1","advanced_search_radius":"0","advanced_search_units":"metric","privacy_search_email":"0","sendemailonpageload":"0","archive_activity_max_day":"1","archive_activity_limit":"1500","newtab":"0","sortactivitybylastupdate":"0","overrideactivityprivacy":"0","allmemberactivitycomment":"0","likes_groups":"0","likes_events":"1","likes_photo":"0","likes_videos":"0","likes_profile":"1","sitename":"\\u0421\\u043e\\u043e\\u0431\\u0449\\u0435\\u0441\\u0442\\u0432\\u043e \\u043b\\u044e\\u0431\\u0438\\u0442\\u0435\\u043b\\u0435\\u0439 \\u0441\\u043e\\u0431\\u0430\\u043a","enablesharethis":"1","shareviaemail":"1","notifications_ajax_enable_refresh":"1","notifications_ajax_refresh_interval":"30000","wallediting":"1","lockprofilewalls":"1","lockvideoswalls":"0","lockphotoswalls":"0","lockgroupwalls":"1","lockeventwalls":"1","enable_refresh":"1","stream_refresh_interval":"30000","stream_default_comments":"3","prev_comment_load":"10","stream_comment_length":"150","daylightsavingoffset":"0","htmlemail":"1","copyrightemail":"Copyright of Your Company","statusmaxchar":"400","streamlocation":"1","statusemoticon":"1","profile_multiprofile":"1","alphabetfiltering":"1","cfgSection":"privacy","network_keywords":"","show_toolbar":"1","displayname":"name","pagination":"12","activitydateformat":"lapse","allowhtml":"1","showactivityavatar":"1","streamcontentlength":"150","singularnumber":"1","maxactivities":"20","frontpageactivitydefault":"privacy:me-and-friends","showactivitystream":"2","custom_activity":"1","infinitescroll":"1","autoloadtrigger":"100","show_featured":"1","featureduserslimit":"10","featuredvideoslimit":"10","featuredgroupslimit":"10","featuredalbumslimit":"10","featuredeventslimit":"10","featured_stream":"1","stream_frontpage_featured":"2","stream_profile_featured":"2","stream_group_featured":"2","stream_event_featured":"2","enablemood":"1","enable_badges":"1","fbconnectkey":"","fbconnectsecret":"","usejfbc":"0","fbsignupimport":"0","fbwatermark":"1","fbloginimportprofile":"0","fbloginimportavatar":"1","fbconnectupdatestatus":"0","fbconnectpoststatus":"0","googleapikey":"AIzaSyBxYQ-UbWedvRNNxNNArRHp8zBzmXncbNo","fieldcodelocation":"FIELD_LOCATION","fieldcodestreet":"","fieldcodecity":"","fieldcodestate":"","fieldcodecountry":"","fieldcodepostcode":"","enable_embedly":"1","embedly_apikey":"","embedly_card_apikey":"","enable_embedly_card_position":"left","enable_embedly_card_template":"light","enable_embedly_card_minimalist":"0","antispam_enable":"0","antispam_akismet_key":"","antispam_akismet_messages":"1","antispam_akismet_friends":"1","antispam_akismet_walls":"1","antispam_akismet_status":"1","antispam_akismet_discussions":"1","enableavataruploadregister":"1","enableterms":"0","registrationTerms":"","check_register_multiple_email":"0","profile_deletion":"1","alloweddomains":"","denieddomains":"","nocaptcha":"1","nocaptchapublic":"","nocaptchaprivate":"","nocaptchatheme":"light","invite_only":"0","invite_only_request":"0","invite_registation_limit":"0","enablegroups":"0","enableguestsearchgroups":"1","moderategroupcreation":"0","creategroups":"1","groupcreatelimit":"300","groupphotouploadlimit":"500","groupvideouploadlimit":"500","createannouncement":"1","creatediscussion":"1","groupphotos":"1","groupvideos":"1","group_events":"1","groupdiscussnotification":"0","discussionfilelimit":"500","groupdiscussfilesharing":"1","filemaxuploadsize":"8","groupbulletinfilesharing":"1","enablephotos":"0","enable_animated_gif":"0","photouploadlimit":"500","photosmapdefault":"0","maxuploadsize":"8","deleteoriginalphotos":"0","magickPath":"","autoalbumcover":"1","photos_auto_rotate":"1","output_image_quality":"80","album_mode":"1","enable_photos_location":"1","photo_watermark":"0","min_width_img_watermark":"500","min_height_img_watermark":"500","watermark_position":"left_top","enablevideos":"0","enableguestsearchvideos":"0","enableprofilevideo":"0","enablevideosupload":"0","videouploadlimit":"500","videosmapdefault":"0","deleteoriginalvideos":"0","videofolder":"video","maxvideouploadsize":"8","ffmpegPath":"","flvtool2":"","qscale":"11","videosSize":"480x360","videosThumbSize":"320x180","customCommandForVideo":"","enablevideopseudostream":"0","videodebug":"0","video_mode":"0","video_native":"1","enable_zencoder":"0","zencoder_api_key":"","privacyprofile":"0","privacyfriends":"30","privacyphotos":"30","privacyvideos":"30","privacy_groups_list":"20","privacy_show_admins":"0","maxnotification":"20","etype_groups_notify_admin":"1","notif_groups_notify_admin":"1","etype_user_profile_delete":"1","notif_user_profile_delete":"1","etype_system_reports_threshold":"1","notif_system_reports_threshold":"1","etype_profile_activity_add_comment":"1","notif_profile_activity_add_comment":"1","etype_profile_activity_reply_comment":"1","notif_profile_activity_reply_comment":"1","etype_profile_status_update":"1","notif_profile_status_update":"1","etype_profile_like":"1","notif_profile_like":"1","etype_profile_stream_like":"1","notif_profile_stream_like":"1","etype_profle_digest_email":"1","notif_profle_digest_email":"0","etype_friends_request_connection":"1","notif_friends_request_connection":"1","etype_friends_create_connection":"1","notif_friends_create_connection":"1","etype_inbox_create_message":"1","notif_inbox_create_message":"1","etype_users_tagged":"1","notif_users_tagged":"1","etype_events_notify_admin":"1","notif_events_notify_admin":"1","etype_events_invite":"1","notif_events_invite":"1","etype_events_invitation_approved":"1","notif_events_invitation_approved":"1","etype_events_sendmail":"1","notif_events_sendmail":"1","etype_event_notify_creator":"0","notif_event_notify_creator":"0","etype_event_join_request":"1","notif_event_join_request":"1","etype_events_activity_add_comment":"0","notif_events_activity_add_comment":"0","etype_events_wall_create":"1","notif_events_wall_create":"1","etype_system_messaging":"1","notif_system_messaging":"1","enablepm":"1","enablechatbar":"0","enablereadstatus":"1","message_file_sharing":"0","message_file_maxsize":"2","message_total_initial_display":"10","message_total_loaded_display":"10","message_recall_minutes":"5","message_pooling_time_active":"30","message_pooling_time_inactive":"30","message_show_timestamp":"1","message_time_format":"g:i A","message_sidebar_softlimit":"15","default_profile_tab":"0","activityLimit":"15","show_profile_card":"1","use_gravatar":"0"}');
 /*!40000 ALTER TABLE `gy3te_community_config` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_connection
 CREATE TABLE IF NOT EXISTS `gy3te_community_connection` (
@@ -717,7 +698,6 @@ INSERT INTO `gy3te_community_connection` (`connection_id`, `connect_from`, `conn
 	(3, 50, 49, 1, 0, '', '2018-05-25 07:37:00');
 /*!40000 ALTER TABLE `gy3te_community_connection` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_connect_users
 CREATE TABLE IF NOT EXISTS `gy3te_community_connect_users` (
   `connectid` bigint(20) NOT NULL,
@@ -732,7 +712,6 @@ DELETE FROM `gy3te_community_connect_users`;
 /*!40000 ALTER TABLE `gy3te_community_connect_users` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_community_connect_users` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_digest_email
 CREATE TABLE IF NOT EXISTS `gy3te_community_digest_email` (
   `user_id` int(11) NOT NULL,
@@ -745,7 +724,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_community_digest_email` (
 DELETE FROM `gy3te_community_digest_email`;
 /*!40000 ALTER TABLE `gy3te_community_digest_email` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_community_digest_email` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_engagement
 CREATE TABLE IF NOT EXISTS `gy3te_community_engagement` (
@@ -764,7 +742,6 @@ DELETE FROM `gy3te_community_engagement`;
 INSERT INTO `gy3te_community_engagement` (`id`, `action`, `user_id`, `created`, `week`) VALUES
 	(1, 'message.share', 49, '2018-05-12 11:31:47', 19);
 /*!40000 ALTER TABLE `gy3te_community_engagement` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_events
 CREATE TABLE IF NOT EXISTS `gy3te_community_events` (
@@ -818,7 +795,6 @@ INSERT INTO `gy3te_community_events` (`id`, `parent`, `catid`, `contentid`, `typ
 	(1, 0, 4, 0, 'profile', 'Выставка всех пород в Минске', 'Минск', 'Описание выставки всех пород в Минске', 0, '<p>Полное описание выставки всех пород в Минске</p>', 53, '2018-05-16 00:00:00', '2018-05-21 00:15:00', 0, NULL, NULL, '', 0, 1, 0, 0, 0, 0, 1, '2018-05-14 07:51:47', 1, 1, 255.000000, 255.000000, '0', 0, NULL, '0000-00-00', 'file', '{"eventrecentphotos":"6","eventrecentvideos":"6","timezone":null,"photopermission":2,"videopermission":2}');
 /*!40000 ALTER TABLE `gy3te_community_events` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_events_category
 CREATE TABLE IF NOT EXISTS `gy3te_community_events_category` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
@@ -841,7 +817,6 @@ INSERT INTO `gy3te_community_events_category` (`id`, `parent`, `name`, `descript
 	(7, 0, 'Обучение', 'Мероприятия связанные с обучением'),
 	(8, 0, 'Открытие', 'Мероприятия связанные с новыми открытиями. К примеру, открытие нового магазина с товарами для собак или новой ветеринарной клиники, новой выставки и т.д.');
 /*!40000 ALTER TABLE `gy3te_community_events_category` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_events_members
 CREATE TABLE IF NOT EXISTS `gy3te_community_events_members` (
@@ -868,7 +843,6 @@ INSERT INTO `gy3te_community_events_members` (`id`, `eventid`, `memberid`, `stat
 	(1, 1, 53, 1, 1, 0, 0, '2018-05-14 07:52:08');
 /*!40000 ALTER TABLE `gy3te_community_events_members` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_event_stats
 CREATE TABLE IF NOT EXISTS `gy3te_community_event_stats` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -888,7 +862,6 @@ INSERT INTO `gy3te_community_event_stats` (`id`, `eid`, `type`, `count`, `date`,
 	(1, 1, 'view', 1, '2018-05-14', '', '2018-05-14 13:52:30');
 /*!40000 ALTER TABLE `gy3te_community_event_stats` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_featured
 CREATE TABLE IF NOT EXISTS `gy3te_community_featured` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -905,7 +878,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_community_featured` (
 DELETE FROM `gy3te_community_featured`;
 /*!40000 ALTER TABLE `gy3te_community_featured` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_community_featured` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_fields
 CREATE TABLE IF NOT EXISTS `gy3te_community_fields` (
@@ -948,7 +920,6 @@ INSERT INTO `gy3te_community_fields` (`id`, `type`, `ordering`, `published`, `mi
 	(14, 'textarea', 3, 1, 0, 0, 'О нас', '', 1, 0, 1, 1, '', 'FIELD_ORGANIZATION_DESC', '{"readonly":"0","min_char":"","max_char":"","style":""}'),
 	(15, 'text', 10, 1, 0, 0, 'Факс', '', 1, 0, 1, 1, '', 'FIELD_FAX', '{"readonly":"0","min_char":"","max_char":"","maxlength":"","style":""}');
 /*!40000 ALTER TABLE `gy3te_community_fields` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_fields_values
 CREATE TABLE IF NOT EXISTS `gy3te_community_fields_values` (
@@ -1003,7 +974,6 @@ INSERT INTO `gy3te_community_fields_values` (`id`, `user_id`, `field_id`, `value
 	(32, 54, 5, '{"name":"","desc":"","lat":"","lng":""}', 10, '');
 /*!40000 ALTER TABLE `gy3te_community_fields_values` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_files
 CREATE TABLE IF NOT EXISTS `gy3te_community_files` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -1032,7 +1002,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_community_files` (
 DELETE FROM `gy3te_community_files`;
 /*!40000 ALTER TABLE `gy3te_community_files` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_community_files` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_groups
 CREATE TABLE IF NOT EXISTS `gy3te_community_groups` (
@@ -1067,7 +1036,6 @@ INSERT INTO `gy3te_community_groups` (`id`, `published`, `ownerid`, `categoryid`
 	(1, 1, 49, 1, 'Тестовая группа', '<p>Тестовая группаТестовая группаТестовая группа</p>', 'Тестовая группа', '', '', 1, 0, '2018-05-12 10:43:07', '', '', '', 0, 0, 2, '{"discussordering":0,"photopermission":-1,"videopermission":-1,"eventpermission":1,"grouprecentphotos":6,"grouprecentvideos":6,"grouprecentevents":6,"newmembernotification":1,"joinrequestnotification":1,"wallnotification":1,"groupdiscussionfilesharing":1,"groupannouncementfilesharing":1,"stream":1}', 3, 'file');
 /*!40000 ALTER TABLE `gy3te_community_groups` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_groups_bulletins
 CREATE TABLE IF NOT EXISTS `gy3te_community_groups_bulletins` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -1086,7 +1054,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_community_groups_bulletins` (
 DELETE FROM `gy3te_community_groups_bulletins`;
 /*!40000 ALTER TABLE `gy3te_community_groups_bulletins` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_community_groups_bulletins` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_groups_category
 CREATE TABLE IF NOT EXISTS `gy3te_community_groups_category` (
@@ -1107,7 +1074,6 @@ INSERT INTO `gy3te_community_groups_category` (`id`, `parent`, `name`, `descript
 	(4, 0, 'Automotive', 'Automotive group category'),
 	(5, 0, 'Music', 'Music group category');
 /*!40000 ALTER TABLE `gy3te_community_groups_category` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_groups_discuss
 CREATE TABLE IF NOT EXISTS `gy3te_community_groups_discuss` (
@@ -1131,7 +1097,6 @@ DELETE FROM `gy3te_community_groups_discuss`;
 /*!40000 ALTER TABLE `gy3te_community_groups_discuss` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_community_groups_discuss` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_groups_invite
 CREATE TABLE IF NOT EXISTS `gy3te_community_groups_invite` (
   `groupid` int(11) NOT NULL,
@@ -1143,7 +1108,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_community_groups_invite` (
 DELETE FROM `gy3te_community_groups_invite`;
 /*!40000 ALTER TABLE `gy3te_community_groups_invite` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_community_groups_invite` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_groups_members
 CREATE TABLE IF NOT EXISTS `gy3te_community_groups_members` (
@@ -1162,7 +1126,6 @@ INSERT INTO `gy3te_community_groups_members` (`groupid`, `memberid`, `approved`,
 	(1, 49, 1, 1),
 	(1, 52, 1, 0);
 /*!40000 ALTER TABLE `gy3te_community_groups_members` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_group_stats
 CREATE TABLE IF NOT EXISTS `gy3te_community_group_stats` (
@@ -1183,7 +1146,6 @@ INSERT INTO `gy3te_community_group_stats` (`id`, `gid`, `type`, `count`, `date`,
 	(1, 1, 'view', 3, '2018-05-12', '', '2018-05-12 16:43:08');
 /*!40000 ALTER TABLE `gy3te_community_group_stats` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_hashtag
 CREATE TABLE IF NOT EXISTS `gy3te_community_hashtag` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -1199,7 +1161,6 @@ DELETE FROM `gy3te_community_hashtag`;
 /*!40000 ALTER TABLE `gy3te_community_hashtag` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_community_hashtag` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_invitations
 CREATE TABLE IF NOT EXISTS `gy3te_community_invitations` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -1213,7 +1174,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_community_invitations` (
 DELETE FROM `gy3te_community_invitations`;
 /*!40000 ALTER TABLE `gy3te_community_invitations` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_community_invitations` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_likes
 CREATE TABLE IF NOT EXISTS `gy3te_community_likes` (
@@ -1230,7 +1190,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_community_likes` (
 DELETE FROM `gy3te_community_likes`;
 /*!40000 ALTER TABLE `gy3te_community_likes` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_community_likes` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_location_cache
 CREATE TABLE IF NOT EXISTS `gy3te_community_location_cache` (
@@ -1249,7 +1208,6 @@ INSERT INTO `gy3te_community_location_cache` (`address`, `latitude`, `longitude`
 	('минск', 255.000000, 255.000000, '', 'ZE', '2018-05-14 07:52:51');
 /*!40000 ALTER TABLE `gy3te_community_location_cache` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_mailq
 CREATE TABLE IF NOT EXISTS `gy3te_community_mailq` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -1263,13 +1221,12 @@ CREATE TABLE IF NOT EXISTS `gy3te_community_mailq` (
   `params` text NOT NULL,
   PRIMARY KEY (`id`),
   KEY `status` (`status`)
-) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- Дамп данных таблицы prodogsinfo.gy3te_community_mailq: 0 rows
 DELETE FROM `gy3te_community_mailq`;
 /*!40000 ALTER TABLE `gy3te_community_mailq` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_community_mailq` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_memberlist
 CREATE TABLE IF NOT EXISTS `gy3te_community_memberlist` (
@@ -1287,7 +1244,6 @@ DELETE FROM `gy3te_community_memberlist`;
 /*!40000 ALTER TABLE `gy3te_community_memberlist` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_community_memberlist` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_memberlist_criteria
 CREATE TABLE IF NOT EXISTS `gy3te_community_memberlist_criteria` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -1304,7 +1260,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_community_memberlist_criteria` (
 DELETE FROM `gy3te_community_memberlist_criteria`;
 /*!40000 ALTER TABLE `gy3te_community_memberlist_criteria` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_community_memberlist_criteria` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_moods
 CREATE TABLE IF NOT EXISTS `gy3te_community_moods` (
@@ -1369,7 +1324,6 @@ INSERT INTO `gy3te_community_moods` (`id`, `title`, `description`, `image`, `cus
 	(46, 'COM_COMMUNITY_MOOD_SHORT_SURFING', 'COM_COMMUNITY_MOOD_SURFING', 'png', 1, 1, 0, 0);
 /*!40000 ALTER TABLE `gy3te_community_moods` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_msg
 CREATE TABLE IF NOT EXISTS `gy3te_community_msg` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -1388,7 +1342,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_community_msg` (
 DELETE FROM `gy3te_community_msg`;
 /*!40000 ALTER TABLE `gy3te_community_msg` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_community_msg` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_msg_recepient
 CREATE TABLE IF NOT EXISTS `gy3te_community_msg_recepient` (
@@ -1409,7 +1362,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_community_msg_recepient` (
 DELETE FROM `gy3te_community_msg_recepient`;
 /*!40000 ALTER TABLE `gy3te_community_msg_recepient` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_community_msg_recepient` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_notifications
 CREATE TABLE IF NOT EXISTS `gy3te_community_notifications` (
@@ -1440,7 +1392,6 @@ INSERT INTO `gy3te_community_notifications` (`id`, `actor`, `target`, `content`,
 	(4, 50, 49, 'Вы теперь друзья с {friend}.', '0', 'notif_friends_create_connection', 0, '2018-05-25 07:37:00', '{"url":"http:\\/\\/prodogs.info\\/index.php?option=com_community&view=profile&userid=50&Itemid=116","friend":"\\u0422\\u0435\\u0441\\u04422","friend_url":"index.php?option=com_community&view=profile&userid=50","actor":"\\u0422\\u0435\\u0441\\u04422","actor_url":"index.php?option=com_community&view=profile&userid=50"}');
 /*!40000 ALTER TABLE `gy3te_community_notifications` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_oauth
 CREATE TABLE IF NOT EXISTS `gy3te_community_oauth` (
   `userid` int(11) NOT NULL,
@@ -1454,7 +1405,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_community_oauth` (
 DELETE FROM `gy3te_community_oauth`;
 /*!40000 ALTER TABLE `gy3te_community_oauth` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_community_oauth` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_photos
 CREATE TABLE IF NOT EXISTS `gy3te_community_photos` (
@@ -1486,7 +1436,6 @@ INSERT INTO `gy3te_community_photos` (`id`, `albumid`, `caption`, `published`, `
 	(1, 13, '', 1, 54, '', 'images/cover/profile/54/cf96ad0d83e951910757ef38ad1b352d.png', 'images/cover/profile/54/thumb_cf96ad0d83e951910757ef38ad1b352d.png', '', 753728, 'file', '2018-05-25 07:40:40', 0, 0, '', ''),
 	(2, 12, '', 1, 54, '', 'images/avatar/902c125394a1933d4b3e783f153c3042.png', 'images/avatar/thumb_902c125394a1933d4b3e783f153c3042.png', 'images/avatar/original_902c125394a1933d4b3e783f153c3042.png', 453487, 'file', '2018-05-25 07:49:42', 0, 0, '', '');
 /*!40000 ALTER TABLE `gy3te_community_photos` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_photos_albums
 CREATE TABLE IF NOT EXISTS `gy3te_community_photos_albums` (
@@ -1535,7 +1484,6 @@ INSERT INTO `gy3te_community_photos_albums` (`id`, `photoid`, `creator`, `name`,
 	(14, 0, 54, 'Лента фото', '', '0', '2018-05-24 13:12:15', 'images/photos/54/', 'profile', 0, 0, 0, '', 255.000000, 255.000000, 1, '{"count":"0","lastupdated":"2018-05-24 14:02:46","thumbnail":"components\\/com_community\\/assets\\/photo_thumb.png"}');
 /*!40000 ALTER TABLE `gy3te_community_photos_albums` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_photos_tag
 CREATE TABLE IF NOT EXISTS `gy3te_community_photos_tag` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -1556,7 +1504,6 @@ DELETE FROM `gy3te_community_photos_tag`;
 /*!40000 ALTER TABLE `gy3te_community_photos_tag` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_community_photos_tag` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_photos_tokens
 CREATE TABLE IF NOT EXISTS `gy3te_community_photos_tokens` (
   `userid` int(11) NOT NULL,
@@ -1568,7 +1515,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_community_photos_tokens` (
 DELETE FROM `gy3te_community_photos_tokens`;
 /*!40000 ALTER TABLE `gy3te_community_photos_tokens` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_community_photos_tokens` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_photo_stats
 CREATE TABLE IF NOT EXISTS `gy3te_community_photo_stats` (
@@ -1586,7 +1532,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_community_photo_stats` (
 DELETE FROM `gy3te_community_photo_stats`;
 /*!40000 ALTER TABLE `gy3te_community_photo_stats` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_community_photo_stats` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_profiles
 CREATE TABLE IF NOT EXISTS `gy3te_community_profiles` (
@@ -1620,7 +1565,6 @@ INSERT INTO `gy3te_community_profiles` (`id`, `name`, `description`, `approvals`
 	(4, 'Супер Администраторы', '', 1, 0, 'images/watermarks/5ca3964ef346d75d89da6f63.jpg', '', '', '', 'images/watermarks/thumb_5ca3964ef346d75d89da6f63.jpg', '2018-05-16 07:56:45', 1, 1, 0, 4, '{"userGroup":["8"]}'),
 	(5, 'Организация', 'Организации связанные с деятельностью по собаководству', 0, 1, 'images/watermarks/9ffe0c94adc4fc9b7b39454b.jpg', '', '', '', 'images/watermarks/thumb_9ffe0c94adc4fc9b7b39454b.jpg', '2018-05-24 12:47:10', 1, 1, 1, 5, '{"userGroup":["13"]}');
 /*!40000 ALTER TABLE `gy3te_community_profiles` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_profiles_fields
 CREATE TABLE IF NOT EXISTS `gy3te_community_profiles_fields` (
@@ -1671,7 +1615,6 @@ INSERT INTO `gy3te_community_profiles_fields` (`id`, `parent`, `field_id`) VALUE
 	(77, 5, 15);
 /*!40000 ALTER TABLE `gy3te_community_profiles_fields` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_profile_stats
 CREATE TABLE IF NOT EXISTS `gy3te_community_profile_stats` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -1708,7 +1651,6 @@ INSERT INTO `gy3te_community_profile_stats` (`id`, `uid`, `type`, `count`, `date
 	(18, 48, 'view', 1, '2018-05-25', '', '2018-05-25 12:08:19');
 /*!40000 ALTER TABLE `gy3te_community_profile_stats` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_register
 CREATE TABLE IF NOT EXISTS `gy3te_community_register` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -1722,13 +1664,12 @@ CREATE TABLE IF NOT EXISTS `gy3te_community_register` (
   `created` datetime DEFAULT NULL,
   `ip` varchar(25) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- Дамп данных таблицы prodogsinfo.gy3te_community_register: 0 rows
 DELETE FROM `gy3te_community_register`;
 /*!40000 ALTER TABLE `gy3te_community_register` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_community_register` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_register_auth_token
 CREATE TABLE IF NOT EXISTS `gy3te_community_register_auth_token` (
@@ -1747,7 +1688,6 @@ INSERT INTO `gy3te_community_register_auth_token` (`token`, `ip`, `auth_key`, `c
 	('8gD7N22inXJtNhvZIpwSxBMywsgz6HYw', '127.0.0.1', 'e5f0b7a07c9a0c8aedad10b641fd1b98', '2018-05-25 08:25:37');
 /*!40000 ALTER TABLE `gy3te_community_register_auth_token` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_reports
 CREATE TABLE IF NOT EXISTS `gy3te_community_reports` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -1762,7 +1702,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_community_reports` (
 DELETE FROM `gy3te_community_reports`;
 /*!40000 ALTER TABLE `gy3te_community_reports` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_community_reports` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_reports_actions
 CREATE TABLE IF NOT EXISTS `gy3te_community_reports_actions` (
@@ -1780,7 +1719,6 @@ DELETE FROM `gy3te_community_reports_actions`;
 /*!40000 ALTER TABLE `gy3te_community_reports_actions` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_community_reports_actions` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_reports_reporter
 CREATE TABLE IF NOT EXISTS `gy3te_community_reports_reporter` (
   `reportid` int(11) NOT NULL,
@@ -1795,7 +1733,6 @@ DELETE FROM `gy3te_community_reports_reporter`;
 /*!40000 ALTER TABLE `gy3te_community_reports_reporter` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_community_reports_reporter` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_storage_s3
 CREATE TABLE IF NOT EXISTS `gy3te_community_storage_s3` (
   `storageid` varchar(255) NOT NULL,
@@ -1807,7 +1744,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_community_storage_s3` (
 DELETE FROM `gy3te_community_storage_s3`;
 /*!40000 ALTER TABLE `gy3te_community_storage_s3` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_community_storage_s3` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_tags
 CREATE TABLE IF NOT EXISTS `gy3te_community_tags` (
@@ -1825,7 +1761,6 @@ DELETE FROM `gy3te_community_tags`;
 /*!40000 ALTER TABLE `gy3te_community_tags` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_community_tags` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_tags_words
 CREATE TABLE IF NOT EXISTS `gy3te_community_tags_words` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -1839,7 +1774,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_community_tags_words` (
 DELETE FROM `gy3te_community_tags_words`;
 /*!40000 ALTER TABLE `gy3te_community_tags_words` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_community_tags_words` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_theme
 CREATE TABLE IF NOT EXISTS `gy3te_community_theme` (
@@ -1859,7 +1793,6 @@ INSERT INTO `gy3te_community_theme` (`id`, `key`, `value`) VALUES
 	(3, 'settings', '{"profile":{"tagline":"[{\\"spacebefore\\":\\"\\",\\"before\\":\\"\\",\\"field\\":\\"4\\",\\"after\\":\\"\\",\\"spaceafter\\":\\"1\\"},{\\"spacebefore\\":\\"\\",\\"before\\":\\"\\",\\"field\\":\\"\\",\\"after\\":\\"\\",\\"spaceafter\\":\\"0\\"},{\\"spacebefore\\":\\"\\",\\"before\\":\\"\\",\\"field\\":\\"\\",\\"after\\":\\"\\",\\"spaceafter\\":\\"0\\"},{\\"spacebefore\\":\\"\\",\\"before\\":\\"\\",\\"field\\":\\"\\",\\"after\\":\\"\\",\\"spaceafter\\":\\"0\\"},{\\"spacebefore\\":\\"\\",\\"before\\":\\"\\",\\"field\\":\\"\\",\\"after\\":\\"\\",\\"spaceafter\\":\\"0\\"},{\\"spacebefore\\":\\"\\",\\"before\\":\\"\\",\\"field\\":\\"\\",\\"after\\":\\"\\",\\"spaceafter\\":\\"0\\"}]","1":{"tagline":"[{\\"spacebefore\\":\\"\\",\\"before\\":\\"\\",\\"field\\":\\"2\\",\\"after\\":\\"\\",\\"spaceafter\\":\\"0\\"},{\\"spacebefore\\":\\"\\",\\"before\\":\\"\\",\\"field\\":\\"3\\",\\"after\\":\\"\\",\\"spaceafter\\":\\"0\\"},{\\"spacebefore\\":\\"\\",\\"before\\":\\"\\",\\"field\\":\\"4\\",\\"after\\":\\"\\",\\"spaceafter\\":\\"0\\"},{\\"spacebefore\\":\\"\\",\\"before\\":\\"\\",\\"field\\":\\"7\\",\\"after\\":\\"\\",\\"spaceafter\\":\\"0\\"},{\\"spacebefore\\":\\"\\",\\"before\\":\\"\\",\\"field\\":\\"8\\",\\"after\\":\\"\\",\\"spaceafter\\":\\"0\\"},{\\"spacebefore\\":\\"\\",\\"before\\":\\"\\",\\"field\\":\\"15\\",\\"after\\":\\"\\",\\"spaceafter\\":\\"0\\"}]"},"2":{"tagline":"[{\\"spacebefore\\":\\"\\",\\"before\\":\\"\\",\\"field\\":\\"14\\",\\"after\\":\\"\\",\\"spaceafter\\":\\"0\\"},{\\"spacebefore\\":\\"\\",\\"before\\":\\"\\",\\"field\\":\\"7\\",\\"after\\":\\"\\",\\"spaceafter\\":\\"0\\"},{\\"spacebefore\\":\\"\\",\\"before\\":\\"\\",\\"field\\":\\"8\\",\\"after\\":\\"\\",\\"spaceafter\\":\\"0\\"},{\\"spacebefore\\":\\"\\",\\"before\\":\\"\\",\\"field\\":\\"15\\",\\"after\\":\\"\\",\\"spaceafter\\":\\"0\\"},{\\"spacebefore\\":\\"\\",\\"before\\":\\"\\",\\"field\\":\\"9\\",\\"after\\":\\"\\",\\"spaceafter\\":\\"0\\"},{\\"spacebefore\\":\\"\\",\\"before\\":\\"\\",\\"field\\":\\"5\\",\\"after\\":\\"\\",\\"spaceafter\\":\\"0\\"}]"},"3":{"tagline":"[{\\"spacebefore\\":\\"\\",\\"before\\":\\"\\",\\"field\\":\\"\\",\\"after\\":\\"\\",\\"spaceafter\\":\\"0\\"},{\\"spacebefore\\":\\"\\",\\"before\\":\\"\\",\\"field\\":\\"\\",\\"after\\":\\"\\",\\"spaceafter\\":\\"0\\"},{\\"spacebefore\\":\\"\\",\\"before\\":\\"\\",\\"field\\":\\"\\",\\"after\\":\\"\\",\\"spaceafter\\":\\"0\\"},{\\"spacebefore\\":\\"\\",\\"before\\":\\"\\",\\"field\\":\\"\\",\\"after\\":\\"\\",\\"spaceafter\\":\\"0\\"},{\\"spacebefore\\":\\"\\",\\"before\\":\\"\\",\\"field\\":\\"\\",\\"after\\":\\"\\",\\"spaceafter\\":\\"0\\"},{\\"spacebefore\\":\\"\\",\\"before\\":\\"\\",\\"field\\":\\"\\",\\"after\\":\\"\\",\\"spaceafter\\":\\"0\\"}]"},"4":{"tagline":"[{\\"spacebefore\\":\\"\\",\\"before\\":\\"\\",\\"field\\":\\"\\",\\"after\\":\\"\\",\\"spaceafter\\":\\"0\\"},{\\"spacebefore\\":\\"\\",\\"before\\":\\"\\",\\"field\\":\\"\\",\\"after\\":\\"\\",\\"spaceafter\\":\\"0\\"},{\\"spacebefore\\":\\"\\",\\"before\\":\\"\\",\\"field\\":\\"\\",\\"after\\":\\"\\",\\"spaceafter\\":\\"0\\"},{\\"spacebefore\\":\\"\\",\\"before\\":\\"\\",\\"field\\":\\"\\",\\"after\\":\\"\\",\\"spaceafter\\":\\"0\\"},{\\"spacebefore\\":\\"\\",\\"before\\":\\"\\",\\"field\\":\\"\\",\\"after\\":\\"\\",\\"spaceafter\\":\\"0\\"},{\\"spacebefore\\":\\"\\",\\"before\\":\\"\\",\\"field\\":\\"\\",\\"after\\":\\"\\",\\"spaceafter\\":\\"0\\"}]"},"5":{"tagline":"[{\\"spacebefore\\":\\"\\",\\"before\\":\\"\\",\\"field\\":\\"\\",\\"after\\":\\"\\",\\"spaceafter\\":\\"0\\"},{\\"spacebefore\\":\\"\\",\\"before\\":\\"\\",\\"field\\":\\"\\",\\"after\\":\\"\\",\\"spaceafter\\":\\"0\\"},{\\"spacebefore\\":\\"\\",\\"before\\":\\"\\",\\"field\\":\\"\\",\\"after\\":\\"\\",\\"spaceafter\\":\\"0\\"},{\\"spacebefore\\":\\"\\",\\"before\\":\\"\\",\\"field\\":\\"\\",\\"after\\":\\"\\",\\"spaceafter\\":\\"0\\"},{\\"spacebefore\\":\\"\\",\\"before\\":\\"\\",\\"field\\":\\"\\",\\"after\\":\\"\\",\\"spaceafter\\":\\"0\\"},{\\"spacebefore\\":\\"\\",\\"before\\":\\"\\",\\"field\\":\\"\\",\\"after\\":\\"\\",\\"spaceafter\\":\\"0\\"}]"}},"general":{"enable-frontpage-login":"1","enable-frontpage-image":"1","enable-frontpage-paragraph":"1","frontpage-image":"jpg"},"group":[],"event":[]}');
 /*!40000 ALTER TABLE `gy3te_community_theme` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_thirdparty_wall_options
 CREATE TABLE IF NOT EXISTS `gy3te_community_thirdparty_wall_options` (
   `name` varchar(255) NOT NULL,
@@ -1873,7 +1806,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_community_thirdparty_wall_options` (
 DELETE FROM `gy3te_community_thirdparty_wall_options`;
 /*!40000 ALTER TABLE `gy3te_community_thirdparty_wall_options` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_community_thirdparty_wall_options` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_userpoints
 CREATE TABLE IF NOT EXISTS `gy3te_community_userpoints` (
@@ -1955,7 +1887,6 @@ INSERT INTO `gy3te_community_userpoints` (`id`, `rule_name`, `rule_description`,
 	(59, 'Event featured', 'Add points when site admin featured event', 'com_community', 'events.featured', '', 1, 1, 1, 1);
 /*!40000 ALTER TABLE `gy3te_community_userpoints` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_users
 CREATE TABLE IF NOT EXISTS `gy3te_community_users` (
   `userid` int(11) NOT NULL,
@@ -1998,7 +1929,6 @@ INSERT INTO `gy3te_community_users` (`userid`, `status`, `status_access`, `point
 	(54, '', 0, 4, '0000-00-00 00:00:00', 'images/avatar/0aadbca4455be47d42d7253b.png', 'images/avatar/thumb_0aadbca4455be47d42d7253b.png', 'images/cover/profile/54/cf96ad0d83e951910757ef38ad1b352d.png', 0, '{"notifyEmailSystem":1,"privacyPrivateMessage":10,"privacyFriendRequest":10,"privacyProfileView":"0","privacyPhotoView":"30","privacyFriendsView":"30","privacyGroupsView":"20","privacyVideoView":"30","notifyEmailMessage":1,"notifyEmailApps":1,"notifyWallComment":0,"invitorId":0,"notif_groups_notify_admin":1,"etype_groups_notify_admin":1,"notif_user_profile_delete":1,"etype_user_profile_delete":1,"notif_system_reports_threshold":1,"etype_system_reports_threshold":1,"notif_profile_activity_add_comment":1,"etype_profile_activity_add_comment":1,"notif_profile_activity_reply_comment":1,"etype_profile_activity_reply_comment":1,"notif_profile_status_update":1,"etype_profile_status_update":1,"notif_profile_like":1,"etype_profile_like":1,"notif_profile_stream_like":1,"etype_profile_stream_like":1,"notif_profle_digest_email":0,"etype_profle_digest_email":1,"notif_friends_request_connection":1,"etype_friends_request_connection":1,"notif_friends_create_connection":1,"etype_friends_create_connection":1,"notif_inbox_create_message":1,"etype_inbox_create_message":1,"notif_users_tagged":1,"etype_users_tagged":1,"notif_events_notify_admin":1,"etype_events_notify_admin":1,"notif_events_invite":1,"etype_events_invite":1,"notif_events_invitation_approved":1,"etype_events_invitation_approved":1,"notif_events_sendmail":1,"etype_events_sendmail":1,"notif_event_notify_creator":0,"etype_event_notify_creator":0,"notif_event_join_request":1,"etype_event_join_request":1,"notif_events_activity_add_comment":0,"etype_events_activity_add_comment":0,"notif_events_wall_create":1,"etype_events_wall_create":1,"notif_system_messaging":1,"etype_system_messaging":1,"postFacebookStatus":"0","daylightsavingoffset":"0"}', 3, '', '', '', 0, '54:organizatsiya', 0.000000, 0.000000, 5, 'file', '', 1, 1, '13');
 /*!40000 ALTER TABLE `gy3te_community_users` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_user_invites
 CREATE TABLE IF NOT EXISTS `gy3te_community_user_invites` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -2015,7 +1945,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_community_user_invites` (
 DELETE FROM `gy3te_community_user_invites`;
 /*!40000 ALTER TABLE `gy3te_community_user_invites` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_community_user_invites` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_user_status
 CREATE TABLE IF NOT EXISTS `gy3te_community_user_status` (
@@ -2034,7 +1963,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_community_user_status` (
 DELETE FROM `gy3te_community_user_status`;
 /*!40000 ALTER TABLE `gy3te_community_user_status` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_community_user_status` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_videos
 CREATE TABLE IF NOT EXISTS `gy3te_community_videos` (
@@ -2074,7 +2002,6 @@ DELETE FROM `gy3te_community_videos`;
 /*!40000 ALTER TABLE `gy3te_community_videos` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_community_videos` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_videos_category
 CREATE TABLE IF NOT EXISTS `gy3te_community_videos_category` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -2092,7 +2019,6 @@ INSERT INTO `gy3te_community_videos_category` (`id`, `parent`, `name`, `descript
 	(1, 0, 'General', 'General video channel', 1);
 /*!40000 ALTER TABLE `gy3te_community_videos_category` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_videos_tag
 CREATE TABLE IF NOT EXISTS `gy3te_community_videos_tag` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -2108,7 +2034,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_community_videos_tag` (
 DELETE FROM `gy3te_community_videos_tag`;
 /*!40000 ALTER TABLE `gy3te_community_videos_tag` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_community_videos_tag` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_video_stats
 CREATE TABLE IF NOT EXISTS `gy3te_community_video_stats` (
@@ -2126,7 +2051,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_community_video_stats` (
 DELETE FROM `gy3te_community_video_stats`;
 /*!40000 ALTER TABLE `gy3te_community_video_stats` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_community_video_stats` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_community_wall
 CREATE TABLE IF NOT EXISTS `gy3te_community_wall` (
@@ -2148,7 +2072,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_community_wall` (
 DELETE FROM `gy3te_community_wall`;
 /*!40000 ALTER TABLE `gy3te_community_wall` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_community_wall` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_contact_details
 CREATE TABLE IF NOT EXISTS `gy3te_contact_details` (
@@ -2211,7 +2134,6 @@ DELETE FROM `gy3te_contact_details`;
 /*!40000 ALTER TABLE `gy3te_contact_details` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_contact_details` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_content
 CREATE TABLE IF NOT EXISTS `gy3te_content` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -2261,7 +2183,6 @@ DELETE FROM `gy3te_content`;
 /*!40000 ALTER TABLE `gy3te_content` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_content` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_contentitem_tag_map
 CREATE TABLE IF NOT EXISTS `gy3te_contentitem_tag_map` (
   `type_alias` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
@@ -2281,7 +2202,6 @@ DELETE FROM `gy3te_contentitem_tag_map`;
 /*!40000 ALTER TABLE `gy3te_contentitem_tag_map` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_contentitem_tag_map` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_content_frontpage
 CREATE TABLE IF NOT EXISTS `gy3te_content_frontpage` (
   `content_id` int(11) NOT NULL DEFAULT '0',
@@ -2293,7 +2213,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_content_frontpage` (
 DELETE FROM `gy3te_content_frontpage`;
 /*!40000 ALTER TABLE `gy3te_content_frontpage` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_content_frontpage` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_content_rating
 CREATE TABLE IF NOT EXISTS `gy3te_content_rating` (
@@ -2308,7 +2227,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_content_rating` (
 DELETE FROM `gy3te_content_rating`;
 /*!40000 ALTER TABLE `gy3te_content_rating` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_content_rating` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_content_types
 CREATE TABLE IF NOT EXISTS `gy3te_content_types` (
@@ -2343,7 +2261,6 @@ INSERT INTO `gy3te_content_types` (`type_id`, `type_title`, `type_alias`, `table
 	(13, 'User Notes Category', 'com_users.category', '{"special":{"dbtable":"#__categories","key":"id","type":"Category","prefix":"JTable","config":"array()"},"common":{"dbtable":"#__ucm_content","key":"ucm_id","type":"Corecontent","prefix":"JTable","config":"array()"}}', '', '{"common":{"core_content_item_id":"id","core_title":"title","core_state":"published","core_alias":"alias","core_created_time":"created_time","core_modified_time":"modified_time","core_body":"description", "core_hits":"hits","core_publish_up":"null","core_publish_down":"null","core_access":"access", "core_params":"params", "core_featured":"null", "core_metadata":"metadata", "core_language":"language", "core_images":"null", "core_urls":"null", "core_version":"version", "core_ordering":"null", "core_metakey":"metakey", "core_metadesc":"metadesc", "core_catid":"parent_id", "core_xreference":"null", "asset_id":"asset_id"}, "special":{"parent_id":"parent_id","lft":"lft","rgt":"rgt","level":"level","path":"path","extension":"extension","note":"note"}}', '', '{"formFile":"administrator\\/components\\/com_categories\\/models\\/forms\\/category.xml", "hideFields":["checked_out","checked_out_time","version","lft","rgt","level","path","extension"], "ignoreChanges":["modified_user_id", "modified_time", "checked_out", "checked_out_time", "version", "hits", "path"], "convertToInt":["publish_up", "publish_down"], "displayLookup":[{"sourceColumn":"created_user_id","targetTable":"#__users","targetColumn":"id","displayColumn":"name"}, {"sourceColumn":"access","targetTable":"#__viewlevels","targetColumn":"id","displayColumn":"title"},{"sourceColumn":"modified_user_id","targetTable":"#__users","targetColumn":"id","displayColumn":"name"},{"sourceColumn":"parent_id","targetTable":"#__categories","targetColumn":"id","displayColumn":"title"}]}');
 /*!40000 ALTER TABLE `gy3te_content_types` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_core_log_searches
 CREATE TABLE IF NOT EXISTS `gy3te_core_log_searches` (
   `search_term` varchar(128) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
@@ -2354,7 +2271,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_core_log_searches` (
 DELETE FROM `gy3te_core_log_searches`;
 /*!40000 ALTER TABLE `gy3te_core_log_searches` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_core_log_searches` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_extensions
 CREATE TABLE IF NOT EXISTS `gy3te_extensions` (
@@ -2380,7 +2296,7 @@ CREATE TABLE IF NOT EXISTS `gy3te_extensions` (
   KEY `element_clientid` (`element`,`client_id`),
   KEY `element_folder_clientid` (`element`,`folder`,`client_id`),
   KEY `extension` (`type`,`element`,`folder`,`client_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10147 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=10148 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- Дамп данных таблицы prodogsinfo.gy3te_extensions: ~310 rows (приблизительно)
 DELETE FROM `gy3te_extensions`;
@@ -2419,7 +2335,7 @@ INSERT INTO `gy3te_extensions` (`extension_id`, `package_id`, `name`, `type`, `e
 	(33, 0, 'com_fields', 'component', 'com_fields', '', 1, 1, 1, 0, '{"name":"com_fields","type":"component","creationDate":"March 2016","author":"Joomla! Project","copyright":"(C) 2005 - 2018 Open Source Matters. All rights reserved.","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"3.7.0","description":"COM_FIELDS_XML_DESCRIPTION","group":"","filename":"fields"}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 	(34, 0, 'com_associations', 'component', 'com_associations', '', 1, 1, 1, 0, '{"name":"com_associations","type":"component","creationDate":"Januar 2017","author":"Joomla! Project","copyright":"(C) 2005 - 2018 Open Source Matters. All rights reserved.","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"3.7.0","description":"COM_ASSOCIATIONS_XML_DESCRIPTION","group":""}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 	(102, 0, 'LIB_PHPUTF8', 'library', 'phputf8', '', 0, 1, 1, 1, '{"name":"LIB_PHPUTF8","type":"library","creationDate":"2006","author":"Harry Fuecks","copyright":"Copyright various authors","authorEmail":"hfuecks@gmail.com","authorUrl":"http:\\/\\/sourceforge.net\\/projects\\/phputf8","version":"0.5","description":"LIB_PHPUTF8_XML_DESCRIPTION","group":"","filename":"phputf8"}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
-	(103, 0, 'LIB_JOOMLA', 'library', 'joomla', '', 0, 1, 1, 1, '{"name":"LIB_JOOMLA","type":"library","creationDate":"2008","author":"Joomla! Project","copyright":"Copyright (C) 2005 - 2018 Open Source Matters. All rights reserved.","authorEmail":"admin@joomla.org","authorUrl":"https:\\/\\/www.joomla.org","version":"13.1","description":"LIB_JOOMLA_XML_DESCRIPTION","group":"","filename":"joomla"}', '{"mediaversion":"ff7d51e467f2f53aae0ae2e51914dab2"}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
+	(103, 0, 'LIB_JOOMLA', 'library', 'joomla', '', 0, 1, 1, 1, '{"name":"LIB_JOOMLA","type":"library","creationDate":"2008","author":"Joomla! Project","copyright":"Copyright (C) 2005 - 2018 Open Source Matters. All rights reserved.","authorEmail":"admin@joomla.org","authorUrl":"https:\\/\\/www.joomla.org","version":"13.1","description":"LIB_JOOMLA_XML_DESCRIPTION","group":"","filename":"joomla"}', '{"mediaversion":"8becd73a66b7f87006b37da9b2fd2654"}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 	(104, 0, 'LIB_IDNA', 'library', 'idna_convert', '', 0, 1, 1, 1, '{"name":"LIB_IDNA","type":"library","creationDate":"2004","author":"phlyLabs","copyright":"2004-2011 phlyLabs Berlin, http:\\/\\/phlylabs.de","authorEmail":"phlymail@phlylabs.de","authorUrl":"http:\\/\\/phlylabs.de","version":"0.8.0","description":"LIB_IDNA_XML_DESCRIPTION","group":"","filename":"idna_convert"}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 	(105, 0, 'FOF', 'library', 'fof', '', 0, 1, 1, 1, '{"name":"FOF","type":"library","creationDate":"2015-04-22 13:15:32","author":"Nicholas K. Dionysopoulos \\/ Akeeba Ltd","copyright":"(C)2011-2015 Nicholas K. Dionysopoulos","authorEmail":"nicholas@akeebabackup.com","authorUrl":"https:\\/\\/www.akeebabackup.com","version":"2.4.3","description":"LIB_FOF_XML_DESCRIPTION","group":"","filename":"fof"}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 	(106, 0, 'LIB_PHPASS', 'library', 'phpass', '', 0, 1, 1, 1, '{"name":"LIB_PHPASS","type":"library","creationDate":"2004-2006","author":"Solar Designer","copyright":"","authorEmail":"solar@openwall.com","authorUrl":"http:\\/\\/www.openwall.com\\/phpass\\/","version":"0.3","description":"LIB_PHPASS_XML_DESCRIPTION","group":"","filename":"phpass"}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
@@ -2513,9 +2429,9 @@ INSERT INTO `gy3te_extensions` (`extension_id`, `package_id`, `name`, `type`, `e
 	(449, 0, 'plg_authentication_cookie', 'plugin', 'cookie', 'authentication', 0, 1, 1, 0, '{"name":"plg_authentication_cookie","type":"plugin","creationDate":"July 2013","author":"Joomla! Project","copyright":"Copyright (C) 2005 - 2018 Open Source Matters. All rights reserved.","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"3.0.0","description":"PLG_AUTH_COOKIE_XML_DESCRIPTION","group":"","filename":"cookie"}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 	(450, 0, 'plg_twofactorauth_yubikey', 'plugin', 'yubikey', 'twofactorauth', 0, 0, 1, 0, '{"name":"plg_twofactorauth_yubikey","type":"plugin","creationDate":"September 2013","author":"Joomla! Project","copyright":"Copyright (C) 2005 - 2018 Open Source Matters. All rights reserved.","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"3.2.0","description":"PLG_TWOFACTORAUTH_YUBIKEY_XML_DESCRIPTION","group":"","filename":"yubikey"}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 	(451, 0, 'plg_search_tags', 'plugin', 'tags', 'search', 0, 1, 1, 0, '{"name":"plg_search_tags","type":"plugin","creationDate":"March 2014","author":"Joomla! Project","copyright":"Copyright (C) 2005 - 2018 Open Source Matters. All rights reserved.","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"3.0.0","description":"PLG_SEARCH_TAGS_XML_DESCRIPTION","group":"","filename":"tags"}', '{"search_limit":"50","show_tagged_items":"1"}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
-	(452, 0, 'plg_system_updatenotification', 'plugin', 'updatenotification', 'system', 0, 1, 1, 0, '{"name":"plg_system_updatenotification","type":"plugin","creationDate":"May 2015","author":"Joomla! Project","copyright":"Copyright (C) 2005 - 2018 Open Source Matters. All rights reserved.","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"3.5.0","description":"PLG_SYSTEM_UPDATENOTIFICATION_XML_DESCRIPTION","group":"","filename":"updatenotification"}', '{"lastrun":1527230594}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
+	(452, 0, 'plg_system_updatenotification', 'plugin', 'updatenotification', 'system', 0, 1, 1, 0, '{"name":"plg_system_updatenotification","type":"plugin","creationDate":"May 2015","author":"Joomla! Project","copyright":"Copyright (C) 2005 - 2018 Open Source Matters. All rights reserved.","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"3.5.0","description":"PLG_SYSTEM_UPDATENOTIFICATION_XML_DESCRIPTION","group":"","filename":"updatenotification"}', '{"lastrun":1527419128}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 	(453, 0, 'plg_editors-xtd_module', 'plugin', 'module', 'editors-xtd', 0, 1, 1, 0, '{"name":"plg_editors-xtd_module","type":"plugin","creationDate":"October 2015","author":"Joomla! Project","copyright":"Copyright (C) 2005 - 2018 Open Source Matters. All rights reserved.","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"3.5.0","description":"PLG_MODULE_XML_DESCRIPTION","group":"","filename":"module"}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
-	(454, 0, 'plg_system_stats', 'plugin', 'stats', 'system', 0, 1, 1, 0, '{"name":"plg_system_stats","type":"plugin","creationDate":"November 2013","author":"Joomla! Project","copyright":"Copyright (C) 2005 - 2018 Open Source Matters. All rights reserved.","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"3.5.0","description":"PLG_SYSTEM_STATS_XML_DESCRIPTION","group":"","filename":"stats"}', '{"mode":1,"lastrun":1527232033,"unique_id":"d49d1fafe1ba3728fc9ed35b2a9658585f1af263","interval":12}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
+	(454, 0, 'plg_system_stats', 'plugin', 'stats', 'system', 0, 1, 1, 0, '{"name":"plg_system_stats","type":"plugin","creationDate":"November 2013","author":"Joomla! Project","copyright":"Copyright (C) 2005 - 2018 Open Source Matters. All rights reserved.","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"3.5.0","description":"PLG_SYSTEM_STATS_XML_DESCRIPTION","group":"","filename":"stats"}', '{"mode":1,"lastrun":1527421120,"unique_id":"d49d1fafe1ba3728fc9ed35b2a9658585f1af263","interval":12}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 	(455, 0, 'plg_installer_packageinstaller', 'plugin', 'packageinstaller', 'installer', 0, 1, 1, 1, '{"name":"plg_installer_packageinstaller","type":"plugin","creationDate":"May 2016","author":"Joomla! Project","copyright":"Copyright (C) 2005 - 2018 Open Source Matters. All rights reserved.","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"3.6.0","description":"PLG_INSTALLER_PACKAGEINSTALLER_PLUGIN_XML_DESCRIPTION","group":"","filename":"packageinstaller"}', '', '', '', 0, '0000-00-00 00:00:00', 1, 0),
 	(456, 0, 'PLG_INSTALLER_FOLDERINSTALLER', 'plugin', 'folderinstaller', 'installer', 0, 1, 1, 1, '{"name":"PLG_INSTALLER_FOLDERINSTALLER","type":"plugin","creationDate":"May 2016","author":"Joomla! Project","copyright":"Copyright (C) 2005 - 2018 Open Source Matters. All rights reserved.","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"3.6.0","description":"PLG_INSTALLER_FOLDERINSTALLER_PLUGIN_XML_DESCRIPTION","group":"","filename":"folderinstaller"}', '', '', '', 0, '0000-00-00 00:00:00', 2, 0),
 	(457, 0, 'PLG_INSTALLER_URLINSTALLER', 'plugin', 'urlinstaller', 'installer', 0, 1, 1, 1, '{"name":"PLG_INSTALLER_URLINSTALLER","type":"plugin","creationDate":"May 2016","author":"Joomla! Project","copyright":"Copyright (C) 2005 - 2018 Open Source Matters. All rights reserved.","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"3.6.0","description":"PLG_INSTALLER_URLINSTALLER_PLUGIN_XML_DESCRIPTION","group":"","filename":"urlinstaller"}', '', '', '', 0, '0000-00-00 00:00:00', 3, 0),
@@ -2630,15 +2546,14 @@ INSERT INTO `gy3te_extensions` (`extension_id`, `package_id`, `name`, `type`, `e
 	(10077, 0, 'Cobalt - Additional Templates', 'file', 'install', '', 0, 1, 0, 0, '{"name":"Cobalt - Additional Templates","type":"file","creationDate":"March 2012","author":"MintJoomla","copyright":"(c) 2012 MintJoomla","authorEmail":"support@mintjoomla.com","authorUrl":"http:\\/\\/www.mintjoomla.com","version":"8.1090","description":"Cobalt 8 - Additional templates","group":""}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 	(10078, 0, 'Cobalt - Field - AK Image', 'file', 'akimage', '', 0, 1, 0, 0, '{"name":"Cobalt - Field - AK Image","type":"file","creationDate":"August 2014","author":"Idea by AsmuZ. Made by Alexander Khmelnitskiy","copyright":"(c) 2014 alexander.khmelnitskiy.ua","authorEmail":"info@alexander.khmelnitskiy","authorUrl":"http:\\/\\/alexander.khmelnitskiy.ua","version":"1.0","description":"\\n            \\n            Cobalt - Field - AK Image by <a href=\\"http:\\/\\/alexander.khmelnitskiy.ua\\" target=\\"_blank\\">alexander.khmelnitskiy.ua<\\/a><br \\/><br \\/>Idea by <a href=\\"http:\\/\\/asmuz.ru\\" target=\\"_blank\\">www.AsmuZ.ru<\\/a>\\n            \\n        ","group":""}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 	(10079, 0, 'Cobalt - Field - AG Picture', 'file', 'ag_picture', '', 0, 1, 0, 0, '{"name":"Cobalt - Field - AG Picture","type":"file","creationDate":"January 2013","author":"MintJoomla","copyright":"(c) 2013 Abstrakt","authorEmail":"ccrosaz@abstrakt.fr","authorUrl":"http:\\/\\/www.abstrakt.fr","version":"1.0","description":"Cobalt - Field - AG Picture This is simple upload image field","group":""}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
-	(10081, 10085, 'Akeeba', 'component', 'com_akeeba', '', 1, 1, 0, 0, '{"name":"Akeeba","type":"component","creationDate":"2018-02-26","author":"Nicholas K. Dionysopoulos","copyright":"Copyright (c)2006-2017 Akeeba Ltd \\/ Nicholas K. Dionysopoulos","authorEmail":"nicholas@dionysopoulos.me","authorUrl":"http:\\/\\/www.akeebabackup.com","version":"6.0.1","description":"Akeeba Backup Core - Full Joomla! site backup solution, Core Edition.","group":"","filename":"akeeba"}', '{"confwiz_upgrade":1,"updatedb":null,"siteurl":"http:\\/\\/prodogs.info\\/","jlibrariesdir":"\\/var\\/www\\/prodogs.info\\/public_html\\/libraries","jversion":"1.6","show_howtorestoremodal":0,"frontend_secret_word":"###AES128###9lGcmfkWSbvXsJn\\/syX9y0pQU1TeqvQtFYLgSFFx3iVnREhUrX0DY3vnGlGeB6G0qUNWAFtUAd883JwoBAnv68v2FZ\\/OopD17HeQbES2S2M4+MzRSlBJVoEVogltAo2AmnqNRYb5mCEAAAAA"}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
+	(10081, 10085, 'Akeeba', 'component', 'com_akeeba', '', 1, 1, 0, 0, '{"name":"Akeeba","type":"component","creationDate":"2018-05-22","author":"Nicholas K. Dionysopoulos","copyright":"Copyright (c)2006-2017 Akeeba Ltd \\/ Nicholas K. Dionysopoulos","authorEmail":"nicholas@dionysopoulos.me","authorUrl":"http:\\/\\/www.akeebabackup.com","version":"6.1.0","description":"Akeeba Backup Core - Full Joomla! site backup solution, Core Edition.","group":"","filename":"akeeba"}', '{"confwiz_upgrade":1,"updatedb":null,"siteurl":"http:\\/\\/prodogs.info\\/","jlibrariesdir":"\\/var\\/www\\/prodogs.info\\/public_html\\/libraries","jversion":"1.6","show_howtorestoremodal":0,"frontend_secret_word":"###AES128###9lGcmfkWSbvXsJn\\/syX9y0pQU1TeqvQtFYLgSFFx3iVnREhUrX0DY3vnGlGeB6G0qUNWAFtUAd883JwoBAnv68v2FZ\\/OopD17HeQbES2S2M4+MzRSlBJVoEVogltAo2AmnqNRYb5mCEAAAAA"}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 	(10082, 10085, 'plg_quickicon_akeebabackup', 'plugin', 'akeebabackup', 'quickicon', 0, 1, 1, 0, '{"name":"plg_quickicon_akeebabackup","type":"plugin","creationDate":"2012-09-26","author":"Nicholas K. Dionysopoulos","copyright":"Copyright (c)2006-2017 Nicholas K. Dionysopoulos","authorEmail":"nicholas@akeebabackup.com","authorUrl":"http:\\/\\/www.akeebabackup.com","version":"1.0","description":"PLG_QUICKICON_AKEEBABACKUP_XML_DESCRIPTION","group":"","filename":"akeebabackup"}', '{"context":"mod_quickicon","enablewarning":"1","warnfailed":"1","maxbackupperiod":"24","profileid":"1"}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 	(10083, 10085, 'PLG_SYSTEM_AKEEBAUPDATECHECK_TITLE', 'plugin', 'akeebaupdatecheck', 'system', 0, 0, 1, 0, '{"name":"PLG_SYSTEM_AKEEBAUPDATECHECK_TITLE","type":"plugin","creationDate":"2011-05-26","author":"Nicholas K. Dionysopoulos","copyright":"Copyright (c)2006-2017 Nicholas K. Dionysopoulos","authorEmail":"nicholas@dionysopoulos.me","authorUrl":"http:\\/\\/www.akeebabackup.com","version":"1.1","description":"PLG_AKEEBAUPDATECHECK_DESCRIPTION2","group":"","filename":"akeebaupdatecheck"}', '{"email":""}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 	(10084, 10085, 'PLG_SYSTEM_BACKUPONUPDATE_TITLE', 'plugin', 'backuponupdate', 'system', 0, 0, 1, 0, '{"name":"PLG_SYSTEM_BACKUPONUPDATE_TITLE","type":"plugin","creationDate":"2013-08-13","author":"Nicholas K. Dionysopoulos","copyright":"Copyright (c)2006-2017 Nicholas K. Dionysopoulos","authorEmail":"nicholas@dionysopoulos.me","authorUrl":"http:\\/\\/www.akeebabackup.com","version":"3.7","description":"PLG_SYSTEM_BACKUPONUPDATE_DESCRIPTION","group":"","filename":"backuponupdate"}', '{"profileid":"1"}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
-	(10085, 0, 'Akeeba Backup package', 'package', 'pkg_akeeba', '', 0, 1, 1, 0, '{"name":"Akeeba Backup package","type":"package","creationDate":"2018-02-26","author":"Nicholas K. Dionysopoulos","copyright":"Copyright (c)2006-2017 Akeeba Ltd \\/ Nicholas K. Dionysopoulos","authorEmail":"","authorUrl":"","version":"6.0.1","description":"Akeeba Backup installation package v.6.0.1","group":"","filename":"pkg_akeeba"}', '{}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
+	(10085, 0, 'Akeeba Backup package', 'package', 'pkg_akeeba', '', 0, 1, 1, 0, '{"name":"Akeeba Backup package","type":"package","creationDate":"2018-05-22","author":"Nicholas K. Dionysopoulos","copyright":"Copyright (c)2006-2017 Akeeba Ltd \\/ Nicholas K. Dionysopoulos","authorEmail":"","authorUrl":"","version":"6.1.0","description":"Akeeba Backup installation package v.6.1.0","group":"","filename":"pkg_akeeba"}', '{}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 	(10086, 0, 'plg_installer_webinstaller', 'plugin', 'webinstaller', 'installer', 0, 1, 1, 0, '{"name":"plg_installer_webinstaller","type":"plugin","creationDate":"28 April 2017","author":"Joomla! Project","copyright":"Copyright (C) 2013-2017 Open Source Matters. All rights reserved.","authorEmail":"admin@joomla.org","authorUrl":"www.joomla.org","version":"1.1.1","description":"PLG_INSTALLER_WEBINSTALLER_XML_DESCRIPTION","group":"","filename":"webinstaller"}', '{"tab_position":"0"}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 	(10087, 0, 'akeebabackup - ru-RU', 'file', 'akeebabackup-ru-RU', '', 0, 1, 0, 0, '{"name":"akeebabackup - ru-RU","type":"file","creationDate":"19 Feb 2017","author":"AkeebaBackup.com","copyright":"Copyright (C)2017 AkeebaBackup.com. All rights reserved.","authorEmail":"","authorUrl":"","version":"C:\\\\Users\\\\sledg\\\\Projects\\\\akeeba\\\\backup\\\\build\\/..","description":"Russian (Russia) translation file for Akeeba Backup","group":""}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
-	(10088, 0, 'FOF30', 'library', 'lib_fof30', '', 0, 1, 1, 0, '{"name":"FOF30","type":"library","creationDate":"2018-02-07","author":"Nicholas K. Dionysopoulos \\/ Akeeba Ltd","copyright":"(C)2010-2017 Nicholas K. Dionysopoulos","authorEmail":"nicholas@akeebabackup.com","authorUrl":"https:\\/\\/www.akeebabackup.com","version":"3.2.1","description":"\\n\\t\\t\\n\\t\\tFramework-on-Framework (FOF) 3.x - The rapid application development framework for Joomla!.<br\\/>\\n\\t\\t<b>WARNING<\\/b>: This is NOT a duplicate of the FOF library already installed with Joomla!. It is a different version used by other extensions on your site. Do NOT uninstall either FOF package. If you do you will break your site.\\n\\t\\t\\n\\t","group":"","filename":"lib_fof30"}', '{}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
-	(10089, 0, 'file_fef', 'file', 'file_fef', '', 0, 1, 0, 0, '{"name":"file_fef","type":"file","creationDate":"2018-02-16","author":"Nicholas K. Dionysopoulos","copyright":"(C) 2017-2018 Akeeba Ltd.","authorEmail":"nicholas@dionysopoulos.me","authorUrl":"https:\\/\\/www.akeebabackup.com","version":"1.0.2","description":"Akeeba Frontend Framework - The CSS framework for Akeeba Ltd extensions.","group":""}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
+	(10089, 0, 'file_fef', 'file', 'file_fef', '', 0, 1, 0, 0, '{"name":"file_fef","type":"file","creationDate":"2018-03-26","author":"Nicholas K. Dionysopoulos","copyright":"(C) 2017-2018 Akeeba Ltd.","authorEmail":"nicholas@dionysopoulos.me","authorUrl":"https:\\/\\/www.akeebabackup.com","version":"1.0.3","description":"Akeeba Frontend Framework - The CSS framework for Akeeba Ltd extensions.","group":""}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 	(10090, 0, 'Community', 'component', 'com_community', '', 1, 1, 0, 0, '{"name":"Community","type":"component","creationDate":"July 2011","author":"JomSocial Team","copyright":"Copyright 2008 by Slashes & Dots Sdn Bhd. All rights reserved","authorEmail":"support@jomsocial.com","authorUrl":"http:\\/\\/www.jomsocial.com","version":"4.5.2","description":"JomSocial is a social networking component for Joomla!","group":"","filename":"community"}', '{}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 	(10091, 0, 'com_community - ru-RU', 'file', 'com_community-ru-RU', '', 0, 1, 0, 0, '{"name":"com_community - ru-RU","type":"file","creationDate":"05.12.2017","author":"compojoom","copyright":"\\u00a9 2008-2017 - compojoom-com. All rights reserved!","authorEmail":"yoursite@yoursite.com","authorUrl":"https:\\/\\/compojoom.com","version":"2017-12-05-10-33-59","description":"\\n        This package was auto generated with CTransifex(https:\\/\\/compojoom.com). We\'ve grabbed the latest language files for our extension from transifex.com.\\n        Special thanks to OpenTranslators (http:\\/\\/opentranslators.org) for helping us with this translation!\\n    ","group":""}', '', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 	(10092, 0, 'System - JomSocial System', 'plugin', 'jomsocial.system', 'system', 0, 1, 1, 0, '{"name":"System - JomSocial System","type":"plugin","creationDate":"July 2011","author":"JomSocial Team","copyright":"Copyright 2008 - 2010 by Slashes & Dots Sdn Bhd. All rights reserved","authorEmail":"support@jomsocial.com","authorUrl":"http:\\/\\/www.jomsocial.com","version":"4.5.2","description":"\\n\\t\\tAjax System for Joomla, JomSocial.com\\n\\t","group":"","filename":"jomsocial.system"}', '{}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
@@ -2695,9 +2610,9 @@ INSERT INTO `gy3te_extensions` (`extension_id`, `package_id`, `name`, `type`, `e
 	(10143, 10146, 'Cobalt [13] - Plugin - Integration - JoomSocial', 'plugin', 'cobalt13', 'community', 0, 0, 1, 0, '{"name":"Cobalt [13] - Plugin - Integration - JoomSocial","type":"plugin","creationDate":"October 15 2012","author":"MintJoomla","copyright":"MintJoomla","authorEmail":"support@mintjoomla.com","authorUrl":"http:\\/\\/www.mintjoomla.com","version":"8.64","description":"\\n\\t\\t Cobalt 8 \\n\\t","group":"","filename":"cobalt13"}', '{"section_id":"","coreapp":"0","cache":"1","position":"content","charlimit":"0","view_tmpl":"default.php","types":"","orderby":"r.ctime DESC","list_type":"created","tmpl":"","limit":"5","vw_created":"Created","vw_favorited":"Bookmarked","vw_rated":"Rated","vw_commented":"Commented","vw_visited":"Visited","vw_follow":"Follow","btn_section_enable":"1","btn_section":"Section home","btn_user_enable":"1","btn_user":"All user atricles","toolbar":"1","toolbar_main_lbl":"Cobalt","tshow_new":"1","type_id":"","tshow_created":"1","tshow_favorited":"1","tshow_rated":"1","tshow_commented":"1","tshow_visited":"1","tshow_follow":"1","tlbl_new":"Add new %s","tlbl_created":"Created","tlbl_favorited":"Bookmarked","tlbl_rated":"Rated","tlbl_commented":"Commented","tlbl_visited":"Visited","tlbl_follow":"Follow","icon_new":"plus.png","icon_created":"plus.png","icon_favorited":"bookmark.png","icon_rated":"star.png","icon_commented":"balloon-left.png","icon_visited":"hand-point-090.png","icon_follow":"follow1.png"}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 	(10144, 10146, 'Cobalt [14] - Plugin - Integration - JoomSocial', 'plugin', 'cobalt14', 'community', 0, 0, 1, 0, '{"name":"Cobalt [14] - Plugin - Integration - JoomSocial","type":"plugin","creationDate":"October 15 2012","author":"MintJoomla","copyright":"MintJoomla","authorEmail":"support@mintjoomla.com","authorUrl":"http:\\/\\/www.mintjoomla.com","version":"8.64","description":"\\n\\t\\t Cobalt 8 \\n\\t","group":"","filename":"cobalt14"}', '{"section_id":"","coreapp":"0","cache":"1","position":"content","charlimit":"0","view_tmpl":"default.php","types":"","orderby":"r.ctime DESC","list_type":"created","tmpl":"","limit":"5","vw_created":"Created","vw_favorited":"Bookmarked","vw_rated":"Rated","vw_commented":"Commented","vw_visited":"Visited","vw_follow":"Follow","btn_section_enable":"1","btn_section":"Section home","btn_user_enable":"1","btn_user":"All user atricles","toolbar":"1","toolbar_main_lbl":"Cobalt","tshow_new":"1","type_id":"","tshow_created":"1","tshow_favorited":"1","tshow_rated":"1","tshow_commented":"1","tshow_visited":"1","tshow_follow":"1","tlbl_new":"Add new %s","tlbl_created":"Created","tlbl_favorited":"Bookmarked","tlbl_rated":"Rated","tlbl_commented":"Commented","tlbl_visited":"Visited","tlbl_follow":"Follow","icon_new":"plus.png","icon_created":"plus.png","icon_favorited":"bookmark.png","icon_rated":"star.png","icon_commented":"balloon-left.png","icon_visited":"hand-point-090.png","icon_follow":"follow1.png"}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
 	(10145, 10146, 'Cobalt - Plugin - JomSocial', 'plugin', 'jomsocial', 'mint', 0, 1, 1, 0, '{"name":"Cobalt - Plugin - JomSocial","type":"plugin","creationDate":"February 17 2009","author":"MintJoomla","copyright":"MintJoomla","authorEmail":"support@mintjoomla.com","authorUrl":"http:\\/\\/www.mintjoomla.com","version":"8.64","description":"\\n\\t This is plugin integrates Cobalt and JomSocial activity and karma \\n\\t","group":"","filename":"jomsocial"}', '{}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
-	(10146, 0, 'Cobalt - Package - All', 'package', 'pkg_cobaltjomsocial', '', 0, 1, 1, 0, '{"name":"Cobalt - Package - All","type":"package","creationDate":"\\u041d\\u0435\\u0438\\u0437\\u0432\\u0435\\u0441\\u0442\\u043d\\u044b\\u0439","author":"\\u041d\\u0435\\u0438\\u0437\\u0432\\u0435\\u0441\\u0442\\u043d\\u044b\\u0439","copyright":"","authorEmail":"","authorUrl":"","version":"8.64","description":"\\n\\t\\t<div class=\\"hero-unit\\" style=\\"text-align: left;\\">\\n\\t\\t\\t<h1>Cobalt 8 CCK <small><b>Jom<\\/b>Social<\\/small><\\/h1>\\n\\t\\t\\t<p>Complete JomSocial integration for Cobalt 8 CCK.\\n\\t\\t<\\/div>\\n\\t\\t<div class=\\"alert alert-warning\\">Do not forget to publish all plugins<\\/div>\\n\\t\\t<div class=\\"well\\" style=\\"text-align:left;\\">\\n\\t\\t\\t<h2>You have successfully installed!<\\/h2>\\n\\t\\t\\t<ul>\\n\\t\\t\\t\\t<li>9 JoomSocial profile plugins to show Coablt content in user profile and toolbar menu.<\\/li>\\n\\t\\t\\t\\t<li>1 Coablt event integration plugin to integrate karma and activity.<\\/li>\\n\\t\\t\\t<\\/ul>\\n\\t\\t\\t<h2>Cobalt 8 Built-in!<\\/h2>\\n\\t\\t\\t<p>You have already built-in to Coablt avatar, message, online status and link to profile integration for free.\\n\\t\\t<\\/div>\\n\\t\\t<br><br>\\n\\t","group":"","filename":"pkg_cobaltjomsocial"}', '{}', '', '', 0, '0000-00-00 00:00:00', 0, 0);
+	(10146, 0, 'Cobalt - Package - All', 'package', 'pkg_cobaltjomsocial', '', 0, 1, 1, 0, '{"name":"Cobalt - Package - All","type":"package","creationDate":"\\u041d\\u0435\\u0438\\u0437\\u0432\\u0435\\u0441\\u0442\\u043d\\u044b\\u0439","author":"\\u041d\\u0435\\u0438\\u0437\\u0432\\u0435\\u0441\\u0442\\u043d\\u044b\\u0439","copyright":"","authorEmail":"","authorUrl":"","version":"8.64","description":"\\n\\t\\t<div class=\\"hero-unit\\" style=\\"text-align: left;\\">\\n\\t\\t\\t<h1>Cobalt 8 CCK <small><b>Jom<\\/b>Social<\\/small><\\/h1>\\n\\t\\t\\t<p>Complete JomSocial integration for Cobalt 8 CCK.\\n\\t\\t<\\/div>\\n\\t\\t<div class=\\"alert alert-warning\\">Do not forget to publish all plugins<\\/div>\\n\\t\\t<div class=\\"well\\" style=\\"text-align:left;\\">\\n\\t\\t\\t<h2>You have successfully installed!<\\/h2>\\n\\t\\t\\t<ul>\\n\\t\\t\\t\\t<li>9 JoomSocial profile plugins to show Coablt content in user profile and toolbar menu.<\\/li>\\n\\t\\t\\t\\t<li>1 Coablt event integration plugin to integrate karma and activity.<\\/li>\\n\\t\\t\\t<\\/ul>\\n\\t\\t\\t<h2>Cobalt 8 Built-in!<\\/h2>\\n\\t\\t\\t<p>You have already built-in to Coablt avatar, message, online status and link to profile integration for free.\\n\\t\\t<\\/div>\\n\\t\\t<br><br>\\n\\t","group":"","filename":"pkg_cobaltjomsocial"}', '{}', '', '', 0, '0000-00-00 00:00:00', 0, 0),
+	(10147, 0, 'FOF30', 'library', 'lib_fof30', '', 0, 1, 1, 0, '{"name":"FOF30","type":"library","creationDate":"2018-05-22","author":"Nicholas K. Dionysopoulos \\/ Akeeba Ltd","copyright":"(C)2010-2017 Nicholas K. Dionysopoulos","authorEmail":"nicholas@akeebabackup.com","authorUrl":"https:\\/\\/www.akeebabackup.com","version":"3.3.4","description":"\\n\\t\\t\\n\\t\\tFramework-on-Framework (FOF) 3.x - The rapid application development framework for Joomla!.<br\\/>\\n\\t\\t<b>WARNING<\\/b>: This is NOT a duplicate of the FOF library already installed with Joomla!. It is a different version used by other extensions on your site. Do NOT uninstall either FOF package. If you do you will break your site.\\n\\t\\t\\n\\t","group":"","filename":"lib_fof30"}', '{}', '', '', 0, '0000-00-00 00:00:00', 0, 0);
 /*!40000 ALTER TABLE `gy3te_extensions` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_fields
 CREATE TABLE IF NOT EXISTS `gy3te_fields` (
@@ -2739,7 +2654,6 @@ DELETE FROM `gy3te_fields`;
 /*!40000 ALTER TABLE `gy3te_fields` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_fields` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_fields_categories
 CREATE TABLE IF NOT EXISTS `gy3te_fields_categories` (
   `field_id` int(11) NOT NULL DEFAULT '0',
@@ -2751,7 +2665,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_fields_categories` (
 DELETE FROM `gy3te_fields_categories`;
 /*!40000 ALTER TABLE `gy3te_fields_categories` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_fields_categories` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_fields_groups
 CREATE TABLE IF NOT EXISTS `gy3te_fields_groups` (
@@ -2786,7 +2699,6 @@ DELETE FROM `gy3te_fields_groups`;
 /*!40000 ALTER TABLE `gy3te_fields_groups` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_fields_groups` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_fields_values
 CREATE TABLE IF NOT EXISTS `gy3te_fields_values` (
   `field_id` int(10) unsigned NOT NULL,
@@ -2800,7 +2712,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_fields_values` (
 DELETE FROM `gy3te_fields_values`;
 /*!40000 ALTER TABLE `gy3te_fields_values` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_fields_values` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_finder_filters
 CREATE TABLE IF NOT EXISTS `gy3te_finder_filters` (
@@ -2825,7 +2736,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_finder_filters` (
 DELETE FROM `gy3te_finder_filters`;
 /*!40000 ALTER TABLE `gy3te_finder_filters` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_finder_filters` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_finder_links
 CREATE TABLE IF NOT EXISTS `gy3te_finder_links` (
@@ -2862,7 +2772,6 @@ DELETE FROM `gy3te_finder_links`;
 /*!40000 ALTER TABLE `gy3te_finder_links` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_finder_links` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_finder_links_terms0
 CREATE TABLE IF NOT EXISTS `gy3te_finder_links_terms0` (
   `link_id` int(10) unsigned NOT NULL,
@@ -2877,7 +2786,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_finder_links_terms0` (
 DELETE FROM `gy3te_finder_links_terms0`;
 /*!40000 ALTER TABLE `gy3te_finder_links_terms0` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_finder_links_terms0` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_finder_links_terms1
 CREATE TABLE IF NOT EXISTS `gy3te_finder_links_terms1` (
@@ -2894,7 +2802,6 @@ DELETE FROM `gy3te_finder_links_terms1`;
 /*!40000 ALTER TABLE `gy3te_finder_links_terms1` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_finder_links_terms1` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_finder_links_terms2
 CREATE TABLE IF NOT EXISTS `gy3te_finder_links_terms2` (
   `link_id` int(10) unsigned NOT NULL,
@@ -2909,7 +2816,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_finder_links_terms2` (
 DELETE FROM `gy3te_finder_links_terms2`;
 /*!40000 ALTER TABLE `gy3te_finder_links_terms2` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_finder_links_terms2` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_finder_links_terms3
 CREATE TABLE IF NOT EXISTS `gy3te_finder_links_terms3` (
@@ -2926,7 +2832,6 @@ DELETE FROM `gy3te_finder_links_terms3`;
 /*!40000 ALTER TABLE `gy3te_finder_links_terms3` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_finder_links_terms3` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_finder_links_terms4
 CREATE TABLE IF NOT EXISTS `gy3te_finder_links_terms4` (
   `link_id` int(10) unsigned NOT NULL,
@@ -2941,7 +2846,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_finder_links_terms4` (
 DELETE FROM `gy3te_finder_links_terms4`;
 /*!40000 ALTER TABLE `gy3te_finder_links_terms4` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_finder_links_terms4` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_finder_links_terms5
 CREATE TABLE IF NOT EXISTS `gy3te_finder_links_terms5` (
@@ -2958,7 +2862,6 @@ DELETE FROM `gy3te_finder_links_terms5`;
 /*!40000 ALTER TABLE `gy3te_finder_links_terms5` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_finder_links_terms5` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_finder_links_terms6
 CREATE TABLE IF NOT EXISTS `gy3te_finder_links_terms6` (
   `link_id` int(10) unsigned NOT NULL,
@@ -2973,7 +2876,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_finder_links_terms6` (
 DELETE FROM `gy3te_finder_links_terms6`;
 /*!40000 ALTER TABLE `gy3te_finder_links_terms6` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_finder_links_terms6` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_finder_links_terms7
 CREATE TABLE IF NOT EXISTS `gy3te_finder_links_terms7` (
@@ -2990,7 +2892,6 @@ DELETE FROM `gy3te_finder_links_terms7`;
 /*!40000 ALTER TABLE `gy3te_finder_links_terms7` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_finder_links_terms7` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_finder_links_terms8
 CREATE TABLE IF NOT EXISTS `gy3te_finder_links_terms8` (
   `link_id` int(10) unsigned NOT NULL,
@@ -3005,7 +2906,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_finder_links_terms8` (
 DELETE FROM `gy3te_finder_links_terms8`;
 /*!40000 ALTER TABLE `gy3te_finder_links_terms8` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_finder_links_terms8` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_finder_links_terms9
 CREATE TABLE IF NOT EXISTS `gy3te_finder_links_terms9` (
@@ -3022,7 +2922,6 @@ DELETE FROM `gy3te_finder_links_terms9`;
 /*!40000 ALTER TABLE `gy3te_finder_links_terms9` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_finder_links_terms9` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_finder_links_termsa
 CREATE TABLE IF NOT EXISTS `gy3te_finder_links_termsa` (
   `link_id` int(10) unsigned NOT NULL,
@@ -3037,7 +2936,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_finder_links_termsa` (
 DELETE FROM `gy3te_finder_links_termsa`;
 /*!40000 ALTER TABLE `gy3te_finder_links_termsa` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_finder_links_termsa` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_finder_links_termsb
 CREATE TABLE IF NOT EXISTS `gy3te_finder_links_termsb` (
@@ -3054,7 +2952,6 @@ DELETE FROM `gy3te_finder_links_termsb`;
 /*!40000 ALTER TABLE `gy3te_finder_links_termsb` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_finder_links_termsb` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_finder_links_termsc
 CREATE TABLE IF NOT EXISTS `gy3te_finder_links_termsc` (
   `link_id` int(10) unsigned NOT NULL,
@@ -3069,7 +2966,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_finder_links_termsc` (
 DELETE FROM `gy3te_finder_links_termsc`;
 /*!40000 ALTER TABLE `gy3te_finder_links_termsc` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_finder_links_termsc` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_finder_links_termsd
 CREATE TABLE IF NOT EXISTS `gy3te_finder_links_termsd` (
@@ -3086,7 +2982,6 @@ DELETE FROM `gy3te_finder_links_termsd`;
 /*!40000 ALTER TABLE `gy3te_finder_links_termsd` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_finder_links_termsd` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_finder_links_termse
 CREATE TABLE IF NOT EXISTS `gy3te_finder_links_termse` (
   `link_id` int(10) unsigned NOT NULL,
@@ -3102,7 +2997,6 @@ DELETE FROM `gy3te_finder_links_termse`;
 /*!40000 ALTER TABLE `gy3te_finder_links_termse` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_finder_links_termse` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_finder_links_termsf
 CREATE TABLE IF NOT EXISTS `gy3te_finder_links_termsf` (
   `link_id` int(10) unsigned NOT NULL,
@@ -3117,7 +3011,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_finder_links_termsf` (
 DELETE FROM `gy3te_finder_links_termsf`;
 /*!40000 ALTER TABLE `gy3te_finder_links_termsf` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_finder_links_termsf` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_finder_taxonomy
 CREATE TABLE IF NOT EXISTS `gy3te_finder_taxonomy` (
@@ -3140,7 +3033,6 @@ DELETE FROM `gy3te_finder_taxonomy`;
 /*!40000 ALTER TABLE `gy3te_finder_taxonomy` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_finder_taxonomy` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_finder_taxonomy_map
 CREATE TABLE IF NOT EXISTS `gy3te_finder_taxonomy_map` (
   `link_id` int(10) unsigned NOT NULL,
@@ -3154,7 +3046,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_finder_taxonomy_map` (
 DELETE FROM `gy3te_finder_taxonomy_map`;
 /*!40000 ALTER TABLE `gy3te_finder_taxonomy_map` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_finder_taxonomy_map` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_finder_terms
 CREATE TABLE IF NOT EXISTS `gy3te_finder_terms` (
@@ -3178,7 +3069,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_finder_terms` (
 DELETE FROM `gy3te_finder_terms`;
 /*!40000 ALTER TABLE `gy3te_finder_terms` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_finder_terms` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_finder_terms_common
 CREATE TABLE IF NOT EXISTS `gy3te_finder_terms_common` (
@@ -3304,7 +3194,6 @@ INSERT INTO `gy3te_finder_terms_common` (`term`, `language`) VALUES
 	('yours', 'en');
 /*!40000 ALTER TABLE `gy3te_finder_terms_common` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_finder_tokens
 CREATE TABLE IF NOT EXISTS `gy3te_finder_tokens` (
   `term` varchar(75) NOT NULL,
@@ -3322,7 +3211,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_finder_tokens` (
 DELETE FROM `gy3te_finder_tokens`;
 /*!40000 ALTER TABLE `gy3te_finder_tokens` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_finder_tokens` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_finder_tokens_aggregate
 CREATE TABLE IF NOT EXISTS `gy3te_finder_tokens_aggregate` (
@@ -3346,7 +3234,6 @@ DELETE FROM `gy3te_finder_tokens_aggregate`;
 /*!40000 ALTER TABLE `gy3te_finder_tokens_aggregate` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_finder_tokens_aggregate` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_finder_types
 CREATE TABLE IF NOT EXISTS `gy3te_finder_types` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -3361,7 +3248,6 @@ DELETE FROM `gy3te_finder_types`;
 /*!40000 ALTER TABLE `gy3te_finder_types` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_finder_types` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_js_ip_2_country
 CREATE TABLE IF NOT EXISTS `gy3te_js_ip_2_country` (
   `ip_from` int(10) NOT NULL DEFAULT '0',
@@ -3369,7 +3255,7 @@ CREATE TABLE IF NOT EXISTS `gy3te_js_ip_2_country` (
   `short_code` varchar(2) NOT NULL DEFAULT '',
   `code` varchar(3) NOT NULL DEFAULT '',
   `country` varchar(100) NOT NULL DEFAULT '',
-  KEY `ip_from` (`ip_from`),
+  KEY `0` (`ip_from`),
   KEY `1` (`ip_to`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
@@ -3377,7 +3263,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_js_ip_2_country` (
 DELETE FROM `gy3te_js_ip_2_country`;
 /*!40000 ALTER TABLE `gy3te_js_ip_2_country` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_js_ip_2_country` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_js_res_audit_log
 CREATE TABLE IF NOT EXISTS `gy3te_js_res_audit_log` (
@@ -3403,7 +3288,6 @@ DELETE FROM `gy3te_js_res_audit_log`;
 /*!40000 ALTER TABLE `gy3te_js_res_audit_log` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_js_res_audit_log` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_js_res_audit_restore
 CREATE TABLE IF NOT EXISTS `gy3te_js_res_audit_restore` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -3425,7 +3309,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_js_res_audit_restore` (
 DELETE FROM `gy3te_js_res_audit_restore`;
 /*!40000 ALTER TABLE `gy3te_js_res_audit_restore` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_js_res_audit_restore` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_js_res_audit_versions
 CREATE TABLE IF NOT EXISTS `gy3te_js_res_audit_versions` (
@@ -3449,7 +3332,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_js_res_audit_versions` (
 DELETE FROM `gy3te_js_res_audit_versions`;
 /*!40000 ALTER TABLE `gy3te_js_res_audit_versions` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_js_res_audit_versions` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_js_res_categories
 CREATE TABLE IF NOT EXISTS `gy3te_js_res_categories` (
@@ -3501,7 +3383,6 @@ INSERT INTO `gy3te_js_res_categories` (`id`, `asset_id`, `parent_id`, `lft`, `rg
 	(1, 0, 0, 0, 1, 0, '', 0, 'ROOT', 'root', '', '', '', 0, 0, '0000-00-00 00:00:00', 0, '{}', ' ', ' ', ' ', 0, '0000-00-00 00:00:00', 0, '0000-00-00 00:00:00', 0, '*', 0, 0, '{}');
 /*!40000 ALTER TABLE `gy3te_js_res_categories` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_js_res_category_filters
 CREATE TABLE IF NOT EXISTS `gy3te_js_res_category_filters` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -3515,7 +3396,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_js_res_category_filters` (
 DELETE FROM `gy3te_js_res_category_filters`;
 /*!40000 ALTER TABLE `gy3te_js_res_category_filters` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_js_res_category_filters` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_js_res_category_user
 CREATE TABLE IF NOT EXISTS `gy3te_js_res_category_user` (
@@ -3550,7 +3430,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_js_res_category_user` (
 DELETE FROM `gy3te_js_res_category_user`;
 /*!40000 ALTER TABLE `gy3te_js_res_category_user` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_js_res_category_user` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_js_res_comments
 CREATE TABLE IF NOT EXISTS `gy3te_js_res_comments` (
@@ -3594,7 +3473,6 @@ DELETE FROM `gy3te_js_res_comments`;
 INSERT INTO `gy3te_js_res_comments` (`id`, `record_id`, `user_id`, `comment`, `ctime`, `published`, `email`, `name`, `langs`, `access`, `rate`, `parent_id`, `root_id`, `level`, `hide`, `params`, `attachment`, `attach_hit`, `ip`, `lft`, `rgt`, `section_id`, `private`, `rate_num`, `type_id`) VALUES
 	(1, 0, 0, ' ', '0000-00-00 00:00:00', 0, '', '', 'en-GB', 0, 0, 0, 0, 0, 0, ' ', ' ', 0, '', 0, 1, 0, 0, 0, 0);
 /*!40000 ALTER TABLE `gy3te_js_res_comments` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_js_res_country
 CREATE TABLE IF NOT EXISTS `gy3te_js_res_country` (
@@ -3872,7 +3750,6 @@ INSERT INTO `gy3te_js_res_country` (`id`, `name`) VALUES
 	('ZZ', 'UNKNOWN OR Invalid Region');
 /*!40000 ALTER TABLE `gy3te_js_res_country` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_js_res_favorite
 CREATE TABLE IF NOT EXISTS `gy3te_js_res_favorite` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -3892,7 +3769,6 @@ DELETE FROM `gy3te_js_res_favorite`;
 INSERT INTO `gy3te_js_res_favorite` (`id`, `user_id`, `record_id`, `ctime`, `section_id`, `type_id`) VALUES
 	(1, 52, 2, '2018-05-12 11:18:49', 1, 1);
 /*!40000 ALTER TABLE `gy3te_js_res_favorite` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_js_res_fields
 CREATE TABLE IF NOT EXISTS `gy3te_js_res_fields` (
@@ -4000,7 +3876,6 @@ INSERT INTO `gy3te_js_res_fields` (`id`, `key`, `label`, `type_id`, `field_type`
 	(84, 'k2360621cbd2d7f2f5d93dd341f168916', 'Организация', 7, 'child', '{"core":{"show_intro":"0","show_full":"1","show_feed":"0","show_compare":"0","required":"0","searchable":"0","description":"","xml_tag_name":"","field_class":"","show_lable":"3","label_break":"0","lable_class":"","icon":"bank.png","field_view_access":"1","field_view_message":"You cannot view this field","field_submit_access":"1","field_submit_message":"You cannot submit this field","field_edit_access":"1","field_edit_message":"You cannot edit this field"},"params":{"template_input":"default.php","template_output_list":"default.php","template_output_full":"default.php","template_filter":"default.php","template_filter_module":"default.php","filter_enable":"0","filter_hide":"0","filter_descr":"","filter_style":"2","filter_show_number":"1","filter_linkage":"1","filter_user_strict":"0","filter_tip":"Show all records where %s is equal to %s","parent_field":"83","parent_type":"8","parent_section":"8","strict_to_user":"1","strict_to_user_mode":"3","show_relate":"0","multi_parent":"0","multi_limit":"10","notify_add":"2","notify_attach":"2","input_mode":"5","input_sort":"","max_result":"10","control_width":"750","control_height":"500","control_label":"Set parent","add_more_access":"3","add_more_access_auth":"1","add_more_access_list":"1","add_more_access_full":"1","add_return":"back","invite_add_more":"Add New","add_existing":"3","add_existing_auth":"1","add_existing_access_list":"1","add_existing_access_full":"1","add_existing_width":"750","add_existing_height":"500","add_existing_label":"Attach Existing","tmpl_list":"","tmpl_full":"","orderby":"r.ctime ASC","limit_list":"10","limit_full":"20","show_list_all":"2","invite_view_more":"Show All...","show_list_all_full":"1","show_list_all_list":"1","show_list_type":"1"},"emerald":{"subscr_skip":"3","subscr_skip_author":"1","subscr_skip_moderator":"1","field_display_subscription_msg":"You can view this field only if article author has subscription.","field_display_subscription_count":"0","field_view_subscription_msg":"Only our paid members can view this field.","field_view_subscription_count":"0","field_submit_subscription_msg":"Only our paid members can vew add this field.","field_submit_subscription_count":"0","field_edit_subscription_msg":"Only our paid members can edit this field.","field_edit_subscription_count":"0"}}', 0, '0000-00-00 00:00:00', 1, -1, 1, 0, 191, 0, 48);
 /*!40000 ALTER TABLE `gy3te_js_res_fields` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_js_res_fields_group
 CREATE TABLE IF NOT EXISTS `gy3te_js_res_fields_group` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -4042,7 +3917,6 @@ INSERT INTO `gy3te_js_res_fields_group` (`id`, `title`, `type_id`, `ordering`, `
 	(24, 'Присвоенные титулы', 8, 5, '', 0, '0000-00-00 00:00:00', 'titles.png');
 /*!40000 ALTER TABLE `gy3te_js_res_fields_group` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_js_res_field_geo
 CREATE TABLE IF NOT EXISTS `gy3te_js_res_field_geo` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -4070,7 +3944,6 @@ DELETE FROM `gy3te_js_res_field_geo`;
 /*!40000 ALTER TABLE `gy3te_js_res_field_geo` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_js_res_field_geo` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_js_res_field_multilevelselect
 CREATE TABLE IF NOT EXISTS `gy3te_js_res_field_multilevelselect` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -4093,7 +3966,6 @@ INSERT INTO `gy3te_js_res_field_multilevelselect` (`id`, `name`, `field_id`, `pa
 	(1, 'root', 0, 0, 0, 1, 2);
 /*!40000 ALTER TABLE `gy3te_js_res_field_multilevelselect` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_js_res_field_stepaccess
 CREATE TABLE IF NOT EXISTS `gy3te_js_res_field_stepaccess` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -4111,7 +3983,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_js_res_field_stepaccess` (
 DELETE FROM `gy3te_js_res_field_stepaccess`;
 /*!40000 ALTER TABLE `gy3te_js_res_field_stepaccess` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_js_res_field_stepaccess` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_js_res_field_telephone
 CREATE TABLE IF NOT EXISTS `gy3te_js_res_field_telephone` (
@@ -4366,7 +4237,6 @@ INSERT INTO `gy3te_js_res_field_telephone` (`id`, `name`, `code2`, `code3`, `pho
 	(237, 'Zimbabwe', 'ZW', 'ZWE', '263');
 /*!40000 ALTER TABLE `gy3te_js_res_field_telephone` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_js_res_files
 CREATE TABLE IF NOT EXISTS `gy3te_js_res_files` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -4424,7 +4294,6 @@ INSERT INTO `gy3te_js_res_files` (`id`, `filename`, `realname`, `ctime`, `saved`
 	(29, '1527161554_e1652cfb357cf13adb1d0c5ec872b7d2.jpg', 'ЮЧП_Лотос.jpg', '2018-05-24 11:32:34', 1, NULL, 7, 11, 7, 68, 49, 'jpg', 'uploads/image/2018-05/1527161554_e1652cfb357cf13adb1d0c5ec872b7d2.jpg', 0, 0, '127.0.0.1', 0, 0, NULL, 0, NULL, 0, NULL, NULL, 0),
 	(30, '1527171214_1c05a587927bc9db2d52cfbfc1a89774.png', 'Shape5_Political_logo.png', '2018-05-24 14:13:34', 1, NULL, 8, 12, 8, 78, 54, 'png', 'uploads/image/2018-05/1527171214_1c05a587927bc9db2d52cfbfc1a89774.png', 0, 0, '127.0.0.1', 0, 0, NULL, 0, NULL, 0, NULL, NULL, 0);
 /*!40000 ALTER TABLE `gy3te_js_res_files` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_js_res_hits
 CREATE TABLE IF NOT EXISTS `gy3te_js_res_hits` (
@@ -4888,7 +4757,6 @@ INSERT INTO `gy3te_js_res_hits` (`id`, `record_id`, `ctime`, `user_id`, `ip`, `s
 	(444, 9, '2018-05-25 09:21:30', 0, '127.0.0.1', 4);
 /*!40000 ALTER TABLE `gy3te_js_res_hits` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_js_res_import
 CREATE TABLE IF NOT EXISTS `gy3te_js_res_import` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -4906,7 +4774,6 @@ DELETE FROM `gy3te_js_res_import`;
 /*!40000 ALTER TABLE `gy3te_js_res_import` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_js_res_import` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_js_res_import_rows
 CREATE TABLE IF NOT EXISTS `gy3te_js_res_import_rows` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -4921,7 +4788,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_js_res_import_rows` (
 DELETE FROM `gy3te_js_res_import_rows`;
 /*!40000 ALTER TABLE `gy3te_js_res_import_rows` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_js_res_import_rows` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_js_res_moderators
 CREATE TABLE IF NOT EXISTS `gy3te_js_res_moderators` (
@@ -4944,7 +4810,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_js_res_moderators` (
 DELETE FROM `gy3te_js_res_moderators`;
 /*!40000 ALTER TABLE `gy3te_js_res_moderators` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_js_res_moderators` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_js_res_notifications
 CREATE TABLE IF NOT EXISTS `gy3te_js_res_notifications` (
@@ -4971,7 +4836,7 @@ CREATE TABLE IF NOT EXISTS `gy3te_js_res_notifications` (
   KEY `idx_ruser` (`user_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
--- Дамп данных таблицы prodogsinfo.gy3te_js_res_notifications: ~2 rows (приблизительно)
+-- Дамп данных таблицы prodogsinfo.gy3te_js_res_notifications: ~3 rows (приблизительно)
 DELETE FROM `gy3te_js_res_notifications`;
 /*!40000 ALTER TABLE `gy3te_js_res_notifications` DISABLE KEYS */;
 INSERT INTO `gy3te_js_res_notifications` (`id`, `option`, `type`, `ctime`, `notified`, `alerted`, `params`, `user_id`, `ref_1`, `ref_2`, `ref_3`, `ref_4`, `ref_5`, `html`, `num`, `state_new`, `eventer`) VALUES
@@ -4979,7 +4844,6 @@ INSERT INTO `gy3te_js_res_notifications` (`id`, `option`, `type`, `ctime`, `noti
 	(3, 'com_cobalt', 'record_edited', '2018-05-23 08:24:38', 0, 0, '{"id":"3","title":"Cristal family","user_id":"52","section_id":"5","ctime":"2018-05-12 10:01:54","extime":"0000-00-00 00:00:00","mtime":"2018-05-23 08:24:38","inittime":"2018-05-12 10:01:54","ftime":"0000-00-00 00:00:00","pubtime":"0000-00-00 00:00:00","type_id":"5","ip":"46.53.181.20","categories":"[]","version":"1","newTags":null,"section":{"id":"5","asset_id":"127","name":"\\u041f\\u0438\\u0442\\u043e\\u043c\\u043d\\u0438\\u043a\\u0438","title":"","alias":"\\u043f\\u0438\\u0442\\u043e\\u043c\\u043d\\u0438\\u043a\\u0438","description":"","published":"1","ordering":"1","image":"","image_position":"","params":{"general":{"status":"1","status_msg":"This section is currently offline. Please, check back later.","category_itemid":"","noaccess_redirect":"","orderby":"r.ctime DESC","lang_mode":"0","records_mode":"0","filter_mode":"1","cat_mode":"1","can_display":"","featured_first":"0","marknew":"0","show_future_records":"3","show_past_records":"3","show_restrict":"1","show_children":"0","have_unpublished":"1","item_label":"item","section_home_items":"1","section_home_orderby":"r.ctime DESC","home_featured_first":"0","type":["5"],"record_submit_limit":"0","tmpl_markup":"main_template.67449bded07880adbc37315e56ebf0ba","tmpl_list":["blog.7c68c75831195ac50933c288a3246a58"],"tmpl_category":"0","tmpl_compare":"blog.234bdd56a921e24dbbd07edde5e676b4","tmpl_list_default":"default"},"more":{"search_mode":"3","search_title":"1","search_name":"0","search_email":"0","search_comments":"0","feed_link":"1","feed_link2":"1","records_mode":"0","feed_limit":"50","orderby_rss":"r.ctime DESC","feed_link_type":"1","metadesc":"","metakey":"","author":"","robots":""},"personalize":{"personalize":"1","records_mode":"0","author_mode":"username","breadcrumbs":"1","post_anywhere":"1","home_text":"See all artilces","text_icon":"home.png","onlinestatus":"1","vip":"0","novip":"3","glod_amount":"250","vip_gold":"vipGold.png","vip_silver":"vipSilver.png","vip_gray":"vipGray.png","pcat_submit":"0","pcat_limit":"10","pcat_descr_length":"200","pcat_icon":"1","pcat_meta":"2","allow_section_set":"1","allow_change_header":"1","allow_change_descr":"1","user_sec_descr_length":"200","allow_access_control":"1","allow_access_control_add":"1"},"events":{"subscribe_section":0,"subscribe_category":0,"subscribe_record":"2","subscribe_user":"2","alerts":"1","user_manage":"1","event_date_format":"","event_date_custom":"d M Y","event":{"record_new":{"notif":"2","activ":"2","karma1":"0","msg":"EVENT_RECORD_NEW","msg_pers":"EVENT_RECORD_NEW_PERS"},"record_view":{"notif":"2","activ":"2","karma1":"0","karma2":"0","msg":"EVENT_RECORD_VIEW","msg_pers":"EVENT_RECORD_VIEW_PERS"},"record_wait_approve":{"notif":"2","activ":"2","msg":"EVENT_RECORD_WAIT_APPROVE","msg_pers":"EVENT_RECORD_WAIT_APPROVE_PERS"},"record_approved":{"notif":"2","activ":"2","karma1":"0","karma2":"0","msg":"EVENT_RECORD_APPROVED","msg_pers":"EVENT_RECORD_APPROVED_PERS"},"record_edited":{"notif":"2","activ":"2","karma1":"0","karma2":"0","msg":"EVENT_RECORD_EDITED","msg_pers":"EVENT_RECORD_EDITED_PERS"},"record_deleted":{"notif":"2","activ":"2","karma1":"0","karma2":"0","msg":"EVENT_RECORD_DELETED","msg_pers":"EVENT_RECORD_DELETED_PERS"},"record_rated":{"notif":"2","activ":"2","karma1":"0","karma2":"0","msg":"EVENT_RECORD_RATED","msg_pers":"EVENT_RECORD_RATED_PERS"},"record_expired":{"notif":"2","activ":"2","karma2":"0","msg":"EVENT_RECORD_EXPIRED","msg_pers":"EVENT_RECORD_EXPIRED_PERS"},"record_featured_expired":{"notif":"2","activ":"2","karma2":"0","msg":"EVENT_RECORD_FEATURED_EXPIRED","msg_pers":"EVENT_RECORD_FEATURED_EXPIRED_PERS"},"record_bookmarked":{"notif":"2","activ":"2","karma1":"0","karma2":"0","msg":"EVENT_RECORD_BOOKMARKED","msg_pers":"EVENT_RECORD_BOOKMARKED_PERS"},"record_tagged":{"notif":"2","activ":"2","karma1":"0","karma2":"0","msg":"EVENT_RECORD_TAGGED","msg_pers":"EVENT_RECORD_TAGGED_PERS"},"record_unpublished":{"notif":"2","activ":"2","karma1":"0","karma2":"0","msg":"EVENT_RECORD_UNPUBLISHED","msg_pers":"EVENT_RECORD_UNPUBLISHED_PERS"},"record_featured":{"notif":"2","activ":"2","karma1":"0","karma2":"0","msg":"EVENT_RECORD_FEATURED","msg_pers":"EVENT_RECORD_FEATURED_PERS"},"record_extended":{"notif":"2","activ":"2","karma1":"0","karma2":"0","msg":"EVENT_RECORD_EXTENDED","msg_pers":"EVENT_RECORD_EXTENDED_PERS"},"record_reposted":{"notif":"2","activ":"2","karma1":"0","karma2":"0","msg":"EVENT_RECORD_REPOSTED","msg_pers":"EVENT_RECORD_REPOSTED_PERS"},"record_posted":{"notif":"2","activ":"2","karma1":"0","msg":"EVENT_RECORD_POSTED","msg_pers":"EVENT_RECORD_POSTED_PERS"},"comment_new":{"notif":"2","activ":"2","karma1":"0","karma2":"0","msg":"EVENT_COMMENT_NEW","msg_pers":"EVENT_COMMENT_NEW_PERS"},"comment_edited":{"notif":"2","activ":"2","karma1":"0","karma2":"0","msg":"EVENT_COMMENT_EDITED","msg_pers":"EVENT_COMMENT_EDITED_PERS"},"comment_rated":{"notif":"2","activ":"2","karma1":"0","karma2":"0","msg":"EVENT_COMMENT_RATED","msg_pers":"EVENT_COMMENT_RATED_PERS"},"comment_deleted":{"notif":"2","activ":"2","karma1":"0","karma2":"0","msg":"EVENT_COMMENT_DELETED","msg_pers":"EVENT_COMMENT_DELETED_PERS"},"comment_approved":{"notif":"2","activ":"2","karma1":"0","karma2":"0","msg":"EVENT_COMMENT_APPROVED","msg_pers":"EVENT_COMMENT_APPROVED_PERS"},"comment_reply":{"notif":"2","activ":"2","karma1":"0","karma2":"0","msg":"EVENT_COMMENT_REPLY","msg_pers":"EVENT_COMMENT_REPLY_PERS"},"comment_unpublished":{"notif":"2","activ":"2","karma1":"0","karma2":"0","msg":"EVENT_COMMENT_UNPUBLISHED","msg_pers":"EVENT_COMMENT_UNPUBLISHED_PERS"},"status_changed":{"notif":"2","activ":"2","karma1":"0","karma2":"0","msg":"EVENT_STATUS_CHANGED","msg_pers":"EVENT_STATUS_CHANGED_PERS"},"parent_new":{"notif":"2","activ":"2","karma1":"0","karma2":"0","msg":"EVENT_PARENT_NEW","msg_pers":"EVENT_PARENT_NEW_PERS"},"child_new":{"notif":"2","activ":"2","karma1":"0","karma2":"0","msg":"EVENT_CHILD_NEW","msg_pers":"EVENT_CHILD_NEW_PERS"},"parent_attached":{"notif":"2","activ":"2","karma1":"0","karma2":"0","msg":"EVENT_PARENT_ATTACHED","msg_pers":"EVENT_PARENT_ATTACHED_PERS"},"child_attached":{"notif":"2","activ":"2","karma1":"0","karma2":"0","msg":"EVENT_CHILD_ATTACHED","msg_pers":"EVENT_CHILD_ATTACHED_PERS"},"order_updated":{"notif":"2","activ":"2","karma1":"0","karma2":"0","msg":"EVENT_ORDER_UPDATED","msg_pers":"EVENT_ORDER_UPDATED_PERS"},"new_sale":{"notif":"2","activ":"2","karma1":"0","karma2":"0","msg":"EVENT_NEW_SALE","msg_pers":"EVENT_NEW_SALE_PERS"},"new_sale_manual":{"notif":"2","activ":"2","karma1":"0","karma2":"0","msg":"EVENT_NEW_SALE_MANUAL","msg_pers":"EVENT_NEW_SALE_MANUAL_PERS"}}}},"checked_out":"0","checked_out_time":"0000-00-00 00:00:00","access":"1","categories":"0","language":"*","descr_before":"","descr_after":null,"descr_full":"","link":"index.php?option=com_cobalt&view=records&section_id=5_\\u043f\\u0438\\u0442\\u043e\\u043c\\u043d\\u0438\\u043a\\u0438&Itemid=141"},"by":"52","on":1527063878}', 48, 3, 5, 0, 0, 0, '', 0, 1, 52),
 	(4, 'com_cobalt', 'record_reposted', '2018-05-24 09:20:04', 0, 0, '{"id":"3","title":"Cristal family","user_id":"52","section_id":"5","ctime":"2018-05-12 10:01:54","extime":"0000-00-00 00:00:00","mtime":"2018-05-24 06:46:35","inittime":"2018-05-12 10:01:54","ftime":"0000-00-00 00:00:00","pubtime":"0000-00-00 00:00:00","type_id":"5","ip":"46.53.181.20","categories":"[]","version":"1","newTags":null,"section":{"id":"5","asset_id":"127","name":"\\u041f\\u0438\\u0442\\u043e\\u043c\\u043d\\u0438\\u043a\\u0438","title":"","alias":"\\u043f\\u0438\\u0442\\u043e\\u043c\\u043d\\u0438\\u043a\\u0438","description":"","published":"1","ordering":"2","image":"","image_position":"","params":{"general":{"status":"1","status_msg":"This section is currently offline. Please, check back later.","category_itemid":"","noaccess_redirect":"","orderby":"r.ctime DESC","lang_mode":"0","records_mode":"0","filter_mode":"1","cat_mode":"1","can_display":"","featured_first":"0","marknew":"0","show_future_records":"3","show_past_records":"3","show_restrict":"1","show_children":"0","have_unpublished":"1","item_label":"item","section_home_items":"1","section_home_orderby":"r.ctime DESC","home_featured_first":"0","type":["5"],"record_submit_limit":"0","tmpl_markup":"main_template.67449bded07880adbc37315e56ebf0ba","tmpl_list":["blog.7c68c75831195ac50933c288a3246a58"],"tmpl_category":"0","tmpl_compare":"blog.234bdd56a921e24dbbd07edde5e676b4","tmpl_list_default":"default"},"more":{"search_mode":"3","search_title":"1","search_name":"0","search_email":"0","search_comments":"0","feed_link":"1","feed_link2":"1","records_mode":"0","feed_limit":"50","orderby_rss":"r.ctime DESC","feed_link_type":"1","metadesc":"","metakey":"","author":"","robots":""},"personalize":{"personalize":"1","records_mode":"0","author_mode":"username","breadcrumbs":"1","post_anywhere":"1","home_text":"See all artilces","text_icon":"home.png","onlinestatus":"1","vip":"0","novip":"3","glod_amount":"250","vip_gold":"vipGold.png","vip_silver":"vipSilver.png","vip_gray":"vipGray.png","pcat_submit":"0","pcat_limit":"10","pcat_descr_length":"200","pcat_icon":"1","pcat_meta":"2","allow_section_set":"1","allow_change_header":"1","allow_change_descr":"1","user_sec_descr_length":"200","allow_access_control":"1","allow_access_control_add":"1"},"events":{"subscribe_section":0,"subscribe_category":0,"subscribe_record":"2","subscribe_user":"2","alerts":"1","user_manage":"1","event_date_format":"","event_date_custom":"d M Y","event":{"record_new":{"notif":"2","activ":"2","karma1":"0","msg":"EVENT_RECORD_NEW","msg_pers":"EVENT_RECORD_NEW_PERS"},"record_view":{"notif":"2","activ":"2","karma1":"0","karma2":"0","msg":"EVENT_RECORD_VIEW","msg_pers":"EVENT_RECORD_VIEW_PERS"},"record_wait_approve":{"notif":"2","activ":"2","msg":"EVENT_RECORD_WAIT_APPROVE","msg_pers":"EVENT_RECORD_WAIT_APPROVE_PERS"},"record_approved":{"notif":"2","activ":"2","karma1":"0","karma2":"0","msg":"EVENT_RECORD_APPROVED","msg_pers":"EVENT_RECORD_APPROVED_PERS"},"record_edited":{"notif":"2","activ":"2","karma1":"0","karma2":"0","msg":"EVENT_RECORD_EDITED","msg_pers":"EVENT_RECORD_EDITED_PERS"},"record_deleted":{"notif":"2","activ":"2","karma1":"0","karma2":"0","msg":"EVENT_RECORD_DELETED","msg_pers":"EVENT_RECORD_DELETED_PERS"},"record_rated":{"notif":"2","activ":"2","karma1":"0","karma2":"0","msg":"EVENT_RECORD_RATED","msg_pers":"EVENT_RECORD_RATED_PERS"},"record_expired":{"notif":"2","activ":"2","karma2":"0","msg":"EVENT_RECORD_EXPIRED","msg_pers":"EVENT_RECORD_EXPIRED_PERS"},"record_featured_expired":{"notif":"2","activ":"2","karma2":"0","msg":"EVENT_RECORD_FEATURED_EXPIRED","msg_pers":"EVENT_RECORD_FEATURED_EXPIRED_PERS"},"record_bookmarked":{"notif":"2","activ":"2","karma1":"0","karma2":"0","msg":"EVENT_RECORD_BOOKMARKED","msg_pers":"EVENT_RECORD_BOOKMARKED_PERS"},"record_tagged":{"notif":"2","activ":"2","karma1":"0","karma2":"0","msg":"EVENT_RECORD_TAGGED","msg_pers":"EVENT_RECORD_TAGGED_PERS"},"record_unpublished":{"notif":"2","activ":"2","karma1":"0","karma2":"0","msg":"EVENT_RECORD_UNPUBLISHED","msg_pers":"EVENT_RECORD_UNPUBLISHED_PERS"},"record_featured":{"notif":"2","activ":"2","karma1":"0","karma2":"0","msg":"EVENT_RECORD_FEATURED","msg_pers":"EVENT_RECORD_FEATURED_PERS"},"record_extended":{"notif":"2","activ":"2","karma1":"0","karma2":"0","msg":"EVENT_RECORD_EXTENDED","msg_pers":"EVENT_RECORD_EXTENDED_PERS"},"record_reposted":{"notif":"2","activ":"2","karma1":"0","karma2":"0","msg":"EVENT_RECORD_REPOSTED","msg_pers":"EVENT_RECORD_REPOSTED_PERS"},"record_posted":{"notif":"2","activ":"2","karma1":"0","msg":"EVENT_RECORD_POSTED","msg_pers":"EVENT_RECORD_POSTED_PERS"},"comment_new":{"notif":"2","activ":"2","karma1":"0","karma2":"0","msg":"EVENT_COMMENT_NEW","msg_pers":"EVENT_COMMENT_NEW_PERS"},"comment_edited":{"notif":"2","activ":"2","karma1":"0","karma2":"0","msg":"EVENT_COMMENT_EDITED","msg_pers":"EVENT_COMMENT_EDITED_PERS"},"comment_rated":{"notif":"2","activ":"2","karma1":"0","karma2":"0","msg":"EVENT_COMMENT_RATED","msg_pers":"EVENT_COMMENT_RATED_PERS"},"comment_deleted":{"notif":"2","activ":"2","karma1":"0","karma2":"0","msg":"EVENT_COMMENT_DELETED","msg_pers":"EVENT_COMMENT_DELETED_PERS"},"comment_approved":{"notif":"2","activ":"2","karma1":"0","karma2":"0","msg":"EVENT_COMMENT_APPROVED","msg_pers":"EVENT_COMMENT_APPROVED_PERS"},"comment_reply":{"notif":"2","activ":"2","karma1":"0","karma2":"0","msg":"EVENT_COMMENT_REPLY","msg_pers":"EVENT_COMMENT_REPLY_PERS"},"comment_unpublished":{"notif":"2","activ":"2","karma1":"0","karma2":"0","msg":"EVENT_COMMENT_UNPUBLISHED","msg_pers":"EVENT_COMMENT_UNPUBLISHED_PERS"},"status_changed":{"notif":"2","activ":"2","karma1":"0","karma2":"0","msg":"EVENT_STATUS_CHANGED","msg_pers":"EVENT_STATUS_CHANGED_PERS"},"parent_new":{"notif":"2","activ":"2","karma1":"0","karma2":"0","msg":"EVENT_PARENT_NEW","msg_pers":"EVENT_PARENT_NEW_PERS"},"child_new":{"notif":"2","activ":"2","karma1":"0","karma2":"0","msg":"EVENT_CHILD_NEW","msg_pers":"EVENT_CHILD_NEW_PERS"},"parent_attached":{"notif":"2","activ":"2","karma1":"0","karma2":"0","msg":"EVENT_PARENT_ATTACHED","msg_pers":"EVENT_PARENT_ATTACHED_PERS"},"child_attached":{"notif":"2","activ":"2","karma1":"0","karma2":"0","msg":"EVENT_CHILD_ATTACHED","msg_pers":"EVENT_CHILD_ATTACHED_PERS"},"order_updated":{"notif":"2","activ":"2","karma1":"0","karma2":"0","msg":"EVENT_ORDER_UPDATED","msg_pers":"EVENT_ORDER_UPDATED_PERS"},"new_sale":{"notif":"2","activ":"2","karma1":"0","karma2":"0","msg":"EVENT_NEW_SALE","msg_pers":"EVENT_NEW_SALE_PERS"},"new_sale_manual":{"notif":"2","activ":"2","karma1":"0","karma2":"0","msg":"EVENT_NEW_SALE_MANUAL","msg_pers":"EVENT_NEW_SALE_MANUAL_PERS"}}}},"checked_out":"0","checked_out_time":"0000-00-00 00:00:00","access":"1","categories":"0","language":"*","descr_before":"","descr_after":null,"descr_full":"","link":"index.php?option=com_cobalt&view=records&section_id=5_\\u043f\\u0438\\u0442\\u043e\\u043c\\u043d\\u0438\\u043a\\u0438&Itemid="},"by":"49","on":1527153604}', 52, 3, 5, 0, 0, 0, '', 0, 1, 49);
 /*!40000 ALTER TABLE `gy3te_js_res_notifications` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_js_res_packs
 CREATE TABLE IF NOT EXISTS `gy3te_js_res_packs` (
@@ -5012,7 +4876,6 @@ INSERT INTO `gy3te_js_res_packs` (`id`, `name`, `description`, `key`, `addkey`, 
 	(1, 'my_pack', '', 'pack33ee59', 0, '', '2018-05-10 10:00:12', '2018-05-10 11:15:59', '0000-00-00 00:00:00', '0', 0, '0000-00-00 00:00:00', 0, 0, 'Dmitry Zatulenko', '', '', 1, '© 2012 - My company. All rights reserved.');
 /*!40000 ALTER TABLE `gy3te_js_res_packs` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_js_res_packs_sections
 CREATE TABLE IF NOT EXISTS `gy3te_js_res_packs_sections` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -5029,7 +4892,6 @@ INSERT INTO `gy3te_js_res_packs_sections` (`id`, `pack_id`, `section_id`, `param
 	(1, 1, 1, '{"markup":"1","list":"1","cat_index":"1","compare":"1","types":{"1":{"article":"1","articleform":"1","rating":"1","comment":"1","categoryselect":"1","copy_content":"1","copy_field_record_templates":"0"}}}'),
 	(2, 1, 4, '{"markup":"1","list":"1","cat_index":"1","compare":"1","types":{"4":{"article":"1","articleform":"1","rating":"1","comment":"1","categoryselect":"1","copy_content":"1","copy_field_record_templates":"0"}}}');
 /*!40000 ALTER TABLE `gy3te_js_res_packs_sections` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_js_res_polls
 CREATE TABLE IF NOT EXISTS `gy3te_js_res_polls` (
@@ -5048,7 +4910,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_js_res_polls` (
 DELETE FROM `gy3te_js_res_polls`;
 /*!40000 ALTER TABLE `gy3te_js_res_polls` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_js_res_polls` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_js_res_record
 CREATE TABLE IF NOT EXISTS `gy3te_js_res_record` (
@@ -5136,7 +4997,6 @@ INSERT INTO `gy3te_js_res_record` (`id`, `title`, `published`, `access`, `params
 	(12, 'Союз общественных объединений "БЕЛОРУССКОЕ КИНОЛОГИЧЕСКОЕ ОБЪЕДИНЕНИЕ"', 1, 1, '', 54, 8, 0, '0000-00-00 00:00:00', '2018-05-24 14:13:34', '0000-00-00 00:00:00', '2018-05-24 14:35:54', '2018-05-24 14:13:34', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 8, 2, 0, '', '', '', 'союз-общественных-объединений-белорусское-кинологическое-объединение', 0, 0, 0, NULL, 'ru-RU', 0, '127.0.0.1', 0, 0, 0, 0, 0, 'b67a1ef9f1ae0bb0ed96b18b3b0a9f91', '[]', 'Союз общественных объединений "БЕЛОРУССКОЕ КИНОЛОГИЧЕСКОЕ ОБЪЕДИНЕНИЕ", СОО "БКО", , Союз общественных объединений "БЕЛОРУССКОЕ КИНОЛОГИЧЕСКОЕ ОБЪЕДИНЕНИЕ"', '{"78":{"image":"uploads\\/image\\/2018-05\\/1527171214_1c05a587927bc9db2d52cfbfc1a89774.png"},"71":"\\u0421\\u043e\\u044e\\u0437 \\u043e\\u0431\\u0449\\u0435\\u0441\\u0442\\u0432\\u0435\\u043d\\u043d\\u044b\\u0445 \\u043e\\u0431\\u044a\\u0435\\u0434\\u0438\\u043d\\u0435\\u043d\\u0438\\u0439 \\"\\u0411\\u0415\\u041b\\u041e\\u0420\\u0423\\u0421\\u0421\\u041a\\u041e\\u0415 \\u041a\\u0418\\u041d\\u041e\\u041b\\u041e\\u0413\\u0418\\u0427\\u0415\\u0421\\u041a\\u041e\\u0415 \\u041e\\u0411\\u042a\\u0415\\u0414\\u0418\\u041d\\u0415\\u041d\\u0418\\u0415\\"","73":"101121556","72":"\\u0421\\u041e\\u041e \\"\\u0411\\u041a\\u041e\\"","76":"","77":"<p style=\\"color: #393939; font-family: Helvetica, Arial, sans-serif; font-size: 13px;\\"><span style=\\"font-size: 12pt;\\"><strong>\\u0420\\u0435\\u0436\\u0438\\u043c \\u0440\\u0430\\u0431\\u043e\\u0442\\u044b:<\\/strong> \\u0441 10.00 \\u0434\\u043e 17.00<\\/span><\\/p>\\r\\n<p style=\\"color: #393939; font-family: Helvetica, Arial, sans-serif; font-size: 13px;\\">\\u00a0<span style=\\"font-size: 12pt;\\">(\\u043f\\u044f\\u0442\\u043d\\u0438\\u0446\\u0430 \\u0441 10.00 \\u0434\\u043e 16.00)<\\/span><\\/p>\\r\\n<p style=\\"color: #393939; font-family: Helvetica, Arial, sans-serif; font-size: 13px;\\"><span style=\\"font-size: 12pt;\\"><strong>\\u041f\\u0435\\u0440\\u0435\\u0440\\u044b\\u0432:<\\/strong> \\u0441 13.00 \\u0434\\u043e 14.00<\\/span><\\/p>\\r\\n<p style=\\"color: #393939; font-family: Helvetica, Arial, sans-serif; font-size: 13px;\\"><span style=\\"font-size: 12pt;\\"><strong>\\u041f\\u0440\\u0438\\u0435\\u043c \\u0434\\u043e\\u043a\\u0443\\u043c\\u0435\\u043d\\u0442\\u043e\\u0432 \\u043e\\u0442 \\u043a\\u043b\\u0443\\u0431\\u043e\\u0432:<\\/strong> \\u0432\\u0442\\u043e\\u0440\\u043d\\u0438\\u043a, \\u0447\\u0435\\u0442\\u0432\\u0435\\u0440\\u0433<br \\/><\\/span><\\/p>\\r\\n<p style=\\"color: #393939; font-family: Helvetica, Arial, sans-serif; font-size: 13px;\\"><span style=\\"font-size: 12pt;\\"><strong>\\u0412\\u044b\\u0445\\u043e\\u0434\\u043d\\u044b\\u0435:<\\/strong>\\u00a0\\u0441\\u0443\\u0431\\u0431\\u043e\\u0442\\u0430, \\u0432\\u043e\\u0441\\u043a\\u0440\\u0435\\u0441\\u0435\\u043d\\u044c\\u0435<\\/span><\\/p>","82":[{"url":"http:\\/\\/www.bcu-upo.org\\/kontakty","label":"\\u041f\\u0435\\u0440\\u0435\\u0439\\u0442\\u0438 \\u043d\\u0430 \\u0441\\u0430\\u0439\\u0442 \\u043e\\u0440\\u0433\\u0430\\u043d\\u0438\\u0437\\u0430\\u0446\\u0438\\u0438","hits":2}],"81":"info@bcu-upo.org","79":{"country":"375","region":"17","tel":"3063164","ext":""},"80":{"country":"375","region":"17","tel":"3060595","ext":""},"74":{"address":{"country":"BY","state":"\\u041c\\u0438\\u043d\\u0441\\u043a\\u0430\\u044f \\u043e\\u0431\\u043b.","city":"\\u041c\\u0438\\u043d\\u0441\\u043a","zip":"220050","address2":"\\u0443\\u043b.\\u041c.\\u0422\\u0430\\u043d\\u043a\\u0430, \\u0434. 16, \\u043f\\u043e\\u0434\\u044a\\u0435\\u0437\\u0434 6, \\u043a\\u043e\\u0434 193, 2-\\u0439 \\u044d\\u0442\\u0430\\u0436, \\u043e\\u0444.1\\u0430"},"position":{"lat":"53.9077926","lng":"27.533336299999974","zoom":"15","marker":"marker-small-red.png"}},"75":{"address":{"country":"BY","state":"\\u041c\\u0438\\u043d\\u0441\\u043a\\u0430\\u044f \\u043e\\u0431\\u043b.","city":"\\u041c\\u0438\\u043d\\u0441\\u043a","zip":"220050","address2":"\\u0443\\u043b.\\u041c.\\u0422\\u0430\\u043d\\u043a\\u0430, \\u0434. 16, \\u043f\\u043e\\u0434\\u044a\\u0435\\u0437\\u0434 6, \\u043a\\u043e\\u0434 193, 2-\\u0439 \\u044d\\u0442\\u0430\\u0436, \\u043e\\u0444.1\\u0430"},"position":{"lat":"53.709807","lng":"27.953389000000016","zoom":"5","marker":"marker-small-red.png"}},"83":["11"]}', 0, '', NULL, 1, 1, 0, 'com_cobalt', 0, '[]', NULL);
 /*!40000 ALTER TABLE `gy3te_js_res_record` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_js_res_record_category
 CREATE TABLE IF NOT EXISTS `gy3te_js_res_record_category` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -5156,7 +5016,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_js_res_record_category` (
 DELETE FROM `gy3te_js_res_record_category`;
 /*!40000 ALTER TABLE `gy3te_js_res_record_category` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_js_res_record_category` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_js_res_record_repost
 CREATE TABLE IF NOT EXISTS `gy3te_js_res_record_repost` (
@@ -5178,7 +5037,6 @@ INSERT INTO `gy3te_js_res_record_repost` (`id`, `host_id`, `record_id`, `ctime`,
 	(36, 49, 2, '2018-05-23 15:07:31', 0, NULL),
 	(37, 52, 3, '2018-05-24 06:46:35', 0, NULL);
 /*!40000 ALTER TABLE `gy3te_js_res_record_repost` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_js_res_record_values
 CREATE TABLE IF NOT EXISTS `gy3te_js_res_record_values` (
@@ -5347,7 +5205,6 @@ INSERT INTO `gy3te_js_res_record_values` (`id`, `field_id`, `field_key`, `field_
 	(919, 84, 'k2360621cbd2d7f2f5d93dd341f168916', 'child', 'Организация', '12', 11, 49, 7, 7, '', '127.0.0.1', '2018-05-24 14:40:19', '0', 0);
 /*!40000 ALTER TABLE `gy3te_js_res_record_values` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_js_res_sales
 CREATE TABLE IF NOT EXISTS `gy3te_js_res_sales` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -5379,7 +5236,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_js_res_sales` (
 DELETE FROM `gy3te_js_res_sales`;
 /*!40000 ALTER TABLE `gy3te_js_res_sales` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_js_res_sales` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_js_res_sections
 CREATE TABLE IF NOT EXISTS `gy3te_js_res_sections` (
@@ -5416,7 +5272,6 @@ INSERT INTO `gy3te_js_res_sections` (`id`, `asset_id`, `name`, `title`, `alias`,
 	(8, 184, 'Организации', '', 'организации', '', 1, 1, '', '', '{"general":{"status":"1","status_msg":"This section is currently offline. Please, check back later.","category_itemid":"","noaccess_redirect":"","orderby":"r.ctime DESC","lang_mode":"0","records_mode":"0","filter_mode":"1","cat_mode":"1","can_display":"","featured_first":"0","marknew":"0","show_future_records":"3","show_past_records":"3","show_restrict":"1","show_children":"0","have_unpublished":"1","item_label":"item","section_home_items":"1","section_home_orderby":"r.ctime DESC","home_featured_first":"0","type":["8"],"record_submit_limit":"0","tmpl_markup":"main_template.3318a696180095a3a850f9d21a708f31","tmpl_list":["blog.c01ef6fbebd346e01f03a1e09ad50b4e"],"tmpl_category":"0","tmpl_compare":"blog.fcbe2a1a904d88461490d4f79f9669e2","tmpl_list_default":"default"},"more":{"search_mode":"3","search_title":"1","search_name":"0","search_email":"0","search_comments":"0","feed_link":"1","feed_link2":"1","records_mode":"0","feed_limit":"50","orderby_rss":"r.ctime DESC","feed_link_type":"1","metadesc":"","metakey":"","author":"","robots":""},"personalize":{"personalize":"1","records_mode":"0","author_mode":"username","breadcrumbs":"1","post_anywhere":"0","home_text":"See all artilces","text_icon":"home.png","onlinestatus":"1","vip":"0","novip":"3","glod_amount":"250","vip_gold":"vipGold.png","vip_silver":"vipSilver.png","vip_gray":"vipGray.png","pcat_submit":"0","pcat_limit":"10","pcat_descr_length":"200","pcat_icon":"1","pcat_meta":"2","allow_section_set":"1","allow_change_header":"1","allow_change_descr":"1","user_sec_descr_length":"200","allow_access_control":"1","allow_access_control_add":"1"},"events":{"subscribe_section":"2","subscribe_category":"2","subscribe_record":"2","subscribe_user":"2","alerts":"1","user_manage":"1","event_date_format":"","event_date_custom":"d M Y","event":{"record_new":{"notif":"2","activ":"2","karma1":"0","msg":"EVENT_RECORD_NEW","msg_pers":"EVENT_RECORD_NEW_PERS"},"record_view":{"notif":"2","activ":"2","karma1":"0","karma2":"0","msg":"EVENT_RECORD_VIEW","msg_pers":"EVENT_RECORD_VIEW_PERS"},"record_wait_approve":{"notif":"2","activ":"2","msg":"EVENT_RECORD_WAIT_APPROVE","msg_pers":"EVENT_RECORD_WAIT_APPROVE_PERS"},"record_approved":{"notif":"2","activ":"2","karma1":"0","karma2":"0","msg":"EVENT_RECORD_APPROVED","msg_pers":"EVENT_RECORD_APPROVED_PERS"},"record_edited":{"notif":"2","activ":"2","karma1":"0","karma2":"0","msg":"EVENT_RECORD_EDITED","msg_pers":"EVENT_RECORD_EDITED_PERS"},"record_deleted":{"notif":"2","activ":"2","karma1":"0","karma2":"0","msg":"EVENT_RECORD_DELETED","msg_pers":"EVENT_RECORD_DELETED_PERS"},"record_rated":{"notif":"2","activ":"2","karma1":"0","karma2":"0","msg":"EVENT_RECORD_RATED","msg_pers":"EVENT_RECORD_RATED_PERS"},"record_expired":{"notif":"2","activ":"2","karma2":"0","msg":"EVENT_RECORD_EXPIRED","msg_pers":"EVENT_RECORD_EXPIRED_PERS"},"record_featured_expired":{"notif":"2","activ":"2","karma2":"0","msg":"EVENT_RECORD_FEATURED_EXPIRED","msg_pers":"EVENT_RECORD_FEATURED_EXPIRED_PERS"},"record_bookmarked":{"notif":"2","activ":"2","karma1":"0","karma2":"0","msg":"EVENT_RECORD_BOOKMARKED","msg_pers":"EVENT_RECORD_BOOKMARKED_PERS"},"record_tagged":{"notif":"2","activ":"2","karma1":"0","karma2":"0","msg":"EVENT_RECORD_TAGGED","msg_pers":"EVENT_RECORD_TAGGED_PERS"},"record_unpublished":{"notif":"2","activ":"2","karma1":"0","karma2":"0","msg":"EVENT_RECORD_UNPUBLISHED","msg_pers":"EVENT_RECORD_UNPUBLISHED_PERS"},"record_featured":{"notif":"2","activ":"2","karma1":"0","karma2":"0","msg":"EVENT_RECORD_FEATURED","msg_pers":"EVENT_RECORD_FEATURED_PERS"},"record_extended":{"notif":"2","activ":"2","karma1":"0","karma2":"0","msg":"EVENT_RECORD_EXTENDED","msg_pers":"EVENT_RECORD_EXTENDED_PERS"},"record_reposted":{"notif":"2","activ":"2","karma1":"0","karma2":"0","msg":"EVENT_RECORD_REPOSTED","msg_pers":"EVENT_RECORD_REPOSTED_PERS"},"record_posted":{"notif":"2","activ":"2","karma1":"0","msg":"EVENT_RECORD_POSTED","msg_pers":"EVENT_RECORD_POSTED_PERS"},"comment_new":{"notif":"2","activ":"2","karma1":"0","karma2":"0","msg":"EVENT_COMMENT_NEW","msg_pers":"EVENT_COMMENT_NEW_PERS"},"comment_edited":{"notif":"2","activ":"2","karma1":"0","karma2":"0","msg":"EVENT_COMMENT_EDITED","msg_pers":"EVENT_COMMENT_EDITED_PERS"},"comment_rated":{"notif":"2","activ":"2","karma1":"0","karma2":"0","msg":"EVENT_COMMENT_RATED","msg_pers":"EVENT_COMMENT_RATED_PERS"},"comment_deleted":{"notif":"2","activ":"2","karma1":"0","karma2":"0","msg":"EVENT_COMMENT_DELETED","msg_pers":"EVENT_COMMENT_DELETED_PERS"},"comment_approved":{"notif":"2","activ":"2","karma1":"0","karma2":"0","msg":"EVENT_COMMENT_APPROVED","msg_pers":"EVENT_COMMENT_APPROVED_PERS"},"comment_reply":{"notif":"2","activ":"2","karma1":"0","karma2":"0","msg":"EVENT_COMMENT_REPLY","msg_pers":"EVENT_COMMENT_REPLY_PERS"},"comment_unpublished":{"notif":"2","activ":"2","karma1":"0","karma2":"0","msg":"EVENT_COMMENT_UNPUBLISHED","msg_pers":"EVENT_COMMENT_UNPUBLISHED_PERS"},"status_changed":{"notif":"2","activ":"2","karma1":"0","karma2":"0","msg":"EVENT_STATUS_CHANGED","msg_pers":"EVENT_STATUS_CHANGED_PERS"},"parent_new":{"notif":"2","activ":"2","karma1":"0","karma2":"0","msg":"EVENT_PARENT_NEW","msg_pers":"EVENT_PARENT_NEW_PERS"},"child_new":{"notif":"2","activ":"2","karma1":"0","karma2":"0","msg":"EVENT_CHILD_NEW","msg_pers":"EVENT_CHILD_NEW_PERS"},"parent_attached":{"notif":"2","activ":"2","karma1":"0","karma2":"0","msg":"EVENT_PARENT_ATTACHED","msg_pers":"EVENT_PARENT_ATTACHED_PERS"},"child_attached":{"notif":"2","activ":"2","karma1":"0","karma2":"0","msg":"EVENT_CHILD_ATTACHED","msg_pers":"EVENT_CHILD_ATTACHED_PERS"},"order_updated":{"notif":"2","activ":"2","karma1":"0","karma2":"0","msg":"EVENT_ORDER_UPDATED","msg_pers":"EVENT_ORDER_UPDATED_PERS"},"new_sale":{"notif":"2","activ":"2","karma1":"0","karma2":"0","msg":"EVENT_NEW_SALE","msg_pers":"EVENT_NEW_SALE_PERS"},"new_sale_manual":{"notif":"2","activ":"2","karma1":"0","karma2":"0","msg":"EVENT_NEW_SALE_MANUAL","msg_pers":"EVENT_NEW_SALE_MANUAL_PERS"}}}}', 0, '0000-00-00 00:00:00', 1, 0, '*');
 /*!40000 ALTER TABLE `gy3te_js_res_sections` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_js_res_subscribe
 CREATE TABLE IF NOT EXISTS `gy3te_js_res_subscribe` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -5450,7 +5305,6 @@ INSERT INTO `gy3te_js_res_subscribe` (`id`, `user_id`, `ref_id`, `ctime`, `type`
 	(16, 54, 12, '2018-05-24 14:13:34', 'record', NULL, 8);
 /*!40000 ALTER TABLE `gy3te_js_res_subscribe` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_js_res_subscribe_cat
 CREATE TABLE IF NOT EXISTS `gy3te_js_res_subscribe_cat` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -5469,7 +5323,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_js_res_subscribe_cat` (
 DELETE FROM `gy3te_js_res_subscribe_cat`;
 /*!40000 ALTER TABLE `gy3te_js_res_subscribe_cat` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_js_res_subscribe_cat` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_js_res_subscribe_user
 CREATE TABLE IF NOT EXISTS `gy3te_js_res_subscribe_user` (
@@ -5492,7 +5345,6 @@ INSERT INTO `gy3te_js_res_subscribe_user` (`id`, `u_id`, `section_id`, `user_id`
 	(1, 49, 1, 52, 1, '2018-05-14 08:27:46');
 /*!40000 ALTER TABLE `gy3te_js_res_subscribe_user` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_js_res_tags
 CREATE TABLE IF NOT EXISTS `gy3te_js_res_tags` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -5507,7 +5359,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_js_res_tags` (
 DELETE FROM `gy3te_js_res_tags`;
 /*!40000 ALTER TABLE `gy3te_js_res_tags` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_js_res_tags` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_js_res_tags_history
 CREATE TABLE IF NOT EXISTS `gy3te_js_res_tags_history` (
@@ -5529,7 +5380,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_js_res_tags_history` (
 DELETE FROM `gy3te_js_res_tags_history`;
 /*!40000 ALTER TABLE `gy3te_js_res_tags_history` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_js_res_tags_history` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_js_res_types
 CREATE TABLE IF NOT EXISTS `gy3te_js_res_types` (
@@ -5562,7 +5412,6 @@ INSERT INTO `gy3te_js_res_types` (`id`, `name`, `params`, `checked_out`, `checke
 	(8, 'Организация', '{"properties":{"item_itemid":"","item_compare":"0","item_can_favorite":"2","item_can_moderate":"3","item_edit":"1","item_delete":"1","allow_extend":"0","allow_hide":"0","default_extend":"10","item_expire_access":"3","tmpl_article":"default.aab5dbdf167d512fe3d852556afa0e8a","tmpl_articleform":"my_form.d98d64d332a0f92514be5c7d72debbf5","tmpl_rating":"crown.fcce58ca786e7b274978076a1f7e03ba","tmpl_comment":"default.01c3e88dae83d2df41bdedd72f55b774","item_can_view_tag":"1","item_can_add_tag":"2","item_can_attach_tag":"2","item_tag_htmltags":"h1, h2, h3, h4, h5, h6, strong, em, b, i, big","item_tag_relevance":"0","item_tag_num":"0","item_tags_max":"25","item_title_unique":"0","item_title":"2","item_title_composite":"[71]","item_title_limit":"0","rate_access":"0","rate_access_author":"0","rate_mode":"1","rate_smart_before":"60","rate_smart_minimum":"5","rate_multirating":"0","rate_multirating_options":"","rate_multirating_tmpl":"default.php","rate_multirating_sort":"2"},"submission":{"submission":"10","can_edit":"-1","access":"1","public_edit":"1","autopublish":"1","edit_autopublish":"1","redirect":"1","redirect_url":"","submit_msg":"JLIB_APPLICATION","save_msg":"JLIB_APPLICATION","default_expire":"0","public_alert":"1","limits_total":"0","limits_day":"0","allow_category":"1","first_category":"0","multi_category":"0","multi_max_num":"3","robots":""},"category_limit":{"allow":"1","category_limit_mode":"0","show_restricted":"0"},"comments":{"comments":""},"audit":{"audit_date_format":"","audit_date_custom":"h:i A, d M Y","versioning":"0","versioning_max":"10","audit_log":"0","itemid":"","al1":{"on":"1","msg":"CAUDLOG1"},"al2":{"on":"1","msg":"CAUDLOG2"},"al26":{"on":"1","msg":"CAUDLOG26"},"al3":{"on":"1","msg":"CAUDLOG3"},"al4":{"on":"1","msg":"CAUDLOG4"},"al5":{"on":"1","msg":"CAUDLOG5"},"al6":{"on":"1","msg":"CAUDLOG6"},"al7":{"on":"1","msg":"CAUDLOG7"},"al8":{"on":"1","msg":"CAUDLOG8"},"al9":{"on":"1","msg":"CAUDLOG9"},"al10":{"on":"1","msg":"CAUDLOG10"},"al25":{"on":"1","msg":"CAUDLOG25"},"al12":{"on":"1","msg":"CAUDLOG12"},"al13":{"on":"1","msg":"CAUDLOG13"},"al14":{"on":"1","msg":"CAUDLOG14"},"al15":{"on":"1","msg":"CAUDLOG15"},"al16":{"on":"1","msg":"CAUDLOG16"},"al17":{"on":"1","msg":"CAUDLOG17"},"al18":{"on":"1","msg":"CAUDLOG18"},"al19":{"on":"1","msg":"CAUDLOG19"},"al20":{"on":"1","msg":"CAUDLOG20"},"al27":{"on":"1","msg":"CAUDLOG27"},"al28":{"on":"1","msg":"CAUDLOG28"},"al29":{"on":"1","msg":"CAUDLOG29"},"al30":{"on":"1","msg":"CAUDLOG30"},"al32":{"on":"1","msg":"CAUDLOG31"}},"emerald":{"subscr_skip":"3","subscr_author_skip":"1","subscr_moderator_skip":"1","type_display_subscription_msg":"You cannot see this article because article author subscritpion has expired.","type_display_subscription_count":"0","type_view_subscription_msg":"You cannot see this article because your subscritpion has expired.","type_view_subscription_count":"0","type_submit_subscription_msg":"To submit you need to be subscribed user and have following subscriptions","type_ulimit_subscription_count":"0","type_ulimit_count":"10","type_edit_subscription_msg":"To edit you need to be subscribed user and have folowing subscriptions","type_comment_subscription_msg":"To comment you need to be subscribed user and have folowing subscriptions","type_multicat_subscription_msg":"To submit this item to multiple categories you have to be subscribed member.","type_feature_subscription_msg":"To make record featured you need to be subscribed user and have folowing subscriptions","type_feature_subscription_time":"30","type_feature_unfeature":"2","type_extend_subscription_msg":"To prolong you need to be subscribed user and have folowing subscriptions","type_extend_subscription_count":"0"}}', 0, '0000-00-00 00:00:00', 1, '', 'form-5e59106742fa3c8c5ae2ec11bbc53e6b15271676', 48, 176, '*');
 /*!40000 ALTER TABLE `gy3te_js_res_types` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_js_res_user_options
 CREATE TABLE IF NOT EXISTS `gy3te_js_res_user_options` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -5581,7 +5430,6 @@ DELETE FROM `gy3te_js_res_user_options`;
 /*!40000 ALTER TABLE `gy3te_js_res_user_options` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_js_res_user_options` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_js_res_user_options_autofollow
 CREATE TABLE IF NOT EXISTS `gy3te_js_res_user_options_autofollow` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -5595,7 +5443,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_js_res_user_options_autofollow` (
 DELETE FROM `gy3te_js_res_user_options_autofollow`;
 /*!40000 ALTER TABLE `gy3te_js_res_user_options_autofollow` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_js_res_user_options_autofollow` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_js_res_user_post_map
 CREATE TABLE IF NOT EXISTS `gy3te_js_res_user_post_map` (
@@ -5611,7 +5458,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_js_res_user_post_map` (
 DELETE FROM `gy3te_js_res_user_post_map`;
 /*!40000 ALTER TABLE `gy3te_js_res_user_post_map` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_js_res_user_post_map` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_js_res_vote
 CREATE TABLE IF NOT EXISTS `gy3te_js_res_vote` (
@@ -5633,7 +5479,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_js_res_vote` (
 DELETE FROM `gy3te_js_res_vote`;
 /*!40000 ALTER TABLE `gy3te_js_res_vote` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_js_res_vote` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_languages
 CREATE TABLE IF NOT EXISTS `gy3te_languages` (
@@ -5665,7 +5510,6 @@ INSERT INTO `gy3te_languages` (`lang_id`, `asset_id`, `lang_code`, `title`, `tit
 	(1, 0, 'en-GB', 'English (en-GB)', 'English (United Kingdom)', 'en', 'en_gb', '', '', '', '', 1, 1, 2),
 	(2, 55, 'ru-RU', 'Русский (Россия)', 'Russian (Russia)', 'ru', 'ru_ru', '', '', '', '', 0, 1, 1);
 /*!40000 ALTER TABLE `gy3te_languages` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_menu
 CREATE TABLE IF NOT EXISTS `gy3te_menu` (
@@ -5701,9 +5545,9 @@ CREATE TABLE IF NOT EXISTS `gy3te_menu` (
   KEY `idx_alias` (`alias`(100)),
   KEY `idx_path` (`path`(100)),
   KEY `idx_language` (`language`)
-) ENGINE=InnoDB AUTO_INCREMENT=147 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=148 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Дамп данных таблицы prodogsinfo.gy3te_menu: ~63 rows (приблизительно)
+-- Дамп данных таблицы prodogsinfo.gy3te_menu: ~65 rows (приблизительно)
 DELETE FROM `gy3te_menu`;
 /*!40000 ALTER TABLE `gy3te_menu` DISABLE KEYS */;
 INSERT INTO `gy3te_menu` (`id`, `menutype`, `title`, `alias`, `note`, `path`, `link`, `type`, `published`, `parent_id`, `level`, `component_id`, `checked_out`, `checked_out_time`, `browserNav`, `access`, `img`, `template_style_id`, `params`, `lft`, `rgt`, `home`, `language`, `client_id`) VALUES
@@ -5739,29 +5583,28 @@ INSERT INTO `gy3te_menu` (`id`, `menutype`, `title`, `alias`, `note`, `path`, `l
 	(110, 'mainmenu', 'Породы собак', 'dogs-breeds', '', 'dogs-breeds', 'index.php?option=com_cobalt&view=records&section_id=4:breeds-dogs', 'component', 1, 1, 1, 10004, 0, '0000-00-00 00:00:00', 0, 1, ' ', 0, '{"menu_archive":"0","menu-anchor_title":"","menu-anchor_css":"","menu_image":"","menu_text":1,"menu_show":1,"page_title":"","show_page_heading":"","page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 33, 34, 0, '*', 0),
 	(111, 'dogsmenu', 'Породы собак', 'breeds-dogs', '', 'breeds-dogs', 'index.php?option=com_cobalt&view=records&layout=user&section_id=4&view_what=created', 'component', 1, 1, 1, 10004, 0, '0000-00-00 00:00:00', 0, 3, ' ', 0, '{"menu-anchor_title":"","menu-anchor_css":"","menu_image":"","menu_text":1,"menu_show":1,"page_title":"","show_page_heading":"","page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 21, 22, 0, '*', 0),
 	(112, 'mainmenu', 'Каталог собак', 'catalog-dogs', '', 'catalog-dogs', 'index.php?option=com_cobalt&view=records&section_id=1:catalog-dogs', 'component', 1, 1, 1, 10004, 0, '0000-00-00 00:00:00', 0, 1, ' ', 0, '{"menu_archive":"0","menu-anchor_title":"","menu-anchor_css":"","menu_image":"","menu_text":1,"menu_show":1,"page_title":"","show_page_heading":"","page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 35, 36, 0, '*', 0),
-	(114, 'main', 'COM_AKEEBA', 'com_akeeba', '', 'com_akeeba', 'index.php?option=com_akeeba', 'component', 1, 1, 1, 10081, 0, '0000-00-00 00:00:00', 0, 1, '../media/com_akeeba/icons/akeeba-16.png', 0, '{}', 81, 82, 0, '', 1),
-	(115, 'main', 'COM_COMMUNITY', 'com_community', '', 'com_community', 'index.php?option=com_community', 'component', 1, 1, 1, 10090, 0, '0000-00-00 00:00:00', 0, 1, 'components/com_community/assets/icons/community-favicon.png', 0, '{}', 83, 84, 0, '', 1),
+	(115, 'main', 'COM_COMMUNITY', 'com_community', '', 'com_community', 'index.php?option=com_community', 'component', 1, 1, 1, 10090, 0, '0000-00-00 00:00:00', 0, 1, 'components/com_community/assets/icons/community-favicon.png', 0, '{}', 81, 82, 0, '', 1),
 	(116, 'mainmenu', 'Главная', 'jomsocial', '', 'jomsocial', 'index.php?option=com_community&view=frontpage', 'component', 1, 1, 1, 10090, 0, '0000-00-00 00:00:00', 0, 1, ' ', 0, '{"menu-anchor_title":"","menu-anchor_css":"","menu_image":"","menu_image_css":"","menu_text":1,"menu_show":1,"page_title":"","show_page_heading":"","page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 31, 32, 1, '*', 0),
-	(117, 'jomsocial', 'Профиль', 'profile', '', 'profile', 'index.php?option=com_community&view=profile', 'component', 1, 1, 1, 10090, 0, '0000-00-00 00:00:00', 0, 1, ' ', 0, '{"menu-anchor_title":"","menu-anchor_css":"","menu_image":"","menu_image_css":"","menu_text":1,"menu_show":1,"page_title":"","show_page_heading":"","page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 85, 102, 0, '*', 0),
-	(118, 'jomsocial', 'Выбрать изображение профиля', 'change-profile-picture', '', 'profile/change-profile-picture', 'index.php?option=com_community&view=profile&task=uploadAvatar', 'component', 1, 117, 2, 10090, 0, '0000-00-00 00:00:00', 0, 1, ' ', 0, '{"menu-anchor_title":"","menu-anchor_css":"","menu_image":"","menu_image_css":"","menu_text":1,"menu_show":1,"page_title":"","show_page_heading":"","page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 86, 87, 0, '*', 0),
-	(119, 'jomsocial', 'Выбрать видео профиля', 'change-profile-video', '', 'profile/change-profile-video', 'index.php?option=com_community&view=profile&task=linkVideo', 'component', 1, 117, 2, 10090, 0, '0000-00-00 00:00:00', 0, 1, ' ', 0, '{"menu-anchor_title":"","menu-anchor_css":"","menu_image":"","menu_image_css":"","menu_text":1,"menu_show":1,"page_title":"","show_page_heading":"","page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 88, 89, 0, '*', 0),
-	(120, 'jomsocial', 'Редактировать профиль', 'edit-profile', '', 'profile/edit-profile', 'index.php?option=com_community&view=profile&task=edit', 'component', 1, 117, 2, 10090, 0, '0000-00-00 00:00:00', 0, 1, ' ', 0, '{"menu-anchor_title":"","menu-anchor_css":"","menu_image":"","menu_image_css":"","menu_text":1,"menu_show":1,"page_title":"","show_page_heading":"","page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 90, 91, 0, '*', 0),
-	(121, 'jomsocial', 'Редактировать дополнительную информацию', 'edit-details', '', 'profile/edit-details', 'index.php?option=com_community&view=profile&task=editDetails', 'component', 1, 117, 2, 10090, 0, '0000-00-00 00:00:00', 0, 1, ' ', 0, '{"menu-anchor_title":"","menu-anchor_css":"","menu_image":"","menu_image_css":"","menu_text":1,"menu_show":1,"page_title":"","show_page_heading":"","page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 92, 93, 0, '*', 0),
-	(122, 'jomsocial', 'Настройки приватности', 'privacy', '', 'profile/privacy', 'index.php?option=com_community&view=profile&task=privacy', 'component', 1, 117, 2, 10090, 0, '0000-00-00 00:00:00', 0, 1, ' ', 0, '{"menu-anchor_title":"","menu-anchor_css":"","menu_image":"","menu_image_css":"","menu_text":1,"menu_show":1,"page_title":"","show_page_heading":"","page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 94, 95, 0, '*', 0),
-	(123, 'jomsocial', 'Настройки', 'preferences', '', 'profile/preferences', 'index.php?option=com_community&view=profile&task=preferences', 'component', 1, 117, 2, 10090, 0, '0000-00-00 00:00:00', 0, 1, ' ', 0, '{"menu-anchor_title":"","menu-anchor_css":"","menu_image":"","menu_image_css":"","menu_text":1,"menu_show":1,"page_title":"","show_page_heading":"","page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 96, 97, 0, '*', 0),
-	(124, 'jomsocial', 'Настройка моей страницы', 'customize-my-page', '', 'profile/customize-my-page', 'index.php?option=com_community&view=profile&task=editPage', 'component', 1, 117, 2, 10090, 0, '0000-00-00 00:00:00', 0, 1, ' ', 0, '{"menu-anchor_title":"","menu-anchor_css":"","menu_image":"","menu_image_css":"","menu_text":1,"menu_show":1,"page_title":"","show_page_heading":"","page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 98, 99, 0, '*', 0),
-	(125, 'jomsocial', 'Уведомления', 'notifications', '', 'profile/notifications', 'index.php?option=com_community&view=profile&task=notifications', 'component', 1, 117, 2, 10090, 0, '0000-00-00 00:00:00', 0, 1, ' ', 0, '{"menu-anchor_title":"","menu-anchor_css":"","menu_image":"","menu_image_css":"","menu_text":1,"menu_show":1,"page_title":"","show_page_heading":"","page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 100, 101, 0, '*', 0),
-	(126, 'jomsocial', 'Пользователи', 'members', '', 'members', 'index.php?option=com_community&view=search&task=browse', 'component', 1, 1, 1, 10090, 0, '0000-00-00 00:00:00', 0, 1, ' ', 0, '{"menu-anchor_title":"","menu-anchor_css":"","menu_image":"","menu_image_css":"","menu_text":1,"menu_show":1,"page_title":"","show_page_heading":"","page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 103, 108, 0, '*', 0),
-	(127, 'jomsocial', 'Все пользователи', 'all-members', '', 'members/all-members', 'index.php?option=com_community&view=search&task=browse', 'component', 1, 126, 2, 10090, 0, '0000-00-00 00:00:00', 0, 1, ' ', 0, '{"menu-anchor_title":"","menu-anchor_css":"","menu_image":"","menu_image_css":"","menu_text":1,"menu_show":1,"page_title":"","show_page_heading":"","page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 104, 105, 0, '*', 0),
-	(128, 'jomsocial', 'Расширенный поиск', 'advanced-search', '', 'members/advanced-search', 'index.php?option=com_community&view=search&task=advancesearch', 'component', 1, 126, 2, 10090, 0, '0000-00-00 00:00:00', 0, 1, ' ', 0, '{"menu-anchor_title":"","menu-anchor_css":"","menu_image":"","menu_image_css":"","menu_text":1,"menu_show":1,"page_title":"","show_page_heading":"","page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 106, 107, 0, '*', 0),
-	(129, 'jomsocial', 'Друзья', 'friends', '', 'friends', 'index.php?option=com_community&view=friends', 'component', 1, 1, 1, 10090, 0, '0000-00-00 00:00:00', 0, 1, ' ', 0, '{"menu-anchor_title":"","menu-anchor_css":"","menu_image":"","menu_image_css":"","menu_text":1,"menu_show":1,"page_title":"","show_page_heading":"","page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 109, 116, 0, '*', 0),
-	(130, 'jomsocial', 'Все друзья', 'all-friends', '', 'friends/all-friends', 'index.php?option=com_community&view=friends', 'component', 1, 129, 2, 10090, 0, '0000-00-00 00:00:00', 0, 1, ' ', 0, '{"menu-anchor_title":"","menu-anchor_css":"","menu_image":"","menu_image_css":"","menu_text":1,"menu_show":1,"page_title":"","show_page_heading":"","page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 110, 111, 0, '*', 0),
-	(131, 'jomsocial', 'Отправить запрос на дружбу', 'request-sent', '', 'friends/request-sent', 'index.php?option=com_community&view=friends&task=sent', 'component', 1, 129, 2, 10090, 0, '0000-00-00 00:00:00', 0, 1, ' ', 0, '{"menu-anchor_title":"","menu-anchor_css":"","menu_image":"","menu_image_css":"","menu_text":1,"menu_show":1,"page_title":"","show_page_heading":"","page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 112, 113, 0, '*', 0),
-	(132, 'jomsocial', 'Запросы на дружбу', 'pending-my-approval', '', 'friends/pending-my-approval', 'index.php?option=com_community&view=friends&task=pending', 'component', 1, 129, 2, 10090, 0, '0000-00-00 00:00:00', 0, 1, ' ', 0, '{"menu-anchor_title":"","menu-anchor_css":"","menu_image":"","menu_image_css":"","menu_text":1,"menu_show":1,"page_title":"","show_page_heading":"","page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 114, 115, 0, '*', 0),
-	(133, 'jomsocial', 'Группы', 'groups', '', 'groups', 'index.php?option=com_community&view=groups', 'component', 1, 1, 1, 10090, 0, '0000-00-00 00:00:00', 0, 1, ' ', 0, '{"menu-anchor_title":"","menu-anchor_css":"","menu_image":"","menu_image_css":"","menu_text":1,"menu_show":1,"page_title":"","show_page_heading":"","page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 117, 118, 0, '*', 0),
-	(134, 'jomsocial', 'Фото', 'photos', '', 'photos', 'index.php?option=com_community&view=photos', 'component', 1, 1, 1, 10090, 0, '0000-00-00 00:00:00', 0, 1, ' ', 0, '{"menu-anchor_title":"","menu-anchor_css":"","menu_image":"","menu_image_css":"","menu_text":1,"menu_show":1,"page_title":"","show_page_heading":"","page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 119, 120, 0, '*', 0),
-	(135, 'jomsocial', 'Видео', 'videos', '', 'videos', 'index.php?option=com_community&view=videos', 'component', 1, 1, 1, 10090, 0, '0000-00-00 00:00:00', 0, 1, ' ', 0, '{"menu-anchor_title":"","menu-anchor_css":"","menu_image":"","menu_image_css":"","menu_text":1,"menu_show":1,"page_title":"","show_page_heading":"","page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 121, 122, 0, '*', 0),
-	(136, 'jomsocial', 'Мероприятия', 'events', '', 'events', 'index.php?option=com_community&view=events', 'component', 1, 1, 1, 10090, 0, '0000-00-00 00:00:00', 0, 1, ' ', 0, '{"menu-anchor_title":"","menu-anchor_css":"","menu_image":"","menu_image_css":"","menu_text":1,"menu_show":1,"page_title":"","show_page_heading":"","page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 123, 124, 0, '*', 0),
+	(117, 'jomsocial', 'Профиль', 'profile', '', 'profile', 'index.php?option=com_community&view=profile', 'component', 1, 1, 1, 10090, 0, '0000-00-00 00:00:00', 0, 1, ' ', 0, '{"menu-anchor_title":"","menu-anchor_css":"","menu_image":"","menu_image_css":"","menu_text":1,"menu_show":1,"page_title":"","show_page_heading":"","page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 83, 100, 0, '*', 0),
+	(118, 'jomsocial', 'Выбрать изображение профиля', 'change-profile-picture', '', 'profile/change-profile-picture', 'index.php?option=com_community&view=profile&task=uploadAvatar', 'component', 1, 117, 2, 10090, 0, '0000-00-00 00:00:00', 0, 1, ' ', 0, '{"menu-anchor_title":"","menu-anchor_css":"","menu_image":"","menu_image_css":"","menu_text":1,"menu_show":1,"page_title":"","show_page_heading":"","page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 84, 85, 0, '*', 0),
+	(119, 'jomsocial', 'Выбрать видео профиля', 'change-profile-video', '', 'profile/change-profile-video', 'index.php?option=com_community&view=profile&task=linkVideo', 'component', 1, 117, 2, 10090, 0, '0000-00-00 00:00:00', 0, 1, ' ', 0, '{"menu-anchor_title":"","menu-anchor_css":"","menu_image":"","menu_image_css":"","menu_text":1,"menu_show":1,"page_title":"","show_page_heading":"","page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 86, 87, 0, '*', 0),
+	(120, 'jomsocial', 'Редактировать профиль', 'edit-profile', '', 'profile/edit-profile', 'index.php?option=com_community&view=profile&task=edit', 'component', 1, 117, 2, 10090, 0, '0000-00-00 00:00:00', 0, 1, ' ', 0, '{"menu-anchor_title":"","menu-anchor_css":"","menu_image":"","menu_image_css":"","menu_text":1,"menu_show":1,"page_title":"","show_page_heading":"","page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 88, 89, 0, '*', 0),
+	(121, 'jomsocial', 'Редактировать дополнительную информацию', 'edit-details', '', 'profile/edit-details', 'index.php?option=com_community&view=profile&task=editDetails', 'component', 1, 117, 2, 10090, 0, '0000-00-00 00:00:00', 0, 1, ' ', 0, '{"menu-anchor_title":"","menu-anchor_css":"","menu_image":"","menu_image_css":"","menu_text":1,"menu_show":1,"page_title":"","show_page_heading":"","page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 90, 91, 0, '*', 0),
+	(122, 'jomsocial', 'Настройки приватности', 'privacy', '', 'profile/privacy', 'index.php?option=com_community&view=profile&task=privacy', 'component', 1, 117, 2, 10090, 0, '0000-00-00 00:00:00', 0, 1, ' ', 0, '{"menu-anchor_title":"","menu-anchor_css":"","menu_image":"","menu_image_css":"","menu_text":1,"menu_show":1,"page_title":"","show_page_heading":"","page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 92, 93, 0, '*', 0),
+	(123, 'jomsocial', 'Настройки', 'preferences', '', 'profile/preferences', 'index.php?option=com_community&view=profile&task=preferences', 'component', 1, 117, 2, 10090, 0, '0000-00-00 00:00:00', 0, 1, ' ', 0, '{"menu-anchor_title":"","menu-anchor_css":"","menu_image":"","menu_image_css":"","menu_text":1,"menu_show":1,"page_title":"","show_page_heading":"","page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 94, 95, 0, '*', 0),
+	(124, 'jomsocial', 'Настройка моей страницы', 'customize-my-page', '', 'profile/customize-my-page', 'index.php?option=com_community&view=profile&task=editPage', 'component', 1, 117, 2, 10090, 0, '0000-00-00 00:00:00', 0, 1, ' ', 0, '{"menu-anchor_title":"","menu-anchor_css":"","menu_image":"","menu_image_css":"","menu_text":1,"menu_show":1,"page_title":"","show_page_heading":"","page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 96, 97, 0, '*', 0),
+	(125, 'jomsocial', 'Уведомления', 'notifications', '', 'profile/notifications', 'index.php?option=com_community&view=profile&task=notifications', 'component', 1, 117, 2, 10090, 0, '0000-00-00 00:00:00', 0, 1, ' ', 0, '{"menu-anchor_title":"","menu-anchor_css":"","menu_image":"","menu_image_css":"","menu_text":1,"menu_show":1,"page_title":"","show_page_heading":"","page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 98, 99, 0, '*', 0),
+	(126, 'jomsocial', 'Пользователи', 'members', '', 'members', 'index.php?option=com_community&view=search&task=browse', 'component', 1, 1, 1, 10090, 0, '0000-00-00 00:00:00', 0, 1, ' ', 0, '{"menu-anchor_title":"","menu-anchor_css":"","menu_image":"","menu_image_css":"","menu_text":1,"menu_show":1,"page_title":"","show_page_heading":"","page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 101, 106, 0, '*', 0),
+	(127, 'jomsocial', 'Все пользователи', 'all-members', '', 'members/all-members', 'index.php?option=com_community&view=search&task=browse', 'component', 1, 126, 2, 10090, 0, '0000-00-00 00:00:00', 0, 1, ' ', 0, '{"menu-anchor_title":"","menu-anchor_css":"","menu_image":"","menu_image_css":"","menu_text":1,"menu_show":1,"page_title":"","show_page_heading":"","page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 102, 103, 0, '*', 0),
+	(128, 'jomsocial', 'Расширенный поиск', 'advanced-search', '', 'members/advanced-search', 'index.php?option=com_community&view=search&task=advancesearch', 'component', 1, 126, 2, 10090, 0, '0000-00-00 00:00:00', 0, 1, ' ', 0, '{"menu-anchor_title":"","menu-anchor_css":"","menu_image":"","menu_image_css":"","menu_text":1,"menu_show":1,"page_title":"","show_page_heading":"","page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 104, 105, 0, '*', 0),
+	(129, 'jomsocial', 'Друзья', 'friends', '', 'friends', 'index.php?option=com_community&view=friends', 'component', 1, 1, 1, 10090, 0, '0000-00-00 00:00:00', 0, 1, ' ', 0, '{"menu-anchor_title":"","menu-anchor_css":"","menu_image":"","menu_image_css":"","menu_text":1,"menu_show":1,"page_title":"","show_page_heading":"","page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 107, 114, 0, '*', 0),
+	(130, 'jomsocial', 'Все друзья', 'all-friends', '', 'friends/all-friends', 'index.php?option=com_community&view=friends', 'component', 1, 129, 2, 10090, 0, '0000-00-00 00:00:00', 0, 1, ' ', 0, '{"menu-anchor_title":"","menu-anchor_css":"","menu_image":"","menu_image_css":"","menu_text":1,"menu_show":1,"page_title":"","show_page_heading":"","page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 108, 109, 0, '*', 0),
+	(131, 'jomsocial', 'Отправить запрос на дружбу', 'request-sent', '', 'friends/request-sent', 'index.php?option=com_community&view=friends&task=sent', 'component', 1, 129, 2, 10090, 0, '0000-00-00 00:00:00', 0, 1, ' ', 0, '{"menu-anchor_title":"","menu-anchor_css":"","menu_image":"","menu_image_css":"","menu_text":1,"menu_show":1,"page_title":"","show_page_heading":"","page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 110, 111, 0, '*', 0),
+	(132, 'jomsocial', 'Запросы на дружбу', 'pending-my-approval', '', 'friends/pending-my-approval', 'index.php?option=com_community&view=friends&task=pending', 'component', 1, 129, 2, 10090, 0, '0000-00-00 00:00:00', 0, 1, ' ', 0, '{"menu-anchor_title":"","menu-anchor_css":"","menu_image":"","menu_image_css":"","menu_text":1,"menu_show":1,"page_title":"","show_page_heading":"","page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 112, 113, 0, '*', 0),
+	(133, 'jomsocial', 'Группы', 'groups', '', 'groups', 'index.php?option=com_community&view=groups', 'component', 1, 1, 1, 10090, 0, '0000-00-00 00:00:00', 0, 1, ' ', 0, '{"menu-anchor_title":"","menu-anchor_css":"","menu_image":"","menu_image_css":"","menu_text":1,"menu_show":1,"page_title":"","show_page_heading":"","page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 115, 116, 0, '*', 0),
+	(134, 'jomsocial', 'Фото', 'photos', '', 'photos', 'index.php?option=com_community&view=photos', 'component', 1, 1, 1, 10090, 0, '0000-00-00 00:00:00', 0, 1, ' ', 0, '{"menu-anchor_title":"","menu-anchor_css":"","menu_image":"","menu_image_css":"","menu_text":1,"menu_show":1,"page_title":"","show_page_heading":"","page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 117, 118, 0, '*', 0),
+	(135, 'jomsocial', 'Видео', 'videos', '', 'videos', 'index.php?option=com_community&view=videos', 'component', 1, 1, 1, 10090, 0, '0000-00-00 00:00:00', 0, 1, ' ', 0, '{"menu-anchor_title":"","menu-anchor_css":"","menu_image":"","menu_image_css":"","menu_text":1,"menu_show":1,"page_title":"","show_page_heading":"","page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 119, 120, 0, '*', 0),
+	(136, 'jomsocial', 'Мероприятия', 'events', '', 'events', 'index.php?option=com_community&view=events', 'component', 1, 1, 1, 10090, 0, '0000-00-00 00:00:00', 0, 1, ' ', 0, '{"menu-anchor_title":"","menu-anchor_css":"","menu_image":"","menu_image_css":"","menu_text":1,"menu_show":1,"page_title":"","show_page_heading":"","page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 121, 122, 0, '*', 0),
 	(137, 'mainmenu', 'Питомники', 'питомники', '', 'питомники', 'index.php?option=com_cobalt&view=records&section_id=5:питомники', 'component', 1, 1, 1, 10004, 0, '0000-00-00 00:00:00', 0, 1, ' ', 0, '{"menu_archive":"0","menu-anchor_title":"","menu-anchor_css":"","menu_image":"","menu_text":1,"menu_show":1,"page_title":"","show_page_heading":"","page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 37, 38, 0, '*', 0),
 	(138, 'mainmenu', 'Организации', 'organization', '', 'organization', 'index.php?option=com_cobalt&view=records&section_id=8:организации', 'component', 1, 1, 1, 10004, 0, '0000-00-00 00:00:00', 0, 1, ' ', 0, '{"menu_archive":"0","menu-anchor_title":"","menu-anchor_css":"","menu_image":"","menu_image_css":"","menu_text":1,"menu_show":1,"page_title":"","show_page_heading":"","page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 39, 40, 0, '*', 0),
 	(139, 'dogsmenu', 'Добавить Собаку', 'добавить-собаку', '', 'добавить-собаку', 'index.php?option=com_cobalt&view=form&type_id=1&section_id=1', 'component', 1, 1, 1, 10004, 0, '0000-00-00 00:00:00', 0, 1, ' ', 0, '{"menu-anchor_title":"","menu-anchor_css":"","menu_image":"","menu_image_css":"","menu_text":1,"menu_show":1,"page_title":"","show_page_heading":"","page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 1, 2, 0, '*', 0),
@@ -5770,10 +5613,10 @@ INSERT INTO `gy3te_menu` (`id`, `menutype`, `title`, `alias`, `note`, `path`, `l
 	(142, 'pitomnikmenu', 'Добавить Контакт', 'add-kontakt', '', 'add-kontakt', 'index.php?option=com_cobalt&view=form&type_id=6&section_id=6', 'component', 1, 1, 1, 10004, 0, '0000-00-00 00:00:00', 0, 1, ' ', 0, '{"menu-anchor_title":"","menu-anchor_css":"","menu_image":"","menu_image_css":"","menu_text":1,"menu_show":1,"page_title":"","show_page_heading":"","page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 27, 28, 0, '*', 0),
 	(143, 'pitomnikmenu', 'Контакты Питомника', 'kontakti-pitomnika', '', 'kontakti-pitomnika', 'index.php?option=com_cobalt&view=records&layout=user&section_id=6&view_what=created', 'component', 1, 1, 1, 10004, 0, '0000-00-00 00:00:00', 0, 1, ' ', 0, '{"menu-anchor_title":"","menu-anchor_css":"","menu_image":"","menu_image_css":"","menu_text":1,"menu_show":1,"page_title":"","show_page_heading":"","page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 29, 30, 0, '*', 0),
 	(144, 'dogsmenu', 'Титулы моих собак', 'титулы-моих-собак', '', 'титулы-моих-собак', 'index.php?option=com_cobalt&view=records&layout=user&section_id=7&view_what=Титулы', 'component', 1, 1, 1, 10004, 0, '0000-00-00 00:00:00', 0, 1, ' ', 0, '{"menu-anchor_title":"","menu-anchor_css":"","menu_image":"","menu_image_css":"","menu_text":1,"menu_show":1,"page_title":"","show_page_heading":"","page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 19, 20, 0, '*', 0),
-	(145, 'organizationmenu', 'Добавить Организацию', 'add-org', '', 'add-org', 'index.php?option=com_cobalt&view=form&type_id=8&section_id=8', 'component', 1, 1, 1, 10004, 0, '0000-00-00 00:00:00', 0, 1, ' ', 0, '{"menu-anchor_title":"","menu-anchor_css":"","menu_image":"","menu_image_css":"","menu_text":1,"menu_show":1,"page_title":"","show_page_heading":"","page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 125, 126, 0, '*', 0),
-	(146, 'organizationmenu', 'Мои Организации', 'мои-организации', '', 'мои-организации', 'index.php?option=com_cobalt&view=records&layout=user&section_id=8&view_what=Мои Организации', 'component', 1, 1, 1, 10004, 0, '0000-00-00 00:00:00', 0, 1, ' ', 0, '{"menu-anchor_title":"","menu-anchor_css":"","menu_image":"","menu_image_css":"","menu_text":1,"menu_show":1,"page_title":"","show_page_heading":"","page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 127, 128, 0, '*', 0);
+	(145, 'organizationmenu', 'Добавить Организацию', 'add-org', '', 'add-org', 'index.php?option=com_cobalt&view=form&type_id=8&section_id=8', 'component', 1, 1, 1, 10004, 0, '0000-00-00 00:00:00', 0, 1, ' ', 0, '{"menu-anchor_title":"","menu-anchor_css":"","menu_image":"","menu_image_css":"","menu_text":1,"menu_show":1,"page_title":"","show_page_heading":"","page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 123, 124, 0, '*', 0),
+	(146, 'organizationmenu', 'Мои Организации', 'мои-организации', '', 'мои-организации', 'index.php?option=com_cobalt&view=records&layout=user&section_id=8&view_what=Мои Организации', 'component', 1, 1, 1, 10004, 0, '0000-00-00 00:00:00', 0, 1, ' ', 0, '{"menu-anchor_title":"","menu-anchor_css":"","menu_image":"","menu_image_css":"","menu_text":1,"menu_show":1,"page_title":"","show_page_heading":"","page_heading":"","pageclass_sfx":"","menu-meta_description":"","menu-meta_keywords":"","robots":"","secure":0}', 125, 126, 0, '*', 0),
+	(147, 'main', 'COM_AKEEBA', 'com_akeeba', '', 'com_akeeba', 'index.php?option=com_akeeba', 'component', 1, 1, 1, 10081, 0, '0000-00-00 00:00:00', 0, 1, '../media/com_akeeba/icons/akeeba-16.png', 0, '{}', 127, 128, 0, '', 1);
 /*!40000 ALTER TABLE `gy3te_menu` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_menu_types
 CREATE TABLE IF NOT EXISTS `gy3te_menu_types` (
@@ -5787,7 +5630,7 @@ CREATE TABLE IF NOT EXISTS `gy3te_menu_types` (
   UNIQUE KEY `idx_menutype` (`menutype`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Дамп данных таблицы prodogsinfo.gy3te_menu_types: ~4 rows (приблизительно)
+-- Дамп данных таблицы prodogsinfo.gy3te_menu_types: ~5 rows (приблизительно)
 DELETE FROM `gy3te_menu_types`;
 /*!40000 ALTER TABLE `gy3te_menu_types` DISABLE KEYS */;
 INSERT INTO `gy3te_menu_types` (`id`, `asset_id`, `menutype`, `title`, `description`, `client_id`) VALUES
@@ -5797,7 +5640,6 @@ INSERT INTO `gy3te_menu_types` (`id`, `asset_id`, `menutype`, `title`, `descript
 	(4, 143, 'pitomnikmenu', 'Меню Питомника', 'Меню Питомника', 0),
 	(5, 174, 'organizationmenu', 'Меню Организации', 'Меню Организации', 0);
 /*!40000 ALTER TABLE `gy3te_menu_types` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_messages
 CREATE TABLE IF NOT EXISTS `gy3te_messages` (
@@ -5819,7 +5661,6 @@ DELETE FROM `gy3te_messages`;
 /*!40000 ALTER TABLE `gy3te_messages` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_messages` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_messages_cfg
 CREATE TABLE IF NOT EXISTS `gy3te_messages_cfg` (
   `user_id` int(10) unsigned NOT NULL DEFAULT '0',
@@ -5832,7 +5673,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_messages_cfg` (
 DELETE FROM `gy3te_messages_cfg`;
 /*!40000 ALTER TABLE `gy3te_messages_cfg` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_messages_cfg` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_modules
 CREATE TABLE IF NOT EXISTS `gy3te_modules` (
@@ -5860,7 +5700,7 @@ CREATE TABLE IF NOT EXISTS `gy3te_modules` (
   KEY `idx_language` (`language`)
 ) ENGINE=InnoDB AUTO_INCREMENT=117 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Дамп данных таблицы prodogsinfo.gy3te_modules: ~44 rows (приблизительно)
+-- Дамп данных таблицы prodogsinfo.gy3te_modules: ~45 rows (приблизительно)
 DELETE FROM `gy3te_modules`;
 /*!40000 ALTER TABLE `gy3te_modules` DISABLE KEYS */;
 INSERT INTO `gy3te_modules` (`id`, `asset_id`, `title`, `note`, `content`, `ordering`, `position`, `checked_out`, `checked_out_time`, `publish_up`, `publish_down`, `published`, `module`, `access`, `showtitle`, `params`, `client_id`, `language`) VALUES
@@ -5911,7 +5751,6 @@ INSERT INTO `gy3te_modules` (`id`, `asset_id`, `title`, `note`, `content`, `orde
 	(116, 175, 'Меню Организации', '', '', 1, 'position-7', 0, '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, 'mod_menu', 10, 1, '{"menutype":"organizationmenu","base":"","startLevel":"1","endLevel":"0","showAllChildren":"1","tag_id":"","class_sfx":"","window_open":"","layout":"_:default","moduleclass_sfx":"","cache":"1","cache_time":"900","cachemode":"itemid","module_tag":"div","bootstrap_size":"0","header_tag":"h3","header_class":"","style":"0"}', 0, '*');
 /*!40000 ALTER TABLE `gy3te_modules` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_modules_menu
 CREATE TABLE IF NOT EXISTS `gy3te_modules_menu` (
   `moduleid` int(11) NOT NULL DEFAULT '0',
@@ -5919,7 +5758,7 @@ CREATE TABLE IF NOT EXISTS `gy3te_modules_menu` (
   PRIMARY KEY (`moduleid`,`menuid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Дамп данных таблицы prodogsinfo.gy3te_modules_menu: ~25 rows (приблизительно)
+-- Дамп данных таблицы prodogsinfo.gy3te_modules_menu: ~26 rows (приблизительно)
 DELETE FROM `gy3te_modules_menu`;
 /*!40000 ALTER TABLE `gy3te_modules_menu` DISABLE KEYS */;
 INSERT INTO `gy3te_modules_menu` (`moduleid`, `menuid`) VALUES
@@ -5950,7 +5789,6 @@ INSERT INTO `gy3te_modules_menu` (`moduleid`, `menuid`) VALUES
 	(115, 0),
 	(116, 0);
 /*!40000 ALTER TABLE `gy3te_modules_menu` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_newsfeeds
 CREATE TABLE IF NOT EXISTS `gy3te_newsfeeds` (
@@ -5999,7 +5837,6 @@ DELETE FROM `gy3te_newsfeeds`;
 /*!40000 ALTER TABLE `gy3te_newsfeeds` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_newsfeeds` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_overrider
 CREATE TABLE IF NOT EXISTS `gy3te_overrider` (
   `id` int(10) NOT NULL AUTO_INCREMENT COMMENT 'Primary Key',
@@ -6013,7 +5850,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_overrider` (
 DELETE FROM `gy3te_overrider`;
 /*!40000 ALTER TABLE `gy3te_overrider` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_overrider` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_postinstall_messages
 CREATE TABLE IF NOT EXISTS `gy3te_postinstall_messages` (
@@ -6047,7 +5883,6 @@ INSERT INTO `gy3te_postinstall_messages` (`postinstall_message_id`, `extension_i
 	(7, 700, 'PLG_PLG_RECAPTCHA_VERSION_1_POSTINSTALL_TITLE', 'PLG_PLG_RECAPTCHA_VERSION_1_POSTINSTALL_BODY', 'PLG_PLG_RECAPTCHA_VERSION_1_POSTINSTALL_ACTION', 'plg_captcha_recaptcha', 1, 'action', 'site://plugins/captcha/recaptcha/postinstall/actions.php', 'recaptcha_postinstall_action', 'site://plugins/captcha/recaptcha/postinstall/actions.php', 'recaptcha_postinstall_condition', '3.8.6', 1);
 /*!40000 ALTER TABLE `gy3te_postinstall_messages` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_redirect_links
 CREATE TABLE IF NOT EXISTS `gy3te_redirect_links` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -6070,7 +5905,6 @@ DELETE FROM `gy3te_redirect_links`;
 /*!40000 ALTER TABLE `gy3te_redirect_links` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_redirect_links` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_schemas
 CREATE TABLE IF NOT EXISTS `gy3te_schemas` (
   `extension_id` int(11) NOT NULL,
@@ -6078,13 +5912,12 @@ CREATE TABLE IF NOT EXISTS `gy3te_schemas` (
   PRIMARY KEY (`extension_id`,`version_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Дамп данных таблицы prodogsinfo.gy3te_schemas: ~1 rows (приблизительно)
+-- Дамп данных таблицы prodogsinfo.gy3te_schemas: ~0 rows (приблизительно)
 DELETE FROM `gy3te_schemas`;
 /*!40000 ALTER TABLE `gy3te_schemas` DISABLE KEYS */;
 INSERT INTO `gy3te_schemas` (`extension_id`, `version_id`) VALUES
 	(700, '3.8.6-2018-02-14');
 /*!40000 ALTER TABLE `gy3te_schemas` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_session
 CREATE TABLE IF NOT EXISTS `gy3te_session` (
@@ -6100,14 +5933,15 @@ CREATE TABLE IF NOT EXISTS `gy3te_session` (
   KEY `time` (`time`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Дамп данных таблицы prodogsinfo.gy3te_session: ~2 rows (приблизительно)
+-- Дамп данных таблицы prodogsinfo.gy3te_session: ~4 rows (приблизительно)
 DELETE FROM `gy3te_session`;
 /*!40000 ALTER TABLE `gy3te_session` DISABLE KEYS */;
 INSERT INTO `gy3te_session` (`session_id`, `client_id`, `guest`, `time`, `data`, `userid`, `username`) VALUES
+	('adjkm01o4h7ntemdfb4i9t6qs136td4v', 1, 0, '1527421164', 'joomla|s:996:"TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjE6e3M6OToiX19kZWZhdWx0IjtPOjg6InN0ZENsYXNzIjo1OntzOjc6InNlc3Npb24iO086ODoic3RkQ2xhc3MiOjM6e3M6NzoiY291bnRlciI7aToxMTtzOjU6InRpbWVyIjtPOjg6InN0ZENsYXNzIjozOntzOjU6InN0YXJ0IjtpOjE1Mjc0MjExMTM7czo0OiJsYXN0IjtpOjE1Mjc0MjExNjI7czozOiJub3ciO2k6MTUyNzQyMTE2NDt9czo1OiJ0b2tlbiI7czozMjoiTkVhNG92RWlKVzFscVZRRjROVjVCTFZrWWprTlVueGkiO31zOjg6InJlZ2lzdHJ5IjtPOjI0OiJKb29tbGFcUmVnaXN0cnlcUmVnaXN0cnkiOjM6e3M6NzoiACoAZGF0YSI7Tzo4OiJzdGRDbGFzcyI6MTp7czoxMzoiY29tX2luc3RhbGxlciI7Tzo4OiJzdGRDbGFzcyI6Mjp7czo3OiJtZXNzYWdlIjtzOjA6IiI7czoxNzoiZXh0ZW5zaW9uX21lc3NhZ2UiO3M6MDoiIjt9fXM6MTQ6IgAqAGluaXRpYWxpemVkIjtiOjA7czo5OiJzZXBhcmF0b3IiO3M6MToiLiI7fXM6NDoidXNlciI7TzoyMDoiSm9vbWxhXENNU1xVc2VyXFVzZXIiOjE6e3M6MjoiaWQiO3M6MjoiNDgiO31zOjE2OiJqb21zb2NpYWxfdXNlcmlwIjtzOjk6IjEyNy4wLjAuMSI7czoxMToiYXBwbGljYXRpb24iO086ODoic3RkQ2xhc3MiOjE6e3M6NToicXVldWUiO2E6MDp7fX19fXM6MTQ6IgAqAGluaXRpYWxpemVkIjtiOjA7czo5OiJzZXBhcmF0b3IiO3M6MToiLiI7fQ==";', 48, 'dimavz'),
+	('ao0075nplbu27r9tu2k8khipr5', 0, 1, '1527420902', 'joomla|s:2132:"TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjE6e3M6OToiX19kZWZhdWx0IjtPOjg6InN0ZENsYXNzIjo1OntzOjc6InNlc3Npb24iO086ODoic3RkQ2xhc3MiOjM6e3M6NzoiY291bnRlciI7aToxODtzOjU6InRpbWVyIjtPOjg6InN0ZENsYXNzIjozOntzOjU6InN0YXJ0IjtpOjE1Mjc0MTkxMjU7czo0OiJsYXN0IjtpOjE1Mjc0MjAwNjI7czozOiJub3ciO2k6MTUyNzQyMDkwMjt9czo1OiJ0b2tlbiI7czozMjoickJ4Q2xaeHpHRmJZZ0hGeHE4R3ZLSGtxRjVBNWo0V3QiO31zOjg6InJlZ2lzdHJ5IjtPOjI0OiJKb29tbGFcUmVnaXN0cnlcUmVnaXN0cnkiOjM6e3M6NzoiACoAZGF0YSI7Tzo4OiJzdGRDbGFzcyI6NDp7czo3OiJza2lwZXJzIjtPOjg6InN0ZENsYXNzIjoxOntzOjM6ImFsbCI7YTowOnt9fXM6NjoiZ2xvYmFsIjtPOjg6InN0ZENsYXNzIjoxOntzOjQ6Imxpc3QiO086ODoic3RkQ2xhc3MiOjE6e3M6NToibGltaXQiO2k6MTc7fX1zOjEwOiJjb21fY29iYWx0IjtPOjg6InN0ZENsYXNzIjo2OntzOjg6InJlY29yZHM0IjtPOjg6InN0ZENsYXNzIjo0OntzOjY6ImZpbHRlciI7Tzo4OiJzdGRDbGFzcyI6MTp7czoxMDoic2VjdGlvbl9pZCI7aTo0O31zOjEwOiJsaW1pdHN0YXJ0IjtpOjA7czo4OiJvcmRlcmNvbCI7TjtzOjk6Im9yZGVyZGlybiI7Tjt9czo2OiJmaWVsZHMiO086ODoic3RkQ2xhc3MiOjI6e3M6ODoib3JkZXJjb2wiO047czoxMDoibGltaXRzdGFydCI7aTowO31zOjg6InJlY29yZHMxIjtPOjg6InN0ZENsYXNzIjoyOntzOjY6ImZpbHRlciI7Tzo4OiJzdGRDbGFzcyI6MTp7czoxMDoic2VjdGlvbl9pZCI7aToxO31zOjEwOiJsaW1pdHN0YXJ0IjtpOjA7fXM6MjE6InJlY29yZHM0X3Nob3dfcGFyZW50cyI7Tzo4OiJzdGRDbGFzcyI6MTp7czo2OiJmaWx0ZXIiO086ODoic3RkQ2xhc3MiOjE6e3M6MTA6InNlY3Rpb25faWQiO2k6NDt9fXM6ODoicmVjb3JkczUiO086ODoic3RkQ2xhc3MiOjI6e3M6NjoiZmlsdGVyIjtPOjg6InN0ZENsYXNzIjoxOntzOjEwOiJzZWN0aW9uX2lkIjtpOjU7fXM6MTA6ImxpbWl0c3RhcnQiO2k6MDt9czo4OiJyZWNvcmRzOCI7Tzo4OiJzdGRDbGFzcyI6Mjp7czo2OiJmaWx0ZXIiO086ODoic3RkQ2xhc3MiOjE6e3M6MTA6InNlY3Rpb25faWQiO2k6ODt9czoxMDoibGltaXRzdGFydCI7aTowO319czoxMzoiY29tX2luc3RhbGxlciI7Tzo4OiJzdGRDbGFzcyI6Mzp7czo3OiJtZXNzYWdlIjtzOjA6IiI7czoxNzoiZXh0ZW5zaW9uX21lc3NhZ2UiO3M6MDoiIjtzOjY6InVwZGF0ZSI7Tzo4OiJzdGRDbGFzcyI6MTp7czoxMDoibGltaXRzdGFydCI7aTowO319fXM6MTQ6IgAqAGluaXRpYWxpemVkIjtiOjA7czo5OiJzZXBhcmF0b3IiO3M6MToiLiI7fXM6NDoidXNlciI7TzoyMDoiSm9vbWxhXENNU1xVc2VyXFVzZXIiOjE6e3M6MjoiaWQiO2k6MDt9czoxNjoiam9tc29jaWFsX3VzZXJpcCI7czo5OiIxMjcuMC4wLjEiO3M6MjA6ImNvYmFsdF9sYXN0X2xpc3RfaWRzIjthOjE6e2k6MDtzOjI6IjEyIjt9fX1zOjE0OiIAKgBpbml0aWFsaXplZCI7YjowO3M6OToic2VwYXJhdG9yIjtzOjE6Ii4iO30=";', 0, ''),
 	('cfugf8r13tgp846fp73i2t7677', 1, 0, '1527242296', 'joomla|s:1980:"TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjE6e3M6OToiX19kZWZhdWx0IjtPOjg6InN0ZENsYXNzIjo2OntzOjc6InNlc3Npb24iO086ODoic3RkQ2xhc3MiOjM6e3M6NzoiY291bnRlciI7aToyMzY7czo1OiJ0b2tlbiI7czozMjoiWlh5S3ZtalVqelRlVndQRVFqOHhCUmxJRTZJRjdvS0YiO3M6NToidGltZXIiO086ODoic3RkQ2xhc3MiOjM6e3M6NToic3RhcnQiO2k6MTUyNzIzODk2MDtzOjQ6Imxhc3QiO2k6MTUyNzI0MjI5NTtzOjM6Im5vdyI7aToxNTI3MjQyMjk2O319czo4OiJyZWdpc3RyeSI7TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjI6e3M6MTE6ImNvbV9wbHVnaW5zIjtPOjg6InN0ZENsYXNzIjoyOntzOjQ6ImVkaXQiO086ODoic3RkQ2xhc3MiOjE6e3M6NjoicGx1Z2luIjtPOjg6InN0ZENsYXNzIjoyOntzOjI6ImlkIjthOjA6e31zOjQ6ImRhdGEiO047fX1zOjc6InBsdWdpbnMiO086ODoic3RkQ2xhc3MiOjM6e3M6NjoiZmlsdGVyIjthOjQ6e3M6Njoic2VhcmNoIjtzOjA6IiI7czo3OiJlbmFibGVkIjtzOjE6IjAiO3M6NjoiZm9sZGVyIjtzOjA6IiI7czo2OiJhY2Nlc3MiO3M6MDoiIjt9czo0OiJsaXN0IjthOjQ6e3M6MTI6ImZ1bGxvcmRlcmluZyI7czoxMDoiZm9sZGVyIEFTQyI7czo1OiJsaW1pdCI7czoyOiIyMCI7czo5OiJzb3J0VGFibGUiO3M6NjoiZm9sZGVyIjtzOjE0OiJkaXJlY3Rpb25UYWJsZSI7czozOiJBU0MiO31zOjEwOiJsaW1pdHN0YXJ0IjtpOjA7fX1zOjEwOiJjb21fY29iYWx0IjtPOjg6InN0ZENsYXNzIjoyOntzOjQ6ImVkaXQiO086ODoic3RkQ2xhc3MiOjM6e3M6NDoidHlwZSI7Tzo4OiJzdGRDbGFzcyI6Mjp7czoyOiJpZCI7YTowOnt9czo0OiJkYXRhIjtOO31zOjc6InNlY3Rpb24iO086ODoic3RkQ2xhc3MiOjI6e3M6MjoiaWQiO2E6MDp7fXM6NDoiZGF0YSI7Tjt9czo1OiJmaWVsZCI7Tzo4OiJzdGRDbGFzcyI6Mjp7czoyOiJpZCI7YTowOnt9czo0OiJkYXRhIjtOO319czo2OiJmaWVsZHMiO086ODoic3RkQ2xhc3MiOjI6e3M6NjoiZmllbGRzIjtPOjg6InN0ZENsYXNzIjoxOntzOjQ6InR5cGUiO2k6MTt9czo4OiJvcmRlcmNvbCI7Tjt9fX1zOjE0OiIAKgBpbml0aWFsaXplZCI7YjowO3M6OToic2VwYXJhdG9yIjtzOjE6Ii4iO31zOjQ6InVzZXIiO086MjA6Ikpvb21sYVxDTVNcVXNlclxVc2VyIjoxOntzOjI6ImlkIjtzOjI6IjQ4Ijt9czoxNjoiam9tc29jaWFsX3VzZXJpcCI7czo5OiIxMjcuMC4wLjEiO3M6MjI6Imlqb29tbGFfbGF0ZXN0X3ZlcnNpb24iO086ODoic3RkQ2xhc3MiOjE6e3M6NzoidmVyc2lvbiI7czowOiIiO31zOjExOiJhcHBsaWNhdGlvbiI7Tzo4OiJzdGRDbGFzcyI6MTp7czo1OiJxdWV1ZSI7YTowOnt9fX19czoxNDoiACoAaW5pdGlhbGl6ZWQiO2I6MDtzOjk6InNlcGFyYXRvciI7czoxOiIuIjt9";', 48, 'dimavz'),
 	('cv536pc2p4c60s3q95vppfu822', 0, 0, '1527242324', 'joomla|s:4212:"TzoyNDoiSm9vbWxhXFJlZ2lzdHJ5XFJlZ2lzdHJ5IjozOntzOjc6IgAqAGRhdGEiO086ODoic3RkQ2xhc3MiOjE6e3M6OToiX19kZWZhdWx0IjtPOjg6InN0ZENsYXNzIjoxMTp7czo3OiJzZXNzaW9uIjtPOjg6InN0ZENsYXNzIjozOntzOjc6ImNvdW50ZXIiO2k6MzAwO3M6NToidGltZXIiO086ODoic3RkQ2xhc3MiOjM6e3M6NToic3RhcnQiO2k6MTUyNzIzNzMzNTtzOjQ6Imxhc3QiO2k6MTUyNzI0MjMyMjtzOjM6Im5vdyI7aToxNTI3MjQyMzI0O31zOjU6InRva2VuIjtzOjMyOiJ3bDZrQUhkajNWMmFiMnFVd3l5U09Qb2ZsYU9OMUNUciI7fXM6ODoicmVnaXN0cnkiO086MjQ6Ikpvb21sYVxSZWdpc3RyeVxSZWdpc3RyeSI6Mzp7czo3OiIAKgBkYXRhIjtPOjg6InN0ZENsYXNzIjozOntzOjc6InNraXBlcnMiO086ODoic3RkQ2xhc3MiOjE6e3M6MzoiYWxsIjthOjA6e319czo2OiJnbG9iYWwiO086ODoic3RkQ2xhc3MiOjE6e3M6NDoibGlzdCI7Tzo4OiJzdGRDbGFzcyI6MTp7czo1OiJsaW1pdCI7aTo1O319czoxMDoiY29tX2NvYmFsdCI7Tzo4OiJzdGRDbGFzcyI6MjE6e3M6ODoicmVjb3JkczQiO086ODoic3RkQ2xhc3MiOjQ6e3M6NjoiZmlsdGVyIjtPOjg6InN0ZENsYXNzIjoxOntzOjEwOiJzZWN0aW9uX2lkIjtpOjQ7fXM6MTA6ImxpbWl0c3RhcnQiO2k6MDtzOjg6Im9yZGVyY29sIjtOO3M6OToib3JkZXJkaXJuIjtOO31zOjY6ImZpZWxkcyI7Tzo4OiJzdGRDbGFzcyI6Mjp7czo4OiJvcmRlcmNvbCI7TjtzOjEwOiJsaW1pdHN0YXJ0IjtpOjA7fXM6ODoicmVjb3JkczEiO086ODoic3RkQ2xhc3MiOjQ6e3M6NjoiZmlsdGVyIjtPOjg6InN0ZENsYXNzIjoxOntzOjEwOiJzZWN0aW9uX2lkIjtpOjE7fXM6MTA6ImxpbWl0c3RhcnQiO2k6MDtzOjg6Im9yZGVyY29sIjtOO3M6OToib3JkZXJkaXJuIjtOO31zOjIxOiJyZWNvcmRzNF9zaG93X3BhcmVudHMiO086ODoic3RkQ2xhc3MiOjE6e3M6NjoiZmlsdGVyIjtPOjg6InN0ZENsYXNzIjoxOntzOjEwOiJzZWN0aW9uX2lkIjtpOjQ7fX1zOjg6InJlY29yZHM1IjtPOjg6InN0ZENsYXNzIjo0OntzOjY6ImZpbHRlciI7Tzo4OiJzdGRDbGFzcyI6MTp7czoxMDoic2VjdGlvbl9pZCI7aTo1O31zOjEwOiJsaW1pdHN0YXJ0IjtpOjA7czo4OiJvcmRlcmNvbCI7TjtzOjk6Im9yZGVyZGlybiI7Tjt9czoyMjoicmVjb3JkczFfc2hvd19jaGlsZHJlbiI7Tzo4OiJzdGRDbGFzcyI6MTp7czo2OiJmaWx0ZXIiO086ODoic3RkQ2xhc3MiOjE6e3M6MTA6InNlY3Rpb25faWQiO2k6MTt9fXM6MjI6InJlY29yZHM1X3Nob3dfY2hpbGRyZW4iO086ODoic3RkQ2xhc3MiOjE6e3M6NjoiZmlsdGVyIjtPOjg6InN0ZENsYXNzIjoxOntzOjEwOiJzZWN0aW9uX2lkIjtpOjU7fX1zOjIyOiJyZWNvcmRzN19zaG93X2NoaWxkcmVuIjtPOjg6InN0ZENsYXNzIjoxOntzOjY6ImZpbHRlciI7Tzo4OiJzdGRDbGFzcyI6MTp7czoxMDoic2VjdGlvbl9pZCI7aTo3O319czo4OiJyZWNvcmRzNyI7Tzo4OiJzdGRDbGFzcyI6Mzp7czoxMDoibGltaXRzdGFydCI7aTowO3M6ODoib3JkZXJjb2wiO047czo5OiJvcmRlcmRpcm4iO047fXM6MjE6InJlY29yZHMxX3Nob3dfcGFyZW50cyI7Tzo4OiJzdGRDbGFzcyI6MTp7czo2OiJmaWx0ZXIiO086ODoic3RkQ2xhc3MiOjE6e3M6MTA6InNlY3Rpb25faWQiO2k6MTt9fXM6MjE6InJlY29yZHM1X3Nob3dfcGFyZW50cyI7Tzo4OiJzdGRDbGFzcyI6MTp7czo2OiJmaWx0ZXIiO086ODoic3RkQ2xhc3MiOjE6e3M6MTA6InNlY3Rpb25faWQiO2k6NTt9fXM6MjI6InJlY29yZHMyX3Nob3dfY2hpbGRyZW4iO086ODoic3RkQ2xhc3MiOjE6e3M6NjoiZmlsdGVyIjtPOjg6InN0ZENsYXNzIjoxOntzOjEwOiJzZWN0aW9uX2lkIjtpOjI7fX1zOjg6InJlY29yZHMyIjtPOjg6InN0ZENsYXNzIjozOntzOjEwOiJsaW1pdHN0YXJ0IjtpOjA7czo4OiJvcmRlcmNvbCI7TjtzOjk6Im9yZGVyZGlybiI7Tjt9czoyMjoicmVjb3JkczNfc2hvd19jaGlsZHJlbiI7Tzo4OiJzdGRDbGFzcyI6MTp7czo2OiJmaWx0ZXIiO086ODoic3RkQ2xhc3MiOjE6e3M6MTA6InNlY3Rpb25faWQiO2k6Mzt9fXM6ODoicmVjb3JkczMiO086ODoic3RkQ2xhc3MiOjM6e3M6MTA6ImxpbWl0c3RhcnQiO2k6MDtzOjg6Im9yZGVyY29sIjtOO3M6OToib3JkZXJkaXJuIjtOO31zOjE4OiJyZWNvcmRzMV8xX2NyZWF0ZWQiO086ODoic3RkQ2xhc3MiOjE6e3M6NjoiZmlsdGVyIjtPOjg6InN0ZENsYXNzIjoxOntzOjEwOiJzZWN0aW9uX2lkIjtpOjE7fX1zOjQ6ImVkaXQiO086ODoic3RkQ2xhc3MiOjE6e3M6NDoiZm9ybSI7Tzo4OiJzdGRDbGFzcyI6Mjp7czoyOiJpZCI7TjtzOjQ6ImRhdGEiO047fX1zOjEyOiJyZWNvcmRzNV9hbGwiO086ODoic3RkQ2xhc3MiOjE6e3M6NjoiZmlsdGVyIjtPOjg6InN0ZENsYXNzIjoxOntzOjEwOiJzZWN0aW9uX2lkIjtpOjU7fX1zOjEyOiJzZWN0aW9uNV9hbGwiO086ODoic3RkQ2xhc3MiOjE6e3M6MTE6ImZpbHRlcl90eXBlIjthOjE6e2k6MDtzOjE6IjUiO319czoxODoicmVjb3JkczJfMV9jcmVhdGVkIjtPOjg6InN0ZENsYXNzIjoxOntzOjY6ImZpbHRlciI7Tzo4OiJzdGRDbGFzcyI6MTp7czoxMDoic2VjdGlvbl9pZCI7aToyO319czoxODoicmVjb3JkczRfMV9jcmVhdGVkIjtPOjg6InN0ZENsYXNzIjoxOntzOjY6ImZpbHRlciI7Tzo4OiJzdGRDbGFzcyI6MTp7czoxMDoic2VjdGlvbl9pZCI7aTo0O319fX1zOjE0OiIAKgBpbml0aWFsaXplZCI7YjowO3M6OToic2VwYXJhdG9yIjtzOjE6Ii4iO31zOjQ6InVzZXIiO086MjA6Ikpvb21sYVxDTVNcVXNlclxVc2VyIjoxOntzOjI6ImlkIjtzOjI6IjQ5Ijt9czoxNjoiam9tc29jaWFsX3VzZXJpcCI7czo5OiIxMjcuMC4wLjEiO3M6Nzoidmlldy01NCI7YjoxO3M6Nzoidmlldy01MyI7YjoxO3M6Nzoidmlldy01MiI7YjoxO3M6MjA6ImNvYmFsdF9sYXN0X2xpc3RfaWRzIjthOjI6e2k6MDtzOjE6IjkiO2k6MTtzOjE6IjEiO31zOjc6InZpZXctNDgiO2I6MTtzOjExOiJhcHBsaWNhdGlvbiI7Tzo4OiJzdGRDbGFzcyI6MTp7czo1OiJxdWV1ZSI7YTowOnt9fXM6MTM6Imdyb3Vwc19uYW1lXzEiO3M6Mjk6ItCi0LXRgdGC0L7QstCw0Y8g0LPRgNGD0L/Qv9CwIjt9fXM6MTQ6IgAqAGluaXRpYWxpemVkIjtiOjA7czo5OiJzZXBhcmF0b3IiO3M6MToiLiI7fQ==";', 49, 'test');
 /*!40000 ALTER TABLE `gy3te_session` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_access
 CREATE TABLE IF NOT EXISTS `gy3te_social_access` (
@@ -6123,7 +5957,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_social_access` (
 DELETE FROM `gy3te_social_access`;
 /*!40000 ALTER TABLE `gy3te_social_access` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_access` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_access_logs
 CREATE TABLE IF NOT EXISTS `gy3te_social_access_logs` (
@@ -6146,7 +5979,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_social_access_logs` (
 DELETE FROM `gy3te_social_access_logs`;
 /*!40000 ALTER TABLE `gy3te_social_access_logs` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_access_logs` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_access_rules
 CREATE TABLE IF NOT EXISTS `gy3te_social_access_rules` (
@@ -6319,7 +6151,6 @@ INSERT INTO `gy3te_social_access_rules` (`id`, `name`, `title`, `description`, `
 	(146, 'videos.daily', 'Total Daily Video Creation', 'Determines the total number of video a user can create in a day.', 'com_easysocial', 'videos', 'user', 1, '2018-05-12 09:09:23', '{"type":"limit","default":50,"suffix":"videos"}');
 /*!40000 ALTER TABLE `gy3te_social_access_rules` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_albums
 CREATE TABLE IF NOT EXISTS `gy3te_social_albums` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -6349,7 +6180,6 @@ DELETE FROM `gy3te_social_albums`;
 /*!40000 ALTER TABLE `gy3te_social_albums` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_albums` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_albums_favourite
 CREATE TABLE IF NOT EXISTS `gy3te_social_albums_favourite` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -6362,7 +6192,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_social_albums_favourite` (
 DELETE FROM `gy3te_social_albums_favourite`;
 /*!40000 ALTER TABLE `gy3te_social_albums_favourite` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_albums_favourite` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_alert
 CREATE TABLE IF NOT EXISTS `gy3te_social_alert` (
@@ -6504,7 +6333,6 @@ INSERT INTO `gy3te_social_alert` (`id`, `extension`, `element`, `rule`, `email`,
 	(109, '', 'videos', 'likes', 1, 1, 1, 0, 0, '', '2018-05-12 09:09:26', 1, 1, 1);
 /*!40000 ALTER TABLE `gy3te_social_alert` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_alert_map
 CREATE TABLE IF NOT EXISTS `gy3te_social_alert_map` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
@@ -6522,7 +6350,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_social_alert_map` (
 DELETE FROM `gy3te_social_alert_map`;
 /*!40000 ALTER TABLE `gy3te_social_alert_map` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_alert_map` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_apps
 CREATE TABLE IF NOT EXISTS `gy3te_social_apps` (
@@ -6791,7 +6618,6 @@ INSERT INTO `gy3te_social_apps` (`id`, `core`, `system`, `unique`, `default`, `t
 	(231, 1, 0, 1, 0, 'fields', 'videos', 'event', 'Videos', '', 1, '2018-05-12 09:09:20', 0, '{}', '2.0.164', 0, 1, 0);
 /*!40000 ALTER TABLE `gy3te_social_apps` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_apps_access
 CREATE TABLE IF NOT EXISTS `gy3te_social_apps_access` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -6804,7 +6630,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_social_apps_access` (
 DELETE FROM `gy3te_social_apps_access`;
 /*!40000 ALTER TABLE `gy3te_social_apps_access` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_apps_access` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_apps_calendar
 CREATE TABLE IF NOT EXISTS `gy3te_social_apps_calendar` (
@@ -6825,7 +6650,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_social_apps_calendar` (
 DELETE FROM `gy3te_social_apps_calendar`;
 /*!40000 ALTER TABLE `gy3te_social_apps_calendar` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_apps_calendar` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_apps_directory
 CREATE TABLE IF NOT EXISTS `gy3te_social_apps_directory` (
@@ -6854,7 +6678,6 @@ DELETE FROM `gy3te_social_apps_directory`;
 /*!40000 ALTER TABLE `gy3te_social_apps_directory` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_apps_directory` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_apps_map
 CREATE TABLE IF NOT EXISTS `gy3te_social_apps_map` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -6872,7 +6695,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_social_apps_map` (
 DELETE FROM `gy3te_social_apps_map`;
 /*!40000 ALTER TABLE `gy3te_social_apps_map` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_apps_map` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_apps_store
 CREATE TABLE IF NOT EXISTS `gy3te_social_apps_store` (
@@ -6906,7 +6728,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_social_apps_store` (
 DELETE FROM `gy3te_social_apps_store`;
 /*!40000 ALTER TABLE `gy3te_social_apps_store` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_apps_store` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_apps_views
 CREATE TABLE IF NOT EXISTS `gy3te_social_apps_views` (
@@ -6949,7 +6770,6 @@ INSERT INTO `gy3te_social_apps_views` (`id`, `app_id`, `view`, `type`, `title`, 
 	(23, 67, 'events', 'embed', '', '');
 /*!40000 ALTER TABLE `gy3te_social_apps_views` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_audios
 CREATE TABLE IF NOT EXISTS `gy3te_social_audios` (
   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Primary key for this table',
@@ -6987,7 +6807,6 @@ DELETE FROM `gy3te_social_audios`;
 /*!40000 ALTER TABLE `gy3te_social_audios` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_audios` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_audios_genres
 CREATE TABLE IF NOT EXISTS `gy3te_social_audios_genres` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -7019,7 +6838,6 @@ INSERT INTO `gy3te_social_audios_genres` (`id`, `title`, `alias`, `description`,
 	(10, 'Blues', 'blues', 'Blues Music', 1, 0, 48, '2018-05-12 09:09:26', 10);
 /*!40000 ALTER TABLE `gy3te_social_audios_genres` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_audios_genres_access
 CREATE TABLE IF NOT EXISTS `gy3te_social_audios_genres_access` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -7034,7 +6852,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_social_audios_genres_access` (
 DELETE FROM `gy3te_social_audios_genres_access`;
 /*!40000 ALTER TABLE `gy3te_social_audios_genres_access` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_audios_genres_access` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_avatars
 CREATE TABLE IF NOT EXISTS `gy3te_social_avatars` (
@@ -7062,7 +6879,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_social_avatars` (
 DELETE FROM `gy3te_social_avatars`;
 /*!40000 ALTER TABLE `gy3te_social_avatars` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_avatars` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_badges
 CREATE TABLE IF NOT EXISTS `gy3te_social_badges` (
@@ -7118,7 +6934,6 @@ INSERT INTO `gy3te_social_badges` (`id`, `command`, `extension`, `title`, `alias
 	(26, 'story.create', 'com_easysocial', 'COM_EASYSOCIAL_BADGES_STORY_TELLER_TITLE', 'story-teller', 'COM_EASYSOCIAL_BADGES_STORY_TELLER_DESC', 'COM_EASYSOCIAL_BADGES_STORY_TELLER_HOWTO', 'media/com_easysocial/badges/story-teller.png', '2018-05-12 09:09:22', 1, 30, 'frequency', 0, 0, 0);
 /*!40000 ALTER TABLE `gy3te_social_badges` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_badges_history
 CREATE TABLE IF NOT EXISTS `gy3te_social_badges_history` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -7132,7 +6947,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_social_badges_history` (
 DELETE FROM `gy3te_social_badges_history`;
 /*!40000 ALTER TABLE `gy3te_social_badges_history` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_badges_history` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_badges_maps
 CREATE TABLE IF NOT EXISTS `gy3te_social_badges_maps` (
@@ -7150,7 +6964,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_social_badges_maps` (
 DELETE FROM `gy3te_social_badges_maps`;
 /*!40000 ALTER TABLE `gy3te_social_badges_maps` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_badges_maps` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_block_users
 CREATE TABLE IF NOT EXISTS `gy3te_social_block_users` (
@@ -7170,7 +6983,6 @@ DELETE FROM `gy3te_social_block_users`;
 /*!40000 ALTER TABLE `gy3te_social_block_users` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_block_users` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_bookmarks
 CREATE TABLE IF NOT EXISTS `gy3te_social_bookmarks` (
   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Primary key',
@@ -7189,7 +7001,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_social_bookmarks` (
 DELETE FROM `gy3te_social_bookmarks`;
 /*!40000 ALTER TABLE `gy3te_social_bookmarks` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_bookmarks` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_broadcasts
 CREATE TABLE IF NOT EXISTS `gy3te_social_broadcasts` (
@@ -7212,7 +7023,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_social_broadcasts` (
 DELETE FROM `gy3te_social_broadcasts`;
 /*!40000 ALTER TABLE `gy3te_social_broadcasts` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_broadcasts` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_clusters
 CREATE TABLE IF NOT EXISTS `gy3te_social_clusters` (
@@ -7249,7 +7059,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_social_clusters` (
 DELETE FROM `gy3te_social_clusters`;
 /*!40000 ALTER TABLE `gy3te_social_clusters` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_clusters` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_clusters_categories
 CREATE TABLE IF NOT EXISTS `gy3te_social_clusters_categories` (
@@ -7291,7 +7100,6 @@ INSERT INTO `gy3te_social_clusters_categories` (`id`, `type`, `title`, `alias`, 
 	(13, 'event', 'Meeting', 'meeting', 0, 0, 'Weekly meeting events.', '2018-05-12 09:09:25', 1, 48, 2, 3, 4, NULL);
 /*!40000 ALTER TABLE `gy3te_social_clusters_categories` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_clusters_categories_access
 CREATE TABLE IF NOT EXISTS `gy3te_social_clusters_categories_access` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -7307,7 +7115,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_social_clusters_categories_access` (
 DELETE FROM `gy3te_social_clusters_categories_access`;
 /*!40000 ALTER TABLE `gy3te_social_clusters_categories_access` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_clusters_categories_access` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_clusters_news
 CREATE TABLE IF NOT EXISTS `gy3te_social_clusters_news` (
@@ -7329,7 +7136,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_social_clusters_news` (
 DELETE FROM `gy3te_social_clusters_news`;
 /*!40000 ALTER TABLE `gy3te_social_clusters_news` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_clusters_news` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_clusters_nodes
 CREATE TABLE IF NOT EXISTS `gy3te_social_clusters_nodes` (
@@ -7357,7 +7163,6 @@ DELETE FROM `gy3te_social_clusters_nodes`;
 /*!40000 ALTER TABLE `gy3te_social_clusters_nodes` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_clusters_nodes` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_clusters_reject
 CREATE TABLE IF NOT EXISTS `gy3te_social_clusters_reject` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -7374,7 +7179,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_social_clusters_reject` (
 DELETE FROM `gy3te_social_clusters_reject`;
 /*!40000 ALTER TABLE `gy3te_social_clusters_reject` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_clusters_reject` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_comments
 CREATE TABLE IF NOT EXISTS `gy3te_social_comments` (
@@ -7407,7 +7211,6 @@ DELETE FROM `gy3te_social_comments`;
 /*!40000 ALTER TABLE `gy3te_social_comments` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_comments` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_config
 CREATE TABLE IF NOT EXISTS `gy3te_social_config` (
   `type` varchar(255) NOT NULL,
@@ -7424,7 +7227,6 @@ INSERT INTO `gy3te_social_config` (`type`, `value`, `value_binary`) VALUES
 	('site', '{"alerts":{"paths":["admin","site","apps","fields","plugins","modules"]},"buttons":{"primary":"#428bca","success":"#39b54a","standard":"#333333","danger":"#d9534f"},"general":{"key":"a3937aaff2bb7aab360532b869945b87","ajaxindex":true,"environment":"static","jquery":true,"mode":"compressed","inline":false,"super":false,"profiler":false,"logger":false,"automatic":{"purge":true},"site":{"loginemail":true,"login":"","logout":"","lockdown":{"enabled":false,"registration":false},"twofactor":false},"url":{"purge":true,"interval":"1"},"cron":{"secure":false,"key":"","limit":20},"location":{"language":"en","proximity":{"unit":"mile"}},"layout":{"toolbar":true,"toolbarguests":true,"toolbarsearch":true,"toolbarbrowse":true},"cdn":{"url":"","passive":false}},"pages":{"enabled":true,"editor":"none","invite":{"nonfriends":false},"item":{"display":"timeline"},"category":{"header":true},"layout":{"description":true,"listingdesc":true},"feed":{"includeadmin":true},"sharing":{"showprivate":true}},"groups":{"enabled":true,"editor":"none","invite":{"nonfriends":false},"item":{"display":"timeline"},"category":{"header":true},"layout":{"hits":true,"description":true,"listingdesc":true},"feed":{"includeadmin":true},"sharing":{"showprivate":true}},"antispam":{"recaptcha":{"public":"","private":""},"akismet":{"key":"dff980f9f600"},"mollom":{"public":"","private":"","servers":""}},"conversations":{"enabled":1,"akismet":1,"typing":1,"archiving":1,"editor":"","locations":1,"multiple":1,"nonfriend":false,"entersubmit":false,"mass":{"enabled":false},"attachments":{"enabled":1,"types":["txt","jpg","png","gif","zip","pdf"],"maxsize":3,"storage":"\\/media\\/com_easysocial\\/uploads\\/conversations"},"sorting":"lastreplied","ordering":"desc","layout":{"intro":200},"conversekit":{"links":true}},"email":{"html":1,"heading":{"company":"Stack Ideas Sdn Bhd"}},"links":{"parser":{"validate":false,"tld":"rocks,aero,asia,berlin,biz,cat,com,blog,coop,deals,discount,edu,expert,gov,guru,club,info,int,jobs,mil,mobi,museum,name,net,org,pro,tel,travel,shopping,ac,ad,ae,af,ag,ai,al,am,an,ao,aq,ar,as,at,au,aw,ax,az,ba,bb,bd,be,bf,bg,bh,bi,bj,bm,bn,bo,br,bs,bt,bv,bw,by,bz,ca,cc,cd,cf,cg,ch,ci,ck,cl,cm,cn,co,cr,cu,cv,cx,cy,cz,cz,de,dj,dk,dm,do,dz,ec,ee,eg,er,es,et,eu,fi,fj,fk,fm,fo,fr,ga,gb,gd,ge,gf,gg,gh,gi,gl,gm,gn,gp,gq,gr,gs,gt,gu,gw,gy,hk,hm,hn,hr,ht,hu,id,ie,il,im,in,io,iq,ir,is,it,je,jm,jo,jp,ke,kg,kh,ki,km,kn,kp,kr,kw,ky,kz,la,lb,lc,li,lk,lr,ls,lt,lu,lv,ly,ma,mc,md,me,mg,mh,mk,ml,mn,mn,mo,mp,mr,ms,mt,mu,mv,mw,mx,my,mz,na,nc,ne,nf,ng,ni,nl,no,np,nr,nu,nz,nom,pa,pe,pf,pg,ph,pk,pl,pm,pn,pr,ps,pt,pw,py,qa,re,ra,rs,ru,ro,rw,sa,sb,sc,sd,se,sg,sh,si,sj,sj,sk,sl,sm,sn,so,sr,st,su,sv,sy,sz,tc,td,tf,tg,th,tj,tk,tl,tm,tn,to,tp,tr,tt,tv,tw,tz,ua,ug,uk,us,uy,uz,va,vc,ve,vg,vi,vn,vu,wf,ws,ye,yt,yu,za,zm,zw,arpa,guru,live,today,bio,xxx"},"cache":{"images":false,"location":"\\/media\\/com_easysocial\\/cache\\/links","data":true,"cleanup":{"enabled":true,"duration":3}}},"login":{"custom":{"image":false}},"notifications":{"general":{"pagination":10},"broadcast":{"popup":true,"interval":15,"sticky":true,"period":8},"system":{"autoread":false,"enabled":true,"polling":30},"friends":{"enabled":true,"polling":30},"conversation":{"enabled":true,"polling":30},"cleanup":{"enabled":false,"duration":6},"polling":{"interval":2}},"reports":{"enabled":true,"automation":true,"threshold":30,"maxip":5,"guests":false,"features":{"stream":true,"user":true,"comments":true},"notifications":{"moderators":true,"custom":false,"emails":""}},"storage":{"avatar":"joomla","photos":"joomla","files":"joomla","links":"joomla","videos":"joomla","audios":"joomla","joomla":{"limit":10},"amazon":{"access":"","secret":"","bucket":"","ssl":true,"limit":10,"upload":{"photo":false},"delete":true,"region":"","class":""}},"photos":{"enabled":true,"quality":80,"downloads":true,"original":true,"location":true,"import":{"exif":true},"popup":{"default":true},"storage":{"container":"\\/media\\/com_easysocial\\/photos"},"uploader":{"maxsize":"32","quality":100},"pagination":{"photo":10,"album":10},"exif":["aperture","iso","exposure","copyright","camera","focalLength"],"layout":{"size":"large","mode":"cover","pattern":"tile","threshold":128,"ratio":"4x3","sidebarlimit":20,"ordering":"desc"},"gif":{"enabled":false}},"avatars":{"storage":{"container":"\\/media\\/com_easysocial\\/avatars","default":"defaults","defaults":{"profiles":"profiles"},"user":"users","group":"group","event":"event","page":"page","clusters":"clusters","profiles":"profiles"},"default":{"user":{"small":"\\/media\\/com_easysocial\\/defaults\\/avatars\\/user\\/small.png","medium":"\\/media\\/com_easysocial\\/defaults\\/avatars\\/user\\/medium.png","large":"\\/media\\/com_easysocial\\/defaults\\/avatars\\/user\\/large.png","square":"\\/media\\/com_easysocial\\/defaults\\/avatars\\/user\\/square.png"},"profiles":{"small":"\\/media\\/com_easysocial\\/defaults\\/avatars\\/profiles\\/small.png","medium":"\\/media\\/com_easysocial\\/defaults\\/avatars\\/profiles\\/medium.png","large":"\\/media\\/com_easysocial\\/defaults\\/avatars\\/profiles\\/large.png","square":"\\/media\\/com_easysocial\\/defaults\\/avatars\\/profiles\\/square.png"},"group":{"small":"\\/media\\/com_easysocial\\/defaults\\/avatars\\/group\\/small.png","medium":"\\/media\\/com_easysocial\\/defaults\\/avatars\\/group\\/medium.png","large":"\\/media\\/com_easysocial\\/defaults\\/avatars\\/group\\/large.png","square":"\\/media\\/com_easysocial\\/defaults\\/avatars\\/group\\/square.png"},"page":{"small":"\\/media\\/com_easysocial\\/defaults\\/avatars\\/page\\/small.png","medium":"\\/media\\/com_easysocial\\/defaults\\/avatars\\/page\\/medium.png","large":"\\/media\\/com_easysocial\\/defaults\\/avatars\\/page\\/large.png","square":"\\/media\\/com_easysocial\\/defaults\\/avatars\\/page\\/square.png"},"event":{"small":"\\/media\\/com_easysocial\\/defaults\\/avatars\\/event\\/small.png","medium":"\\/media\\/com_easysocial\\/defaults\\/avatars\\/event\\/medium.png","large":"\\/media\\/com_easysocial\\/defaults\\/avatars\\/event\\/large.png","square":"\\/media\\/com_easysocial\\/defaults\\/avatars\\/event\\/square.png"},"clusterscategory":{"small":"\\/media\\/com_easysocial\\/defaults\\/avatars\\/clusterscategory\\/small.png","medium":"\\/media\\/com_easysocial\\/defaults\\/avatars\\/clusterscategory\\/medium.png","large":"\\/media\\/com_easysocial\\/defaults\\/avatars\\/clusterscategory\\/large.png","square":"\\/media\\/com_easysocial\\/defaults\\/avatars\\/clusterscategory\\/square.png"}}},"connector":{"client":"curl"},"covers":{"storage":{"container":"\\/media\\/com_easysocial\\/covers","default":"defaults","defaults":{"profiles":"profiles"},"user":"users","group":"group","page":"page","event":"event","profiles":"profiles","clusters":"clusters"},"default":{"user":{"default":"\\/media\\/com_easysocial\\/defaults\\/covers\\/user\\/default.jpg"},"group":{"default":"\\/media\\/com_easysocial\\/defaults\\/covers\\/group\\/default.jpg"},"page":{"default":"\\/media\\/com_easysocial\\/defaults\\/covers\\/page\\/default.jpg"},"event":{"default":"\\/media\\/com_easysocial\\/defaults\\/covers\\/event\\/default.jpg"}}},"files":{"storage":{"container":"\\/media\\/com_easysocial\\/files","fields":{"container":"fields","user":"user"},"conversations":{"container":"conversations"},"group":{"container":"groups"},"page":{"container":"pages"},"event":{"container":"events"},"user":{"container":"users"},"comments":{"container":"comments"}}},"friends":{"enabled":true,"invites":{"enabled":true},"stream":{"create":1}},"lists":{"display":{"limit":5},"stream":{"create":1}},"apps":{"browser":true,"tnc":{"required":true,"message":"COM_EASYSOCIAL_APPS_TNC"}},"layout":{"dashboard":{"apps":{"limit":5},"lists":{"limit":5}},"leaderboard":{"limit":20},"profile":{"apps":{"limit":15}}},"oauth":{"twitter":{"app":"","secret":"","registration":{"enabled":false,"type":"simplified","profile":"1","avatar":true,"cover":true,"tweets":true,"totalTweets":true},"card":{"enabled":false,"type":"summary_large_image"}},"facebook":{"app":"","secret":"","pull":true,"push":true,"opengraph":{"enabled":true},"jfbconnect":{"enabled":false},"registration":{"enabled":false,"type":"simplified","profile":1,"avatar":true,"cover":true,"timeline":true,"totalTimeline":1},"username":"email","autologin":false,"autolink":false},"myspace":{"app":"","secret":""}},"leaderboard":{"listings":{"admin":false}},"badges":{"enabled":true,"storage":"\\/media\\/com_easysocial\\/badges","paths":["admin","site","apps","fields","plugins","modules"]},"followers":{"enabled":true},"points":{"enabled":true,"history":{"limit":60},"paths":["admin","site","apps","fields","plugins","modules"]},"polls":{"enabled":true},"welcome":{"enabled":true,"text":"COM_EASYSOCIAL_WELCOME_MESSAGE"},"profiles":{"stream":{"create":1,"update":1}},"registrations":{"enabled":1,"emailasusername":0,"change.selection":1,"email":{"password":true,"reconfirmation":false},"profiles":{"avatar":true,"showUsers":true,"usersCount":20,"showType":true},"steps":{"progress":1,"heading":1},"mini":{"mode":"quick","profile":"default"},"layout":{"avatar":false,"users":true}},"stream":{"pushtop":{"reactions":true},"clusters":{"private":true},"translations":{"azure":false,"azurekey":"","explicit":false},"timestamp":{"style":"elapsed","format":"Y-m-d H:i"},"aggregation":{"enabled":1,"duration":15},"rss":{"enabled":true},"bookmarks":{"enabled":true},"content":{"nofollow":false,"truncate":false,"truncatelength":250},"archive":{"enabled":true,"duration":6},"pin":{"enabled":true},"comments":{"enabled":true,"guestview":true},"follow":{"enabled":true},"sharing":{"enabled":true},"pagination":{"style":"loadmore","autoload":true,"pagelimit":10,"ordering":"modified"},"story":{"mentions":true,"moods":true,"location":true,"entertosubmit":false},"updates":{"enabled":true,"interval":30},"exclude":{"admin":false},"actions":["likes","comments","repost"]},"activity":{"logs":{"enabled":false},"pagination":{"max":5,"limit":10}},"story":{"friends_enabled":1},"location":{"coords":"40.702147,-74.015794","provider":"maps","foursquare":{"clientid":"","clientsecret":""},"places":{"api":""},"maps":{"api":"","secure":{"api":false,"browser":"","server":""}}},"toolbar":{"display":true},"theme":{"site":"wireframe","site_base":"wireframe","admin":"default","admin_base":"default","apps":"default","fields":"default","compiler":{"mode":"off","use_absolute_uri":0,"allow_template_override":1}},"uploader":{"storage":{"container":"\\/media\\/com_easysocial\\/tmp"}},"users":{"change_username":1,"display":{"profiletype":true},"displayName":"username","avatarUseName":true,"avatarColors":"#F44336, #E91E63, #9C27B0, #03A9F4, #673AB7, #3F51B5, #2196F3, #00BCD4, #009688, #4CAF50, #8BC34A, #CDDC39, #FFEB3B, #FFC107, #FF9800, #FF5722, #795548, #9E9E9E, #607D8B, #000000","avatarFontColor":"#FFFFFF","aliasName":"username","deleteLogic":"unpublish","simpleUrl":false,"avatarWebcam":true,"blocking":{"enabled":true},"reminder":{"enabled":false,"duration":30},"dashboard":{"start":"me","sidebar":"left","everyone":true,"appfilters":true,"customfilters":false,"groups":true,"groupslimit":5,"events":true,"eventslimit":5,"pages":true,"pageslimit":5,"guest":true},"stream":{"login":1,"logout":1,"friend":1,"following":1,"profile":1},"listings":{"admin":false,"sorting":"latest","esadadmin":true,"profilescount":false},"layout":{"cover":true,"profiletitle":true,"badges":true,"gender":true,"age":true,"address":true,"apps":false,"sidebarapps":true,"lastonline":false},"indexer":{"name":"realname","email":false,"privacy":true},"profile":{"display":"timeline","switchgroup":false,"sidebar":"left"},"verification":{"enabled":true,"requests":true},"privacy":{"field":false},"online":{"state":true}},"sharing":{"enabled":1,"vendors":{"email":1,"facebook":1,"twitter":1,"google":1,"live":1,"linkedin":1,"myspace":1,"vk":1,"stumbleupon":1,"digg":1,"tumblr":1,"evernote":1,"reddit":1,"delicious":1},"email":{"limit":10}},"access":{"paths":["admin","site","apps","fields","plugins","modules"]},"comments":{"reply":0,"maxlevel":3,"limit":5,"attachments":true,"resize":{"enabled":false,"width":"1024","height":"768"},"storage":"\\/media\\/com_easysocial\\/comments","submit":1,"smileys":true},"user":{"completeprofile":{"required":false,"strict":true,"action":"info"}},"events":{"showenddate":0,"startofweek":1,"enabled":true,"recurringlimit":50,"editor":"none","ical":true,"invite":{"allowmembers":true,"nonfriends":false},"timeformat":"12h","listing":{"includefeatured":false,"includegroup":false,"includepage":false},"item":{"display":"timeline"},"layout":{"hits":true,"description":true,"listingdesc":true,"address":true,"seatsleft":true,"categoryheaders":true,"timezone":false,"eventtime":false},"feed":{"includeadmin":true},"reminder":{"enabled":true},"sharing":{"showprivate":true}},"video":{"enabled":true,"uploads":false,"embeds":true,"ffmpeg":"\\/opt\\/local\\/bin\\/ffmpeg","autoencode":true,"audiobitrate":"64k","size":"720","storage":{"container":"\\/media\\/com_easysocial\\/videos"},"layout":{"item":{"embed":true,"recent":true,"total":5,"hits":true,"duration":true,"details":true,"tags":true},"player":{"logo":false,"watermark":false,"watermarkposition":"top-right"}}},"audio":{"enabled":true,"uploads":false,"embeds":true,"allowencode":true,"encoder":"\\/opt\\/local\\/bin\\/ffmpeg","downloads":true,"autoencode":true,"autoimportdata":true,"bitrate":"64k","storage":{"container":"\\/media\\/com_easysocial\\/audios"},"layout":{"item":{"recent":true,"total":5,"hits":true,"duration":true,"details":true,"tags":true}}},"privacy":{"enabled":true},"mobileshortcut":{"enabled":true,"name":"Social Network for Joomla!","shortname":"EasySocial"},"zeroasplural":{"enabled":false}}', NULL),
 	('scriptversion', '2.1.9', NULL);
 /*!40000 ALTER TABLE `gy3te_social_config` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_conversations
 CREATE TABLE IF NOT EXISTS `gy3te_social_conversations` (
@@ -7445,7 +7247,6 @@ DELETE FROM `gy3te_social_conversations`;
 /*!40000 ALTER TABLE `gy3te_social_conversations` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_conversations` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_conversations_message
 CREATE TABLE IF NOT EXISTS `gy3te_social_conversations_message` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
@@ -7463,7 +7264,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_social_conversations_message` (
 DELETE FROM `gy3te_social_conversations_message`;
 /*!40000 ALTER TABLE `gy3te_social_conversations_message` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_conversations_message` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_conversations_message_maps
 CREATE TABLE IF NOT EXISTS `gy3te_social_conversations_message_maps` (
@@ -7486,7 +7286,6 @@ DELETE FROM `gy3te_social_conversations_message_maps`;
 /*!40000 ALTER TABLE `gy3te_social_conversations_message_maps` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_conversations_message_maps` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_conversations_participants
 CREATE TABLE IF NOT EXISTS `gy3te_social_conversations_participants` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
@@ -7503,7 +7302,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_social_conversations_participants` (
 DELETE FROM `gy3te_social_conversations_participants`;
 /*!40000 ALTER TABLE `gy3te_social_conversations_participants` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_conversations_participants` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_covers
 CREATE TABLE IF NOT EXISTS `gy3te_social_covers` (
@@ -7525,7 +7323,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_social_covers` (
 DELETE FROM `gy3te_social_covers`;
 /*!40000 ALTER TABLE `gy3te_social_covers` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_covers` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_default_avatars
 CREATE TABLE IF NOT EXISTS `gy3te_social_default_avatars` (
@@ -7551,7 +7348,6 @@ DELETE FROM `gy3te_social_default_avatars`;
 /*!40000 ALTER TABLE `gy3te_social_default_avatars` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_default_avatars` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_default_covers
 CREATE TABLE IF NOT EXISTS `gy3te_social_default_covers` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -7573,7 +7369,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_social_default_covers` (
 DELETE FROM `gy3te_social_default_covers`;
 /*!40000 ALTER TABLE `gy3te_social_default_covers` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_default_covers` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_discussions
 CREATE TABLE IF NOT EXISTS `gy3te_social_discussions` (
@@ -7607,7 +7402,6 @@ DELETE FROM `gy3te_social_discussions`;
 /*!40000 ALTER TABLE `gy3te_social_discussions` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_discussions` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_discussions_files
 CREATE TABLE IF NOT EXISTS `gy3te_social_discussions_files` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -7622,7 +7416,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_social_discussions_files` (
 DELETE FROM `gy3te_social_discussions_files`;
 /*!40000 ALTER TABLE `gy3te_social_discussions_files` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_discussions_files` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_events_meta
 CREATE TABLE IF NOT EXISTS `gy3te_social_events_meta` (
@@ -7649,7 +7442,6 @@ DELETE FROM `gy3te_social_events_meta`;
 /*!40000 ALTER TABLE `gy3te_social_events_meta` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_events_meta` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_feeds
 CREATE TABLE IF NOT EXISTS `gy3te_social_feeds` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -7667,7 +7459,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_social_feeds` (
 DELETE FROM `gy3te_social_feeds`;
 /*!40000 ALTER TABLE `gy3te_social_feeds` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_feeds` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_fields
 CREATE TABLE IF NOT EXISTS `gy3te_social_fields` (
@@ -7794,7 +7585,6 @@ INSERT INTO `gy3te_social_fields` (`id`, `unique_key`, `app_id`, `step_id`, `tit
 	(83, 'COVER', 158, 4, 'COM_EASYSOCIAL_FIELDS_PAGE_COVER', 1, 'COM_EASYSOCIAL_FIELDS_PAGE_COVER_DESC', 1, '0', '', 1, 0, 0, '{"id":"5af6af4477559","app_id":"158","step_id":null,"validation":null,"state":null,"params":"[]","ordering":19,"core":null,"visible_mini_registration":null,"friend_suggest":null,"_isCopy":false,"is_conditional":null,"conditions":null,"value":null,"element":"cover","data":null,"raw":null,"privacy":0}', 19, 1, 1, 1, 0, 0, 0, NULL, 0);
 /*!40000 ALTER TABLE `gy3te_social_fields` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_fields_data
 CREATE TABLE IF NOT EXISTS `gy3te_social_fields_data` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -7836,7 +7626,6 @@ INSERT INTO `gy3te_social_fields_data` (`id`, `field_id`, `uid`, `type`, `datake
 	(16, 2, 51, 'user', 'name', 'Support', '', 'Support');
 /*!40000 ALTER TABLE `gy3te_social_fields_data` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_fields_options
 CREATE TABLE IF NOT EXISTS `gy3te_social_fields_options` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -7856,7 +7645,6 @@ DELETE FROM `gy3te_social_fields_options`;
 /*!40000 ALTER TABLE `gy3te_social_fields_options` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_fields_options` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_fields_position
 CREATE TABLE IF NOT EXISTS `gy3te_social_fields_position` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -7870,7 +7658,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_social_fields_position` (
 DELETE FROM `gy3te_social_fields_position`;
 /*!40000 ALTER TABLE `gy3te_social_fields_position` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_fields_position` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_fields_rules
 CREATE TABLE IF NOT EXISTS `gy3te_social_fields_rules` (
@@ -7886,7 +7673,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_social_fields_rules` (
 DELETE FROM `gy3te_social_fields_rules`;
 /*!40000 ALTER TABLE `gy3te_social_fields_rules` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_fields_rules` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_fields_steps
 CREATE TABLE IF NOT EXISTS `gy3te_social_fields_steps` (
@@ -7918,7 +7704,6 @@ INSERT INTO `gy3te_social_fields_steps` (`id`, `uid`, `workflow_id`, `type`, `ti
 	(4, 4, 4, 'clusters', 'COM_EASYSOCIAL_FIELDS_PAGE_INFO', 'COM_EASYSOCIAL_FIELDS_PAGE_INFO_DESC', 1, '2018-05-12 09:09:24', 1, 1, 1, 1);
 /*!40000 ALTER TABLE `gy3te_social_fields_steps` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_files
 CREATE TABLE IF NOT EXISTS `gy3te_social_files` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -7946,7 +7731,6 @@ DELETE FROM `gy3te_social_files`;
 /*!40000 ALTER TABLE `gy3te_social_files` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_files` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_files_collections
 CREATE TABLE IF NOT EXISTS `gy3te_social_files_collections` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -7964,7 +7748,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_social_files_collections` (
 DELETE FROM `gy3te_social_files_collections`;
 /*!40000 ALTER TABLE `gy3te_social_files_collections` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_files_collections` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_friends
 CREATE TABLE IF NOT EXISTS `gy3te_social_friends` (
@@ -7989,7 +7772,6 @@ DELETE FROM `gy3te_social_friends`;
 /*!40000 ALTER TABLE `gy3te_social_friends` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_friends` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_friends_invitations
 CREATE TABLE IF NOT EXISTS `gy3te_social_friends_invitations` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -8005,7 +7787,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_social_friends_invitations` (
 DELETE FROM `gy3te_social_friends_invitations`;
 /*!40000 ALTER TABLE `gy3te_social_friends_invitations` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_friends_invitations` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_indexer
 CREATE TABLE IF NOT EXISTS `gy3te_social_indexer` (
@@ -8029,7 +7810,6 @@ DELETE FROM `gy3te_social_indexer`;
 /*!40000 ALTER TABLE `gy3te_social_indexer` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_indexer` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_languages
 CREATE TABLE IF NOT EXISTS `gy3te_social_languages` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -8047,7 +7827,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_social_languages` (
 DELETE FROM `gy3te_social_languages`;
 /*!40000 ALTER TABLE `gy3te_social_languages` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_languages` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_likes
 CREATE TABLE IF NOT EXISTS `gy3te_social_likes` (
@@ -8075,7 +7854,6 @@ DELETE FROM `gy3te_social_likes`;
 /*!40000 ALTER TABLE `gy3te_social_likes` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_likes` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_links
 CREATE TABLE IF NOT EXISTS `gy3te_social_links` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -8091,7 +7869,6 @@ DELETE FROM `gy3te_social_links`;
 /*!40000 ALTER TABLE `gy3te_social_links` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_links` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_links_images
 CREATE TABLE IF NOT EXISTS `gy3te_social_links_images` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -8106,7 +7883,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_social_links_images` (
 DELETE FROM `gy3te_social_links_images`;
 /*!40000 ALTER TABLE `gy3te_social_links_images` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_links_images` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_lists
 CREATE TABLE IF NOT EXISTS `gy3te_social_lists` (
@@ -8129,7 +7905,6 @@ DELETE FROM `gy3te_social_lists`;
 /*!40000 ALTER TABLE `gy3te_social_lists` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_lists` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_lists_maps
 CREATE TABLE IF NOT EXISTS `gy3te_social_lists_maps` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
@@ -8146,7 +7921,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_social_lists_maps` (
 DELETE FROM `gy3te_social_lists_maps`;
 /*!40000 ALTER TABLE `gy3te_social_lists_maps` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_lists_maps` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_locations
 CREATE TABLE IF NOT EXISTS `gy3te_social_locations` (
@@ -8168,7 +7942,6 @@ DELETE FROM `gy3te_social_locations`;
 /*!40000 ALTER TABLE `gy3te_social_locations` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_locations` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_logger
 CREATE TABLE IF NOT EXISTS `gy3te_social_logger` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
@@ -8183,7 +7956,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_social_logger` (
 DELETE FROM `gy3te_social_logger`;
 /*!40000 ALTER TABLE `gy3te_social_logger` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_logger` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_mailer
 CREATE TABLE IF NOT EXISTS `gy3te_social_mailer` (
@@ -8212,7 +7984,6 @@ DELETE FROM `gy3te_social_mailer`;
 /*!40000 ALTER TABLE `gy3te_social_mailer` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_mailer` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_migrators
 CREATE TABLE IF NOT EXISTS `gy3te_social_migrators` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
@@ -8230,7 +8001,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_social_migrators` (
 DELETE FROM `gy3te_social_migrators`;
 /*!40000 ALTER TABLE `gy3te_social_migrators` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_migrators` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_moods
 CREATE TABLE IF NOT EXISTS `gy3te_social_moods` (
@@ -8252,7 +8022,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_social_moods` (
 DELETE FROM `gy3te_social_moods`;
 /*!40000 ALTER TABLE `gy3te_social_moods` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_moods` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_notifications
 CREATE TABLE IF NOT EXISTS `gy3te_social_notifications` (
@@ -8285,7 +8054,6 @@ DELETE FROM `gy3te_social_notifications`;
 /*!40000 ALTER TABLE `gy3te_social_notifications` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_notifications` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_oauth
 CREATE TABLE IF NOT EXISTS `gy3te_social_oauth` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -8312,7 +8080,6 @@ DELETE FROM `gy3te_social_oauth`;
 /*!40000 ALTER TABLE `gy3te_social_oauth` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_oauth` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_oauth_history
 CREATE TABLE IF NOT EXISTS `gy3te_social_oauth_history` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -8329,7 +8096,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_social_oauth_history` (
 DELETE FROM `gy3te_social_oauth_history`;
 /*!40000 ALTER TABLE `gy3te_social_oauth_history` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_oauth_history` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_photos
 CREATE TABLE IF NOT EXISTS `gy3te_social_photos` (
@@ -8362,7 +8128,6 @@ DELETE FROM `gy3te_social_photos`;
 /*!40000 ALTER TABLE `gy3te_social_photos` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_photos` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_photos_meta
 CREATE TABLE IF NOT EXISTS `gy3te_social_photos_meta` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -8381,7 +8146,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_social_photos_meta` (
 DELETE FROM `gy3te_social_photos_meta`;
 /*!40000 ALTER TABLE `gy3te_social_photos_meta` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_photos_meta` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_photos_tag
 CREATE TABLE IF NOT EXISTS `gy3te_social_photos_tag` (
@@ -8403,7 +8167,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_social_photos_tag` (
 DELETE FROM `gy3te_social_photos_tag`;
 /*!40000 ALTER TABLE `gy3te_social_photos_tag` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_photos_tag` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_points
 CREATE TABLE IF NOT EXISTS `gy3te_social_points` (
@@ -8560,7 +8323,6 @@ INSERT INTO `gy3te_social_points` (`id`, `command`, `extension`, `title`, `descr
 	(130, 'video.unfeatured', 'com_easysocial', 'COM_EASYSOCIAL_POINTS_VIDEO_UNFEATURED', 'COM_EASYSOCIAL_POINTS_VIDEO_UNFEATURED_DESC', 'video-unfeatured', '2018-05-12 09:09:23', NULL, 0, -2, 1, '');
 /*!40000 ALTER TABLE `gy3te_social_points` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_points_history
 CREATE TABLE IF NOT EXISTS `gy3te_social_points_history` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT 'Primary key for this table',
@@ -8581,7 +8343,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_social_points_history` (
 DELETE FROM `gy3te_social_points_history`;
 /*!40000 ALTER TABLE `gy3te_social_points_history` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_points_history` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_polls
 CREATE TABLE IF NOT EXISTS `gy3te_social_polls` (
@@ -8605,7 +8366,6 @@ DELETE FROM `gy3te_social_polls`;
 /*!40000 ALTER TABLE `gy3te_social_polls` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_polls` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_polls_items
 CREATE TABLE IF NOT EXISTS `gy3te_social_polls_items` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
@@ -8621,7 +8381,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_social_polls_items` (
 DELETE FROM `gy3te_social_polls_items`;
 /*!40000 ALTER TABLE `gy3te_social_polls_items` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_polls_items` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_polls_users
 CREATE TABLE IF NOT EXISTS `gy3te_social_polls_users` (
@@ -8643,7 +8402,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_social_polls_users` (
 DELETE FROM `gy3te_social_polls_users`;
 /*!40000 ALTER TABLE `gy3te_social_polls_users` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_polls_users` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_privacy
 CREATE TABLE IF NOT EXISTS `gy3te_social_privacy` (
@@ -8709,7 +8467,6 @@ INSERT INTO `gy3te_social_privacy` (`id`, `type`, `rule`, `value`, `options`, `d
 	(43, 'videos', 'view', 0, '{"options":["public","member","friend","only_me","custom","field"]}', 'COM_EASYSOCIAL_PRIVACY_DESC_VIDEOS_VIEW', 1, 1);
 /*!40000 ALTER TABLE `gy3te_social_privacy` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_privacy_customize
 CREATE TABLE IF NOT EXISTS `gy3te_social_privacy_customize` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -8725,7 +8482,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_social_privacy_customize` (
 DELETE FROM `gy3te_social_privacy_customize`;
 /*!40000 ALTER TABLE `gy3te_social_privacy_customize` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_privacy_customize` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_privacy_field
 CREATE TABLE IF NOT EXISTS `gy3te_social_privacy_field` (
@@ -8743,7 +8499,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_social_privacy_field` (
 DELETE FROM `gy3te_social_privacy_field`;
 /*!40000 ALTER TABLE `gy3te_social_privacy_field` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_privacy_field` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_privacy_items
 CREATE TABLE IF NOT EXISTS `gy3te_social_privacy_items` (
@@ -8767,7 +8522,6 @@ DELETE FROM `gy3te_social_privacy_items`;
 /*!40000 ALTER TABLE `gy3te_social_privacy_items` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_privacy_items` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_privacy_items_field
 CREATE TABLE IF NOT EXISTS `gy3te_social_privacy_items_field` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -8785,7 +8539,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_social_privacy_items_field` (
 DELETE FROM `gy3te_social_privacy_items_field`;
 /*!40000 ALTER TABLE `gy3te_social_privacy_items_field` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_privacy_items_field` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_privacy_map
 CREATE TABLE IF NOT EXISTS `gy3te_social_privacy_map` (
@@ -8807,7 +8560,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_social_privacy_map` (
 DELETE FROM `gy3te_social_privacy_map`;
 /*!40000 ALTER TABLE `gy3te_social_privacy_map` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_privacy_map` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_profiles
 CREATE TABLE IF NOT EXISTS `gy3te_social_profiles` (
@@ -8842,7 +8594,6 @@ INSERT INTO `gy3te_social_profiles` (`id`, `title`, `alias`, `description`, `gid
 	(1, 'Registered Users', 'registered-users', 'This is the default profile that was created in the site.', '["2"]', 1, 0, '2018-05-12 09:09:24', '2018-05-12 09:09:24', 1, '{"delete_account":0,"theme":"","registration":"approvals"}', 1, 1, 1, 0, '', NULL, NULL);
 /*!40000 ALTER TABLE `gy3te_social_profiles` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_profiles_maps
 CREATE TABLE IF NOT EXISTS `gy3te_social_profiles_maps` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
@@ -8866,7 +8617,6 @@ INSERT INTO `gy3te_social_profiles_maps` (`id`, `profile_id`, `user_id`, `state`
 	(4, 1, 51, 1, '2018-05-12 09:09:35');
 /*!40000 ALTER TABLE `gy3te_social_profiles_maps` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_reactions
 CREATE TABLE IF NOT EXISTS `gy3te_social_reactions` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -8889,7 +8639,6 @@ INSERT INTO `gy3te_social_reactions` (`id`, `action`, `published`, `created`, `p
 	(6, 'sad', 1, '0000-00-00 00:00:00', '');
 /*!40000 ALTER TABLE `gy3te_social_reactions` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_regions
 CREATE TABLE IF NOT EXISTS `gy3te_social_regions` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
@@ -8911,7 +8660,6 @@ DELETE FROM `gy3te_social_regions`;
 /*!40000 ALTER TABLE `gy3te_social_regions` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_regions` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_registrations
 CREATE TABLE IF NOT EXISTS `gy3te_social_registrations` (
   `session_id` varchar(200) NOT NULL,
@@ -8931,7 +8679,6 @@ DELETE FROM `gy3te_social_registrations`;
 /*!40000 ALTER TABLE `gy3te_social_registrations` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_registrations` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_relationship_status
 CREATE TABLE IF NOT EXISTS `gy3te_social_relationship_status` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -8949,7 +8696,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_social_relationship_status` (
 DELETE FROM `gy3te_social_relationship_status`;
 /*!40000 ALTER TABLE `gy3te_social_relationship_status` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_relationship_status` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_reports
 CREATE TABLE IF NOT EXISTS `gy3te_social_reports` (
@@ -8973,7 +8719,6 @@ DELETE FROM `gy3te_social_reports`;
 /*!40000 ALTER TABLE `gy3te_social_reports` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_reports` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_reviews
 CREATE TABLE IF NOT EXISTS `gy3te_social_reviews` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -8992,7 +8737,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_social_reviews` (
 DELETE FROM `gy3te_social_reviews`;
 /*!40000 ALTER TABLE `gy3te_social_reviews` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_reviews` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_rss
 CREATE TABLE IF NOT EXISTS `gy3te_social_rss` (
@@ -9014,7 +8758,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_social_rss` (
 DELETE FROM `gy3te_social_rss`;
 /*!40000 ALTER TABLE `gy3te_social_rss` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_rss` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_search_filter
 CREATE TABLE IF NOT EXISTS `gy3te_social_search_filter` (
@@ -9038,7 +8781,6 @@ DELETE FROM `gy3te_social_search_filter`;
 /*!40000 ALTER TABLE `gy3te_social_search_filter` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_search_filter` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_shares
 CREATE TABLE IF NOT EXISTS `gy3te_social_shares` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
@@ -9057,7 +8799,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_social_shares` (
 DELETE FROM `gy3te_social_shares`;
 /*!40000 ALTER TABLE `gy3te_social_shares` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_shares` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_step_sessions
 CREATE TABLE IF NOT EXISTS `gy3te_social_step_sessions` (
@@ -9080,7 +8821,6 @@ DELETE FROM `gy3te_social_step_sessions`;
 /*!40000 ALTER TABLE `gy3te_social_step_sessions` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_step_sessions` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_storage_log
 CREATE TABLE IF NOT EXISTS `gy3te_social_storage_log` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -9097,7 +8837,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_social_storage_log` (
 DELETE FROM `gy3te_social_storage_log`;
 /*!40000 ALTER TABLE `gy3te_social_storage_log` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_storage_log` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_stream
 CREATE TABLE IF NOT EXISTS `gy3te_social_stream` (
@@ -9162,7 +8901,6 @@ DELETE FROM `gy3te_social_stream`;
 /*!40000 ALTER TABLE `gy3te_social_stream` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_stream` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_stream_assets
 CREATE TABLE IF NOT EXISTS `gy3te_social_stream_assets` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -9176,7 +8914,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_social_stream_assets` (
 DELETE FROM `gy3te_social_stream_assets`;
 /*!40000 ALTER TABLE `gy3te_social_stream_assets` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_stream_assets` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_stream_filter
 CREATE TABLE IF NOT EXISTS `gy3te_social_stream_filter` (
@@ -9198,7 +8935,6 @@ DELETE FROM `gy3te_social_stream_filter`;
 /*!40000 ALTER TABLE `gy3te_social_stream_filter` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_stream_filter` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_stream_filter_item
 CREATE TABLE IF NOT EXISTS `gy3te_social_stream_filter_item` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
@@ -9215,7 +8951,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_social_stream_filter_item` (
 DELETE FROM `gy3te_social_stream_filter_item`;
 /*!40000 ALTER TABLE `gy3te_social_stream_filter_item` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_stream_filter_item` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_stream_hide
 CREATE TABLE IF NOT EXISTS `gy3te_social_stream_hide` (
@@ -9239,7 +8974,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_social_stream_hide` (
 DELETE FROM `gy3te_social_stream_hide`;
 /*!40000 ALTER TABLE `gy3te_social_stream_hide` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_stream_hide` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_stream_history
 CREATE TABLE IF NOT EXISTS `gy3te_social_stream_history` (
@@ -9287,7 +9021,6 @@ DELETE FROM `gy3te_social_stream_history`;
 /*!40000 ALTER TABLE `gy3te_social_stream_history` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_stream_history` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_stream_item
 CREATE TABLE IF NOT EXISTS `gy3te_social_stream_item` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
@@ -9316,7 +9049,6 @@ DELETE FROM `gy3te_social_stream_item`;
 /*!40000 ALTER TABLE `gy3te_social_stream_item` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_stream_item` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_stream_item_history
 CREATE TABLE IF NOT EXISTS `gy3te_social_stream_item_history` (
   `id` bigint(20) unsigned NOT NULL,
@@ -9340,7 +9072,6 @@ DELETE FROM `gy3te_social_stream_item_history`;
 /*!40000 ALTER TABLE `gy3te_social_stream_item_history` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_stream_item_history` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_stream_privacy_field
 CREATE TABLE IF NOT EXISTS `gy3te_social_stream_privacy_field` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -9358,7 +9089,6 @@ DELETE FROM `gy3te_social_stream_privacy_field`;
 /*!40000 ALTER TABLE `gy3te_social_stream_privacy_field` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_stream_privacy_field` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_stream_sticky
 CREATE TABLE IF NOT EXISTS `gy3te_social_stream_sticky` (
   `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
@@ -9372,7 +9102,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_social_stream_sticky` (
 DELETE FROM `gy3te_social_stream_sticky`;
 /*!40000 ALTER TABLE `gy3te_social_stream_sticky` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_stream_sticky` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_stream_tags
 CREATE TABLE IF NOT EXISTS `gy3te_social_stream_tags` (
@@ -9396,7 +9125,6 @@ DELETE FROM `gy3te_social_stream_tags`;
 /*!40000 ALTER TABLE `gy3te_social_stream_tags` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_stream_tags` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_subscriptions
 CREATE TABLE IF NOT EXISTS `gy3te_social_subscriptions` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -9417,7 +9145,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_social_subscriptions` (
 DELETE FROM `gy3te_social_subscriptions`;
 /*!40000 ALTER TABLE `gy3te_social_subscriptions` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_subscriptions` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_tags
 CREATE TABLE IF NOT EXISTS `gy3te_social_tags` (
@@ -9441,7 +9168,6 @@ DELETE FROM `gy3te_social_tags`;
 /*!40000 ALTER TABLE `gy3te_social_tags` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_tags` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_tags_filter
 CREATE TABLE IF NOT EXISTS `gy3te_social_tags_filter` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
@@ -9460,7 +9186,6 @@ DELETE FROM `gy3te_social_tags_filter`;
 /*!40000 ALTER TABLE `gy3te_social_tags_filter` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_tags_filter` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_tags_filter_item
 CREATE TABLE IF NOT EXISTS `gy3te_social_tags_filter_item` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
@@ -9476,7 +9201,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_social_tags_filter_item` (
 DELETE FROM `gy3te_social_tags_filter_item`;
 /*!40000 ALTER TABLE `gy3te_social_tags_filter_item` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_tags_filter_item` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_tasks
 CREATE TABLE IF NOT EXISTS `gy3te_social_tasks` (
@@ -9500,7 +9224,6 @@ DELETE FROM `gy3te_social_tasks`;
 /*!40000 ALTER TABLE `gy3te_social_tasks` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_tasks` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_tasks_milestones
 CREATE TABLE IF NOT EXISTS `gy3te_social_tasks_milestones` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -9522,7 +9245,6 @@ DELETE FROM `gy3te_social_tasks_milestones`;
 /*!40000 ALTER TABLE `gy3te_social_tasks_milestones` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_tasks_milestones` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_themes
 CREATE TABLE IF NOT EXISTS `gy3te_social_themes` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -9537,7 +9259,6 @@ DELETE FROM `gy3te_social_themes`;
 /*!40000 ALTER TABLE `gy3te_social_themes` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_themes` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_themes_overrides
 CREATE TABLE IF NOT EXISTS `gy3te_social_themes_overrides` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -9551,7 +9272,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_social_themes_overrides` (
 DELETE FROM `gy3te_social_themes_overrides`;
 /*!40000 ALTER TABLE `gy3te_social_themes_overrides` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_themes_overrides` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_tmp
 CREATE TABLE IF NOT EXISTS `gy3te_social_tmp` (
@@ -9571,7 +9291,6 @@ DELETE FROM `gy3te_social_tmp`;
 /*!40000 ALTER TABLE `gy3te_social_tmp` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_tmp` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_uploader
 CREATE TABLE IF NOT EXISTS `gy3te_social_uploader` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -9588,7 +9307,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_social_uploader` (
 DELETE FROM `gy3te_social_uploader`;
 /*!40000 ALTER TABLE `gy3te_social_uploader` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_uploader` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_users
 CREATE TABLE IF NOT EXISTS `gy3te_social_users` (
@@ -9625,7 +9343,6 @@ INSERT INTO `gy3te_social_users` (`user_id`, `alias`, `state`, `params`, `connec
 	(51, '', 1, '', 0, '', 'joomla', '', 0, 0, 0, '0000-00-00 00:00:00', 0, '', 0);
 /*!40000 ALTER TABLE `gy3te_social_users` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_verification_requests
 CREATE TABLE IF NOT EXISTS `gy3te_social_verification_requests` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -9644,7 +9361,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_social_verification_requests` (
 DELETE FROM `gy3te_social_verification_requests`;
 /*!40000 ALTER TABLE `gy3te_social_verification_requests` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_verification_requests` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_videos
 CREATE TABLE IF NOT EXISTS `gy3te_social_videos` (
@@ -9679,7 +9395,6 @@ DELETE FROM `gy3te_social_videos`;
 /*!40000 ALTER TABLE `gy3te_social_videos` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_videos` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_videos_categories
 CREATE TABLE IF NOT EXISTS `gy3te_social_videos_categories` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -9711,7 +9426,6 @@ INSERT INTO `gy3te_social_videos_categories` (`id`, `title`, `alias`, `descripti
 	(10, 'Technology', 'technology', 'Technology videos', 1, 0, 48, '2018-05-12 09:09:26', 10);
 /*!40000 ALTER TABLE `gy3te_social_videos_categories` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_videos_categories_access
 CREATE TABLE IF NOT EXISTS `gy3te_social_videos_categories_access` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -9726,7 +9440,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_social_videos_categories_access` (
 DELETE FROM `gy3te_social_videos_categories_access`;
 /*!40000 ALTER TABLE `gy3te_social_videos_categories_access` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_social_videos_categories_access` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_workflows
 CREATE TABLE IF NOT EXISTS `gy3te_social_workflows` (
@@ -9748,7 +9461,6 @@ INSERT INTO `gy3te_social_workflows` (`id`, `title`, `description`, `type`) VALU
 	(3, 'Event Workflow', 'This is a workflow for Event', 'event'),
 	(4, 'Page Workflow', 'This is a workflow for Page', 'page');
 /*!40000 ALTER TABLE `gy3te_social_workflows` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_social_workflows_maps
 CREATE TABLE IF NOT EXISTS `gy3te_social_workflows_maps` (
@@ -9781,7 +9493,6 @@ INSERT INTO `gy3te_social_workflows_maps` (`id`, `uid`, `workflow_id`, `type`) V
 	(13, 12, 3, 'event'),
 	(14, 13, 3, 'event');
 /*!40000 ALTER TABLE `gy3te_social_workflows_maps` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_tags
 CREATE TABLE IF NOT EXISTS `gy3te_tags` (
@@ -9832,7 +9543,6 @@ INSERT INTO `gy3te_tags` (`id`, `parent_id`, `lft`, `rgt`, `level`, `path`, `tit
 	(1, 0, 0, 1, 0, '', 'ROOT', 'root', '', '', 1, 0, '0000-00-00 00:00:00', 1, '', '', '', '', 48, '2017-05-15 08:46:37', '', 0, '0000-00-00 00:00:00', '', '', 0, '*', 1, '0000-00-00 00:00:00', '0000-00-00 00:00:00');
 /*!40000 ALTER TABLE `gy3te_tags` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_template_styles
 CREATE TABLE IF NOT EXISTS `gy3te_template_styles` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -9857,7 +9567,6 @@ INSERT INTO `gy3te_template_styles` (`id`, `template`, `client_id`, `home`, `tit
 	(9, 'flat', 0, '0', 'Flat - По умолчанию', '{}');
 /*!40000 ALTER TABLE `gy3te_template_styles` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_ucm_base
 CREATE TABLE IF NOT EXISTS `gy3te_ucm_base` (
   `ucm_id` int(10) unsigned NOT NULL,
@@ -9874,7 +9583,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_ucm_base` (
 DELETE FROM `gy3te_ucm_base`;
 /*!40000 ALTER TABLE `gy3te_ucm_base` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_ucm_base` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_ucm_content
 CREATE TABLE IF NOT EXISTS `gy3te_ucm_content` (
@@ -9930,7 +9638,6 @@ DELETE FROM `gy3te_ucm_content`;
 /*!40000 ALTER TABLE `gy3te_ucm_content` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_ucm_content` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_ucm_history
 CREATE TABLE IF NOT EXISTS `gy3te_ucm_history` (
   `version_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
@@ -9953,7 +9660,6 @@ DELETE FROM `gy3te_ucm_history`;
 /*!40000 ALTER TABLE `gy3te_ucm_history` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_ucm_history` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_updates
 CREATE TABLE IF NOT EXISTS `gy3te_updates` (
   `update_id` int(11) NOT NULL AUTO_INCREMENT,
@@ -9971,13 +9677,14 @@ CREATE TABLE IF NOT EXISTS `gy3te_updates` (
   `infourl` text COLLATE utf8mb4_unicode_ci NOT NULL,
   `extra_query` varchar(1000) COLLATE utf8mb4_unicode_ci DEFAULT '',
   PRIMARY KEY (`update_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='Available Updates';
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='Available Updates';
 
--- Дамп данных таблицы prodogsinfo.gy3te_updates: ~0 rows (приблизительно)
+-- Дамп данных таблицы prodogsinfo.gy3te_updates: ~1 rows (приблизительно)
 DELETE FROM `gy3te_updates`;
 /*!40000 ALTER TABLE `gy3te_updates` DISABLE KEYS */;
+INSERT INTO `gy3te_updates` (`update_id`, `update_site_id`, `extension_id`, `name`, `description`, `element`, `type`, `folder`, `client_id`, `version`, `data`, `detailsurl`, `infourl`, `extra_query`) VALUES
+	(1, 1, 700, 'Joomla', '', 'joomla', 'file', '', 0, '3.8.8', '', 'https://update.joomla.org/core/sts/extension_sts.xml', '', '');
 /*!40000 ALTER TABLE `gy3te_updates` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_update_sites
 CREATE TABLE IF NOT EXISTS `gy3te_update_sites` (
@@ -9989,22 +9696,21 @@ CREATE TABLE IF NOT EXISTS `gy3te_update_sites` (
   `last_check_timestamp` bigint(20) DEFAULT '0',
   `extra_query` varchar(1000) COLLATE utf8mb4_unicode_ci DEFAULT '',
   PRIMARY KEY (`update_site_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='Update Sites';
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='Update Sites';
 
 -- Дамп данных таблицы prodogsinfo.gy3te_update_sites: ~8 rows (приблизительно)
 DELETE FROM `gy3te_update_sites`;
 /*!40000 ALTER TABLE `gy3te_update_sites` DISABLE KEYS */;
 INSERT INTO `gy3te_update_sites` (`update_site_id`, `name`, `type`, `location`, `enabled`, `last_check_timestamp`, `extra_query`) VALUES
-	(1, 'Joomla! Core', 'collection', 'https://update.joomla.org/core/list.xml', 1, 1527232053, ''),
-	(2, 'Accredited Joomla! Translations', 'collection', 'https://update.joomla.org/language/translationlist_3.xml', 1, 1527232073, ''),
-	(3, 'Joomla! Update Component Update Site', 'extension', 'https://update.joomla.org/core/extensions/com_joomlaupdate.xml', 1, 1527232093, ''),
-	(6, 'WebInstaller Update Site', 'extension', 'https://appscdn.joomla.org/webapps/jedapps/webinstaller.xml', 1, 1527232113, ''),
-	(7, 'FOF 3.x', 'extension', 'http://cdn.akeebabackup.com/updates/fof3.xml', 1, 1527232132, ''),
-	(8, 'Akeeba FEF', 'extension', 'http://cdn.akeebabackup.com/updates/fef.xml', 1, 1527232151, ''),
-	(9, 'Akeeba Backup Core', 'extension', 'https://cdn.akeebabackup.com/updates/pkgakeebacore.xml', 1, 1527232170, ''),
-	(10, 'JomSocial', 'extension', 'https://www.jomsocial.com/updates/community_update.xml', 1, 1527232186, '');
+	(1, 'Joomla! Core', 'collection', 'https://update.joomla.org/core/list.xml', 1, 1527421164, ''),
+	(2, 'Accredited Joomla! Translations', 'collection', 'https://update.joomla.org/language/translationlist_3.xml', 1, 0, ''),
+	(3, 'Joomla! Update Component Update Site', 'extension', 'https://update.joomla.org/core/extensions/com_joomlaupdate.xml', 1, 0, ''),
+	(6, 'WebInstaller Update Site', 'extension', 'https://appscdn.joomla.org/webapps/jedapps/webinstaller.xml', 1, 0, ''),
+	(8, 'Akeeba FEF', 'extension', 'http://cdn.akeebabackup.com/updates/fef.xml', 1, 0, ''),
+	(9, 'Akeeba Backup Core', 'extension', 'https://cdn.akeebabackup.com/updates/pkgakeebacore.xml', 1, 0, ''),
+	(10, 'JomSocial', 'extension', 'https://www.jomsocial.com/updates/community_update.xml', 1, 0, ''),
+	(11, 'FOF 3.x', 'extension', 'http://cdn.akeebabackup.com/updates/fof3.xml', 1, 0, '');
 /*!40000 ALTER TABLE `gy3te_update_sites` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_update_sites_extensions
 CREATE TABLE IF NOT EXISTS `gy3te_update_sites_extensions` (
@@ -10022,12 +9728,11 @@ INSERT INTO `gy3te_update_sites_extensions` (`update_site_id`, `extension_id`) V
 	(2, 10002),
 	(3, 28),
 	(6, 10086),
-	(7, 10088),
 	(8, 10089),
 	(9, 10085),
-	(10, 10090);
+	(10, 10090),
+	(11, 10147);
 /*!40000 ALTER TABLE `gy3te_update_sites_extensions` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_usergroups
 CREATE TABLE IF NOT EXISTS `gy3te_usergroups` (
@@ -10062,7 +9767,6 @@ INSERT INTO `gy3te_usergroups` (`id`, `parent_id`, `lft`, `rgt`, `title`) VALUES
 	(13, 2, 17, 18, 'Организация');
 /*!40000 ALTER TABLE `gy3te_usergroups` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_users
 CREATE TABLE IF NOT EXISTS `gy3te_users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -10092,7 +9796,7 @@ CREATE TABLE IF NOT EXISTS `gy3te_users` (
 DELETE FROM `gy3te_users`;
 /*!40000 ALTER TABLE `gy3te_users` DISABLE KEYS */;
 INSERT INTO `gy3te_users` (`id`, `name`, `username`, `email`, `password`, `block`, `sendEmail`, `registerDate`, `lastvisitDate`, `activation`, `params`, `lastResetTime`, `resetCount`, `otpKey`, `otep`, `requireReset`) VALUES
-	(48, 'Super User', 'dimavz', 'zatulenko@gmail.com', '$2y$10$hcaTdf8pwSF8gXLoQauXdOgiqDuJA4eT/c0C1pXC037kOle2SXu4S', 0, 1, '2017-05-15 08:46:38', '2018-05-25 09:02:41', '0', '{"admin_style":"","admin_language":"ru-RU","language":"ru-RU","editor":"","helpsite":"","timezone":"Europe\\/Minsk","update_cache_list":1}', '0000-00-00 00:00:00', 0, '', '', 0),
+	(48, 'Super User', 'dimavz', 'zatulenko@gmail.com', '$2y$10$hcaTdf8pwSF8gXLoQauXdOgiqDuJA4eT/c0C1pXC037kOle2SXu4S', 0, 1, '2017-05-15 08:46:38', '2018-05-27 11:38:39', '0', '{"admin_style":"","admin_language":"ru-RU","language":"ru-RU","editor":"","helpsite":"","timezone":"Europe\\/Minsk","update_cache_list":1}', '0000-00-00 00:00:00', 0, '', '', 0),
 	(49, 'Тест', 'test', 'test@mail.ru', '$2y$10$SnqEiqeopU69SkI/6rdYtO5NBa.RBLM2SJb4nNXDGXbLxFdyX2K0G', 0, 0, '2017-05-15 09:23:36', '2018-05-25 09:40:08', '', '{"admin_style":"","admin_language":"","language":"","editor":"","helpsite":"","timezone":"","update_cache_list":1}', '0000-00-00 00:00:00', 0, '', '', 0),
 	(50, 'Тест2', 'test2', 'test2@mail.ru', '$2y$10$M1qZakRwZC7yw0hdTDt5me1PrpGM7AfzA.wyn9qZvRQ9wIn5A46MS', 0, 0, '2017-05-15 09:24:42', '2018-05-25 07:39:16', '', '{"admin_style":"","admin_language":"","language":"","editor":"","helpsite":"","timezone":"","update_cache_list":1}', '0000-00-00 00:00:00', 0, '', '', 0),
 	(51, 'Support', 'support', 'support@prodogs.info', '$2y$10$ITx.vlFx1XnVGShB8sFkOemSKzopoI47OFGO8FpqXegcm3wjS2Bye', 0, 0, '2017-05-18 17:01:25', '0000-00-00 00:00:00', '', '{"admin_style":"","admin_language":"","language":"","editor":"","helpsite":"","timezone":"","update_cache_list":1}', '0000-00-00 00:00:00', 0, '', '', 0),
@@ -10100,7 +9804,6 @@ INSERT INTO `gy3te_users` (`id`, `name`, `username`, `email`, `password`, `block
 	(53, 'vistavka', 'vistavka', 'vistavka@mail.ru', '$2y$10$ODrl7iuU1DK/27aK41Elv.S5ig40YiRhzwXo5E8YyFhUJEJvm..uG', 0, 0, '2018-05-14 07:42:24', '2018-05-14 14:02:36', '', '{"update_cache_list":1}', '0000-00-00 00:00:00', 0, '', '', 0),
 	(54, 'СОО БКО', 'organization', 'organization@mail.ru', '$2y$10$Ocj4NEZVtstKXvmDkWJ0te2aGHK5vZ0dT6YlSTSFq8wGI3nLW/7jG', 0, 0, '2018-05-24 13:12:15', '2018-05-25 08:35:35', '', '{"update_cache_list":1,"language":"","timezone":""}', '0000-00-00 00:00:00', 0, '', '', 0);
 /*!40000 ALTER TABLE `gy3te_users` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_user_keys
 CREATE TABLE IF NOT EXISTS `gy3te_user_keys` (
@@ -10120,7 +9823,6 @@ CREATE TABLE IF NOT EXISTS `gy3te_user_keys` (
 DELETE FROM `gy3te_user_keys`;
 /*!40000 ALTER TABLE `gy3te_user_keys` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_user_keys` ENABLE KEYS */;
-
 
 -- Дамп структуры для таблица prodogsinfo.gy3te_user_notes
 CREATE TABLE IF NOT EXISTS `gy3te_user_notes` (
@@ -10149,7 +9851,6 @@ DELETE FROM `gy3te_user_notes`;
 /*!40000 ALTER TABLE `gy3te_user_notes` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_user_notes` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_user_profiles
 CREATE TABLE IF NOT EXISTS `gy3te_user_profiles` (
   `user_id` int(11) NOT NULL,
@@ -10164,7 +9865,6 @@ DELETE FROM `gy3te_user_profiles`;
 /*!40000 ALTER TABLE `gy3te_user_profiles` DISABLE KEYS */;
 /*!40000 ALTER TABLE `gy3te_user_profiles` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_user_usergroup_map
 CREATE TABLE IF NOT EXISTS `gy3te_user_usergroup_map` (
   `user_id` int(10) unsigned NOT NULL DEFAULT '0' COMMENT 'Foreign Key to #__users.id',
@@ -10172,7 +9872,7 @@ CREATE TABLE IF NOT EXISTS `gy3te_user_usergroup_map` (
   PRIMARY KEY (`user_id`,`group_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Дамп данных таблицы prodogsinfo.gy3te_user_usergroup_map: ~9 rows (приблизительно)
+-- Дамп данных таблицы prodogsinfo.gy3te_user_usergroup_map: ~11 rows (приблизительно)
 DELETE FROM `gy3te_user_usergroup_map`;
 /*!40000 ALTER TABLE `gy3te_user_usergroup_map` DISABLE KEYS */;
 INSERT INTO `gy3te_user_usergroup_map` (`user_id`, `group_id`) VALUES
@@ -10189,7 +9889,6 @@ INSERT INTO `gy3te_user_usergroup_map` (`user_id`, `group_id`) VALUES
 	(54, 13);
 /*!40000 ALTER TABLE `gy3te_user_usergroup_map` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_utf8_conversion
 CREATE TABLE IF NOT EXISTS `gy3te_utf8_conversion` (
   `converted` tinyint(4) NOT NULL DEFAULT '0'
@@ -10202,7 +9901,6 @@ INSERT INTO `gy3te_utf8_conversion` (`converted`) VALUES
 	(2);
 /*!40000 ALTER TABLE `gy3te_utf8_conversion` ENABLE KEYS */;
 
-
 -- Дамп структуры для таблица prodogsinfo.gy3te_viewlevels
 CREATE TABLE IF NOT EXISTS `gy3te_viewlevels` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Primary Key',
@@ -10213,7 +9911,7 @@ CREATE TABLE IF NOT EXISTS `gy3te_viewlevels` (
   UNIQUE KEY `idx_assetgroup_title_lookup` (`title`)
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Дамп данных таблицы prodogsinfo.gy3te_viewlevels: ~8 rows (приблизительно)
+-- Дамп данных таблицы prodogsinfo.gy3te_viewlevels: ~9 rows (приблизительно)
 DELETE FROM `gy3te_viewlevels`;
 /*!40000 ALTER TABLE `gy3te_viewlevels` DISABLE KEYS */;
 INSERT INTO `gy3te_viewlevels` (`id`, `title`, `ordering`, `rules`) VALUES
@@ -10227,6 +9925,7 @@ INSERT INTO `gy3te_viewlevels` (`id`, `title`, `ordering`, `rules`) VALUES
 	(9, 'Выставка', 0, '[12]'),
 	(10, 'Организация', 0, '[13]');
 /*!40000 ALTER TABLE `gy3te_viewlevels` ENABLE KEYS */;
+
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
 /*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
