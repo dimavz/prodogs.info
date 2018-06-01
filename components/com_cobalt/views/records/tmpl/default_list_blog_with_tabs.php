@@ -7,6 +7,7 @@
  * @license GNU/GPL http://www.gnu.org/copyleft/gpl.html
  */
 defined('_JEXEC') or die('Restricted access');
+echo JRoute::_($item->url);
 
 if(!class_exists('CarticleHelper'))
 {
