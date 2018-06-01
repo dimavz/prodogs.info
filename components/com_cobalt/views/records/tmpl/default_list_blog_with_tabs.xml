@@ -11,6 +11,16 @@
 	<description>Template list blog</description>
 
 	<fields name="tmpl_params">
+		<fieldset name="show_tags_and_icons_fields" label="Ярлыки и иконки полей" description="Настройка видимости ярлыков и иконок выводимых полей">
+			<field name="show_tags" type="radio" class="btn-group" default="1" label="Показать ярлыки полей">
+				<option value="0">CNO</option>
+				<option value="1">CYES</option>
+			</field>
+			<field name="show_icons" type="radio" class="btn-group" default="1" label="Показать иконки полей">
+				<option value="0">CNO</option>
+				<option value="1">CYES</option>
+			</field>
+		</fieldset>
 		<fieldset name="general" label="Группировка полей">
 			<field name="item_grouping_type" type="list" label="X_GROUPTIPE"  default="1">
 				<option value="0">X_GRONOTGROUP</option>
