@@ -1,22 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <form>
 	<name>Блог с табами</name>
-	<author>MintJoomla</author>
-	<creationDate>Febrary 2012</creationDate>
-	<copyright>Copyright (C) 2005 - 2012 MintJoomla. All rights reserved.</copyright>
-	<license>Commercial (http://www.mintjoomla.com/commercial-license)</license>
-	<authorEmail>support@mintjoomla.com</authorEmail>
-	<authorUrl>www.mintjoomla.com</authorUrl>
-	<version>8.33</version>
-	<description>Template list table</description>
+	<author>Dmitry Zatulenko</author>
+	<creationDate>Jun 2018</creationDate>
+	<copyright>Copyright (C) 2018 - Dmitry Zatulenko. All rights reserved.</copyright>
+	<license>Non-Commercial</license>
+	<authorEmail>zatulenko@gmail.com</authorEmail>
+	<authorUrl>www.prodogs.info</authorUrl>
+	<version>1.00</version>
+	<description>Template list blog</description>
 
 	<fields name="tmpl_params">
-		<fieldset name="positions" label="Exclude" description="Fields to be excluded of fields that are allowed to be shown in the list">
-			<field name="field_id_exclude" client="list" type="meresourcesfields" size="15" key="id" multiple="true" default="" label="Fields to exclude" description=""/>
-			<field name="leading" type="text" size="3" default="1" label="Blog Num Leading" description=""/>
-			<field name="blog_intro" type="text" size="3" default="5" label="Blog Num Intro" description=""/>
-			<field name="blog_cols" type="text" size="3" default="1" label="Blog Columns" description=""/>
-			<field name="blog_links" type="text" size="3" default="0" label="Blog Num Links" description="Number of Items to display as Links."/>
+		<fieldset name="general" label="Группировка полей">
+			<field name="item_grouping_type" type="list" label="X_GROUPTIPE"  default="1">
+				<option value="0">X_GRONOTGROUP</option>
+				<option value="1">X_GROTABS</option>
+				<option value="2">X_GRESLID</option>
+				<option value="3">X_GROFIELDSET</option>
+			</field>
+			<field name="title_tag" label="Тэг заголовка" type="text" size="3" default="h1"  />
+			<field name="css" type="textarea" rows="10" cols="39"  default="" label="X_CUSTOMCSS" />
+			<field name="show_groupdescr" type="radio" class="btn-group" default="1" label="X_SHOWGROUPDES">
+				<option value="0">CNO</option>
+				<option value="1">CYES</option>
+			</field>
+			<field name="show_groupicon" type="radio" class="btn-group" default="1" label="X_SHOWGROUPICON">
+				<option value="0">CNO</option>
+				<option value="1">CYES</option>
+			</field>
+		</fieldset>
+
+		<fieldset name="tabs" label="FS_TABSSET" description="FS_TABSSETDESCR">
+			<field name="tabs_position" type="list" label="X_TABSPOS"  default="">
+				<option value="">X_TABSPOS1</option>
+				<option value="tabs-below">X_TABSPOS2</option>
+				<option value="tabs-left">X_TABSPOS3</option>
+				<option value="tabs-right">X_TABSPOS4</option>
+			</field>
+			<field name="tabs_style" type="list" label="X_TABSSTYLE"  default="1">
+				<option value="nav-tabs">X_TABSSTYLE1</option>
+				<option value="nav-pills">X_TABSSTYLE2</option>
+			</field>
+		</fieldset>
+
+		<fieldset name="positions" label="Исключить" description="Поля, которые должны быть исключены из полей, разрешенных для показа в списке">
+			<field name="field_id_exclude" client="list" type="meresourcesfields" size="15" key="id" multiple="true" default="" label="Поля для исключения" description=""/>
+			<field name="leading" type="text" size="3" default="1" label="BLOG_NUM_LEADING" description=""/>
+			<field name="blog_intro" type="text" size="3" default="5" label="BLOG_NUM_INTRO" description=""/>
+			<field name="blog_cols" type="text" size="3" default="1" label="BLOG_COLUMNS" description=""/>
+			<field name="blog_links" type="text" size="3" default="0" label="BLOG_NUM_LINKS" description="Number of Items to display as Links."/>
 		</fieldset>
 	</fields>
 
