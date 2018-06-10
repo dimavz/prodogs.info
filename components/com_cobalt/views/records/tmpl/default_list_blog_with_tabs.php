@@ -22,6 +22,9 @@ if(!class_exists('CarticleHelper'))
 		}
 		public function display(&$obj)
 		{
+			$started = FALSE;
+			$i = $o = 0;
+
 			if(empty($obj->items[$this->k]))
 			{
 				return;
@@ -41,7 +44,7 @@ if(!class_exists('CarticleHelper'))
 			// Значение 1 - группировать как Табы
 			// Значение 2 - группировать как Слайдеры
 			// Значение 3 - группировать как Филдсеты
-			$item_grouping_type = $params->get('tmpl_params.item_grouping_type');
+			//$item_grouping_type = $params->get('tmpl_params.item_grouping_type');
 
 			$item = $obj->items[$this->k];
 			unset($obj->items[$this->k++]);
@@ -100,173 +103,258 @@ if(!class_exists('CarticleHelper'))
 							echo $field->label;
 							if($field->params->get('core.icon'))
 							{
-									echo HTMLFormatHelper::icon($field->params->get('core.icon'));
+								echo HTMLFormatHelper::icon($field->params->get('core.icon'));
 							}
 							echo "</dt>";
 						}
 						echo '<dd class="input-field'.($field->params->get('core.label_break') > 1 ? '-full' : NULL).$field->fieldclass.'">';
-							echo $field->result;
+						echo $field->result;
 						echo "</dd>";
 					}
-				echo "</dl>";
-				break;
+					echo "</dl>";
+					break;
 
 				//tab
-				case 1:
-				echo "Включены ТАБЫ";
-				echo "<br/>";
-
-				if(isset($item->fields_by_groups))
-				{
-					foreach ($item->fields_by_groups as $group_name => $fields) 
+					case 1:
+				// "Включены ТАБЫ"
+					if(isset($item->fields_by_groups[null]))
 					{
-						echo "<h2>".$group_name."</h2>";
-						foreach($fields as $key => $field)
+						echo '<dl class="dl-horizontal fields-list">';
+						foreach ($item->fields_by_groups[null] as $field_id => $field)
 						{
-							echo $field->params->get('core.show_lable');
+							echo '<dt id="dt-'.$field_id.'" class="'.$field->class.'">';
 							if($field->params->get('core.show_lable') > 1)
 							{
-								echo "<label id=".$field->id."-lbl>";
+								echo '<label id="'.$field->id.'-lbl">';
+								echo $field->label;
+								if($field->params->get('core.icon'))
+								{
+									echo HTMLFormatHelper::icon($field->params->get('core.icon'));
+								}
+								echo '</label>';
+							}
+
+							echo '</dt>';
+							echo '<dd id="dd-'.$field_id.'" class="'.$field->fieldclass.($field->params->get('core.label_break') > 1 ? ' line-brk' : NULL).'">';
+							echo $field->result;
+							echo '</dd>';
+						}
+						echo '</dl>';
+						unset($item->fields_by_groups[null]);
+					}
+
+					if(in_array($params->get('tmpl_params.item_grouping_type', 0), array(1)) && count($item->fields_by_groups))
+					{
+						echo '<div class="clearfix"></div>';
+						echo '<div class="tabbable'.$params->get('tmpl_params.tabs_position').'">';
+						echo '<ul class="nav'.$params->get('tmpl_params.tabs_style', 'nav-tabs').'" id="tabs-list">';
+						if(isset($this->item->fields_by_groups))
+						{
+							foreach ($item->fields_by_groups as $group_id => $fields)
+							{
+								echo '<li>';
+								echo '<a href="#tab-'.$o++.'" data-toggle="tab">';
+								if(!empty($item->field_groups[$group_id]['icon']) && $params->get('tmpl_params.show_groupicon', 1))
+								{
+									echo HTMLFormatHelper::icon($item->field_groups[$group_id]['icon']);
+								}
+								
+								echo JText::_($group_id);
+								echo '</a>';
+								echo '</li>';
+							}
+						}
+						echo '</ul>';
+					}
+
+					if(isset($item->fields_by_groups))
+					{
+						foreach ($item->fields_by_groups as $group_name => $fields)
+						{
+							$started = true;
+							group_start($this, $group_name, 'tab-'.$i++);
+							echo '<dl class="dl-horizontal fields-list fields-group'.$i.'">';
+							foreach ($fields as $field_id => $field)
+							{
+								echo '<dt id="dt-'.$field_id.'" class="'.$field->class.'">';
+								if($field->params->get('core.show_lable') > 1)
+								{
+									echo '<label id="'.$field->id.'-lbl">';
 									echo $field->label;
 									if($field->params->get('core.icon'))
 									{
 										echo HTMLFormatHelper::icon($field->params->get('core.icon'));
 									}
+									echo '</label>';
 								}
-							echo "</label>";
+								echo '</dt>';
+								echo '<dd id="dd-'.$field_id.'" class="'.$field->fieldclass.($field->params->get('core.label_break') > 1 ? ' line-brk' : NULL).'">';
+								echo $field->result;
+								echo '</dd>';
+							}
+							echo '</dl>';
+							group_end($this);
 						}
 					}
+
+					if($started)
+					{
+						total_end($this);
+					}
+					
+					if(in_array($params->get('tmpl_params.item_grouping_type', 0), array(1))  && count($this->item->fields_by_groups))
+					{
+						echo '</div>';
+						echo '<div class="clearfix"></div>';
+						echo '<br />';
+					}
+
+
+
+					break;
+
+					//slider
+					case 2:
+					echo "Включены СЛАЙДЫ";
+					break;
+
+					// fieldset
+					case 3:
+					echo "Включены ФИЕЛДСЕТЫ";
+					break;
 				}
-				break;
 
-				//slider
-				case 2:
-				echo "Включены СЛАЙДЫ";
-				break;
+				?>
 
-				// fieldset
-				case 3:
-				echo "Включены ФИЕЛДСЕТЫ";
-				break;
-			}
+				<?php elseif ($show_labels):?><!-- "Показать только ярлыки полей" -->
 
-			?>
+				<?php elseif ($show_icons):?><!-- "Показать только иконки полей" -->
 
-			<?php elseif ($show_labels):?><!-- "Показать только ярлыки полей" -->
+				<?php else: ?><!-- "НЕ показать ярлыки полей и иконки полей" -->
 
-			<?php elseif ($show_icons):?><!-- "Показать только иконки полей" -->
-
-			<?php else: ?><!-- "НЕ показать ярлыки полей и иконки полей" -->
-
-			<?php endif;?><!-- Конец блока отображение ярлыков и иконок -->
+				<?php endif;?><!-- Конец блока отображение ярлыков и иконок -->
 
 
 
-			<?php
-			$category = array();
-			$author = array();
-			$details = array();
+				<?php
+				$category = array();
+				$author = array();
+				$details = array();
 
-			if($params->get('tmpl_core.item_categories') && $item->categories_links)
-			{
-				$category[] = sprintf('%s: %s', (count($item->categories_links) > 1 ? JText::_('CCATEGORIES') : JText::_('CCATEGORY')), implode(', ', $item->categories_links));
-			}
-			if($params->get('tmpl_core.item_user_categories') && $item->ucatid)
-			{
-				$category[] = sprintf('%s: %s', JText::_('CUSERCAT'), $item->ucatname_link);
-			}
-			if($params->get('tmpl_core.item_author') && $item->user_id)
-			{
-				$author[] = JText::sprintf('CWRITTENBY', CCommunityHelper::getName($item->user_id, $obj->section));
-			}
-			if($params->get('tmpl_core.item_author_filter'))
-			{
-				$author[] = FilterHelper::filterButton('filter_user', $item->user_id, NULL, JText::sprintf('CSHOWALLUSERREC', CCommunityHelper::getName($item->user_id, $obj->section, array('nohtml' => 1))), $obj->section);
-			}
-			if($params->get('tmpl_core.item_ctime'))
-			{
-				$author[] = JText::sprintf('CONDATE', JHtml::_('date', $item->created, $params->get('tmpl_core.item_time_format')));
-			}
+				if($params->get('tmpl_core.item_categories') && $item->categories_links)
+				{
+					$category[] = sprintf('%s: %s', (count($item->categories_links) > 1 ? JText::_('CCATEGORIES') : JText::_('CCATEGORY')), implode(', ', $item->categories_links));
+				}
+				if($params->get('tmpl_core.item_user_categories') && $item->ucatid)
+				{
+					$category[] = sprintf('%s: %s', JText::_('CUSERCAT'), $item->ucatname_link);
+				}
+				if($params->get('tmpl_core.item_author') && $item->user_id)
+				{
+					$author[] = JText::sprintf('CWRITTENBY', CCommunityHelper::getName($item->user_id, $obj->section));
+				}
+				if($params->get('tmpl_core.item_author_filter'))
+				{
+					$author[] = FilterHelper::filterButton('filter_user', $item->user_id, NULL, JText::sprintf('CSHOWALLUSERREC', CCommunityHelper::getName($item->user_id, $obj->section, array('nohtml' => 1))), $obj->section);
+				}
+				if($params->get('tmpl_core.item_ctime'))
+				{
+					$author[] = JText::sprintf('CONDATE', JHtml::_('date', $item->created, $params->get('tmpl_core.item_time_format')));
+				}
 
-			if($params->get('tmpl_core.item_mtime'))
-			{
-				$author[] = sprintf('%s: %s', JText::_('CCHANGEON'), JHtml::_('date', $item->modify, $params->get('tmpl_core.item_time_format')));
-			}
+				if($params->get('tmpl_core.item_mtime'))
+				{
+					$author[] = sprintf('%s: %s', JText::_('CCHANGEON'), JHtml::_('date', $item->modify, $params->get('tmpl_core.item_time_format')));
+				}
 
-			if($params->get('tmpl_core.item_extime'))
-			{
-				$author[] = sprintf('%s: %s', JText::_('CEXPIREON'), $item->expire ? JHtml::_('date', $item->expire, $params->get('tmpl_core.item_time_format')) : JText::_('CNEVER'));
-			}
+				if($params->get('tmpl_core.item_extime'))
+				{
+					$author[] = sprintf('%s: %s', JText::_('CEXPIREON'), $item->expire ? JHtml::_('date', $item->expire, $params->get('tmpl_core.item_time_format')) : JText::_('CNEVER'));
+				}
 
-			if($params->get('tmpl_core.item_type'))
-			{
-				$details[] = sprintf('%s: %s %s', JText::_('CTYPE'), $item->type_name, ($params->get('tmpl_core.item_type_filter') ? FilterHelper::filterButton('filter_type', $item->type_id, NULL, JText::sprintf('CSHOWALLTYPEREC', $item->type_name), $obj->section) : NULL));
-			}
-			if($params->get('tmpl_core.item_hits'))
-			{
-				$details[] = sprintf('%s: %s', JText::_('CHITS'), $item->hits);
-			}
-			if($params->get('tmpl_core.item_comments_num'))
-			{
-				$details[] = sprintf('%s: %s', JText::_('CCOMMENTS'), CommentHelper::numComments($obj->submission_types[$item->type_id], $item));
-			}
-			if($params->get('tmpl_core.item_vote_num'))
-			{
-				$details[] = sprintf('%s: %s', JText::_('CVOTES'), $item->votes);
-			}
-			if($params->get('tmpl_core.item_favorite_num'))
-			{
-				$details[] = sprintf('%s: %s', JText::_('CFAVORITED'), $item->favorite_num);
-			}
-			if($params->get('tmpl_core.item_follow_num'))
-			{
-				$details[] = sprintf('%s: %s', JText::_('CFOLLOWERS'), $item->subscriptions_num);
-			}
-			?>
+				if($params->get('tmpl_core.item_type'))
+				{
+					$details[] = sprintf('%s: %s %s', JText::_('CTYPE'), $item->type_name, ($params->get('tmpl_core.item_type_filter') ? FilterHelper::filterButton('filter_type', $item->type_id, NULL, JText::sprintf('CSHOWALLTYPEREC', $item->type_name), $obj->section) : NULL));
+				}
+				if($params->get('tmpl_core.item_hits'))
+				{
+					$details[] = sprintf('%s: %s', JText::_('CHITS'), $item->hits);
+				}
+				if($params->get('tmpl_core.item_comments_num'))
+				{
+					$details[] = sprintf('%s: %s', JText::_('CCOMMENTS'), CommentHelper::numComments($obj->submission_types[$item->type_id], $item));
+				}
+				if($params->get('tmpl_core.item_vote_num'))
+				{
+					$details[] = sprintf('%s: %s', JText::_('CVOTES'), $item->votes);
+				}
+				if($params->get('tmpl_core.item_favorite_num'))
+				{
+					$details[] = sprintf('%s: %s', JText::_('CFAVORITED'), $item->favorite_num);
+				}
+				if($params->get('tmpl_core.item_follow_num'))
+				{
+					$details[] = sprintf('%s: %s', JText::_('CFOLLOWERS'), $item->subscriptions_num);
+				}
+				?>
 
-			<?php if($params->get('tmpl_core.item_readon')): ?>
-				<p>
-					<a class="btn btn-primary" href="<?php echo JRoute::_($item->url);?>"><?php echo JText::_('CREADMORE'); ?></a>
-				</p>
-			<?php endif;?>
+				<?php if($params->get('tmpl_core.item_readon')): ?>
+					<p>
+						<a class="btn btn-primary" href="<?php echo JRoute::_($item->url);?>"><?php echo JText::_('CREADMORE'); ?></a>
+					</p>
+				<?php endif;?>
 
-			<?php if($category || $author || $details): ?>
-				<div class="clearfix"></div>
+				<?php if($category || $author || $details): ?>
+					<div class="clearfix"></div>
 
-				<div class="well well-small">
-					<?php if($params->get('tmpl_core.item_author_avatar')):?>
-						<div class="pull-right">
-							<img class="img-polaroid" src="<?php echo CCommunityHelper::getAvatar($item->user_id, $params->get('tmpl_core.item_author_avatar_width', 40), $params->get('tmpl_core.item_author_avatar_height', 40));?>" />
-						</div>
-					<?php endif;?>
-					<small>
-						<dl>
-							<?php if($category):?>
-								<dt><?php echo JText::_('CCATEGORY');?></dt>
-								<dd><?php echo implode(' ', $category);?></dd>
-							<?php endif;?>
-							<?php if($author):?>
-								<dt><?php echo JText::_('Информация:');?></dt>
-								<dd>
-									<?php echo implode(', ', $author);?>
-								</dd>
-							<?php endif;?>
-							<?php if($details):?>
-								<dt>Активность:</dt>
-								<dd class="hits">
-									<?php echo implode(', ', $details);?>
-								</dd>
-							<?php endif;?>
-						</dl>
-					</small>
-				</div>
-			<?php endif;?>
-		</article>
+					<div class="well well-small">
+						<?php if($params->get('tmpl_core.item_author_avatar')):?>
+							<div class="pull-right">
+								<img class="img-polaroid" src="<?php echo CCommunityHelper::getAvatar($item->user_id, $params->get('tmpl_core.item_author_avatar_width', 40), $params->get('tmpl_core.item_author_avatar_height', 40));?>" />
+							</div>
+						<?php endif;?>
+						<small>
+							<dl>
+								<?php if($category):?>
+									<dt><?php echo JText::_('CCATEGORY');?></dt>
+									<dd><?php echo implode(' ', $category);?></dd>
+								<?php endif;?>
+								<?php if($author):?>
+									<dt><?php echo JText::_('Информация:');?></dt>
+									<dd>
+										<?php echo implode(', ', $author);?>
+									</dd>
+								<?php endif;?>
+								<?php if($details):?>
+									<dt>Активность:</dt>
+									<dd class="hits">
+										<?php echo implode(', ', $details);?>
+									</dd>
+								<?php endif;?>
+							</dl>
+						</small>
+					</div>
+				<?php endif;?>
+			</article>
+
+			<!-- Вставка Скриптов -->
+			<?php if($started):?>
+				<script type="text/javascript">
+					<?php if(in_array($params->get('tmpl_params.item_grouping_type', 0), array(1))):?>
+					jQuery('#tabs-list a:first').tab('show');
+					<?php elseif(in_array($params->get('tmpl_params.item_grouping_type', 0), array(2))):?>
+					jQuery('#tab-main').collapse('show');
+				<?php endif;?>
+			</script>
+		<?php endif;?>
+
 		<?php
 	}
 }
 }
 ?>
+
+
 <?php
 $k = 0;
 $params = $this->tmpl_params['list'];
@@ -365,3 +453,76 @@ $helper->exclude = $exclude;
 	</div>
 <?php endif;?>
 
+<?php
+function group_start($data, $label, $name)
+{
+	static $start = false;
+	$icon = '';
+	if(!empty($data->item->field_groups[$label]['icon']) && $data->tmpl_params['record']->get('tmpl_params.show_groupicon', 1)) {
+		$icon = HTMLFormatHelper::icon($data->item->field_groups[$label]['icon']);
+	}
+	switch ($data->tmpl_params['record']->get('tmpl_params.item_grouping_type', 0))
+	{
+		//tab
+		case 1:
+			if(!$start)
+			{
+				echo '<div class="tab-content" id="tabs-box">';
+				$start = TRUE;
+			}
+			echo '<div class="tab-pane" id="'.$name.'">';
+			break;
+		//slider
+		case 2:
+			if(!$start)
+			{
+				echo '<div class="accordion" id="accordion2">';
+				$start = TRUE;
+			}
+			echo '<div class="accordion-group">
+				<div class="accordion-heading">
+					<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#'.$name.'">
+					     '.$icon. ' '. $label.'
+					</a>
+				</div>
+				<div id="'.$name.'" class="accordion-body collapse">
+					<div class="accordion-inner">';
+			break;
+		// fieldset
+		case 3:
+			echo "<legend>{$icon} {$label}</legend>";
+		break;
+	}
+
+	if($data->tmpl_params['record']->get('tmpl_params.show_groupdescr') && !empty($data->item->field_groups[$label]['descr']))
+	{
+		echo $data->item->field_groups[$label]['descr'];
+	}
+}
+
+function group_end($data)
+{
+	switch ($data->tmpl_params['record']->get('tmpl_params.item_grouping_type', 0))
+	{
+		case 1:
+			echo '</div>';
+		break;
+		case 2:
+			echo '</div></div></div>';
+		break;
+	}
+}
+
+function total_end($data)
+{
+	switch ($data->tmpl_params['record']->get('tmpl_params.item_grouping_type', 0))
+	{
+		//tab
+		case 1:
+			echo '</div>';
+		break;
+		case 2:
+			echo '</div>';
+		break;
+	}
+}
