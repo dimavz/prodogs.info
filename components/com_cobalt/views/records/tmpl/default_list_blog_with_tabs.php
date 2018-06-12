@@ -133,9 +133,9 @@ if(!class_exists('CarticleHelper'))
 				<!-- Формируем поля вкладок Tab panes -->
 				<?php if(isset($item->fields_by_groups)):?>
 					<div class="tab-content" id="tabs-box">
-						<?php $o=0; ?>		
+						<?php $t=0; ?>		
 						<?php foreach ($item->fields_by_groups as $group_name => $fields) :?>
-							<div class="tab-pane" id='tab-<?php echo $o++; ?>'>
+							<div class="tab-pane" id='tab-<?php echo $t++; ?>'>
 								<dl class="dl-horizontal fields-list">
 									<?php foreach ($fields as $field_id => $field):?>
 										<dt id="<?php echo 'dt-'.$field_id; ?>" class="<?php echo $field->class;?>">
@@ -386,76 +386,3 @@ $helper->exclude = $exclude;
 	</div>
 <?php endif;?>
 
-<?php
-function group_start($data, $label, $name)
-{
-	static $start = false;
-	$icon = '';
-	if(!empty($data->item->field_groups[$label]['icon']) && $data->tmpl_params['record']->get('tmpl_params.show_groupicon', 1)) {
-		$icon = HTMLFormatHelper::icon($data->item->field_groups[$label]['icon']);
-	}
-	switch ($data->tmpl_params['list']->get('tmpl_params.item_grouping_type', 0))
-	{
-		//tab
-		case 1:
-		if(!$start)
-		{
-			echo '<div class="tab-content" id="tabs-box">';
-			$start = TRUE;
-		}
-		echo '<div class="tab-pane" id="'.$name.'">';
-		break;
-		//slider
-		case 2:
-		if(!$start)
-		{
-			echo '<div class="accordion" id="accordion2">';
-			$start = TRUE;
-		}
-		echo '<div class="accordion-group">
-		<div class="accordion-heading">
-		<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#'.$name.'">
-		'.$icon. ' '. $label.'
-		</a>
-		</div>
-		<div id="'.$name.'" class="accordion-body collapse">
-		<div class="accordion-inner">';
-		break;
-		// fieldset
-		case 3:
-		echo "<legend>{$icon} {$label}</legend>";
-		break;
-	}
-
-	if($data->tmpl_params['list']->get('tmpl_params.show_groupdescr') && !empty($data->item->field_groups[$label]['descr']))
-	{
-		echo $data->item->field_groups[$label]['descr'];
-	}
-}
-
-function group_end($data)
-{
-	switch ($data->tmpl_params['list']->get('tmpl_params.item_grouping_type', 0))
-	{
-		case 1:
-		echo '</div>';
-		break;
-		case 2:
-		echo '</div></div></div>';
-		break;
-	}
-}
-
-function total_end($data)
-{
-	switch ($data->tmpl_params['list']->get('tmpl_params.item_grouping_type', 0))
-	{
-		//tab
-		case 1:
-		echo '</div>';
-		break;
-		case 2:
-		echo '</div>';
-		break;
-	}
-}
