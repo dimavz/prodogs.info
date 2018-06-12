@@ -90,6 +90,7 @@ if(!class_exists('CarticleHelper'))
 				<?php if(isset($item->fields_by_groups[null])):?>
 					<dl class="dl-horizontal fields-list">
 						<?php foreach ($item->fields_by_groups[null] as $field_id => $field):?>
+							<?php if(in_array($field->key, $this->exclude)) continue; ?>
 							<dt id="<?php echo 'dt-'.$field_id; ?>" class="<?php echo $field->class;?>">
 								<?php if($field->params->get('core.show_lable') > 1):?>
 									<label id="<?php echo $field->id;?>-lbl">
@@ -130,7 +131,7 @@ if(!class_exists('CarticleHelper'))
 				</ul>
 				<?php endif;?><!-- Конец формировки Nav tabs -->
 				
-				<!-- Формируем поля вкладок Tab panes -->
+				<!-- Формируем контент вкладок (поля) Tab panes -->
 				<?php if(isset($item->fields_by_groups)):?>
 					<div class="tab-content" id="tabs-box">
 						<?php $t=0; ?>		
@@ -138,6 +139,7 @@ if(!class_exists('CarticleHelper'))
 							<div class="tab-pane" id='tab-<?php echo $t++; ?>'>
 								<dl class="dl-horizontal fields-list">
 									<?php foreach ($fields as $field_id => $field):?>
+										<?php if(in_array($field->key, $this->exclude)) continue; ?>
 										<dt id="<?php echo 'dt-'.$field_id; ?>" class="<?php echo $field->class;?>">
 											<?php if($field->params->get('core.show_lable') > 1):?>
 												<label id="<?php echo $field->id;?>-lbl">
