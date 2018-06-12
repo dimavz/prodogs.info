@@ -102,7 +102,7 @@ if(!class_exists('CarticleHelper'))
 									<?php endif;?>
 								<?php endif;?>
 							</dt>
-							<dd id="<?php echo 'dd-'.$field_id; ?>" class="<?php echo $field->fieldclass;?><?php echo ($field->params->get('core.label_break') > 1 ? ' line-brk' : NULL) ?>">
+							<dd id="<?php echo 'dd-'.$field_id; ?>" class="input-field<?php echo ($field->params->get('core.label_break') > 1 ? '-full' : NULL) ?> <?php echo $field->fieldclass;?>">
 								<?php echo $field->result; ?>
 							</dd>
 						<?php endforeach;?>
