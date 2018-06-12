@@ -119,7 +119,7 @@ if(!class_exists('CarticleHelper'))
 						<?php if(isset($item->fields_by_groups)):?>
 							<?php foreach ($item->fields_by_groups as $group_id => $fields) :?>
 								<li>
-									<a href="#tab-<?php echo $o++?>" data-toggle="tab" aria-controls="<?php echo JText::_($group_id) ?>">
+									<a href="#tab-<?php echo $o++?>" data-toggle="tab">
 										<?php if(!empty($item->field_groups[$group_id]['icon']) && $params->get('tmpl_params.show_groupicon', 1)): ?>
 										<?php echo HTMLFormatHelper::icon($item->field_groups[$group_id]['icon']) ?>
 									<?php endif; ?>
@@ -137,6 +137,11 @@ if(!class_exists('CarticleHelper'))
 						<?php $t=0; ?>		
 						<?php foreach ($item->fields_by_groups as $group_name => $fields) :?>
 							<div class="tab-pane" id='tab-<?php echo $t++; ?>'>
+								<?php if($params->get('tmpl_params.show_groupdescr') && !empty($item->field_groups[$group_name]['descr']))
+								{
+									echo $item->field_groups[$group_name]['descr'];
+								}
+								?>
 								<dl class="dl-horizontal fields-list">
 									<?php foreach ($fields as $field_id => $field):?>
 										<?php if(in_array($field->key, $this->exclude)) continue; ?>
