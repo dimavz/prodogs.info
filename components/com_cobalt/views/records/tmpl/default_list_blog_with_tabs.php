@@ -123,172 +123,177 @@ if(!class_exists('CarticleHelper'))
 										<?php if(!empty($item->field_groups[$group_id]['icon']) && $params->get('tmpl_params.show_groupicon', 1)): ?>
 										<?php echo HTMLFormatHelper::icon($item->field_groups[$group_id]['icon']) ?>
 									<?php endif; ?>
-									<?php echo JText::_($group_id) ?>
+									<?php echo JText::_($group_id)?>
 								</a>
 							</li>
 						<?php endforeach;?>
 					<?php endif;?>
 				</ul>
-				<?php endif;?><!-- Конец формировки Nav tabs -->
-				
-				<!-- Формируем контент вкладок (поля) Tab panes -->
-				<?php if(isset($item->fields_by_groups)):?>
-					<div class="tab-content" id="tabs-box">
-						<?php $t=0; ?>		
-						<?php foreach ($item->fields_by_groups as $group_name => $fields) :?>
-							<div class="tab-pane" id='tab-<?php echo $t++; ?>'>
-								<?php if($params->get('tmpl_params.show_groupdescr') && !empty($item->field_groups[$group_name]['descr']))
-								{
-									echo $item->field_groups[$group_name]['descr'];
-								}
-								?>
-								<dl class="dl-horizontal fields-list">
-									<?php foreach ($fields as $field_id => $field):?>
-										<?php if(in_array($field->key, $this->exclude)) continue; ?>
-										<dt id="<?php echo 'dt-'.$field_id; ?>" class="<?php echo $field->class;?>">
-											<?php if($field->params->get('core.show_lable') > 1):?>
-												<label id="<?php echo $field->id;?>-lbl">
-													<?php echo $field->label; ?>
-													<?php if($field->params->get('core.icon')):?>
-														<?php echo HTMLFormatHelper::icon($field->params->get('core.icon'));  ?>
-													<?php endif;?>
-												</label>
-												<?php if($field->params->get('core.label_break') > 1):?>
-												<?php endif;?>
-											<?php endif;?>
-										</dt>
-										<dd id="<?php echo 'dd-'.$field_id; ?>" class="<?php echo $field->fieldclass;?><?php echo ($field->params->get('core.label_break') > 1 ? ' line-brk' : NULL) ?>">
-											<?php echo $field->result; ?>
-										</dd>
-									<?php endforeach;?>
-								</dl>
-							</div><!-- end "tab-pane" -->
+			<?php endif;?>
+
+			<!-- Конец формировки Nav tabs -->
+
+			<!-- Формируем контент вкладок (поля) Tab panes -->
+			
+			<?php if(isset($item->fields_by_groups)):?>
+				<?php foreach ($item->fields_by_groups as $group_name => $fields) :?>
+					<?php $started = true;?>
+					<?php group_start($obj, $group_name, 'tab-'.$i++);?>
+					<dl class="dl-horizontal fields-list fields-group<?php echo $i;?>">
+						<?php foreach ($fields as $field_id => $field):?>
+							<dt id="<?php echo 'dt-'.$field_id; ?>" class="<?php echo $field->class;?>">
+								<?php if($field->params->get('core.show_lable') > 1):?>
+									<label id="<?php echo $field->id;?>-lbl">
+										<?php echo $field->label; ?>
+										<?php if($field->params->get('core.icon')):?>
+											<?php echo HTMLFormatHelper::icon($field->params->get('core.icon'));  ?>
+										<?php endif;?>
+									</label>
+									<?php if($field->params->get('core.label_break') > 1):?>
+									<?php endif;?>
+								<?php endif;?>
+							</dt>
+							<dd id="<?php echo 'dd-'.$field_id; ?>" class="<?php echo $field->fieldclass;?><?php echo ($field->params->get('core.label_break') > 1 ? ' line-brk' : NULL) ?>">
+								<?php echo $field->result; ?>
+							</dd>
 						<?php endforeach;?>
-					</div><!-- end  "tab-content"-->
-				<?php endif;?>
-			</div><!-- end tabbable -->
-
-			<?php elseif ($show_labels):?><!-- "Показать только ярлыки полей" -->
-
-			<?php elseif ($show_icons):?><!-- "Показать только иконки полей" -->
-
-			<?php else: ?><!-- "НЕ показать ярлыки полей и иконки полей" -->
-
-			<?php endif;?><!-- Конец блока отображение ярлыков и иконок -->
-
-
-
-			<?php
-			$category = array();
-			$author = array();
-			$details = array();
-
-			if($params->get('tmpl_core.item_categories') && $item->categories_links)
-			{
-				$category[] = sprintf('%s: %s', (count($item->categories_links) > 1 ? JText::_('CCATEGORIES') : JText::_('CCATEGORY')), implode(', ', $item->categories_links));
-			}
-			if($params->get('tmpl_core.item_user_categories') && $item->ucatid)
-			{
-				$category[] = sprintf('%s: %s', JText::_('CUSERCAT'), $item->ucatname_link);
-			}
-			if($params->get('tmpl_core.item_author') && $item->user_id)
-			{
-				$author[] = JText::sprintf('CWRITTENBY', CCommunityHelper::getName($item->user_id, $obj->section));
-			}
-			if($params->get('tmpl_core.item_author_filter'))
-			{
-				$author[] = FilterHelper::filterButton('filter_user', $item->user_id, NULL, JText::sprintf('CSHOWALLUSERREC', CCommunityHelper::getName($item->user_id, $obj->section, array('nohtml' => 1))), $obj->section);
-			}
-			if($params->get('tmpl_core.item_ctime'))
-			{
-				$author[] = JText::sprintf('CONDATE', JHtml::_('date', $item->created, $params->get('tmpl_core.item_time_format')));
-			}
-
-			if($params->get('tmpl_core.item_mtime'))
-			{
-				$author[] = sprintf('%s: %s', JText::_('CCHANGEON'), JHtml::_('date', $item->modify, $params->get('tmpl_core.item_time_format')));
-			}
-
-			if($params->get('tmpl_core.item_extime'))
-			{
-				$author[] = sprintf('%s: %s', JText::_('CEXPIREON'), $item->expire ? JHtml::_('date', $item->expire, $params->get('tmpl_core.item_time_format')) : JText::_('CNEVER'));
-			}
-
-			if($params->get('tmpl_core.item_type'))
-			{
-				$details[] = sprintf('%s: %s %s', JText::_('CTYPE'), $item->type_name, ($params->get('tmpl_core.item_type_filter') ? FilterHelper::filterButton('filter_type', $item->type_id, NULL, JText::sprintf('CSHOWALLTYPEREC', $item->type_name), $obj->section) : NULL));
-			}
-			if($params->get('tmpl_core.item_hits'))
-			{
-				$details[] = sprintf('%s: %s', JText::_('CHITS'), $item->hits);
-			}
-			if($params->get('tmpl_core.item_comments_num'))
-			{
-				$details[] = sprintf('%s: %s', JText::_('CCOMMENTS'), CommentHelper::numComments($obj->submission_types[$item->type_id], $item));
-			}
-			if($params->get('tmpl_core.item_vote_num'))
-			{
-				$details[] = sprintf('%s: %s', JText::_('CVOTES'), $item->votes);
-			}
-			if($params->get('tmpl_core.item_favorite_num'))
-			{
-				$details[] = sprintf('%s: %s', JText::_('CFAVORITED'), $item->favorite_num);
-			}
-			if($params->get('tmpl_core.item_follow_num'))
-			{
-				$details[] = sprintf('%s: %s', JText::_('CFOLLOWERS'), $item->subscriptions_num);
-			}
-			?>
-
-			<?php if($params->get('tmpl_core.item_readon')): ?>
-				<p>
-					<a class="btn btn-primary" href="<?php echo JRoute::_($item->url);?>"><?php echo JText::_('CREADMORE'); ?></a>
-				</p>
+					</dl>
+					<?php group_end($obj);?>
+				<?php endforeach;?>
 			<?php endif;?>
 
-			<?php if($category || $author || $details): ?>
-				<div class="clearfix"></div>
-
-				<div class="well well-small">
-					<?php if($params->get('tmpl_core.item_author_avatar')):?>
-						<div class="pull-right">
-							<img class="img-polaroid" src="<?php echo CCommunityHelper::getAvatar($item->user_id, $params->get('tmpl_core.item_author_avatar_width', 40), $params->get('tmpl_core.item_author_avatar_height', 40));?>" />
-						</div>
-					<?php endif;?>
-					<small>
-						<dl>
-							<?php if($category):?>
-								<dt><?php echo JText::_('CCATEGORY');?></dt>
-								<dd><?php echo implode(' ', $category);?></dd>
-							<?php endif;?>
-							<?php if($author):?>
-								<dt><?php echo JText::_('Информация:');?></dt>
-								<dd>
-									<?php echo implode(', ', $author);?>
-								</dd>
-							<?php endif;?>
-							<?php if($details):?>
-								<dt>Активность:</dt>
-								<dd class="hits">
-									<?php echo implode(', ', $details);?>
-								</dd>
-							<?php endif;?>
-						</dl>
-					</small>
-				</div>
+			<?php if($started):?>
+				<?php total_end($obj);?>
 			<?php endif;?>
-		</article>
 
-		<!-- Вставка Скриптов для  Табов -->
-		<script type="text/javascript">
-			<?php if(in_array($params->get('tmpl_params.item_grouping_type', 0), array(1))):?>
-			jQuery('#tabs-list a:first').tab('show');
-			<?php elseif(in_array($params->get('tmpl_params.item_grouping_type', 0), array(2))):?>
-			jQuery('#tab-main').collapse('show');
+
+		<?php if(in_array($params->get('tmpl_params.item_grouping_type', 0), array(1))  && count($titem->fields_by_groups)):?>
+		</div>
+		<div class="clearfix"></div>
+		<br />
+	<?php endif;?>
+
+		<?php elseif ($show_labels):?><!-- "Показать только ярлыки полей" -->
+
+		<?php elseif ($show_icons):?><!-- "Показать только иконки полей" -->
+
+		<?php else: ?><!-- "НЕ показать ярлыки полей и иконки полей" -->
+
+		<?php endif;?><!-- Конец блока отображение ярлыков и иконок -->
+
+
+
+		<?php
+		$category = array();
+		$author = array();
+		$details = array();
+
+		if($params->get('tmpl_core.item_categories') && $item->categories_links)
+		{
+			$category[] = sprintf('%s: %s', (count($item->categories_links) > 1 ? JText::_('CCATEGORIES') : JText::_('CCATEGORY')), implode(', ', $item->categories_links));
+		}
+		if($params->get('tmpl_core.item_user_categories') && $item->ucatid)
+		{
+			$category[] = sprintf('%s: %s', JText::_('CUSERCAT'), $item->ucatname_link);
+		}
+		if($params->get('tmpl_core.item_author') && $item->user_id)
+		{
+			$author[] = JText::sprintf('CWRITTENBY', CCommunityHelper::getName($item->user_id, $obj->section));
+		}
+		if($params->get('tmpl_core.item_author_filter'))
+		{
+			$author[] = FilterHelper::filterButton('filter_user', $item->user_id, NULL, JText::sprintf('CSHOWALLUSERREC', CCommunityHelper::getName($item->user_id, $obj->section, array('nohtml' => 1))), $obj->section);
+		}
+		if($params->get('tmpl_core.item_ctime'))
+		{
+			$author[] = JText::sprintf('CONDATE', JHtml::_('date', $item->created, $params->get('tmpl_core.item_time_format')));
+		}
+
+		if($params->get('tmpl_core.item_mtime'))
+		{
+			$author[] = sprintf('%s: %s', JText::_('CCHANGEON'), JHtml::_('date', $item->modify, $params->get('tmpl_core.item_time_format')));
+		}
+
+		if($params->get('tmpl_core.item_extime'))
+		{
+			$author[] = sprintf('%s: %s', JText::_('CEXPIREON'), $item->expire ? JHtml::_('date', $item->expire, $params->get('tmpl_core.item_time_format')) : JText::_('CNEVER'));
+		}
+
+		if($params->get('tmpl_core.item_type'))
+		{
+			$details[] = sprintf('%s: %s %s', JText::_('CTYPE'), $item->type_name, ($params->get('tmpl_core.item_type_filter') ? FilterHelper::filterButton('filter_type', $item->type_id, NULL, JText::sprintf('CSHOWALLTYPEREC', $item->type_name), $obj->section) : NULL));
+		}
+		if($params->get('tmpl_core.item_hits'))
+		{
+			$details[] = sprintf('%s: %s', JText::_('CHITS'), $item->hits);
+		}
+		if($params->get('tmpl_core.item_comments_num'))
+		{
+			$details[] = sprintf('%s: %s', JText::_('CCOMMENTS'), CommentHelper::numComments($obj->submission_types[$item->type_id], $item));
+		}
+		if($params->get('tmpl_core.item_vote_num'))
+		{
+			$details[] = sprintf('%s: %s', JText::_('CVOTES'), $item->votes);
+		}
+		if($params->get('tmpl_core.item_favorite_num'))
+		{
+			$details[] = sprintf('%s: %s', JText::_('CFAVORITED'), $item->favorite_num);
+		}
+		if($params->get('tmpl_core.item_follow_num'))
+		{
+			$details[] = sprintf('%s: %s', JText::_('CFOLLOWERS'), $item->subscriptions_num);
+		}
+		?>
+
+		<?php if($params->get('tmpl_core.item_readon')): ?>
+			<p>
+				<a class="btn btn-primary" href="<?php echo JRoute::_($item->url);?>"><?php echo JText::_('CREADMORE'); ?></a>
+			</p>
 		<?php endif;?>
-	</script>
 
-	<?php
+		<?php if($category || $author || $details): ?>
+			<div class="clearfix"></div>
+
+			<div class="well well-small">
+				<?php if($params->get('tmpl_core.item_author_avatar')):?>
+					<div class="pull-right">
+						<img class="img-polaroid" src="<?php echo CCommunityHelper::getAvatar($item->user_id, $params->get('tmpl_core.item_author_avatar_width', 40), $params->get('tmpl_core.item_author_avatar_height', 40));?>" />
+					</div>
+				<?php endif;?>
+				<small>
+					<dl>
+						<?php if($category):?>
+							<dt><?php echo JText::_('CCATEGORY');?></dt>
+							<dd><?php echo implode(' ', $category);?></dd>
+						<?php endif;?>
+						<?php if($author):?>
+							<dt><?php echo JText::_('Информация:');?></dt>
+							<dd>
+								<?php echo implode(', ', $author);?>
+							</dd>
+						<?php endif;?>
+						<?php if($details):?>
+							<dt>Активность:</dt>
+							<dd class="hits">
+								<?php echo implode(', ', $details);?>
+							</dd>
+						<?php endif;?>
+					</dl>
+				</small>
+			</div>
+		<?php endif;?>
+	</article>
+
+	<!-- Вставка Скриптов для  Табов -->
+	<script type="text/javascript">
+		<?php if(in_array($params->get('tmpl_params.item_grouping_type', 0), array(1))):?>
+		jQuery('#tabs-list a:first').tab('show');
+		<?php elseif(in_array($params->get('tmpl_params.item_grouping_type', 0), array(2))):?>
+		jQuery('#tab-main').collapse('show');
+	<?php endif;?>
+</script>
+
+<?php
 }
 }
 }
@@ -392,4 +397,78 @@ $helper->exclude = $exclude;
 		</ul>
 	</div>
 <?php endif;?>
+
+<?php
+function group_start($data, $label, $name)
+{
+	static $start = false;
+	$icon = '';
+	if(!empty($data->item->field_groups[$label]['icon']) && $data->tmpl_params['list']->get('tmpl_params.show_groupicon', 1)) {
+		$icon = HTMLFormatHelper::icon($data->item->field_groups[$label]['icon']);
+	}
+	switch ($data->tmpl_params['list']->get('tmpl_params.item_grouping_type', 0))
+	{
+		//tab
+		case 1:
+			if(!$start)
+			{
+				echo '<div class="tab-content" id="tabs-box">';
+				$start = TRUE;
+			}
+			echo '<div class="tab-pane" id="'.$name.'">';
+			break;
+		//slider
+		case 2:
+			if(!$start)
+			{
+				echo '<div class="accordion" id="accordion2">';
+				$start = TRUE;
+			}
+			echo '<div class="accordion-group">
+				<div class="accordion-heading">
+					<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#'.$name.'">
+					     '.$icon. ' '. $label.'
+					</a>
+				</div>
+				<div id="'.$name.'" class="accordion-body collapse">
+					<div class="accordion-inner">';
+			break;
+		// fieldset
+		case 3:
+			echo "<legend>{$icon} {$label}</legend>";
+		break;
+	}
+
+	if($data->tmpl_params['list']->get('tmpl_params.show_groupdescr') && !empty($data->item->field_groups[$label]['descr']))
+	{
+		echo $data->item->field_groups[$label]['descr'];
+	}
+}
+
+function group_end($data)
+{
+	switch ($data->tmpl_params['list']->get('tmpl_params.item_grouping_type', 0))
+	{
+		case 1:
+			echo '</div>';
+		break;
+		case 2:
+			echo '</div></div></div>';
+		break;
+	}
+}
+
+function total_end($data)
+{
+	switch ($data->tmpl_params['list']->get('tmpl_params.item_grouping_type', 0))
+	{
+		//tab
+		case 1:
+			echo '</div>';
+		break;
+		case 2:
+			echo '</div>';
+		break;
+	}
+}
 
